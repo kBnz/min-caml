@@ -11,15 +11,15 @@ let lexbuf outchan l = (* バッファをコンパイルしてチャンネルへ出力する (caml2htm
   Id.counter := 0;
   Typing.extenv := M.empty;
   Emit.f outchan
-    (RegAlloc.f
-       (Simm.f
-	  (Virtual.f
-	     (Closure.f
-		(iter !limit
-		   (Alpha.f
-		      (KNormal.f
+    (Mydebug.print_regalloc (RegAlloc.f
+       (Mydebug.print_simm (Simm.f
+	  (Mydebug.print_virtual (Virtual.f
+	     (Mydebug.print_closure (Closure.f
+		(Mydebug.print_beta (iter !limit
+		   (Mydebug.print_alpha (Alpha.f
+		      (Mydebug.print_knormal (KNormal.f
 			 (Typing.f
-			    (Parser.exp Lexer.token l)))))))))
+			    (Mydebug.print_syntax (Parser.exp Lexer.token l)))))))))))))))))
 
 let string s = lexbuf stdout (Lexing.from_string s) (* 文字列をコンパイルして標準出力に表示する (caml2html: main_string) *)
 
