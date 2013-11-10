@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+ln -sf myarch/{*.ml{,i},libmincaml.S} .
+cd shootout; ln -sf myarch/Makefile .
+cd ../bytemark; ln -sf myarch/Makefile .
+cd ../min-rt; ln -sf myarch/globals.s .
+cd ..
