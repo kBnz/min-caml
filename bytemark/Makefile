@@ -1,1 +1,1 @@
-SPARC/Makefile
+myarch/Makefile

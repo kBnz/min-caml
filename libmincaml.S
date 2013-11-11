@@ -1,1 +1,1 @@
-SPARC/libmincaml.S
+myarch/libmincaml.S

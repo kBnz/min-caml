@@ -3,24 +3,21 @@
 .section	".text"
 .global	min_caml_start
 min_caml_start:
-	save	%sp, -112, %sp
-	set	123, %i2
-	st	%o7, [%i0 + 4]
-	call	min_caml_print_int
-	add	%i0, 8, %i0	! delay slot
-	sub	%i0, 8, %i0
-	ld	[%i0 + 4], %o7
-	set	-456, %i2
-	st	%o7, [%i0 + 4]
-	call	min_caml_print_int
-	add	%i0, 8, %i0	! delay slot
-	sub	%i0, 8, %i0
-	ld	[%i0 + 4], %o7
-	set	789, %i2
-	st	%o7, [%i0 + 4]
-	call	min_caml_print_int
-	add	%i0, 8, %i0	! delay slot
-	sub	%i0, 8, %i0
-	ld	[%i0 + 4], %o7
-	ret
-	restore
+	add	%0, 0, 123
+	add	%25, %29 ,4
+	st	%25, %27
+	call	%27, min_caml_print_int
+	add	%25, %29, 4
+	ld	%27, 0, %25
+	add	%0, 0, -456
+	add	%25, %29 ,4
+	st	%25, %27
+	call	%27, min_caml_print_int
+	add	%25, %29, 4
+	ld	%27, 0, %25
+	add	%0, 0, 789
+	add	%25, %29 ,4
+	st	%25, %27
+	call	%27, min_caml_print_int
+	add	%25, %29, 4
+	ld	%27, 0, %25

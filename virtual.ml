@@ -1,1 +1,1 @@
-SPARC/virtual.ml
+myarch/virtual.ml

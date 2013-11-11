@@ -1,0 +1,54 @@
+ISA
+    op      imm_enabled0  imm_enabled1 neg _ outResistor _ in_resistor0 _ in_resistor1  where imm_enabled0 == 0 && imm_enabled1 == 0
+    4      |1           |1           |1  |4|5          |3|5           |3|5           |
+    op      imm_enabled0  imm_enabled1 neg _ outResistor _ in_resistor0 immediate0      where imm_enabled0 == 0 && imm_enabled1 == 1
+    4      |1           |1           |1  |4|5          |3|5           |8             |
+    op      imm_enabled0  imm_enabled1 neg _ outResistor immediate0     _ in_resistor1  where imm_enabled0 == 1 && imm_enabled1 == 0 
+    4      |1           |1           |1  |4|5          |8             |3|5           |
+    op      imm_enabled0  imm_enabled1 neg _ outResistor immediate0     immediate1      where imm_enabled0 == 1 && imm_enabled1 == 1
+    4      |1           |1           |1  |4|5          |8             |8             |
+    op      imm_enabled0  _            _   _ outResistor immediate16bit                 where op == op_call && imm_enabled0 == 1
+    4      |1           |1           |1  |4|5          |16                           |
+
+    opcode: 4
+    imm_enabled0: 1
+    imm_enabled1: 1
+    neg: 1
+    _: 4
+    out_resistor: 5
+    union {
+        struct {
+            _: 3
+            in_resistor0: 5
+        };
+        imm0: 8
+    };
+    union {
+        struct {
+            _: 3
+            in_resistor1: 5
+        };
+        imm1: 8
+    }
+    extend(x) = (int)(signed char)x // 符号拡張
+    in0 = imm_enabled0 ? extend(imm0) : in_resistor0
+    in1 = imm_enabled1 ? extend(imm1) : in_resistor1
+    in1_ = neg? -in1 : in1
+     0 mov   <out> <- <in1_>
+     1 add   out <- in0 + in1
+     2 sh    out <- (in1_ >= 0 -> shl in0 in1_, in1_ <= 0 -> shr in0 (-in1_))
+     3 cmp   out <- in0 > in1_ ? 1 : in0 == in1_ > 0 : -1
+     4 breq  if in1_ == 0 then pc <- pc + in0
+     5 brle  if in1_ <= 0 then pc <- pc + in0
+     6 st    mem[in0] <- in1_
+     7 ld    out <- mem[(in0 << 8) + in1_]
+     8 addf  
+     9 mulf  
+    10 sqrtf 
+    11 invf  
+    12 absf  
+    13 call <out> <dest16>      // <out> <- <pc> + 1; <pc> <- <call先の命令アドレス> <in1は使用しない>
+    14 
+    15 inout if in0 >= 0
+               then  out <- world
+               else  world <- in1_

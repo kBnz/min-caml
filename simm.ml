@@ -1,1 +1,1 @@
-SPARC/simm.ml
+myarch/simm.ml

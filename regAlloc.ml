@@ -1,1 +1,1 @@
-SPARC/regAlloc.ml
+myarch/regAlloc.ml

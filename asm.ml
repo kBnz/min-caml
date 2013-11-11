@@ -1,1 +1,1 @@
-SPARC/asm.ml
+myarch/asm.ml
