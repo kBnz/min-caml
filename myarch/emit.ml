@@ -63,7 +63,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(x), SLL(y, z') -> Printf.fprintf oc "\tsll\t%s, %s, %s\n" x y (pp_id_or_imm z')
   | NonTail(x), Ld(y, z') -> Printf.fprintf oc "\tld\t[%s + %s], %s\n" y (pp_id_or_imm z') x
   | NonTail(_), St(x, y, z') ->
-    Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp y (pp_id_or_imm z');    
+    Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp y (pp_id_or_imm z');
     Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp x
   | NonTail(x), FMovD(y) when x = y -> ()
   | NonTail(x), FMovD(y) ->
@@ -163,8 +163,9 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(a), CallCls(x, ys, zs) ->
       g'_args oc [(x, reg_cl)] ys zs;
       let ss = stacksize () in
-      Printf.fprintf oc "\tadd\t%s, %s ,%d\n" reg_tmp reg_sp (ss - 4);        
-      Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp reg_ra;
+        (*あとでなおす*)
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_sp reg_sp (ss - 4);        
+      Printf.fprintf oc "\tst\t%s, %s\n" reg_sp reg_ra;
       Printf.fprintf oc "\tld\t%s, %s\n" reg_cl reg_sw;
       Printf.fprintf oc "\tcall\t%s\n" reg_sw;
       Printf.fprintf oc "\tadd\t%s, %d, %s\t! delay slot\n" reg_sp ss reg_sp;
@@ -178,10 +179,13 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(a), CallDir(Id.L(x), ys, zs) ->
       g'_args oc [] ys zs;
       let ss = stacksize () in
-      Printf.fprintf oc "\tadd\t%s, %s ,%d\n" reg_tmp reg_sp (ss - 4);        
+        (*reg_spはcall直前と直後以外変更しない*)
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (ss - 4);        
       Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp reg_ra;
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_sp reg_sp ss;
       Printf.fprintf oc "\tcall\t%s, %s\n" reg_ra x;
-     (* Printf.fprintf oc "\tadd\t%s, %d, %s\t! delay slot\n" reg_sp ss reg_sp;
+      Printf.fprintf oc "\tsub\t%s, %s, %d\n" reg_sp reg_sp ss;   
+      (* Printf.fprintf oc "\tadd\t%s, %d, %s\t! delay slot\n" reg_sp ss reg_sp;
       Printf.fprintf oc "\tsub\t%s, %d, %s\n" reg_sp ss reg_sp; *)
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (ss - 4);        
       Printf.fprintf oc "\tld\t%s, 0, %s\n" reg_ra  reg_tmp;

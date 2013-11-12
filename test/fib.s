@@ -8,9 +8,11 @@ fib.10:
 	add	%25, %29, 0
 	st	%25, %0
 	mov	%0, %1
-	add	%25, %29 ,4
+	add	%25, %29, 4
 	st	%25, %27
+	add	%29, %29, 8
 	call	%27, fib.10
+	sub	%29, %29, 8
 	add	%25, %29, 4
 	ld	%27, 0, %25
 	add	%25, %29, 0
@@ -19,9 +21,11 @@ fib.10:
 	add	%25, %29, 4
 	st	%25, %0
 	mov	%0, %1
-	add	%25, %29 ,12
+	add	%25, %29, 12
 	st	%25, %27
+	add	%29, %29, 16
 	call	%27, fib.10
+	sub	%29, %29, 16
 	add	%25, %29, 12
 	ld	%27, 0, %25
 	add	%25, %29, 4
@@ -33,13 +37,17 @@ brle_else.24:
 .global	min_caml_start
 min_caml_start:
 	add	%0, 0, 30
-	add	%25, %29 ,4
+	add	%25, %29, 4
 	st	%25, %27
+	add	%29, %29, 8
 	call	%27, fib.10
+	sub	%29, %29, 8
 	add	%25, %29, 4
 	ld	%27, 0, %25
-	add	%25, %29 ,4
+	add	%25, %29, 4
 	st	%25, %27
+	add	%29, %29, 8
 	call	%27, min_caml_print_int
+	sub	%29, %29, 8
 	add	%25, %29, 4
 	ld	%27, 0, %25
