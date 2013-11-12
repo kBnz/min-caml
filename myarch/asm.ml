@@ -46,18 +46,20 @@ let regs =  Array.init 32 (fun i -> Printf.sprintf "%%%d" i)
 let fregs = Array.init 32 (fun i -> Printf.sprintf "%%f%d" i)
 let allregs = Array.to_list regs
 let allfregs = Array.to_list fregs
-let reg_cl = regs.(Array.length regs - 1) (* closure address (caml2html: sparcasm_regcl) *)
 let reg_sw = regs.(Array.length regs - 2) (* temporary for swap *)
 let reg_fsw = fregs.(Array.length fregs - 1) (* temporary for swap *)
 
-(*  
+(* (*allregsにないので注意*)  
+let reg_cl = "%cl"  
 let reg_sp = "%sp" (* stack pointer *)
 let reg_hp = "%hp" (* heap pointer (caml2html: sparcasm_reghp) *)
 let reg_ra = "%ra" (* return address *)
 let reg_cmp = "%cmp" (* compare result *)
 let reg_tmp = "%tmp" (* temporaly *)
 *)
+    
 
+let reg_cl = regs.(Array.length regs - 1) (* closure address (caml2html: sparcasm_regcl) *)
 let reg_sp = regs.(Array.length regs - 3) (* stack pointer *)
 let reg_hp = regs.(Array.length regs - 4) (* heap pointer (caml2html: sparcasm_reghp) *)
 let reg_ra = regs.(Array.length regs - 5) (* return address *)

@@ -36,7 +36,7 @@ brle_else.24:
 	call	%25, %27
 .global	min_caml_start
 min_caml_start:
-	add	%0, 0, 30
+	mov	%0, 30
 	add	%25, %29, 4
 	st	%25, %27
 	add	%29, %29, 8
