@@ -3,7 +3,7 @@
 .section	".text"
 .global	min_caml_start
 min_caml_start:
-	mov	%28, 64
+	mov	%28, 4096
 	mov	%0, 123
 	add	%25, %29, 4
 	st	%25, %27

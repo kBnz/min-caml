@@ -120,7 +120,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tretl\n";
   | Tail, IfEq(x, y', e1, e2) ->
       Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
-      g'_tail_if oc e2 e1 "be" "be"
+      g'_tail_if oc e2 e1 "brne" "breq"
   | Tail, IfLE(x, y', e1, e2) ->
       Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
       g'_tail_if oc e2 e1 "brle" "brle"
@@ -263,7 +263,7 @@ let f oc (Prog(data, fundefs, e)) =
   Printf.fprintf oc "min_caml_start:\n";
   (* Printf.fprintf oc "\tsave\t%%sp, -112, %%sp\n"; (* from gcc; why 112? *) *)
   (*tekitou*)
-  Printf.fprintf oc "\tmov\t%s, 64\n" reg_hp;  
+  Printf.fprintf oc "\tmov\t%s, 4096\n" reg_hp;  
   stackset := S.empty;
   stackmap := [];
   g oc (NonTail("%g0"), e);
