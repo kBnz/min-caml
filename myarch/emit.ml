@@ -123,10 +123,11 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       g'_tail_if oc e2 e1 "brne" "breq"
   | Tail, IfLE(x, y', e1, e2) ->
       Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
-      g'_tail_if oc e2 e1 "brle" "brle"
+      g'_tail_if oc e2 e1 "bgt" "brle"
   | Tail, IfGE(x, y', e1, e2) ->
-      Printf.fprintf oc "\tcmp\t%s, %s\n" x (pp_id_or_imm y');
-      g'_tail_if oc e1 e2 "bge" "bl"
+      Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
+      Printf.fprintf oc "\tsub\t%s, 0, %s\n" reg_cmp reg_cmp;
+      g'_tail_if oc e2 e1 "bgt" "brle"
   | Tail, IfFEq(x, y, e1, e2) ->
       Printf.fprintf oc "\tfcmpd\t%s, %s\n" x y;
       Printf.fprintf oc "\tnop\n";
