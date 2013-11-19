@@ -137,14 +137,15 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tnop\n";
       g'_tail_if oc e1 e2 "fble" "fbg"
   | NonTail(z), IfEq(x, y', e1, e2) ->
-      Printf.fprintf oc "\tcmp\t%s, %s\n" x (pp_id_or_imm y');
-      g'_non_tail_if oc (NonTail(z)) e1 e2 "be" "bne"
+      Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
+      g'_non_tail_if oc (NonTail(z)) e2 e1 "brne" "breq"
   | NonTail(z), IfLE(x, y', e1, e2) ->
-      Printf.fprintf oc "\tcmp\t%s, %s\n" x (pp_id_or_imm y');
-      g'_non_tail_if oc (NonTail(z)) e2 e1 "ble" "ble"
+      Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
+      g'_non_tail_if oc (NonTail(z)) e2 e1 "bgt" "brle"
   | NonTail(z), IfGE(x, y', e1, e2) ->
-      Printf.fprintf oc "\tcmp\t%s, %s\n" x (pp_id_or_imm y');
-      g'_non_tail_if oc (NonTail(z)) e1 e2 "bge" "bl"
+      Printf.fprintf oc "\tcmp\t%s, %s, %s\n" reg_cmp x (pp_id_or_imm y');
+      Printf.fprintf oc "\tsub\t%s, 0, %s\n" reg_cmp reg_cmp;
+      g'_non_tail_if oc (NonTail(z)) e2 e1 "bgt" "brle"
   | NonTail(z), IfFEq(x, y, e1, e2) ->
       Printf.fprintf oc "\tfcmpd\t%s, %s\n" x y;
       Printf.fprintf oc "\tnop\n";
@@ -207,12 +208,10 @@ and g'_non_tail_if oc dest e1 e2 b bn =
   let b_else = Id.genid (b ^ "_else") in
   let b_cont = Id.genid (b ^ "_cont") in
   Printf.fprintf oc "\t%s\t%s, %s\n" bn b_else reg_cmp;
-  Printf.fprintf oc "\tnop\n";
   let stackset_back = !stackset in
   g oc (dest, e1);
   let stackset1 = !stackset in
-  Printf.fprintf oc "\tb\t%s\n" b_cont;
-  Printf.fprintf oc "\tnop\n";
+  Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp b_cont;
   Printf.fprintf oc "%s:\n" b_else;
   stackset := stackset_back;
   g oc (dest, e2);
