@@ -156,15 +156,14 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   (* 関数呼び出しの仮想命令の実装 (caml2html: emit_call) *)
   | Tail, CallCls(x, ys, zs) -> (* 末尾呼び出し (caml2html: emit_tailcall) *)
       g'_args oc [(x, reg_cl)] ys zs;
-      Printf.fprintf oc "\tld\t[%s + 0], %s\n" reg_cl reg_sw;
-      Printf.fprintf oc "\tjmp\t%s\n" reg_sw;
+      Printf.fprintf oc "\tld\t%s, 0, %s\n" reg_tmp reg_cl;
+      Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp reg_tmp;
   | Tail, CallDir(Id.L(x), ys, zs) -> (* 末尾呼び出し *)
       g'_args oc [] ys zs;
       Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp x;
   | NonTail(a), CallCls(x, ys, zs) ->
       g'_args oc [(x, reg_cl)] ys zs;
       let ss = stacksize () in
-        (*あとでなおす*)
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (ss - 4);
       Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp reg_ra;
       Printf.fprintf oc "\tld\t%s, 0, %s\n" reg_tmp reg_cl;
