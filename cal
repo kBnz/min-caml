@@ -1,0 +1,3 @@
+#compile and link
+./min-caml $1
+./linker $1.s

@@ -44,7 +44,6 @@ val fregs : Id.t array
 val allregs : Id.t list
 val allfregs : Id.t list
 val reg_cl : Id.t
-val reg_sw : Id.t
 val reg_fsw : Id.t
 val reg_ra : Id.t
 val reg_hp : Id.t

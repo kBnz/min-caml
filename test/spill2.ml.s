@@ -16,3 +16,4 @@ create_array_cont:
 	breq	create_array_loop, 0
 create_array_exit:
 	call	%30, %27
+min_caml_end:

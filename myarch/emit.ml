@@ -226,7 +226,7 @@ and g'_args oc x_reg_cl ys zs =
       ys in
   List.iter
     (fun (y, r) -> Printf.fprintf oc "\tmov\t%s, %s\n" r y)
-    (shuffle reg_sw yrs);
+    (shuffle reg_tmp yrs);
   let (d, zfrs) =
     List.fold_left
       (fun (d, zfrs) z -> (d + 1, (z, fregs.(d)) :: zfrs))
@@ -246,7 +246,7 @@ let h oc { name = Id.L(x); args = _; fargs = _; body = e; ret = _ } =
 
 let f oc (Prog(data, fundefs, e)) =
   Format.eprintf "generating assembly...@.";
-  Printf.fprintf oc ".section\t\".rodata\"\n";
+(*  Printf.fprintf oc ".section\t\".rodata\"\n";
   Printf.fprintf oc ".align\t8\n";
   List.iter
     (fun (Id.L(x), d) ->
@@ -254,9 +254,8 @@ let f oc (Prog(data, fundefs, e)) =
       Printf.fprintf oc "\t.long\t0x%lx\n" (gethi d);
       Printf.fprintf oc "\t.long\t0x%lx\n" (getlo d))
     data;
-  Printf.fprintf oc ".section\t\".text\"\n";
-  List.iter (fun fundef -> h oc fundef) fundefs;
-  Printf.fprintf oc ".global\tmin_caml_start\n";
+  Printf.fprintf oc ".section\t\".text\"\n"; 
+  Printf.fprintf oc ".global\tmin_caml_start\n"; *)
   Printf.fprintf oc "min_caml_start:\n";
   (* Printf.fprintf oc "\tsave\t%%sp, -112, %%sp\n"; (* from gcc; why 112? *) *)
   (*tekitou*)
@@ -264,5 +263,8 @@ let f oc (Prog(data, fundefs, e)) =
   stackset := S.empty;
   stackmap := [];
   g oc (NonTail("%g0"), e);
- (* Printf.fprintf oc "\tret\n";
+  Printf.fprintf oc "\tcall\t%s, min_caml_end\n" reg_tmp;  
+  List.iter (fun fundef -> h oc fundef) fundefs;
+
+(* Printf.fprintf oc "\tret\n";
   Printf.fprintf oc "\trestore\n" *)

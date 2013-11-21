@@ -202,7 +202,10 @@ let rec print_asm3 a =
        | Add(x, i) ->
 	   print_string ("Add "^x^(string_of_id_or_imm i)); print_newline ()
        | Sub(x,i) ->
-	   print_string ("Add "^x^(string_of_id_or_imm i)); print_newline ()      
+	   print_string ("Sub "^x^(string_of_id_or_imm i)); print_newline ()
+       | SLL(x,i) ->
+	   print_string ("SLL "^x^(string_of_id_or_imm i)); print_newline ()      
+       
        | Ld(x,y) ->
 	   print_string ("Ld "^x^(string_of_id_or_imm y));
 	   print_newline ()	
