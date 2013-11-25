@@ -1,3 +1,7 @@
+.section	".rodata"
+.align	8
+.section	".text"
+.global	min_caml_start
 min_caml_start:
 	mov	%28, 4096
 	mov	%0, %28
@@ -47,7 +51,7 @@ g.8:
 	call	%30, %27
 .global min_caml_print_int
 min_caml_print_int:
-	inout	-1, %0
+	inout	%30, -1, %0
 	call	%30, %27
 .global min_caml_create_array
 min_caml_create_array:

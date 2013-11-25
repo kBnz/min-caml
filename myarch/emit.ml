@@ -246,7 +246,7 @@ let h oc { name = Id.L(x); args = _; fargs = _; body = e; ret = _ } =
 
 let f oc (Prog(data, fundefs, e)) =
   Format.eprintf "generating assembly...@.";
-(*  Printf.fprintf oc ".section\t\".rodata\"\n";
+  Printf.fprintf oc ".section\t\".rodata\"\n";
   Printf.fprintf oc ".align\t8\n";
   List.iter
     (fun (Id.L(x), d) ->
@@ -255,7 +255,7 @@ let f oc (Prog(data, fundefs, e)) =
       Printf.fprintf oc "\t.long\t0x%lx\n" (getlo d))
     data;
   Printf.fprintf oc ".section\t\".text\"\n"; 
-  Printf.fprintf oc ".global\tmin_caml_start\n"; *)
+  Printf.fprintf oc ".global\tmin_caml_start\n"; 
   Printf.fprintf oc "min_caml_start:\n";
   (* Printf.fprintf oc "\tsave\t%%sp, -112, %%sp\n"; (* from gcc; why 112? *) *)
   (*tekitou*)

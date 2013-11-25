@@ -1,4 +1,4 @@
-let x = truncate 1.23 in
+let x = truncate 0.5 in
 let y = truncate 4.56 in
 let z = truncate (-.7.89) in
 print_int
