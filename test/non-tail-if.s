@@ -1,20 +1,18 @@
 .section	".rodata"
 .align	8
 #l.32:	! -7.890000
-	0x28f5c28f
-	0xc01f8f5c
+	0xc0fc7ae1
 #l.30:	! 4.560000
-	.long	0xa3d70a3d
-	.long	0x40123d70
-l.28:	! 0.500000
-	.long	0x0
-	.long	0x3fe00000
+	0x4091eb85
+#l.28:	! 0.500000
+	0x3f000000
 .section	".text"
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 4096
 	mov	%0, l.28
-	ldd	[%0 + 0], %f0
+	add	%30, %0, 0
+	fld	%f0, 0, %30
 	add	%30, %29, 4
 	st	%30, %27
 	add	%29, %29, 8
@@ -23,7 +21,8 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, 0, %30
 	mov	%1, l.30
-	ldd	[%1 + 0], %f0
+	add	%30, %1, 0
+	fld	%f0, 0, %30
 	add	%30, %29, 0
 	st	%30, %0
 	add	%30, %29, 4
@@ -34,7 +33,8 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, 0, %30
 	mov	%1, l.32
-	ldd	[%1 + 0], %f0
+	add	%30, %1, 0
+	fld	%f0, 0, %30
 	add	%30, %29, 4
 	st	%30, %0
 	add	%30, %29, 12
@@ -83,3 +83,22 @@ bgt_cont.42:
 	add	%30, %29, 12
 	ld	%27, 0, %30
 	call	%30, min_caml_end
+.global min_caml_print_int
+min_caml_print_int:
+	inout	%30, -1, %0
+	call	%30, %27
+.global min_caml_create_array
+min_caml_create_array:
+	mov	%30, %0
+	mov	%0, %28
+create_array_loop:
+	cmp	%26, %30, 0
+	breq	create_array_exit, %26
+create_array_cont:
+	st	%28, %1
+	sub	%30, %30, 1
+	add	%28, %28, 4
+	breq	create_array_loop, 0
+create_array_exit:
+	call	%30, %27
+min_caml_end:

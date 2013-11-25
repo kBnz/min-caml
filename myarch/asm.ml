@@ -43,7 +43,7 @@ let fletd(x, e1, e2) = Let((x, Type.Float), e1, e2)
 let seq(e1, e2) = Let((Id.gentmp Type.Unit, Type.Unit), e1, e2)
 
 let regs =  Array.init 26 (fun i -> Printf.sprintf "%%%d" i)
-let fregs = Array.init 32 (fun i -> Printf.sprintf "%%f%d" i)
+let fregs = Array.init 32 (fun i -> Printf.sprintf "%%%d" i)
 let allregs = Array.to_list regs
 let allfregs = Array.to_list fregs
 let reg_fsw = fregs.(Array.length fregs - 1) (* temporary for swap *)

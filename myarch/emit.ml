@@ -1,5 +1,4 @@
 open Asm
-
 external gethi : float -> int32 = "gethi"
 external getlo : float -> int32 = "getlo"
 
@@ -69,17 +68,21 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
     Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp x
   | NonTail(x), FMovD(y) when x = y -> ()
   | NonTail(x), FMovD(y) ->
-      Printf.fprintf oc "\tfmovs\t%s, %s\n" y x;
-      Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg y) (co_freg x)
+      Printf.fprintf oc "\tfmov\t%s, %s\n" x y;
+      Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg x) (co_freg y)
   | NonTail(x), FNegD(y) ->
       Printf.fprintf oc "\tfnegs\t%s, %s\n" y x;
       if x <> y then Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg y) (co_freg x)
-  | NonTail(x), FAddD(y, z) -> Printf.fprintf oc "\tfaddd\t%s, %s, %s\n" y z x
-  | NonTail(x), FSubD(y, z) -> Printf.fprintf oc "\tfsubd\t%s, %s, %s\n" y z x
-  | NonTail(x), FMulD(y, z) -> Printf.fprintf oc "\tfmuld\t%s, %s, %s\n" y z x
-  | NonTail(x), FDivD(y, z) -> Printf.fprintf oc "\tfdivd\t%s, %s, %s\n" y z x
-  | NonTail(x), LdDF(y, z') -> Printf.fprintf oc "\tldd\t[%s + %s], %s\n" y (pp_id_or_imm z') x
-  | NonTail(_), StDF(x, y, z') -> Printf.fprintf oc "\tstd\t%s, [%s + %s]\n" x y (pp_id_or_imm z')
+  | NonTail(x), FAddD(y, z) -> Printf.fprintf oc "\tfadd\t%s, %s, %s\n" x y z
+  | NonTail(x), FSubD(y, z) -> Printf.fprintf oc "\tfsub\t%s, %s, %s\n" x y z
+  | NonTail(x), FMulD(y, z) -> Printf.fprintf oc "\tfmul\t%s, %s, %s\n" x y z
+  | NonTail(x), FDivD(y, z) -> Printf.fprintf oc "\tfdiv\t%s, %s, %s\n" x y z
+  | NonTail(x), LdDF(y, z') ->
+    Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp  y (pp_id_or_imm z'); 
+    Printf.fprintf oc "\tfld\t%s, 0, %s\n" x reg_tmp
+  | NonTail(_), StDF(x, y, z') ->
+    Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp  y (pp_id_or_imm z'); 
+    Printf.fprintf oc "\tfst\t%s, %s\n" reg_tmp x
   | NonTail(_), Comment(s) -> Printf.fprintf oc "\t! %s\n" s
   (* 退避の仮想命令の実装 (caml2html: emit_save) *)
   | NonTail(_), Save(x, y) when List.mem x allregs && not (S.mem y !stackset) ->
@@ -88,7 +91,8 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tst\t%s, %s\n" reg_tmp x
   | NonTail(_), Save(x, y) when List.mem x allfregs && not (S.mem y !stackset) ->
       savef y;
-      Printf.fprintf oc "\tstd\t%s, [%s + %d]\n" x reg_sp (offset y)
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+      Printf.fprintf oc "\tfst\t%s, %s\n" reg_tmp x
   | NonTail(_), Save(x, y) -> assert (S.mem y !stackset); ()
   (* 復帰の仮想命令の実装 (caml2html: emit_restore) *)
   | NonTail(x), Restore(y) when List.mem x allregs ->
@@ -96,7 +100,8 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tld\t%s, 0, %s\n" x reg_tmp
   | NonTail(x), Restore(y) ->
       assert (List.mem x allfregs);
-      Printf.fprintf oc "\tldd\t[%s + %d], %s\n" reg_sp (offset y) x
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+      Printf.fprintf oc "\tfld\t%s, 0, %s\n" reg_tmp x
   (* 末尾だったら計算結果を第一レジスタにセットしてret (caml2html: emit_tailret) *)
   | Tail, (Nop | St _ | StDF _ | Comment _ | Save _ as exp) ->
       g' oc (NonTail(Id.gentmp Type.Unit), exp);
@@ -244,15 +249,15 @@ let h oc { name = Id.L(x); args = _; fargs = _; body = e; ret = _ } =
   stackmap := [];
   g oc (Tail, e)
 
+open Int32    
+    
 let f oc (Prog(data, fundefs, e)) =
   Format.eprintf "generating assembly...@.";
   Printf.fprintf oc ".section\t\".rodata\"\n";
   Printf.fprintf oc ".align\t8\n";
   List.iter
     (fun (Id.L(x), d) ->
-      Printf.fprintf oc "%s:\t! %f\n" x d;
-      Printf.fprintf oc "\t.long\t0x%lx\n" (gethi d);
-      Printf.fprintf oc "\t.long\t0x%lx\n" (getlo d))
+      Printf.fprintf oc "%s:\t 0x%lx\n" x (bits_of_float d))
     data;
   Printf.fprintf oc ".section\t\".text\"\n"; 
   Printf.fprintf oc ".global\tmin_caml_start\n"; 
