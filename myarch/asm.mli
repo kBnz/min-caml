@@ -6,6 +6,7 @@ and exp =
   | Nop
   | Set of int
   | SetL of Id.l
+  | SetF of Id.l
   | Mov of Id.t
   | Neg of Id.t
   | Add of Id.t * id_or_imm

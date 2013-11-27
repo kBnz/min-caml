@@ -53,6 +53,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(_), Nop -> ()
   | NonTail(x), Set(i) -> Printf.fprintf oc "\tmov\t%s, %d\n" x i
   | NonTail(x), SetL(Id.L(y)) -> Printf.fprintf oc "\tmov\t%s, %s\n" x y
+  | NonTail(x), SetF(Id.L(y)) -> Printf.fprintf oc "\tfmov\t%s, %s\n" x y    
   | NonTail(x), Mov(y) when x = y -> ()
     (* #### inとoutの順番に注意 #### *)    
   | NonTail(x), Mov(y) -> Printf.fprintf oc "\tmov\t%s, %s\n" x y
@@ -108,15 +109,16 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp reg_ra
   (*  Printf.fprintf oc "\tretl\n";
       Printf.fprintf oc "\tnop\n" *)
-  | Tail, (Set _ | SetL _ | Mov _ | Neg _ | Add _ | Sub _ | SLL _ | Ld _ as exp) ->
+  | Tail, (Set _ | SetL _ | SetF _ | Mov _ | Neg _ | Add _ | Sub _ | SLL _ | Ld _ as exp) ->
       g' oc (NonTail(regs.(0)), exp);
       Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp reg_ra
   (*  Printf.fprintf oc "\tretl\n";
       Printf.fprintf oc "\tnop\n" *)
   | Tail, (FMovD _ | FNegD _ | FAddD _ | FSubD _ | FMulD _ | FDivD _ | LdDF _  as exp) ->
       g' oc (NonTail(fregs.(0)), exp);
-      Printf.fprintf oc "\tretl\n";
-      Printf.fprintf oc "\tnop\n"
+      Printf.fprintf oc "\tcall\t%s, %s\n" reg_tmp reg_ra
+  (*    Printf.fprintf oc "\tretl\n";
+        Printf.fprintf oc "\tnop\n" *)
   | Tail, (Restore(x) as exp) ->
       (match locate x with
       | [i] -> g' oc (NonTail(regs.(0)), exp)

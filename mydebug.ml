@@ -146,7 +146,8 @@ let rec print_closure2 c nest =
     | IfLE(e1, e2, e3, e4) -> print_string ("IfLE "^e1^" "^e2);
 	print_newline (); print_closure2 e3 (nest+1);
 	print_closure2 e4 (nest+1)
-    | Let((vn, tn), e1, e2) -> print_string ("Let "^vn);
+    | Let((vn, tn), e1, e2) -> print_string ("Let "^vn^":");
+      print_type tn;
 	print_newline (); print_closure2 e1 (nest+1);
 	print_closure2 e2 (nest+1)
     | Var x -> print_string ("Id("^x^")"); print_newline ()
@@ -197,6 +198,7 @@ let rec print_asm3 a =
        | Nop -> print_string "Nop"; print_newline ()
        | Set(x) -> print_string ("Set "^(string_of_int x)); print_newline ()
        | SetL(Id.L x)  -> print_string ("SetL "^x); print_newline ()
+       | SetF(Id.L x)  -> print_string ("SetF "^x); print_newline ()
        | Mov(x) -> print_string ("Mov "^x); print_newline ()
        | Neg(x) -> print_string ("Neg "^x); print_newline ()
        | Add(x, i) ->

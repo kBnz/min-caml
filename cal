@@ -1,3 +1,7 @@
 #compile and link
 ./min-caml $1
 ./linker $1.s
+#浮動小数点レジスタの%fを%に変換
+sed -e s/%f/%/g $1.s > cal_memo.tmp
+cp cal_memo.tmp $1.s
+rm cal_memo.tmp
