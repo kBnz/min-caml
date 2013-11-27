@@ -196,6 +196,8 @@ let rec print_asm3 a =
     (match p with
        | Nop -> print_string "Nop"; print_newline ()
        | Set(x) -> print_string ("Set "^(string_of_int x)); print_newline ()
+       | Set(x) -> print_string ("Set "^(string_of_int x)); print_newline ()
+
        | SetL(Id.L x)  -> print_string ("SetL "^x); print_newline ()
        | Mov(x) -> print_string ("Mov "^x); print_newline ()
        | Neg(x) -> print_string ("Neg "^x); print_newline ()
