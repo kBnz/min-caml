@@ -8,16 +8,8 @@ min_caml_print_float:
 	call	%30, %27
 .global min_caml_abs_float
 min_caml_abs_float:
-	fabs	%0, %0
-	call	%30, %27
-.global min_caml_sqrt
-min_caml_sqrt:
-	fsqrt	%0, %0
-	call	%30, %27
-.global min_caml_float_of_int
-min_caml_float_of_int:
-	itof	%0, %0
-	call	%30, %27
+	fabs	%0, 0, %0
+	call	%30, %27	
 .global min_caml_create_array
 min_caml_create_array:
 	mov	%30, %0
@@ -32,3 +24,4 @@ create_array_cont:
 	breq	create_array_loop, 0
 create_array_exit:
 	call	%30, %27
+min_caml_end:

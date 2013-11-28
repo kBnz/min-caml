@@ -12,7 +12,7 @@ let savef x =
   stackset := S.add x !stackset;
   if not (List.mem x !stackmap) then
     (let pad =
-      if List.length !stackmap mod 2 = 0 then [] else [Id.gentmp Type.Int] in
+      (*if List.length !stackmap mod 2 = 0 then [] else*) [Id.gentmp Type.Int] in
     stackmap := !stackmap @ pad @ [x; x])
 let locate x =
   let rec loc = function
@@ -70,14 +70,16 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(x), FMovD(y) when x = y -> ()
   | NonTail(x), FMovD(y) ->
       Printf.fprintf oc "\tfmov\t%s, %s\n" x y;
-      Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg x) (co_freg y)
+  (* Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg x) (co_freg y) *)
   | NonTail(x), FNegD(y) ->
       Printf.fprintf oc "\tfsub\t%s, 0, %s\n" x y;
-      if x <> y then Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg y) (co_freg x)
+  (*    if x <> y then Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg y) (co_freg x) *)
   | NonTail(x), FAddD(y, z) -> Printf.fprintf oc "\tfadd\t%s, %s, %s\n" x y z
   | NonTail(x), FSubD(y, z) -> Printf.fprintf oc "\tfsub\t%s, %s, %s\n" x y z
   | NonTail(x), FMulD(y, z) -> Printf.fprintf oc "\tfmul\t%s, %s, %s\n" x y z
-  | NonTail(x), FDivD(y, z) -> Printf.fprintf oc "\tfdiv\t%s, %s, %s\n" x y z
+  | NonTail(x), FDivD(y, z) ->
+    (Printf.fprintf oc "\tfinv\t%s, %s\n" reg_fsw z;
+    Printf.fprintf oc "\tfmul\t%s, %s, %s\n" x y reg_fsw)
   | NonTail(x), LdDF(y, z') ->
     Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp  y (pp_id_or_imm z'); 
     Printf.fprintf oc "\tfld\t%s, %s\n" x reg_tmp
@@ -179,10 +181,10 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       if List.mem a allregs && a <> regs.(0) then
 	Printf.fprintf oc "\tmov\t%s, %s\n" a regs.(0)
       else if List.mem a allfregs && a <> fregs.(0) then
-	(Printf.fprintf oc "\tfmovs\t%s, %s\n" fregs.(0) a;
-	 Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg fregs.(0)) (co_freg a))
+	(Printf.fprintf oc "\tfmov\t%s, %s\n" a fregs.(0)(*;
+	 Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg fregs.(0)) (co_freg a)*))
   | NonTail(a), CallDir(Id.L(x), ys, zs) ->
-      g'_args oc [] ys zs;
+    g'_args oc [] ys zs;
       let ss = stacksize () in
         (*reg_spはcall直前と直後以外変更しない*)
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (ss - 4);        
@@ -197,8 +199,8 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       if List.mem a allregs && a <> regs.(0) then
 	Printf.fprintf oc "\tmov\t%s, %s\n" a regs.(0)
       else if List.mem a allfregs && a <> fregs.(0) then
-	(Printf.fprintf oc "\tfmovs\t%s, %s\n" fregs.(0) a;
-	 Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg fregs.(0)) (co_freg a))
+	(Printf.fprintf oc "\tfmov\t%s, %s\n" a fregs.(0)(*;
+	 Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg fregs.(0)) (co_freg a)*))
 and g'_tail_if oc e1 e2 b bn =
   let b_else = Id.genid (b ^ "_else") in
   Printf.fprintf oc "\t%s\t%s, %s\n" bn b_else reg_cmp;
@@ -237,14 +239,15 @@ and g'_args oc x_reg_cl ys zs =
       zs in
   List.iter
     (fun (z, fr) ->
-      Printf.fprintf oc "\tfmovs\t%s, %s\n" z fr;
-      Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg z) (co_freg fr))
+      Printf.fprintf oc "\tfmov\t%s, %s\n" fr z(*;
+      Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg z) (co_freg fr)*))
     (shuffle reg_fsw zfrs)
 
 let h oc { name = Id.L(x); args = _; fargs = _; body = e; ret = _ } =
   Printf.fprintf oc "%s:\n" x;
   stackset := S.empty;
   stackmap := [];
+  (*g oc (Tail, e)*)
   g oc (Tail, e)
 
 open Int32    

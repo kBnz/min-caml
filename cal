@@ -5,3 +5,4 @@
 sed -e s/%f/%/g $1.s > cal_memo.tmp
 cp cal_memo.tmp $1.s
 rm cal_memo.tmp
+cp $1.s ~/ドキュメント/sim

@@ -45,7 +45,13 @@ let seq(e1, e2) = Let((Id.gentmp Type.Unit, Type.Unit), e1, e2)
 
 let regs =  Array.init 26 (fun i -> Printf.sprintf "%%%d" i)
 let fregs = Array.init 32 (fun i -> Printf.sprintf "%%f%d" i)
-let allregs = Array.to_list regs
+let reg_cl = "%31" (* closure address (caml2html: sparcasm_regcl) *)
+let reg_tmp = "%30" (* temporary *) 
+let reg_sp = "%29" (* stack pointer *)
+let reg_hp = "%28" (* heap pointer (caml2html: sparcasm_reghp) *)
+let reg_ra = "%27" (* return address *)
+let reg_cmp = "%26" (* compare result *)
+let allregs = (Array.to_list regs)@[reg_cl]
 let allfregs = Array.to_list fregs
 let reg_fsw = fregs.(Array.length fregs - 1) (* temporary for swap *)
 
@@ -57,16 +63,7 @@ let reg_ra = "%ra" (* return address *)
 let reg_cmp = "%cmp" (* compare result *)
 let reg_tmp = "%tmp" (* temporaly *)
 *)
-    
-
-let reg_cl = "%31" (* closure address (caml2html: sparcasm_regcl) *)
-let reg_tmp = "%30" (* temporary *) 
-let reg_sp = "%29" (* stack pointer *)
-let reg_hp = "%28" (* heap pointer (caml2html: sparcasm_reghp) *)
-let reg_ra = "%27" (* return address *)
-let reg_cmp = "%26" (* compare result *)
-
-  
+      
 let is_reg x = (x.[0] = '%')
 let co_freg_table =
   let ht = Hashtbl.create 16 in
