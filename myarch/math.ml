@@ -1,16 +1,26 @@
 let rec mysin x =
-let seido = 10 in
-let rec fact n = (if n <= 1.0  then 1.0 else (n *. (fact (n-.1.0)))) in
-let rec poly x n = (if n = 1 then x else x *. (poly x (n-1))) in
-let rec mymod a b = (if a < b then a else mymod (a-b) b) in
-  let rec loop c =
-    (if c < seido then
-      (if (mymod c 2) = 0 then
-        (loop (c+1))+.(poly x (c+c+1))/.(fact (float_of_int (c+c+1)))
-      else
-        (loop (c+1))-.(poly x (c+c+1))/.(fact (float_of_int (c+c+1))))
+  let rec loop c x2 s sgn=
+    if 0 < c then
+      let c2 = (float_of_int c) in
+      let f3 = (2.0*.c2)*.(2.0*.c2+.1.0) in
+        (loop (c-1) x2 ((s+.sgn)*.x2/.f3) (sgn*.(-1.0)))
     else
-      0.0)
+      s*.x+.x
   in
-    loop 0
-in print_float (mysin 1.0)
+    (loop 10 (x*.x) 0.0 1.0)
+
+let pi = 3.141592653 in      
+let rec mycos x = sin (pi/.2.0 -. x) in print_float (mycos 1.0)*)
+
+
+let rec myatan x=
+  let x2 = x*.x in
+  let rec loop c y=
+    if 0.0 < c then
+      (loop (c-.1.0) ((c*.c)*.x2/.(2.0*.c+.1.0+.y)))
+    else
+      (x/.(1.0+.y))
+  in
+    (loop 10.0 (x*.x))
+in print_float (myatan 1.0)
+

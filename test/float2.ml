@@ -1,7 +1,4 @@
-let rec g z =
-let rec f x y = x +. y in
-let a = 0.5 in
-let b = 1.1 in
-  print_int ((int_of_float (f a b)) + z)
+let rec f x =
+  let a = Array.create 3 x in a.(1)
 in
-  g 5
+  print_float (f 2.9)

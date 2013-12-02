@@ -60,7 +60,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(x), Neg(y) -> Printf.fprintf oc "\tsub\t%s, 0, %s\n" x y
   | NonTail(x), Add(y, z') -> Printf.fprintf oc "\tadd\t%s, %s, %s\n" x y (pp_id_or_imm z')
   | NonTail(x), Sub(y, z') -> Printf.fprintf oc "\tsub\t%s, %s, %s\n" x y (pp_id_or_imm z')
-  | NonTail(x), SLL(y, z') -> Printf.fprintf oc "\tsll\t%s, %s, %s\n" x y (pp_id_or_imm z')
+  | NonTail(x), SLL(y, z') -> Printf.fprintf oc "\tsh\t%s, %s, %s\n" x y (pp_id_or_imm z')
   | NonTail(x), Ld(y, z') ->
     Printf.fprintf oc "\tadd\t%s, %s, %s\n" reg_tmp y (pp_id_or_imm z');
     Printf.fprintf oc "\tld\t%s, %s\n" x reg_tmp

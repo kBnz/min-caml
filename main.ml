@@ -8,7 +8,7 @@ let rec iter n e = (* 最適化処理をくりかえす (caml2html: main_iter) *)
   iter (n - 1) e'
 
 let lexbuf outchan l = (* バッファをコンパイルしてチャンネルへ出力する (caml2html: main_lexbuf) *)
-  Id.counter := 0;
+  Id.counter := 100;
   Typing.extenv := M.empty;
   Emit.f outchan
     (Mydebug.print_regalloc (RegAlloc.f

@@ -123,7 +123,7 @@ let rec g env = function (* 式の仮想マシンコード生成 (caml2html: virtual_g) *)
       (match M.find x env with
       | Type.Array(Type.Unit) -> Ans(Nop)
       | Type.Array(Type.Float) ->
-	  Let((offset, Type.Int), SLL(y, C(3)),
+	  Let((offset, Type.Int), SLL(y, C(2)),
 	      Ans(LdDF(x, V(offset))))
       | Type.Array(_) ->
 	  Let((offset, Type.Int), SLL(y, C(2)),
