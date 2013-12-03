@@ -130,23 +130,23 @@ min_caml_cos:
 	call	%30, min_caml_sin
 .global min_caml_print_int
 min_caml_print_int:
-	inout	%30, -1, %0
+	inout	%30, %0, -1
 	call	%30, %27
 .global min_caml_print_byte
 min_caml_print_byte:
-	inout	%30, -2, %0
+	inout	%30, %0, -2
 	call	%30, %27
 .global min_caml_print_float
 min_caml_print_float:
-	finout	%30, -1, %0
+	finout	%30, %0, -1
 	call	%30, %27
 .global min_caml_read_int
 min_caml_read_int:
-	inout	%30, 1, %0
+	inout	%0, 1
 	call	%30, %27
 .global min_caml_read_float
 min_caml_read_float:
-	finout	%30, 1, %0
+	finout	%0, 1
 	call	%30, %27
 .global min_caml_abs_float
 min_caml_abs_float:

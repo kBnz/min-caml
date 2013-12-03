@@ -200,11 +200,23 @@ min_caml_cos:
 	call	%30, min_caml_sin
 .global min_caml_print_int
 min_caml_print_int:
-	inout	%30, -1, %0
+	inout	%30, %0, -1
+	call	%30, %27
+.global min_caml_print_byte
+min_caml_print_byte:
+	inout	%30, %0, -2
 	call	%30, %27
 .global min_caml_print_float
 min_caml_print_float:
-	finout	%30, -1, %0
+	finout	%30, %0, -1
+	call	%30, %27
+.global min_caml_read_int
+min_caml_read_int:
+	inout	%30, %0, 1
+	call	%30, %27
+.global min_caml_read_float
+min_caml_read_float:
+	finout	%30, %0, 1
 	call	%30, %27
 .global min_caml_abs_float
 min_caml_abs_float:
@@ -222,6 +234,11 @@ min_caml_float_of_int:
 min_caml_int_of_float:
 	ftoi	%0, %0
 	call	%30, %27        
+.global min_caml_floor
+min_caml_floor:
+	ftoi	%30, %0
+	itof	%0, %30
+	call	%30, %27    
 .global min_caml_create_array
 min_caml_create_array:
 	mov	%30, %0
@@ -230,12 +247,26 @@ create_array_loop:
 	cmp	%26, %30, 0
 	breq	create_array_exit, %26
 create_array_cont:
-	st	%28, %1
+	st	%1, %28
 	sub	%30, %30, 1
 	add	%28, %28, 4
-	breq	create_array_loop, 0
+	mov	%26, 0
+	breq	create_array_loop, %26
 create_array_exit:
 	call	%30, %27
-min_caml_end:
-min_caml_end:
+.global min_caml_create_float_array
+min_caml_create_float_array:
+	mov	%30, %0
+	mov	%0, %28
+create_float_array_loop:
+	cmp	%26, %30, 0
+	breq	create_float_array_exit, %26
+create_float_array_cont:
+	fst	%0, %28
+	sub	%30, %30, 1
+	add	%28, %28, 4
+	mov	%26, 0
+	breq	create_float_array_loop, %26
+create_float_array_exit:
+	call	%30, %27
 min_caml_end:
