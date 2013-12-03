@@ -132,9 +132,21 @@ min_caml_cos:
 min_caml_print_int:
 	inout	%30, -1, %0
 	call	%30, %27
+.global min_caml_print_byte
+min_caml_print_byte:
+	inout	%30, -2, %0
+	call	%30, %27
 .global min_caml_print_float
 min_caml_print_float:
 	finout	%30, -1, %0
+	call	%30, %27
+.global min_caml_read_int
+min_caml_read_int:
+	inout	%30, 1, %0
+	call	%30, %27
+.global min_caml_read_float
+min_caml_read_float:
+	finout	%30, 1, %0
 	call	%30, %27
 .global min_caml_abs_float
 min_caml_abs_float:
@@ -152,6 +164,11 @@ min_caml_float_of_int:
 min_caml_int_of_float:
 	ftoi	%0, %0
 	call	%30, %27        
+.global min_caml_floor
+min_caml_floor:
+	ftoi	%30, %0
+	itof	%0, %30
+	call	%30, %27    
 .global min_caml_create_array
 min_caml_create_array:
 	mov	%30, %0
