@@ -244,13 +244,13 @@ brne_cont.5892:
 	fld	%1, %30
 	finv	%31, %0
 	fmul	%1, %1, %31
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	add	%30, %0, 8
 	fld	%1, %30
 	finv	%31, %0
 	fmul	%0, %1, %31
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 sgn.2125:
@@ -293,7 +293,7 @@ read_environ.2129:
 	ld	%27, %30
 	add	%30, %29, 4
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2312
 	add	%30, %29, 8
@@ -307,7 +307,7 @@ read_environ.2129:
 	ld	%27, %30
 	add	%30, %29, 8
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	add	%30, %29, 12
 	st	%27, %30
@@ -383,7 +383,7 @@ read_environ.2129:
 	ld	%27, %30
 	add	%30, %29, 44
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2376
 	add	%30, %29, 36
@@ -399,7 +399,7 @@ read_environ.2129:
 	ld	%27, %30
 	add	%30, %29, 48
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 52
 	st	%27, %30
@@ -433,7 +433,7 @@ read_environ.2129:
 	ld	%27, %30
 	mov	%0, 2360
 	fsub	%0, 0, %0
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 68
 	st	%27, %30
@@ -492,7 +492,7 @@ read_environ.2129:
 	add	%30, %29, 80
 	fld	%1, %30
 	fmul	%0, %1, %0
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2380
 	add	%30, %29, 88
@@ -527,7 +527,7 @@ read_environ.2129:
 	fsub	%0, 0, %0
 	fmov	%1, #l.4586
 	fmul	%0, %0, %1
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2324
 	mov	%1, 2368
@@ -539,7 +539,7 @@ read_environ.2129:
 	fmul	%0, %0, %1
 	fmov	%1, #l.4586
 	fmul	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2348
 	mov	%1, 2324
@@ -559,7 +559,7 @@ read_environ.2129:
 	add	%30, %1, 4
 	fld	%1, %30
 	fadd	%0, %0, %1
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2348
 	mov	%1, 2324
@@ -569,7 +569,7 @@ read_environ.2129:
 	add	%30, %1, 8
 	fld	%1, %30
 	fadd	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 read_nth_object.2131:
@@ -645,7 +645,7 @@ read_nth_object.2131:
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
@@ -656,7 +656,7 @@ read_nth_object.2131:
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%1, 3
 	fmov	%0, #l.4565
@@ -690,7 +690,7 @@ read_nth_object.2131:
 	ld	%27, %30
 	add	%30, %29, 24
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
@@ -701,7 +701,7 @@ read_nth_object.2131:
 	ld	%27, %30
 	add	%30, %29, 24
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	fmov	%0, #l.4565
 	add	%30, %29, 32
@@ -756,7 +756,7 @@ bgt_cont.5904:
 	ld	%27, %30
 	add	%30, %29, 44
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%1, 3
 	fmov	%0, #l.4565
@@ -790,7 +790,7 @@ bgt_cont.5904:
 	ld	%27, %30
 	add	%30, %29, 48
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 52
 	st	%27, %30
@@ -801,7 +801,7 @@ bgt_cont.5904:
 	ld	%27, %30
 	add	%30, %29, 48
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%1, 3
 	fmov	%0, #l.4565
@@ -853,7 +853,7 @@ bgt_cont.5904:
 	ld	%27, %30
 	add	%30, %29, 52
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %29, 60
 	st	%27, %30
@@ -871,7 +871,7 @@ bgt_cont.5904:
 	ld	%27, %30
 	add	%30, %29, 52
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, brne_cont.5906
 brne_else.5905:
@@ -1030,7 +1030,7 @@ brne_else.5919:
 brne_cont.5920:
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	add	%30, %0, 8
 	fld	%0, %30
@@ -1068,7 +1068,7 @@ brne_else.5923:
 brne_cont.5924:
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 brne_cont.5910:
 	add	%30, %29, 16
@@ -1091,7 +1091,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 128
 	ld	%0, %30
-	add	%30, %0, 80
+	add	%30, %0, 40
 	fst	%0, %30
 	mov	%0, 2704
 	add	%30, %29, 52
@@ -1109,7 +1109,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 132
 	ld	%0, %30
-	add	%30, %0, 88
+	add	%30, %0, 44
 	fst	%0, %30
 	mov	%0, 2704
 	add	%30, %29, 52
@@ -1127,7 +1127,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 136
 	ld	%0, %30
-	add	%30, %0, 96
+	add	%30, %0, 48
 	fst	%0, %30
 	mov	%0, 2704
 	add	%30, %29, 52
@@ -1145,7 +1145,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 140
 	ld	%0, %30
-	add	%30, %0, 104
+	add	%30, %0, 52
 	fst	%0, %30
 	mov	%0, 2704
 	add	%30, %29, 52
@@ -1163,7 +1163,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 144
 	ld	%0, %30
-	add	%30, %0, 112
+	add	%30, %0, 56
 	fst	%0, %30
 	mov	%0, 2704
 	add	%30, %29, 52
@@ -1181,7 +1181,7 @@ brne_cont.5910:
 	ld	%27, %30
 	add	%30, %29, 148
 	ld	%0, %30
-	add	%30, %0, 120
+	add	%30, %0, 60
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1213,7 +1213,7 @@ brne_cont.5910:
 	fld	%2, %30
 	fmul	%1, %1, %2
 	fsub	%0, %0, %1
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1235,7 +1235,7 @@ brne_cont.5910:
 	fld	%2, %30
 	fmul	%1, %1, %2
 	fadd	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1245,7 +1245,7 @@ brne_cont.5910:
 	add	%30, %1, 60
 	fld	%1, %30
 	fmul	%0, %0, %1
-	add	%30, %0, 24
+	add	%30, %0, 12
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1267,7 +1267,7 @@ brne_cont.5910:
 	fld	%2, %30
 	fmul	%1, %1, %2
 	fadd	%0, %0, %1
-	add	%30, %0, 32
+	add	%30, %0, 16
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1289,14 +1289,14 @@ brne_cont.5910:
 	fld	%2, %30
 	fmul	%1, %1, %2
 	fsub	%0, %0, %1
-	add	%30, %0, 40
+	add	%30, %0, 20
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
 	add	%30, %1, 52
 	fld	%0, %30
 	fsub	%0, 0, %0
-	add	%30, %0, 48
+	add	%30, %0, 24
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1306,7 +1306,7 @@ brne_cont.5910:
 	add	%30, %1, 48
 	fld	%1, %30
 	fmul	%0, %0, %1
-	add	%30, %0, 56
+	add	%30, %0, 28
 	fst	%0, %30
 	mov	%0, 2704
 	mov	%1, 2704
@@ -1316,7 +1316,7 @@ brne_cont.5910:
 	add	%30, %1, 48
 	fld	%1, %30
 	fmul	%0, %0, %1
-	add	%30, %0, 64
+	add	%30, %0, 32
 	fst	%0, %30
 	add	%30, %29, 20
 	ld	%0, %30
@@ -1441,7 +1441,7 @@ brne_cont.5910:
 	fadd	%0, %2, %0
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%1, 2704
 	add	%30, %1, 8
@@ -1496,7 +1496,7 @@ brne_cont.5910:
 	fadd	%0, %2, %0
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	fmov	%0, #l.4540
 	mov	%0, 2704
@@ -1562,7 +1562,7 @@ brne_cont.5910:
 	fmul	%4, %4, %6
 	fadd	%2, %2, %4
 	fmul	%0, %0, %2
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	fmov	%0, #l.4540
 	mov	%1, 2704
@@ -1592,7 +1592,7 @@ brne_cont.5910:
 	fmul	%1, %1, %3
 	fadd	%1, %2, %1
 	fmul	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, brne_cont.5928
 brne_else.5927:
@@ -3055,7 +3055,7 @@ solver.2166:
 	fsub	%0, %1, %0
 	add	%30, %29, 28
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2796
 	add	%30, %29, 8
@@ -3081,7 +3081,7 @@ solver.2166:
 	fsub	%0, %1, %0
 	add	%30, %29, 44
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	add	%30, %29, 4
 	ld	%0, %30
@@ -3461,7 +3461,7 @@ is_outside.2176:
 	fsub	%0, %1, %0
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2820
 	mov	%1, 2808
@@ -3486,7 +3486,7 @@ is_outside.2176:
 	fsub	%0, %1, %0
 	add	%30, %29, 36
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	add	%30, %29, 0
 	ld	%0, %30
@@ -3616,7 +3616,7 @@ brne_cont.6081:
 	add	%30, %1, 4
 	fld	%2, %30
 	fadd	%1, %1, %2
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	mov	%0, 2808
 	mov	%2, 2360
@@ -3626,7 +3626,7 @@ brne_cont.6081:
 	add	%30, %1, 8
 	fld	%1, %30
 	fadd	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 0
 	add	%30, %29, 4
@@ -3895,7 +3895,7 @@ solve_each_element.2193:
 	add	%30, %2, 4
 	fld	%2, %30
 	fadd	%1, %1, %2
-	add	%30, %1, 8
+	add	%30, %1, 4
 	fst	%1, %30
 	mov	%1, 2808
 	mov	%2, 2720
@@ -3906,7 +3906,7 @@ solve_each_element.2193:
 	add	%30, %2, 8
 	fld	%2, %30
 	fadd	%1, %1, %2
-	add	%30, %1, 16
+	add	%30, %1, 8
 	fst	%1, %30
 	mov	%1, 0
 	add	%30, %29, 4
@@ -3941,13 +3941,13 @@ solve_each_element.2193:
 	mov	%1, 2808
 	add	%30, %1, 4
 	fld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2740
 	mov	%1, 2808
 	add	%30, %1, 8
 	fld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2724
 	add	%30, %29, 12
@@ -4170,7 +4170,7 @@ brne_else.6124:
 	fst	%0, %30
 	mov	%0, 2760
 	fmov	%0, #l.4565
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	mov	%1, 2720
@@ -4188,7 +4188,7 @@ brne_else.6124:
 	fsub	%0, 0, %0
 	add	%30, %29, 0
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 brne_else.6123:
@@ -4212,11 +4212,11 @@ brne_else.6123:
 	fsub	%0, 0, %0
 	add	%30, %29, 4
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	fmov	%0, #l.4565
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 brne_else.6122:
@@ -4240,11 +4240,11 @@ brne_else.6122:
 	fst	%0, %30
 	mov	%0, 2760
 	fmov	%0, #l.4565
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	fmov	%0, #l.4565
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 get_nvector_plane.2207:
@@ -4281,7 +4281,7 @@ get_nvector_plane.2207:
 	fsub	%0, 0, %0
 	add	%30, %29, 8
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	add	%30, %29, 0
@@ -4299,7 +4299,7 @@ get_nvector_plane.2207:
 	fsub	%0, 0, %0
 	add	%30, %29, 12
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 get_nvector_second_norot.2209:
@@ -4380,7 +4380,7 @@ get_nvector_second_norot.2209:
 	fmul	%0, %1, %0
 	add	%30, %29, 36
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	add	%30, %29, 0
@@ -4420,7 +4420,7 @@ get_nvector_second_norot.2209:
 	fmul	%0, %1, %0
 	add	%30, %29, 64
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2760
 	add	%30, %29, 8
@@ -4489,7 +4489,7 @@ get_nvector_second_rot.2212:
 	fsub	%0, %1, %0
 	add	%30, %29, 24
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760_w
 	add	%30, %29, 4
@@ -4515,7 +4515,7 @@ get_nvector_second_rot.2212:
 	fsub	%0, %1, %0
 	add	%30, %29, 40
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2760
 	mov	%1, 2760_w
@@ -4667,7 +4667,7 @@ get_nvector_second_rot.2212:
 	fadd	%0, %1, %0
 	add	%30, %29, 120
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2760
 	mov	%1, 2760_w
@@ -4743,7 +4743,7 @@ get_nvector_second_rot.2212:
 	fadd	%0, %1, %0
 	add	%30, %29, 184
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2760
 	add	%30, %29, 0
@@ -4852,7 +4852,7 @@ utexture.2218:
 	ld	%27, %30
 	add	%30, %29, 16
 	ld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2784
 	add	%30, %29, 4
@@ -4869,7 +4869,7 @@ utexture.2218:
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	add	%30, %29, 8
 	ld	%0, %30
@@ -5201,7 +5201,7 @@ bgt_cont.6180:
 bgt_else.6185:
 	fmov	%0, #l.4565
 bgt_cont.6186:
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 brne_else.6159:
@@ -5312,14 +5312,14 @@ brne_else.6159:
 	mov	%0, 2784
 	fmov	%1, #l.4986
 	fmul	%1, %0, %1
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	mov	%0, 2784
 	fmov	%1, #l.4567
 	fsub	%0, %1, %0
 	fmov	%1, #l.4986
 	fmul	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 brne_else.6158:
@@ -5353,7 +5353,7 @@ brne_else.6158:
 	fmov	%2, #l.4567
 	fsub	%0, %2, %0
 	fmul	%0, %1, %0
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	call	%30, %27
 brne_else.6157:
@@ -5469,7 +5469,7 @@ brne_else.6208:
 	fmov	%0, #l.4986
 brne_cont.6209:
 brne_cont.6205:
-	add	%30, %1, 8
+	add	%30, %1, 4
 	fst	%0, %30
 	call	%30, %27
 in_prod.2221:
@@ -5506,7 +5506,7 @@ accumulate_vec_mul.2224:
 	fld	%2, %30
 	fmul	%2, %0, %2
 	fadd	%1, %1, %2
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	add	%30, %0, 8
 	fld	%1, %30
@@ -5514,7 +5514,7 @@ accumulate_vec_mul.2224:
 	fld	%2, %30
 	fmul	%0, %0, %2
 	fadd	%0, %1, %0
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 raytracing.2228:
@@ -5589,14 +5589,14 @@ brne_else.6213:
 	add	%30, %1, 4
 	fld	%2, %30
 	fadd	%2, %2, %0
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%2, %30
 	mov	%0, 2772
 	mov	%1, 2772
 	add	%30, %1, 8
 	fld	%2, %30
 	fadd	%0, %2, %0
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, bgt_cont.6218
 bgt_else.6217:
@@ -5765,13 +5765,13 @@ brne_else.6232:
 	mov	%1, 2740
 	add	%30, %1, 4
 	fld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2336
 	mov	%1, 2740
 	add	%30, %1, 8
 	fld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	fmov	%0, #l.4567
 	add	%30, %29, 32
@@ -5871,14 +5871,14 @@ brne_else.6231:
 	add	%30, %1, 4
 	fld	%1, %30
 	fadd	%1, %1, %0
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	mov	%0, 2772
 	mov	%1, 2772
 	add	%30, %1, 8
 	fld	%1, %30
 	fadd	%0, %1, %0
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
 bgt_else.6237:
@@ -6070,7 +6070,7 @@ scan_point.2235:
 	add	%30, %1, 4
 	fld	%2, %30
 	fsub	%1, %1, %2
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	mov	%0, 2720
 	fsub	%1, 0, %0
@@ -6082,7 +6082,7 @@ scan_point.2235:
 	add	%30, %1, 8
 	fld	%2, %30
 	fadd	%1, %1, %2
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%1, %30
 	add	%30, %29, 4
 	st	%27, %30
@@ -6116,7 +6116,7 @@ scan_point.2235:
 	fld	%1, %30
 	finv	%31, %0
 	fmul	%1, %1, %31
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%1, %30
 	mov	%0, 2720
 	mov	%1, 2720
@@ -6124,7 +6124,7 @@ scan_point.2235:
 	fld	%1, %30
 	finv	%31, %0
 	fmul	%0, %1, %31
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2336
 	mov	%1, 2348
@@ -6136,13 +6136,13 @@ scan_point.2235:
 	mov	%1, 2348
 	add	%30, %1, 4
 	fld	%0, %30
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2336
 	mov	%1, 2348
 	add	%30, %1, 8
 	fld	%0, %30
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 2772
 	fmov	%0, #l.4565
@@ -6150,11 +6150,11 @@ scan_point.2235:
 	fst	%0, %30
 	mov	%0, 2772
 	fmov	%0, #l.4565
-	add	%30, %0, 8
+	add	%30, %0, 4
 	fst	%0, %30
 	mov	%0, 2772
 	fmov	%0, #l.4565
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 0
 	fmov	%0, #l.4567
@@ -6260,7 +6260,7 @@ scan_line.2237:
 	add	%30, %1, 8
 	fld	%1, %30
 	fsub	%0, %0, %1
-	add	%30, %0, 16
+	add	%30, %0, 8
 	fst	%0, %30
 	mov	%0, 0
 	add	%30, %29, 28
@@ -6337,6 +6337,10 @@ rt.2241:
 .section	".text"
 .global	min_caml_sin
 min_caml_sin:
+	st	%28, %29
+	add	%29, %29, 4
+	st	%27, %29
+	add	%29, %29, 4
 	mov	%31, %28
 	add	%28, %28, 16
 	mov	%0, sin_loop
@@ -6349,7 +6353,12 @@ min_caml_sin:
 	fmov	%1, #l.61
 	fmov	%2, #l.57
 	ld	%30, %31
-	call	%30, %30
+	call	%27, %30
+	sub	%29, %29, 4
+	ld	%27, %29
+	sub	%29, %29, 4
+	ld	%28, %29
+	call	%30, %27 	
 sin_loop:
 	add	%30, %31, 8
 	fld	%3, %30
@@ -6406,6 +6415,10 @@ sin_bgt_else:
 	call	%30, %27
 .global min_caml_atan
 min_caml_atan:
+	st	%28, %29
+	add	%29, %29, 4
+	st	%27, %29
+	add	%29, %29, 4
 	fmul	%1, %0, %0
 	mov	%31, %28
 	add	%28, %28, 24
@@ -6422,7 +6435,12 @@ min_caml_atan:
 	fmov	%1, %0
 	fmov	%0, %31
 	ld	%30, %31
-	call	%30, %30
+	call	%27, %30
+	sub	%29, %29, 4
+	ld	%27, %29
+	sub	%29, %29, 4
+	ld	%28, %29
+	call	%30, %27 	
 atan_loop:
 	add	%30, %31, 16
 	fld	%2, %30
@@ -6445,7 +6463,7 @@ atan_loop:
 	fmov	%0, %3
 	ld	%30, %31
 	call	%30, %30
-atan_bgt_else.57:
+atan_bgt_else:
 	fmov	%0, #l.57
 	fadd	%0, %0, %1
 	finv	%31, %0
@@ -6491,7 +6509,11 @@ min_caml_float_of_int:
 .global min_caml_int_of_float
 min_caml_int_of_float:
 	ftoi	%0, %0
-	call	%30, %27        
+	call	%30, %27
+.global min_caml_truncate
+min_caml_truncate:
+	ftoi	%0, %0
+	call	%30, %27      
 .global min_caml_floor
 min_caml_floor:
 	ftoi	%30, %0

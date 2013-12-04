@@ -1,4 +1,4 @@
-let rec mysin x =
+(*let rec mysin x =
   let rec loop c x2 s sgn=
     if 0 < c then
       let c2 = (float_of_int c) in
@@ -22,5 +22,5 @@ let rec myatan x=
       (x/.(1.0+.y))
   in
     (loop 10.0 (x*.x))
-in print_float (myatan 1.0)
+in print_float (myatan 1.3)
 

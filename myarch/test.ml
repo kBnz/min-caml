@@ -1,1 +1,1 @@
-print_float (cos 1.3)
+print_float (atan 1.3)

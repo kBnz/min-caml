@@ -79,6 +79,10 @@ min_caml_start:
 .section	".text"
 .global	min_caml_sin
 min_caml_sin:
+	st	%28, %29
+	add	%29, %29, 4
+	st	%27, %29
+	add	%29, %29, 4
 	mov	%31, %28
 	add	%28, %28, 16
 	mov	%0, sin_loop
@@ -91,7 +95,12 @@ min_caml_sin:
 	fmov	%1, #l.61
 	fmov	%2, #l.57
 	ld	%30, %31
-	call	%30, %30
+	call	%27, %30
+	sub	%29, %29, 4
+	ld	%27, %29
+	sub	%29, %29, 4
+	ld	%28, %29
+	call	%30, %27 	
 sin_loop:
 	add	%30, %31, 8
 	fld	%3, %30
@@ -148,6 +157,10 @@ sin_bgt_else:
 	call	%30, %27
 .global min_caml_atan
 min_caml_atan:
+	st	%28, %29
+	add	%29, %29, 4
+	st	%27, %29
+	add	%29, %29, 4
 	fmul	%1, %0, %0
 	mov	%31, %28
 	add	%28, %28, 24
@@ -164,7 +177,12 @@ min_caml_atan:
 	fmov	%1, %0
 	fmov	%0, %31
 	ld	%30, %31
-	call	%30, %30
+	call	%27, %30
+	sub	%29, %29, 4
+	ld	%27, %29
+	sub	%29, %29, 4
+	ld	%28, %29
+	call	%30, %27 	
 atan_loop:
 	add	%30, %31, 16
 	fld	%2, %30
@@ -187,7 +205,7 @@ atan_loop:
 	fmov	%0, %3
 	ld	%30, %31
 	call	%30, %30
-atan_bgt_else.57:
+atan_bgt_else:
 	fmov	%0, #l.57
 	fadd	%0, %0, %1
 	finv	%31, %0
@@ -212,11 +230,11 @@ min_caml_print_float:
 	call	%30, %27
 .global min_caml_read_int
 min_caml_read_int:
-	inout	%30, %0, 1
+	inout	%0, 1
 	call	%30, %27
 .global min_caml_read_float
 min_caml_read_float:
-	finout	%30, %0, 1
+	finout	%0, 1
 	call	%30, %27
 .global min_caml_abs_float
 min_caml_abs_float:
@@ -269,4 +287,5 @@ create_float_array_cont:
 	breq	create_float_array_loop, %26
 create_float_array_exit:
 	call	%30, %27
+min_caml_end:
 min_caml_end:
