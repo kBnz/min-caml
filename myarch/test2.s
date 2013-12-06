@@ -1,23 +1,21 @@
 .section	".rodata"
 .align	8
-#l.187:	 0x0
-#l.183:	 0x40c90fdb
-#l.181:	 0xbf800000
-#l.179:	 0x3f800000
-#l.176:	 0x40000000
-#l.0:	 0x0
+#l.110:	 0x41100000
 .section	".text"
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	fmov	%0, #l.179
+	mov	%0, 3
+	fmov	%0, #l.110
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, mysin.134
+	call	%27, min_caml_create_float_array
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
+	add	%30, %0, 4
+	fld	%0, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -26,114 +24,6 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	call	%30, min_caml_end
-loop.149:
-	add	%30, %31, 8
-	fld	%3, %30
-	cmp	%26, %0, 0
-	brle	bgt_else.202, %26
-	add	%30, %29, 0
-	st	%31, %30
-	add	%30, %29, 4
-	fst	%0, %30
-	add	%30, %29, 8
-	fst	%2, %30
-	add	%30, %29, 12
-	fst	%1, %30
-	add	%30, %29, 16
-	st	%0, %30
-	add	%30, %29, 20
-	st	%27, %30
-	add	%29, %29, 24
-	call	%27, min_caml_float_of_int
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	fmov	%1, #l.176
-	fmul	%1, %1, %0
-	fmov	%2, #l.176
-	fmul	%0, %2, %0
-	fmov	%2, #l.179
-	fadd	%0, %0, %2
-	fmul	%0, %1, %0
-	add	%30, %29, 16
-	ld	%0, %30
-	sub	%0, %0, 1
-	add	%30, %29, 8
-	fld	%1, %30
-	add	%30, %29, 12
-	fld	%2, %30
-	fadd	%2, %2, %1
-	add	%30, %29, 4
-	fld	%3, %30
-	fmul	%2, %2, %3
-	finv	%31, %0
-	fmul	%0, %2, %31
-	fmov	%2, #l.181
-	fmul	%2, %1, %2
-	add	%30, %29, 0
-	ld	%31, %30
-	fmov	%1, %0
-	fmov	%0, %3
-	ld	%30, %31
-	call	%30, %30
-bgt_else.202:
-	fmul	%0, %1, %3
-	fadd	%0, %0, %3
-	call	%30, %27
-mysin.134:
-	add	%30, %29, 0
-	fst	%0, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_abs_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	fmov	%1, #l.183
-	fcmp	%26, %0, %1
-	brle	bgt_else.203, %26
-	fmov	%0, #l.183
-	add	%30, %29, 0
-	fld	%1, %30
-	finv	%31, %0
-	fmul	%0, %1, %31
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_int_of_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_float_of_int
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	fmov	%1, #l.183
-	fmul	%0, %1, %0
-	add	%30, %29, 0
-	fld	%1, %30
-	fsub	%0, %1, %0
-	call	%30, mysin.134
-bgt_else.203:
-	mov	%31, %28
-	add	%28, %28, 16
-	mov	%0, loop.149
-	add	%30, %31, 0
-	st	%0, %30
-	add	%30, %29, 0
-	fld	%0, %30
-	add	%30, %31, 8
-	fst	%0, %30
-	mov	%0, 10
-	fmul	%0, %0, %0
-	fmov	%1, #l.187
-	fmov	%2, #l.179
-	ld	%30, %31
-	call	%30, %30
 .section	".rodata"
 .align	8
 #l.14:	 0x3fc90fdb
@@ -142,66 +32,18 @@ bgt_else.203:
 #l.57:	 0x3f800000
 #l.54:	 0x40000000
 #l.49:	 0x41200000
-#l.85:	 0x40c90fdb
-#l.54:	 0x40000000
 .section	".text"
+.global	min_caml_sin
 min_caml_sin:
-	add	%30, %29, 0
-	fst	%0, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_abs_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	fmov	%1, #l.85
-	fcmp	%26, %0, %1
-	brle	sin_bgt_else_second, %26
-	fmov	%0, #l.85
-	add	%30, %29, 0
-	fld	%1, %30
-	finv	%31, %0
-	fmul	%0, %1, %31
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_int_of_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_float_of_int
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 4
-	fst	%0, %30
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_float
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	fmov	%0, #l.85
-	add	%30, %29, 4
-	fld	%1, %30
-	fmul	%0, %0, %1
-	add	%30, %29, 0
-	fld	%1, %30
-	fsub	%0, %1, %0
-	call	%30, min_caml_sin
-sin_bgt_else_second:
+	st	%28, %29
+	add	%29, %29, 4
+	st	%27, %29
+	add	%29, %29, 4
 	mov	%31, %28
 	add	%28, %28, 16
-	mov	%0, loop.151
+	mov	%0, sin_loop
 	add	%30, %31, 0
 	st	%0, %30
-	add	%30, %29, 0
-	fld	%0, %30
 	add	%30, %31, 8
 	fst	%0, %30
 	mov	%0, 10
@@ -209,7 +51,12 @@ sin_bgt_else_second:
 	fmov	%1, #l.61
 	fmov	%2, #l.57
 	ld	%30, %31
-	call	%30, %30
+	call	%27, %30
+	sub	%29, %29, 4
+	ld	%27, %29
+	sub	%29, %29, 4
+	ld	%28, %29
+	call	%30, %27 	
 sin_loop:
 	add	%30, %31, 8
 	fld	%3, %30
@@ -217,20 +64,20 @@ sin_loop:
 	brle	sin_bgt_else, %26
 	add	%30, %29, 0
 	st	%31, %30
-	add	%30, %29, 4
-	fst	%0, %30
 	add	%30, %29, 8
+	fst	%0, %30
+	add	%30, %29, 20
 	fst	%2, %30
-	add	%30, %29, 12
+	add	%30, %29, 32
 	fst	%1, %30
-	add	%30, %29, 16
+	add	%30, %29, 40
 	st	%0, %30
-	add	%30, %29, 20
+	add	%30, %29, 44
 	st	%27, %30
-	add	%29, %29, 24
+	add	%29, %29, 48
 	call	%27, min_caml_float_of_int
-	sub	%29, %29, 24
-	add	%30, %29, 20
+	sub	%29, %29, 48
+	add	%30, %29, 44
 	ld	%27, %30
 	fmov	%1, #l.54
 	fmul	%1, %1, %0
@@ -239,15 +86,15 @@ sin_loop:
 	fmov	%2, #l.57
 	fadd	%0, %0, %2
 	fmul	%0, %1, %0
-	add	%30, %29, 16
+	add	%30, %29, 40
 	ld	%0, %30
 	sub	%0, %0, 1
-	add	%30, %29, 8
+	add	%30, %29, 20
 	fld	%1, %30
-	add	%30, %29, 12
+	add	%30, %29, 32
 	fld	%2, %30
 	fadd	%2, %2, %1
-	add	%30, %29, 4
+	add	%30, %29, 8
 	fld	%3, %30
 	fmul	%2, %2, %3
 	finv	%31, %0
@@ -367,37 +214,9 @@ min_caml_truncate:
 	call	%30, %27      
 .global min_caml_floor
 min_caml_floor:
-	add	%30, %29, 0
-	fst	%0, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_int_of_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_float_of_int
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 0
-	fld	%1, %30
-	fcmp	%26, %0, %1
-	breq	floor_brne_else, %26
-	fmov	%2, #l.61
-	fcmp	%26, %1, %2
-	brle	floor_bgt_else, %26
-	call	%30, %27
-floor_bgt_else:
-	fmov	%1, #l.57
-	fsub	%0, %0, %1
-	call	%30, %27
-floor_brne_else:
-	fmov	%0, %1
-	call	%30, %27
+	ftoi	%30, %0
+	itof	%0, %30
+	call	%30, %27    
 .global min_caml_create_array
 min_caml_create_array:
 	mov	%30, %0

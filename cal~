@@ -1,3 +1,0 @@
-#compile and link
-./min-caml $1
-echo $1ok

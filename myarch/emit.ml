@@ -11,9 +11,11 @@ let save x =
 let savef x =
   stackset := S.add x !stackset;
   if not (List.mem x !stackmap) then
-    (let pad =
+    stackmap := !stackmap @ [x]
+    
+    (*(let pad =
       (*if List.length !stackmap mod 2 = 0 then [] else*) [Id.gentmp Type.Int] in
-    stackmap := !stackmap @ pad @ [x; x])
+    stackmap := !stackmap @ pad @ [x; x])*)
 let locate x =
   let rec loc = function
     | [] -> []
@@ -72,7 +74,8 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       Printf.fprintf oc "\tfmov\t%s, %s\n" x y;
   (* Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg x) (co_freg y) *)
   | NonTail(x), FNegD(y) ->
-      Printf.fprintf oc "\tfsub\t%s, 0, %s\n" x y;
+      Printf.fprintf oc "\tfmov\t%s, #l.0\n" reg_fsw;
+      Printf.fprintf oc "\tfsub\t%s, %s, %s\n" x reg_fsw y;
   (*    if x <> y then Printf.fprintf oc "\tfmovs\t%s, %s\n" (co_freg y) (co_freg x) *)
   | NonTail(x), FAddD(y, z) -> Printf.fprintf oc "\tfadd\t%s, %s, %s\n" x y z
   | NonTail(x), FSubD(y, z) -> Printf.fprintf oc "\tfsub\t%s, %s, %s\n" x y z
@@ -260,12 +263,13 @@ let f oc (Prog(data, fundefs, e)) =
     (fun (Id.L(x), d) ->
       Printf.fprintf oc "%s:\t 0x%lx\n" x (bits_of_float d))
     data;
+  Printf.fprintf oc "%s:\t 0x%lx\n" "#l.0" (bits_of_float 0.0);
   Printf.fprintf oc ".section\t\".text\"\n"; 
   Printf.fprintf oc ".global\tmin_caml_start\n"; 
   Printf.fprintf oc "min_caml_start:\n";
   (* Printf.fprintf oc "\tsave\t%%sp, -112, %%sp\n"; (* from gcc; why 112? *) *)
   (*tekitou*)
-  Printf.fprintf oc "\tmov\t%s, 4096\n" reg_hp;  
+  Printf.fprintf oc "\tmov\t%s, 32764\n" reg_hp;  
   stackset := S.empty;
   stackmap := [];
   g oc (NonTail("%g0"), e);

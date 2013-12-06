@@ -5,6 +5,6 @@
 sed -e s/%f/%/g $1.s > cal_memo.tmp
 cp cal_memo.tmp $1.s
 rm cal_memo.tmp
-bash min-rt/script.sh
+#bash min-rt/script.sh $1
 cp $1.s ~/ドキュメント/sim
 grep -n ^$'\t' ~/ドキュメント/sim/min-rt.s > ~/ドキュメント/sim/min-rt.txt

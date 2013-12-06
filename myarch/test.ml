@@ -1,1 +1,1 @@
-print_float (atan 1.3)
+print_float (sin 21.11)

@@ -1,9 +1,10 @@
 .section	".rodata"
 .align	8
+#l.0:	 0x0
 .section	".text"
 .global	min_caml_start
 min_caml_start:
-	mov	%28, 4096
+	mov	%28, 32764
 	mov	%0, 123
 	add	%30, %29, 4
 	st	%27, %30

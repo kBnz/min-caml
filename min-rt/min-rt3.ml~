@@ -532,11 +532,11 @@ in
 let solver_surface m l =
   (* 点と平面の符号つき距離 *)
   (* 平面は極性が負に統一されている *)
-  let q = (l.(0) *. o_param_a m +. l.(1) *. o_param_b m +. l.(2) *. o_param_c m) in (o_param_c m);
-    (if 0.0 < q then
+  let q = (l.(0) *. o_param_a m +. l.(1) *. o_param_b m +. l.(2) *. o_param_c m) in
+  if 0.0 < q then
     let t = (solver_w_vec.(0) *. o_param_a m +. solver_w_vec.(1) *. o_param_b m +. solver_w_vec.(2) *. o_param_c m) /. q in
     (solver_dist.(0) <- -.t; 1)
-  else 0)
+  else 0
 in
 
 (* solver_second のローカル変数が多いので分割 *)
@@ -618,9 +618,9 @@ let solver index l p =
   solver_w_vec.(1) <- p.(1) -. o_param_y m;
   solver_w_vec.(2) <- p.(2) -. o_param_z m;
   let m_shape = o_form m in
-  (if m_shape = 1 then (let mytmp = solver_rect m l in mytmp)
+  if m_shape = 1 then solver_rect m l
   else if m_shape = 2 then solver_surface m l
-  else solver_second m l)
+  else solver_second m l
 in
 
 (**************** 点とオブジェクトの位置関係に関する関数群 ****************)
@@ -776,44 +776,44 @@ in
 
 let rec solve_each_element iand_ofs and_group =
   let iobj = and_group.(iand_ofs) in
-    if iobj = -1 then ()
-    else (
-      let t0 = (solver iobj vscan viewpoint) in
-        (if t0 <> 0 then
-          (
-       (* 交点がある時は、その交点が他の要素の中に含まれるかどうか調べる。*)
-       (* 今までの中で最小の t の値と比べる。*)
-            let t0p = solver_dist.(0) in
-              if -0.1 < t0p then
-	            if t0p < tmin.(0) then
-	              (
-	                let t = t0p +. 0.01 in
-	                  chkinside_p.(0) <- vscan.(0) *. t +. viewpoint.(0);
-	                  chkinside_p.(1) <- vscan.(1) *. t +. viewpoint.(1);
-	                  chkinside_p.(2) <- vscan.(2) *. t +. viewpoint.(2);
-	                  if check_all_inside 0 and_group then 
-	                    ( 
-		                  tmin.(0) <- t;
-		                  crashed_point.(0) <- chkinside_p.(0);
-		                  crashed_point.(1) <- chkinside_p.(1);
-		                  crashed_point.(2) <- chkinside_p.(2);
-		                  intsec_rectside.(0) <- t0;
-		                  crashed_object.(0) <- iobj
-	                    )
-	                  else ()
-	              )
-	            else ()
-              else ()
-          )
-        else 
-          (
+  if iobj = -1 then ()
+  else (
+    let t0 = solver iobj vscan viewpoint in
+    if t0 <> 0 then
+      (
+        (* 交点がある時は、その交点が他の要素の中に含まれるかどうか調べる。*)
+        (* 今までの中で最小の t の値と比べる。*)
+       let t0p = solver_dist.(0) in
+       if -0.1 < t0p then
+	 if t0p < tmin.(0) then
+	   (
+	    let t = t0p +. 0.01 in
+	    chkinside_p.(0) <- vscan.(0) *. t +. viewpoint.(0);
+	    chkinside_p.(1) <- vscan.(1) *. t +. viewpoint.(1);
+	    chkinside_p.(2) <- vscan.(2) *. t +. viewpoint.(2);
+	    if check_all_inside 0 and_group then 
+	      ( 
+		tmin.(0) <- t;
+		crashed_point.(0) <- chkinside_p.(0);
+		crashed_point.(1) <- chkinside_p.(1);
+		crashed_point.(2) <- chkinside_p.(2);
+		intsec_rectside.(0) <- t0;
+		crashed_object.(0) <- iobj
+	       )
+	    else ()
+	   )
+	 else ()
+       else ()
+      )
+    else 
+      (
        (* 交点がなく、しかもその物体は内側が真ならこれ以上交点はない *)
-            if o_isinvert (objects.(iobj)) then () else end_flag.(0) <- (true)
-          );
-        if (not (end_flag.(0))) then 
-          solve_each_element (iand_ofs + 1) and_group
-        else ())
-    )
+       if o_isinvert (objects.(iobj)) then () else end_flag.(0) <- (true)
+      );
+    if (not (end_flag.(0))) then 
+      solve_each_element (iand_ofs + 1) and_group
+    else ()
+  )
 in
 
 (**** 1つの OR-group について交点を調べる ****)
@@ -863,11 +863,11 @@ let tracer viewpoint vscan =
   tmin.(0) <- (1000000000.0);
   trace_or_matrix 0 (or_net.(0));
   let t = tmin.(0) in
-  (if -0.1 < t then
+  if -0.1 < t then
     if t < 100000000.0 then
       true
     else false
-  else false)
+  else false
 )
 
 in
@@ -983,7 +983,6 @@ let utexture m p =
     (* y軸方向のストライプ (R-G) *)
     (
       let w2 = fsqr (sin (p.(1) *. 0.25)) in
-      print_string ("sin " ^ (string_of_float (p.(1) *. 0.25)));
       texture_color.(0) <- 255.0 *. w2;
       texture_color.(1) <- 255.0 *. (1.0 -. w2)
     )
@@ -1055,22 +1054,21 @@ let rec raytracing nref energy =
   (* 反射がなく何もぶつからない時は暗闇 (nref = 0) *)
   (* 反射したあと無限遠に達する時は光源の影響を加味 *)
   if (not crashed_p) then
-
-    if nref <> 0 then
-    ( 
-	  let hl = -.(in_prod vscan light); in
+    if nref <> 0 then 
+      ( 
+	let hl = -.(in_prod vscan light) in
 	(* 90°を超える場合は0 (光なし) *)
-	    if 0.0 < hl then
-	      (
+	if 0.0 < hl then
+	  (
 	   (* ハイライト強度は角度の cos^3 に比例 *)
-	        let ihl = fsqr hl *. hl *. energy *. beam.(0) in
-	          rgb.(0) <- rgb.(0) +. ihl;
-	          rgb.(1) <- rgb.(1) +. ihl;
-	          rgb.(2) <- rgb.(2) +. ihl
-	      )
-	    else ()
-    )
- else ()
+	   let ihl = fsqr hl *. hl *. energy *. beam.(0) in
+	   rgb.(0) <- rgb.(0) +. ihl;
+	   rgb.(1) <- rgb.(1) +. ihl;
+	   rgb.(2) <- rgb.(2) +. ihl
+	  )
+	else ()
+       )
+    else ()
   else ();
   
   if crashed_p then
@@ -1190,21 +1188,12 @@ let rec scan_point scanx =
     viewpoint.(0) <- view.(0);
     viewpoint.(1) <- view.(1);
     viewpoint.(2) <- view.(2);
+
     (* 色アキュムレータの初期化 *)
     rgb.(0) <- 0.0;
     rgb.(1) <- 0.0;
     rgb.(2) <- 0.0;
-    
-(*    print_float vscan.(0);
-    print_float vscan.(1);
-    print_float vscan.(2);
-    print_float viewpoint.(0);
-    print_float viewpoint.(1);
-    print_float viewpoint.(2);*)
 
-   (* print_float vscan.(0);
-    print_float viewpoint.(0); *)
-    
     (* Go! *)
     raytracing 0 1.0;
 
@@ -1237,11 +1226,6 @@ let rec scan_line scany =
       let t1 = scan_sscany.(0) *. sin_v.(0) in
       wscan.(0) <- t1 *. sin_v.(1) -. vp.(0);
       wscan.(2) <- t1 *. cos_v.(1) -. vp.(2);
-(* (*ここまでok*)     print_float t1;
-      print_float sin_v.(1);
-      print_float vp.(0);
-      print_float wscan.(0);
-      print_float wscan.(2); *)
       scan_point 0;
       scan_line (scany + 1)
     )
