@@ -16,7 +16,7 @@ let lexbuf outchan l = (* バッファをコンパイルしてチャンネルへ出力する (caml2htm
 	      (Virtual.f
 	         (Closure.f
 		        (iter !limit
-		        (Dataflow.f  (Mydebug.print_alpha  (Alpha.f
+		        (Dataflow2.f  (Mydebug.print_alpha  (Alpha.f
 		              (KNormal.f
 			             (Typing.f
 			                (Parser.exp Lexer.token l)))))))))))

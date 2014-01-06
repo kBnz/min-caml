@@ -3,3 +3,5 @@
 *~
 *.d
 *.di
+min-caml
+min-caml.*

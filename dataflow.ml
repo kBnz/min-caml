@@ -119,6 +119,7 @@ and g k n cur nl2 el2=
        g e1 (Fun (vn,tn)) cur2 nl3 el3;
        cur*) h2 k n cur nl2 el2
 
+(*defのlist lにdef nを追加*)
 let rec add_def l n =
   match !n with
     | (Set (x,_)) ->
@@ -126,25 +127,39 @@ let rec add_def l n =
         | yr::z ->
           (match !yr with
             (Set (y,y2)) ->
-              if x=y then n::z else (yr)::(add_def n z))
-        | [] -> [n])
+              if x=y then (n::z) else ((yr)::(add_def z n)))
+        | _ -> [n])
     | _ -> l
-let rec conf_def l n =
-  match !n with
-    | (Set (x,_)) ->
-      (match l with
-        | yr::z ->
-          (match !yr with
-            (Set (y,y2)) ->
-              if x=y then n::z else (yr)::(add_def n z))
-        | [] -> [])
-    | _ -> l
-          
+
+(*blockを受け取りそのdefを返す*)      
+let rec block_def b =
+  let rec loop l b2=
+    match b2 with
+      | x :: y ->
+        (match !x with
+          | (Set (x1, x2)) -> loop (add_def l x) y
+          | _ -> loop l y)
+      | _ -> l
+  in loop [] b
+
+let rec print_def_list l =
+  match l with
+    | x :: y ->
+      (match !x with
+        | (Set (x1, x2)) ->
+           print_string x1; print_newline (); print_def_list y)
+    | _ -> ()
+
+let apply_block f b = map f b     
+let apply_graph_node f g = map f g
+let print_def () = map (fun x -> print_string "***graph***";print_newline (); (map (fun y -> print_string "block"; print_newline ();print_def_list (block_def !y)) !x)) !nl
+(*          
 let rec tt g=
   let rec def d = function (*各ブロックのdef*)
     | x :: y -> def (add_def d x) y
     | [] -> d
   in
   let rec kill d = function
-     
-let f k= h k;  print_graph_node ();print_graph_edge (); k
+  *)     
+let f k= h k;  print_graph_node ();print_graph_edge (); print_def ();
+  k; 
