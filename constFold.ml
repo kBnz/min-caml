@@ -1,5 +1,9 @@
 open KNormal
 
+let rec pow22 n =
+  if n < 0 then -(pow22 (-n)) else
+  if n = 0 then 1 else 2 * (pow22 (n-1))
+
 let memi x env =
   try (match M.find x env with Int(_) -> true | _ -> false)
   with Not_found -> false
@@ -21,6 +25,7 @@ let rec g env = function (* 定数畳み込みルーチン本体 (caml2html: constfold_g) *)
   | Neg(x) when memi x env -> Int(-(findi x env))
   | Add(x, y) when memi x env && memi y env -> Int(findi x env + findi y env) (* 足し算のケース (caml2html: constfold_add) *)
   | Sub(x, y) when memi x env && memi y env -> Int(findi x env - findi y env)
+  | Mul(x, y) when memi x env && memi y env -> Int(findi x env * pow22 (findi y env))
   | FNeg(x) when memf x env -> Float(-.(findf x env))
   | FAdd(x, y) when memf x env && memf y env -> Float(findf x env +. findf y env)
   | FSub(x, y) when memf x env && memf y env -> Float(findf x env -. findf y env)

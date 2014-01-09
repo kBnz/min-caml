@@ -46,6 +46,8 @@ let rec print_syntax2 t nest =
 	print_syntax2 e1 (nest+1); print_syntax2 e2 (nest+1)
     | FSub(e1, e2) -> print_string "FSub"; print_newline ();
 	print_syntax2 e1 (nest+1); print_syntax2 e2 (nest+1)
+    | Mul(e1, e2) -> print_string "Mul"; print_newline ();
+	print_syntax2 e1 (nest+1); print_syntax2 e2 (nest+1)
     | FMul(e1, e2) -> print_string "FMul"; print_newline ();
 	print_syntax2 e1 (nest+1); print_syntax2 e2 (nest+1)
     | FDiv(e1, e2) -> print_string "FDiv"; print_newline ();
@@ -85,6 +87,7 @@ let rec print_knormal2 k nest =
     | Neg(e) -> print_string ("Neg("^e^")"); print_newline ()
     | Add(e1, e2) -> print_string ("Add "^e1^" "^e2); print_newline ()
     | Sub(e1, e2) -> print_string ("Sub "^e1^" "^e2); print_newline ()
+    | Mul(e1, e2) -> print_string ("Mul "^e1^" "^e2); print_newline ()
     | FNeg(e) -> print_string ("FNeg("^e^")"); print_newline ()
     | FAdd(e1, e2) -> print_string ("FAdd "^e1^" "^e2); print_newline ()
     | FSub(e1, e2) -> print_string ("FSub "^e1^" "^e2); print_newline ()
@@ -135,6 +138,7 @@ let rec print_closure2 c nest =
     | Neg(e) -> print_string ("Neg("^e^")"); print_newline ()
     | Add(e1, e2) -> print_string ("Add "^e1^" "^e2); print_newline ();
     | Sub(e1, e2) -> print_string ("Sub "^e1^" "^e2); print_newline ();
+    | Mul(e1, e2) -> print_string ("Mul "^e1^" "^e2); print_newline ();
     | FNeg(e) -> print_string ("FNeg("^e^")"); print_newline ()
     | FAdd(e1, e2) -> print_string ("FAdd "^e1^" "^e2); print_newline ();
     | FSub(e1, e2) -> print_string ("FSub "^e1^" "^e2); print_newline ();

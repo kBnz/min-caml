@@ -9,6 +9,7 @@ type t =
   | FNeg of Id.t
   | FAdd of Id.t * Id.t
   | FSub of Id.t * Id.t
+  | Mul of Id.t * Id.t
   | FMul of Id.t * Id.t
   | FDiv of Id.t * Id.t
   | IfEq of Id.t * Id.t * t * t

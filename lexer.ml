@@ -7,25 +7,25 @@ open Type
 # 8 "lexer.ml"
 let __ocaml_lex_tables = {
   Lexing.lex_base = 
-   "\000\000\220\255\075\000\222\255\223\255\225\255\019\000\227\255\
-    \228\255\160\000\235\000\054\001\129\001\002\000\013\000\240\255\
+   "\000\000\218\255\075\000\220\255\221\255\223\255\019\000\225\255\
+    \226\255\160\000\235\000\054\001\129\001\002\000\013\000\238\255\
     \018\000\020\000\021\000\022\000\206\001\216\001\035\002\110\002\
     \252\255\027\000\002\000\254\255\185\002\004\003\079\003\154\003\
     \229\003\048\004\123\004\198\004\017\005\092\005\167\005\242\005\
-    \028\000\150\000\061\006\071\006\244\255\243\255\242\255\241\255\
-    \224\255\238\255\239\255\237\255\081\006\156\006\231\006\050\007\
+    \028\000\150\000\061\006\071\006\242\255\241\255\240\255\239\255\
+    \222\255\236\255\237\255\235\255\081\006\156\006\231\006\050\007\
     \125\007\200\007\019\008\094\008\169\008\020\000\038\000\015\000\
-    \024\000\038\000\024\000\038\000\069\000\051\000\067\000\226\255\
+    \024\000\038\000\024\000\038\000\069\000\051\000\067\000\224\255\
     \253\000\252\255\253\255\030\000\045\000\255\255\254\255";
   Lexing.lex_backtrk = 
-   "\255\255\255\255\034\000\255\255\255\255\255\255\035\000\255\255\
-    \255\255\034\000\034\000\034\000\034\000\020\000\019\000\255\255\
-    \035\000\035\000\010\000\009\000\007\000\034\000\034\000\034\000\
-    \255\255\002\000\000\000\255\255\034\000\034\000\034\000\004\000\
-    \034\000\022\000\034\000\034\000\034\000\005\000\034\000\006\000\
+   "\255\255\255\255\036\000\255\255\255\255\255\255\037\000\255\255\
+    \255\255\036\000\036\000\036\000\036\000\022\000\021\000\255\255\
+    \012\000\011\000\010\000\009\000\007\000\036\000\036\000\036\000\
+    \255\255\002\000\000\000\255\255\036\000\036\000\036\000\004\000\
+    \036\000\024\000\036\000\036\000\036\000\005\000\036\000\006\000\
     \255\255\008\000\008\000\255\255\255\255\255\255\255\255\255\255\
-    \255\255\255\255\255\255\255\255\025\000\021\000\034\000\034\000\
-    \023\000\034\000\024\000\034\000\026\000\255\255\255\255\255\255\
+    \255\255\255\255\255\255\255\255\027\000\023\000\036\000\036\000\
+    \025\000\036\000\026\000\036\000\028\000\255\255\255\255\255\255\
     \255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\
     \255\255\255\255\255\255\003\000\003\000\255\255\255\255";
   Lexing.lex_default = 
@@ -737,132 +737,142 @@ and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
 
   | 11 ->
 # 38 "lexer.mll"
-    ( MINUS_DOT )
+    ( AST )
 # 742 "lexer.ml"
 
   | 12 ->
 # 40 "lexer.mll"
-    ( PLUS_DOT )
+    ( SLASH )
 # 747 "lexer.ml"
 
   | 13 ->
 # 42 "lexer.mll"
-    ( AST_DOT )
+    ( MINUS_DOT )
 # 752 "lexer.ml"
 
   | 14 ->
 # 44 "lexer.mll"
-    ( SLASH_DOT )
+    ( PLUS_DOT )
 # 757 "lexer.ml"
 
   | 15 ->
 # 46 "lexer.mll"
-    ( EQUAL )
+    ( AST_DOT )
 # 762 "lexer.ml"
 
   | 16 ->
 # 48 "lexer.mll"
-    ( LESS_GREATER )
+    ( SLASH_DOT )
 # 767 "lexer.ml"
 
   | 17 ->
 # 50 "lexer.mll"
-    ( LESS_EQUAL )
+    ( EQUAL )
 # 772 "lexer.ml"
 
   | 18 ->
 # 52 "lexer.mll"
-    ( GREATER_EQUAL )
+    ( LESS_GREATER )
 # 777 "lexer.ml"
 
   | 19 ->
 # 54 "lexer.mll"
-    ( LESS )
+    ( LESS_EQUAL )
 # 782 "lexer.ml"
 
   | 20 ->
 # 56 "lexer.mll"
-    ( GREATER )
+    ( GREATER_EQUAL )
 # 787 "lexer.ml"
 
   | 21 ->
 # 58 "lexer.mll"
-    ( IF )
+    ( LESS )
 # 792 "lexer.ml"
 
   | 22 ->
 # 60 "lexer.mll"
-    ( THEN )
+    ( GREATER )
 # 797 "lexer.ml"
 
   | 23 ->
 # 62 "lexer.mll"
-    ( ELSE )
+    ( IF )
 # 802 "lexer.ml"
 
   | 24 ->
 # 64 "lexer.mll"
-    ( LET )
+    ( THEN )
 # 807 "lexer.ml"
 
   | 25 ->
 # 66 "lexer.mll"
-    ( IN )
+    ( ELSE )
 # 812 "lexer.ml"
 
   | 26 ->
 # 68 "lexer.mll"
-    ( REC )
+    ( LET )
 # 817 "lexer.ml"
 
   | 27 ->
 # 70 "lexer.mll"
-    ( COMMA )
+    ( IN )
 # 822 "lexer.ml"
 
   | 28 ->
 # 72 "lexer.mll"
-    ( IDENT(Id.gentmp Type.Unit) )
+    ( REC )
 # 827 "lexer.ml"
 
   | 29 ->
 # 74 "lexer.mll"
-    ( ARRAY_CREATE )
+    ( COMMA )
 # 832 "lexer.ml"
 
   | 30 ->
 # 76 "lexer.mll"
-    ( DOT )
+    ( IDENT(Id.gentmp Type.Unit) )
 # 837 "lexer.ml"
 
   | 31 ->
 # 78 "lexer.mll"
-    ( LESS_MINUS )
+    ( ARRAY_CREATE )
 # 842 "lexer.ml"
 
   | 32 ->
 # 80 "lexer.mll"
-    ( SEMICOLON )
+    ( DOT )
 # 847 "lexer.ml"
 
   | 33 ->
 # 82 "lexer.mll"
-    ( EOF )
+    ( LESS_MINUS )
 # 852 "lexer.ml"
 
   | 34 ->
 # 84 "lexer.mll"
-    ( IDENT(Lexing.lexeme lexbuf) )
+    ( SEMICOLON )
 # 857 "lexer.ml"
 
   | 35 ->
 # 86 "lexer.mll"
+    ( EOF )
+# 862 "lexer.ml"
+
+  | 36 ->
+# 88 "lexer.mll"
+    ( IDENT(Lexing.lexeme lexbuf) )
+# 867 "lexer.ml"
+
+  | 37 ->
+# 90 "lexer.mll"
     ( failwith
 	(Printf.sprintf "unknown token %s near characters %d-%d"
 	   (Lexing.lexeme lexbuf)
 	   (Lexing.lexeme_start lexbuf)
 	   (Lexing.lexeme_end lexbuf)) )
-# 866 "lexer.ml"
+# 876 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_token_rec lexbuf __ocaml_lex_state
 
@@ -871,25 +881,25 @@ and comment lexbuf =
 and __ocaml_lex_comment_rec lexbuf __ocaml_lex_state =
   match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
       | 0 ->
-# 93 "lexer.mll"
+# 97 "lexer.mll"
     ( () )
-# 877 "lexer.ml"
+# 887 "lexer.ml"
 
   | 1 ->
-# 95 "lexer.mll"
+# 99 "lexer.mll"
     ( comment lexbuf;
       comment lexbuf )
-# 883 "lexer.ml"
+# 893 "lexer.ml"
 
   | 2 ->
-# 98 "lexer.mll"
+# 102 "lexer.mll"
     ( Format.eprintf "warning: unterminated comment@." )
-# 888 "lexer.ml"
+# 898 "lexer.ml"
 
   | 3 ->
-# 100 "lexer.mll"
+# 104 "lexer.mll"
     ( comment lexbuf )
-# 893 "lexer.ml"
+# 903 "lexer.ml"
 
   | __ocaml_lex_state -> lexbuf.Lexing.refill_buff lexbuf; __ocaml_lex_comment_rec lexbuf __ocaml_lex_state
 

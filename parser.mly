@@ -2,6 +2,8 @@
 (* parserが利用する変数、関数、型などの定義 *)
 open Syntax
 let addtyp x = (x, Type.gentyp ())
+let rec pow2 n =
+  if n = 1 then 0 else 1 + (pow2 (n/2))
 %}
 
 /* 字句を表すデータ型の定義 (caml2html: parser_token) */
@@ -11,6 +13,8 @@ let addtyp x = (x, Type.gentyp ())
 %token NOT
 %token MINUS
 %token PLUS
+%token AST
+%token SLASH
 %token MINUS_DOT
 %token PLUS_DOT
 %token AST_DOT
@@ -45,7 +49,7 @@ let addtyp x = (x, Type.gentyp ())
 %left COMMA
 %left EQUAL LESS_GREATER LESS GREATER LESS_EQUAL GREATER_EQUAL
 %left PLUS MINUS PLUS_DOT MINUS_DOT
-%left AST_DOT SLASH_DOT
+%left AST AST_DOT SLASH SLASH_DOT
 %right prec_unary_minus
 %left prec_app
 %left DOT
@@ -109,6 +113,10 @@ exp: /* 一般の式 (caml2html: parser_exp) */
     { FAdd($1, $3) }
 | exp MINUS_DOT exp
     { FSub($1, $3) }
+| exp AST INT
+    { Mul($1, Int(pow2 $3)) }
+| exp SLASH INT
+    { Mul($1, Int(-(pow2 $3))) }
 | exp AST_DOT exp
     { FMul($1, $3) }
 | exp SLASH_DOT exp
