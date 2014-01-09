@@ -132,23 +132,17 @@
 
    module Graph = MakeGraph(Block)
    type flowgraph =
-       {control: Graph.graph; def: (statement ref) list list;
-        kill: (statement ref) list list; name: string; arg: Id.t list;
+       {control: Graph.graph; def: (Graph.node*((statement ref) list)) list;
+        kill: (Graph.node*((statement ref) list)) list;
+        name: string; arg: Id.t list;
         start_n: Graph.node; end_n: Graph.node}
-   let make_empty_def g =
-     let block_def b = [] in
-       Graph.map_nodes g block_def
-
-   let make_empty_kill g =
-     let block_kill b = [] in
-       Graph.map_nodes g block_kill
 
    let newFlow ()=
      let start_n = Graph.to_node empty_block in
      let end_n = Graph.to_node empty_block in
      let g = Graph.addNodes (Graph.newGraph ()) [start_n;end_n]
-     in {control = g; def = make_empty_def g;
-         kill = make_empty_kill g; name = ""; arg=[];
+     in {control = g; def = [];
+         kill = []; name = ""; arg=[];
          start_n = start_n; end_n = end_n;}
 
    let print_flow {control = g; def = d; kill = k; name = n; arg=arg;
@@ -158,7 +152,7 @@
        List.map
          (fun y ->
            print_string "**Block**\n";
-           List.map (fun x -> print_string
+           List.map (fun (_,x) -> print_string
            (statement_to_string !x)) y)  l
      in
        print_string ("****Graph "^n^
@@ -263,23 +257,23 @@
       in
       let make_def (nl,_) =
         let block_def b =
-          List.fold_left
+          (b,(List.fold_left
             (fun l x-> if (is_set x) then simple_list2 l x eq2
-              else l) [] b
+              else l) [] !b))
         in
-          List.map (fun x -> block_def !x) nl
+          List.map (fun x -> block_def x) nl
       in
       let make_kill (f::defl) =
-        let rec loop l r b =
+        let rec loop l r (br,b) =
           match r with
               rl :: rr -> 
-                (List.fold_left
+                (br,(List.fold_left
                    (fun kl l2 ->
                      kl@(List.fold_left
                            (fun l3 x ->
                              if (search_list x eq2 b) then x::l3
                              else l3) [] l2))
-                   [] (l@r))::(loop (b::l) rr rl)
+                   [] (l@r)))::(loop (b::l) rr rl)
             | _ -> []::[]
         in
           loop [] defl f
@@ -287,15 +281,15 @@
       let d = make_def g in
         (d, (make_kill d))
     in
+    let rec rm_list n = function
+      | x::y -> if x==n then y else x::(rm_list n y)
+      | _ -> []
+    in
     (*block内に一文しかないgraphからblockにまとめられたgraphをつくる*)      
     let block_graph g =
       let {control=scontrol;def=sdef;kill=skill;name=sname;arg=sarg;
            start_n=sstart_n;end_n=send_n} = g in
       (*graphをかえす*)
-      let rec rm_list n = function
-        | x::y -> if x==n then y else x::(rm_list n y)
-        | _ -> []
-      in
       let rec search_list n = function
         | x::y -> if x==n then true else search_list n y
         | _ -> false in
@@ -341,6 +335,13 @@
         {control=bg;def=d;kill=k;name=sname;arg=sarg;
            start_n=start_n;end_n=end_n}
     in
+(*    let make_reach {control=g; def=def; kill=kill;
+                    name=sname; arg=sarg;
+                    start_n=start_n;end_n=end_n}=
+      let rm_list2 l rl =
+        List.fold_left (fun l2 r ->rm_list r l2) l rl in
+        
+      let reach = def2@(rm_list2 r l2) *)
       List.map
         (fun {control=g; def=def; kill=kill;name=sname; arg=sarg;
               start_n=start_n;end_n=end_n} -> 
