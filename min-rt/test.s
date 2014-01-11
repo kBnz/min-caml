@@ -185,10 +185,6 @@ min_caml_print_int:
 min_caml_print_byte:
 	inout	%30, %0, -2
 	call	%30, %27
-.global min_caml_print_char
-min_caml_print_char:
-	inout	%30, %0, -2
-	call	%30, %27
 .global min_caml_print_float
 min_caml_print_float:
 	finout	%30, %0, -1
@@ -284,3 +280,4 @@ create_float_array_cont:
 	breq	create_float_array_loop, %26
 create_float_array_exit:
 	call	%30, %27
+min_caml_end:

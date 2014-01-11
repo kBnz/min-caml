@@ -1,0 +1,3 @@
+#compile and link (global)
+cat $1.ml $2.ml > min_caml_temp.ml
+./cal min_caml_temp

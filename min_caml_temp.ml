@@ -1,103 +1,93 @@
-let rec fispos x = if 0.0 <= x then not (x = 0.0) else false in
-let rec fless x y = if x <= y then not (x = y) else false in
-let rec fequal x y = x = y in
-let rec fisneg x = if (x <= 0.0) then  not (x = 0.0) else false in
-let rec fiszero x = (x = 0.0) in
-let rec fneg x = -.x in
-let rec fhalf x = x/.2.0 in
-let rec fsqr x = x *. x in 
-let rec fabs x = abs_float x in 
 (**************** グローバル変数の宣言 ****************)
 
 (* オブジェクトの個数 *)
-let n_objects = Array.create 1 0 in
+let n_objects = create_array 1 0
 
 (* オブジェクトのデータを入れるベクトル（最大60個）*)
 let objects = 
-  let dummy = Array.create 0 0.0 in
-  Array.create 60 (0, 0, 0, 0, dummy, dummy, false, dummy, dummy, dummy, dummy) in
+  let dummy = create_array 0 0.0 in
+  create_array 60 (0, 0, 0, 0, dummy, dummy, false, dummy, dummy, dummy, dummy)
 
 (* Screen の中心座標 *)
-let screen = Array.create 3 0.0 in
+let screen = create_array 3 0.0
 (* 視点の座標 *)
-let viewpoint = Array.create 3 0.0 in
+let viewpoint = create_array 3 0.0
 (* 光源方向ベクトル (単位ベクトル) *)
-let light = Array.create 3 0.0 in
+let light = create_array 3 0.0
 (* 鏡面ハイライト強度 (標準=255) *)
-let beam = Array.create 1 255.0 in
+let beam = create_array 1 255.0
 (* AND ネットワークを保持 *)
-let and_net = Array.create 50 (Array.create 1 (-1)) in
+let and_net = create_array 50 (create_array 1 (-1))
 (* OR ネットワークを保持 *)
-let or_net = Array.create 1 (Array.create 1 (and_net.(0))) in
+let or_net = create_array 1 (create_array 1 (and_net.(0)))
 
 (* 以下、交差判定ルーチンの返り値格納用 *)
 (* solver の交点 の t の値 *)
-let solver_dist = Array.create 1 0.0 in
+let solver_dist = create_array 1 0.0
 (* 交点の直方体表面での方向 *)
-let intsec_rectside = Array.create 1 0 in
+let intsec_rectside = create_array 1 0
 (* 発見した交点の最小の t *)
-let tmin = Array.create 1 (1000000000.0) in
+let tmin = create_array 1 (1000000000.0)
 (* 交点の座標 *)
-let intersection_point = Array.create 3 0.0 in
+let intersection_point = create_array 3 0.0
 (* 衝突したオブジェクト番号 *)
-let intersected_object_id = Array.create 1 0 in
+let intersected_object_id = create_array 1 0
 (* 法線ベクトル *)
-let nvector = Array.create 3 0.0 in
+let nvector = create_array 3 0.0
 (* 交点の色 *)
-let texture_color = Array.create 3 0.0 in
+let texture_color = create_array 3 0.0
 
 (* 計算中の間接受光強度を保持 *)
-let diffuse_ray = Array.create 3 0.0 in
+let diffuse_ray = create_array 3 0.0
 (* スクリーン上の点の明るさ *)
-let rgb = Array.create 3 0.0 in
+let rgb = create_array 3 0.0
 
 (* 画像サイズ *)
-let image_size = Array.create 2 0 in
+let image_size = create_array 2 0
 (* 画像の中心 = 画像サイズの半分 *)
-let image_center = Array.create 2 0 in
+let image_center = create_array 2 0
 (* 3次元上のピクセル間隔 *)
-let scan_pitch = Array.create 1 0.0 in
+let scan_pitch = create_array 1 0.0
 
 (* judge_intersectionに与える光線始点 *)
-let startp = Array.create 3 0.0 in
+let startp = create_array 3 0.0
 (* judge_intersection_fastに与える光線始点 *)
-let startp_fast = Array.create 3 0.0 in
+let startp_fast = create_array 3 0.0
 
 (* 画面上のx,y,z軸の3次元空間上の方向 *)
-let screenx_dir = Array.create 3 0.0 in
-let screeny_dir = Array.create 3 0.0 in
-let screenz_dir = Array.create 3 0.0 in
+let screenx_dir = create_array 3 0.0
+let screeny_dir = create_array 3 0.0
+let screenz_dir = create_array 3 0.0
 
 (* 直接光追跡で使う光方向ベクトル *)
-let ptrace_dirvec  = Array.create 3 0.0 in
+let ptrace_dirvec  = create_array 3 0.0
 
 (* 間接光サンプリングに使う方向ベクトル *)
 let dirvecs = 
-  let dummyf = Array.create 0 0.0 in
-  let dummyff = Array.create 0 dummyf in
-  let dummy_vs = Array.create 0 (dummyf, dummyff) in
-  Array.create 5 dummy_vs in
+  let dummyf = create_array 0 0.0 in
+  let dummyff = create_array 0 dummyf in
+  let dummy_vs = create_array 0 (dummyf, dummyff) in
+  create_array 5 dummy_vs
 
 (* 光源光の前処理済み方向ベクトル *)
 let light_dirvec =
-  let dummyf2 = Array.create 0 0.0 in
-  let v3 = Array.create 3 0.0 in
-  let consts = Array.create 60 dummyf2 in
-  (v3, consts) in
+  let dummyf2 = create_array 0 0.0 in
+  let v3 = create_array 3 0.0 in
+  let consts = create_array 60 dummyf2 in
+  (v3, consts)
 
 (* 鏡平面の反射情報 *)
 let reflections =
-  let dummyf3 = Array.create 0 0.0 in
-  let dummyff3 = Array.create 0 dummyf3 in
+  let dummyf3 = create_array 0 0.0 in
+  let dummyff3 = create_array 0 dummyf3 in
   let dummydv = (dummyf3, dummyff3) in
-  Array.create 180 (0, dummydv, 0.0) in
+  create_array 180 (0, dummydv, 0.0)
 
 (* reflectionsの有効な要素数 *) 
 
-let n_reflections = Array.create 1 0 in
-
+let n_reflections = create_array 1 0
 (*(*MINCAML*) let true = 1 in 
-(*MINCAML*) let false = 0 in*)
+(*MINCAML*) let false = 0 in *)
 (*MINCAML*) let rec xor x y = if x then not y else y in
 (******************************************************************************
    ユーティリティー
@@ -2391,4 +2381,4 @@ in
 
 let _ = rt 128 128
 
-in ()
+in 0
