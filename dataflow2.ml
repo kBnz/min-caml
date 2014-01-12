@@ -23,6 +23,9 @@
        | _ -> [z]
    in loop l
 
+ let rec rm_list n = function
+   | x::y -> if x==n then y else x::(rm_list n y)
+   | _ -> []
 
  module MakeGraph(Item: ItemType)  =
  struct
@@ -145,24 +148,6 @@
          kill = []; name = ""; arg=[];
          start_n = start_n; end_n = end_n;}
 
-   let print_flow {control = g; def = d; kill = k; name = n; arg=arg;
-                   start_n = start_n; end_n = end_n;} =
-   (*defとkillのprint*)
-     let print_srll l =      
-       List.map
-         (fun y ->
-           print_string "**Block**\n";
-           List.map (fun (_,x) -> print_string
-           (statement_to_string !x)) y)  l
-     in
-       print_string ("****Graph "^n^
-                        (List.fold_left (fun a b->a^" "^b) " " arg)^"****\n");
-       Graph.print_graph g;
-       print_string ("****def "^n^"****\n");
-       print_srll d;
-       print_string ("****kill "^n^"****\n");
-       print_srll k
-
    type dest = Tail | NonTail
    let list_size l =
      let rec loop = function
@@ -268,22 +253,18 @@
           match r with
               rl :: rr -> 
                 (br,(List.fold_left
-                   (fun kl l2 ->
+                   (fun kl (_,l2) ->
                      kl@(List.fold_left
                            (fun l3 x ->
                              if (search_list x eq2 b) then x::l3
                              else l3) [] l2))
-                   [] (l@r)))::(loop (b::l) rr rl)
-            | _ -> []::[]
+                   [] (l@r)))::(loop ((br,b)::l) rr rl)
+            | _ -> (br,[])::[]
         in
           loop [] defl f
       in
       let d = make_def g in
         (d, (make_kill d))
-    in
-    let rec rm_list n = function
-      | x::y -> if x==n then y else x::(rm_list n y)
-      | _ -> []
     in
     (*block内に一文しかないgraphからblockにまとめられたgraphをつくる*)      
     let block_graph g =
@@ -335,23 +316,53 @@
         {control=bg;def=d;kill=k;name=sname;arg=sarg;
            start_n=start_n;end_n=end_n}
     in
-(*    let make_reach {control=g; def=def; kill=kill;
-                    name=sname; arg=sarg;
-                    start_n=start_n;end_n=end_n}=
-      let rm_list2 l rl =
-        List.fold_left (fun l2 r ->rm_list r l2) l rl in
-        
-      let reach = def2@(rm_list2 r l2) *)
       List.map
         (fun {control=g; def=def; kill=kill;name=sname; arg=sarg;
               start_n=start_n;end_n=end_n} -> 
           Graph.print_graph g) (sg ());
       List.map block_graph (sg ())
-end
+
+   let make_reach {control=g; def=def; kill=kill;
+                   name=sname; arg=sarg;
+                   start_n=start_n;end_n=end_n}=
+     let rm_list2 l rl =
+       List.fold_left (fun l2 r ->rm_list r l2) l rl in
+     let rec mymap x = function
+       | (a,b)::l -> if a==x then b else mymap x l
+       | _ -> [] in
+     let rec loop reach count =
+       let r = (List.fold_left
+                  (fun reach2 n ->
+                    reach2@
+                      [(n,(List.fold_left
+                             (fun l2 pr ->
+                               ((mymap pr def)@(rm_list2 (mymap pr kill) (mymap pr reach)))@l2)
+                             [] (Graph.pred g n)))])
+                  [] (Graph.nodes g)) in
+         if (reach = r) || (count>10) then r else loop r (count+1)
+     in loop [] 0
+       
+   let print_flow f =
+     let {control = g; def = d; kill = k; name = n; arg=arg;
+          start_n = start_n; end_n = end_n;} = f in
+     (*defとkillのprint*)
+     let print_srll l =      
+       List.map
+         (fun (n,y) ->
+           print_string ((string_of_int (Graph.node_to_int g n))^"**Block**\n");
+           List.map (fun x -> print_string
+             (statement_to_string !x)) y)  l
+     in
+       print_string ("****Graph "^n^
+                        (List.fold_left (fun a b->a^" "^b) " " arg)^"****\n");
+       Graph.print_graph g;
+       print_string ("****def "^n^"****\n");
+       print_srll d;
+       print_string ("****kill "^n^"****\n");
+       print_srll k;
+       print_string ("***reach "^n^"****\n");
+       print_srll (make_reach f)       
+ end
 
 let f k =
-  (*List.map
-  (fun {Flow.control=g; Flow.def=def; Flow.kill=kill;Flow.name=name;
-        Flow.start_n=start_n;Flow.end_n=end_n} -> 
-    Flow.Graph.print_graph g) (Flow.h k);*)
   List.map Flow.print_flow (Flow.h k); k  
