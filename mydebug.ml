@@ -274,17 +274,16 @@ let rec print_asm3 a =
 	     (* スタック変数から値を復元 (caml2html: sparcasm_restore) *)))
   in 
     match a with
-      | Ans(e) -> print_asm4 e 0; print_newline ()
+      | Ans(e) -> print_asm4 e 0;
       | Let((i,ty),e,t) -> print_string ("Let "^i);
 	  print_asm4 e 0;
-	  print_asm3 t;
-	  print_newline ()
+	  print_asm3 t
 	    
 	    
 let print_asm2
     {name = (Id.L i); args = al; fargs = fl; body = b; ret=r} =
   print_string ("*name* "^i^" *args*{"^(String.concat "," al)^"} *fargs*{"^
-		  (String.concat "," fl)^"} *body*");
+		  (String.concat "," fl)^"} *body*\n");
   print_asm3 b;
   print_string ("*ret* ");
   print_type r
@@ -305,7 +304,7 @@ let print_virtual (Asm.Prog (ifl, fl, t)) = print_string "****Virtual****";
   print_newline ();
   print_string "**float list**"; print_newline ();
   List.map (fun ((Id.L i),f)-> print_string (i^","^(string_of_float f))) ifl;
-  print_string "**code**"; print_newline ();
+  print_string "**code**";
   List.map print_asm2 fl; print_newline ();
   print_asm3 t;
   (Asm.Prog (ifl, fl, t))
@@ -313,7 +312,7 @@ let print_simm (Asm.Prog (ifl, fl, t)) = print_string "****Simm****";
   print_newline ();
   print_string "**float list**"; print_newline ();
   List.map (fun ((Id.L i),f)-> print_string (i^","^(string_of_float f))) ifl;
-  print_string "**code**"; print_newline ();
+  print_string "**code**";
   List.map print_asm2 fl; print_newline ();
   print_asm3 t;
   (Asm.Prog (ifl, fl, t))
@@ -321,7 +320,7 @@ let print_regalloc (Asm.Prog (ifl, fl, t)) = print_string "****RegAlloc****";
   print_newline ();
   print_string "**float list**"; print_newline ();
   List.map (fun ((Id.L i),f)-> print_string (i^","^(string_of_float f))) ifl;
-  print_string "**code**"; print_newline ();
+  print_string "**code**";
   List.map print_asm2 fl; print_newline ();
   print_asm3 t;
   (Asm.Prog (ifl, fl, t))
