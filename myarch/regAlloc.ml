@@ -25,6 +25,8 @@ module Flow 生存解析用の処理及び干渉グラフの記述
 Debug用チェックリスト
 ・干渉グラフはできているか？
   ・idtは正確か？
+  ・配列を使ってもうまく行くか
+  ・外部変数があっても
 *)
 
 open Asm
@@ -59,7 +61,8 @@ let string_of_id_or_imm = function
   | C(x) -> string_of_int x
 (*変数とtypeのリスト*)
 let idt = ref []
-
+exception IDT_ERROR
+  
 let string_of_type = function
   | Type.Unit -> "unit"
   | Type.Bool -> "bool"
@@ -75,8 +78,9 @@ let print_idt () =
       loop y
     | _ -> ()
   in
-    print_string "*****id->type*****\n";
-    loop (!idt)
+    print_string "*****id->type*****{\n";
+    loop (!idt);
+      print_string "}\n";
   
 module MakeGraph(Item: ItemType)  =
 struct
@@ -205,21 +209,25 @@ struct
       {control: Graph.graph; def: (Graph.node*(Id.t list)) list;
        use: (Graph.node*(Id.t list)) list;
        live: (Graph.node*(Id.t list)) list;
-       name: string; arg: Id.t list;
-       start_n: Graph.node; end_n: Graph.node; igraph:IGraph.graph}
+       name: string; arg: (Id.t list)*(Id.t list); (*int,float0*)
+       start_n: Graph.node; end_n: Graph.node; igraphi:IGraph.graph;
+       igraphf:IGraph.graph}
 
   let newFlow ()=
     let start_n = Graph.to_node Empty in
     let end_n = Graph.to_node Empty in
     let g = Graph.addNodes (Graph.newGraph ()) [start_n;end_n]
     in {control = g; def = [];
-        use = []; live=[];name = ""; arg=[]; igraph=IGraph.newGraph();
+        use = []; live=[];name = ""; arg=([],[]); igraphi=IGraph.newGraph();
+        igraphf=IGraph.newGraph();
         start_n = start_n; end_n = end_n;}
   let print_flow f =
-    let {control = g; def = d; use = u; name = n; live=live; arg=arg;
-         start_n = start_n; end_n = end_n; igraph=ig} = f in
-      print_string ("****Graph "^n^
-                       (List.fold_left (fun a b->a^" "^b) " " arg)
+    let {control = g; def = d; use = u; name = n; live=live; arg=(argi,argf);
+         start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf}= f in
+      print_string ("****Graph "^n^" int {"^
+                       (List.fold_left (fun a b->a^" "^b) " " argi)^"}"
+                       ^" float {"^
+                       (List.fold_left (fun a b->a^" "^b) " " argf)^"}"
                     ^"****\n");
       Graph.print_graph g;
      let print_ids l =
@@ -234,8 +242,10 @@ struct
        print_ids u;
        print_string ("***live***\n");
        print_ids live;
-       print_string ("***igraph***\n");
-       IGraph.print_graph ig
+       print_string ("***igraph(int)***\n");
+       IGraph.print_graph igi;
+       print_string ("***igraph(float)***\n");
+       IGraph.print_graph igf
 
   let list_size l =
     let rec loop = function
@@ -246,7 +256,7 @@ struct
   exception Map_Error
   let make_igraph {control=control;def=def;
                    use=use;name=name;arg=arg;live=live;
-                   start_n=start_n;end_n=end_n;igraph=ig} =
+                   start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} =
     let g = IGraph.newGraph () in
     let rec ref_node x (nl,el) =
       match nl with
@@ -272,12 +282,31 @@ struct
           (List.fold_left
              (fun g4 y -> if x=y then g4 else make_edge2 g4 x y)
              g3 l)) g2 l in
-      List.fold_left (fun x (y,z) -> make_edge3 x z)
-        (add_nodes g (def@use)) live
+    let type_of_id i =
+      let rec loop = function
+        | (xi,xt)::y -> if xi=i then xt else loop y
+        | _ -> print_string i;raise IDT_ERROR
+      in
+        loop !idt
+    in
+    let type_def_use_live vt = (*ある型の変数のみのdef,use,liveを返す*)
+      let rec select = function
+        | (n,tl)::y -> (n,(List.fold_left
+          (fun l v -> if (type_of_id v)=vt then v::l else l) [] tl))::(select y)
+        | _ -> []
+      in
+        (select def, select use, select live)
+    in
+    let (defi,usei,livei) = type_def_use_live Type.Int in
+    let (deff,usef,livef) = type_def_use_live Type.Float in
+      ((List.fold_left (fun x (y,z) -> make_edge3 x z)
+        (add_nodes g (defi@usei)) livei),
+       (List.fold_left (fun x (y,z) -> make_edge3 x z)
+        (add_nodes g (deff@usef)) livef))
         
   let make_def_and_use {control=control;def=def;
                          use=use;name=name;arg=arg;live=live;
-                         start_n=start_n;end_n=end_n;igraph=ig} =
+                         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} =
     let make_use (nl,el) =
       let make_statement_use s =
         let id_list i = function
@@ -348,15 +377,16 @@ struct
     let live2 = make_live control in
     let fg = {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraph=ig} in
+       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} in      
+    let (igi2,igf2) = make_igraph fg in
       {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraph =make_igraph fg}
+       start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2}
       
-  let h2 body=
+  let h2 x ys zs body ret=
     let fl = newFlow () in
     let {control=control;def=def;use=use;live=live;name=name;arg=arg;
-         start_n=start_n;end_n=end_n;igraph=ig} = fl in
+         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} = fl in
     let new_block_list curr prevl g2=
       List.fold_left
         (fun g3 p ->Graph.mk_edge g3 p curr)
@@ -398,20 +428,22 @@ struct
               let (p2,g3) = loop_exp e i g2 in loop_t t1 p2 g3 i1
             | Ans(e) -> loop_exp e i1 g2
       in
-      let (p,g2) = loop_t body [start_n] g "min_caml_ret_reg" in
+      let (p,g2) = loop_t body [start_n] g (x^".min_caml_ret_reg") in
         List.fold_left
           (fun g3 p2 ->Graph.mk_edge g3 p2 end_n) g2 p
     in
-      make_def_and_use {control=main ();def=def;use=use;live=live;name=name;arg=arg;
-                        start_n=start_n;end_n=end_n;igraph=ig}
+      make_def_and_use {control=main ();def=def;use=use;live=live;name=x;arg=(ys,zs);
+                        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf}
 
   let h { Asm.name = Id.L(x); args = ys;
           fargs = zs; body = body; ret = ret } =
-   (h2 body)
+    idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@
+      (List.fold_left (fun l1 v ->(v,Type.Float)::l1) [] zs)@(!idt);
+   (h2 x ys zs body ret)
 end
 
 let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html: regalloc_f) *)
   List.map (fun x -> Flow.print_flow (Flow.h x)) fundefs;
-  Flow.print_flow (Flow.h2 e);
+  Flow.print_flow (Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit});
   print_idt ();
   raise Exit
