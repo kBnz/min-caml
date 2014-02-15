@@ -18,8 +18,10 @@ module Flow 生存解析用の処理及び干渉グラフの記述
 *)
 (*
 やること
-・intとfloatで干渉グラフを分ける  
+・intとfloatで干渉グラフを分ける  (終了)
 ・debug
+・単純化
+・選択 
 *)
 (*
 Debug用チェックリスト
@@ -30,7 +32,9 @@ Debug用チェックリスト
 *)
 
 open Asm
-
+let reg_size = 32
+let freg_size = 32
+  
 module type ItemType = sig
   type t
   val to_string : t -> string
@@ -62,7 +66,9 @@ let string_of_id_or_imm = function
 (*変数とtypeのリスト*)
 let idt = ref []
 exception IDT_ERROR
-  
+exception Map_Error
+exception Spill
+exception The_Others  
 let string_of_type = function
   | Type.Unit -> "unit"
   | Type.Bool -> "bool"
@@ -139,6 +145,23 @@ struct
     List.map (fun x -> f (to_item x)) nl
   let map_edges ((nl,el):graph) f =
     List.map f el
+  let count_degree ((nl,el):graph) n = (*nodeの次数を返す*)
+    let rec loop = function
+      | (x,y)::z ->
+        if x == n or y == n then 1+(loop z) else (loop z)
+      | _ -> 0
+    in
+      loop el
+  let rm_node ((nl,el):graph) n =
+    let rec loop1 = function
+      | (x,y)::z ->
+        if x == n or y == n then (loop1 z) else (x,y)::(loop1 z)
+      | _ -> []
+    in
+    let rec loop2 = function
+      | x::z -> if x == n then z else x::(loop2 z)
+      | _ -> []
+    in ((loop2 nl),(loop1 el))        
   let print_graph ((nl,el):graph) =
     List.map
       (fun x ->
@@ -211,7 +234,7 @@ struct
        live: (Graph.node*(Id.t list)) list;
        name: string; arg: (Id.t list)*(Id.t list); (*int,float0*)
        start_n: Graph.node; end_n: Graph.node; igraphi:IGraph.graph;
-       igraphf:IGraph.graph}
+       igraphf:IGraph.graph; cmap:(((IGraph.node*int) list)*((IGraph.node*int) list))}
 
   let newFlow ()=
     let start_n = Graph.to_node Empty in
@@ -220,10 +243,10 @@ struct
     in {control = g; def = [];
         use = []; live=[];name = ""; arg=([],[]); igraphi=IGraph.newGraph();
         igraphf=IGraph.newGraph();
-        start_n = start_n; end_n = end_n;}
+        start_n = start_n; end_n = end_n; cmap=[],[]}
   let print_flow f =
     let {control = g; def = d; use = u; name = n; live=live; arg=(argi,argf);
-         start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf}= f in
+         start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf;cmap=(cmap,fcmap)}= f in
       print_string ("****Graph "^n^" int {"^
                        (List.fold_left (fun a b->a^" "^b) " " argi)^"}"
                        ^" float {"^
@@ -236,6 +259,10 @@ struct
          List.map (fun x -> print_string (x^" ")) y;
          print_newline ()) l
      in
+     let print_coloring cmap =
+       List.map (fun (x,c) -> print_string ("("^(!x)^","^(string_of_int c)^")")) cmap;
+       print_newline ()
+     in
        print_string ("***def***\n");
        print_ids d;
        print_string ("***use***\n");
@@ -244,8 +271,10 @@ struct
        print_ids live;
        print_string ("***igraph(int)***\n");
        IGraph.print_graph igi;
+       print_coloring cmap;
        print_string ("***igraph(float)***\n");
-       IGraph.print_graph igf
+       IGraph.print_graph igf;
+       print_coloring fcmap
 
   let list_size l =
     let rec loop = function
@@ -254,9 +283,67 @@ struct
     in loop l
    (*fundef -> flowgraph*)
   exception Map_Error
+  let simplify ((nl,el):IGraph.graph) size =
+    (*単純化 グラフとレジスタ数を受け取りGraphとStackを返す*)
+    let rec degree_list (nl2,el2)=
+      List.map (fun x -> (x, IGraph.count_degree (nl2,el2) x)) nl2 in
+    let rec push_nodes (nl2,el2) st =
+      List.fold_left (fun (g2,st2) (n,d)->
+        if d <= size then ((IGraph.rm_node g2 n), n::st2)
+        else (g2,st2)) ((nl2,el2), st) (degree_list (nl2,el2))
+    in
+    let rec loop prev_g prev_st=
+      let (curr_g,curr_st) = push_nodes prev_g prev_st in
+        if curr_st = prev_st then (curr_g,curr_st) else loop curr_g curr_st
+    in
+      push_nodes (nl,el) []
+  let rec select ((nl,el):IGraph.graph) size st args ret=
+    let g = (nl,el) in
+    let cl =
+      let rec make_list i =
+        if i<size then i::(make_list (i+1)) else [] in
+        make_list 0
+    in
+    let enable_colors n cmap = (*nodeの色塗りに使える色*)
+      let rec rm_list2 x = function
+        | y::z -> if y=x then z else y::(rm_list2 x z)
+        | _ -> [] in
+      let adj_nodes = IGraph.adj g n in
+      let rec node_color n2 = function
+        | (x,c)::y -> if n2 = x then c else node_color n2 y
+        | _ -> raise Map_Error in        
+      let adj_colors = List.map (fun n ->node_color n cmap) adj_nodes in
+        List.fold_right rm_list2 adj_colors cl
+    in
+    let select_color = function
+      | x::y -> x
+      | _ -> raise Spill in
+    let is_arg_or_ret x = (List.exists (fun y->(!x)=y) args) or (!x)=ret in
+    let cmap = (*引数と返り値に色を塗りほかは塗っていない(-1)color_map*)
+      let rec num_of_ele n = function
+        | x::y -> if x=n then 0 else 1+(num_of_ele n y)
+        | _ -> raise The_Others in
+      List.map
+        (fun x -> if (List.exists (fun y->(!x)=y) args)
+          then (x,(num_of_ele !x args)) else (x,(if (!x)=ret then 0 else -1))) nl in
+    let rec main cmap2 = function
+      | x::y -> if is_arg_or_ret x then main cmap2 y (*もう色がついている*)else
+        main (simple_list2 cmap2
+                       (x, select_color (enable_colors x cmap2))
+                       (fun (n,_) (n2,_) -> n=n2)) y
+      | _ -> cmap2
+    in main cmap st
+      
+  let reg_coloring igi igf (args,fargs) name =
+    let main ig args2 size =
+      let (_,st) = simplify ig size in
+        select ig size st args2 (name^".min_caml_ret_reg")
+    in
+      ((main igi args reg_size),(main igf fargs freg_size))
+        
   let make_igraph {control=control;def=def;
                    use=use;name=name;arg=arg;live=live;
-                   start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} =
+                   start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} =
     let g = IGraph.newGraph () in
     let rec ref_node x (nl,el) =
       match nl with
@@ -306,7 +393,7 @@ struct
         
   let make_def_and_use {control=control;def=def;
                          use=use;name=name;arg=arg;live=live;
-                         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} =
+                         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} =
     let make_use (nl,el) =
       let make_statement_use s =
         let id_list i = function
@@ -377,16 +464,17 @@ struct
     let live2 = make_live control in
     let fg = {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} in      
+       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in      
     let (igi2,igf2) = make_igraph fg in
+    let (cmap,fcmap) = reg_coloring igi2 igf2 arg name in
       {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2}
+       start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)}
       
   let h2 x ys zs body ret=
     let fl = newFlow () in
     let {control=control;def=def;use=use;live=live;name=name;arg=arg;
-         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf} = fl in
+         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} = fl in
     let new_block_list curr prevl g2=
       List.fold_left
         (fun g3 p ->Graph.mk_edge g3 p curr)
@@ -433,13 +521,14 @@ struct
           (fun g3 p2 ->Graph.mk_edge g3 p2 end_n) g2 p
     in
       make_def_and_use {control=main ();def=def;use=use;live=live;name=x;arg=(ys,zs);
-                        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf}
+                        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap}
 
   let h { Asm.name = Id.L(x); args = ys;
           fargs = zs; body = body; ret = ret } =
     idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@
       (List.fold_left (fun l1 v ->(v,Type.Float)::l1) [] zs)@(!idt);
    (h2 x ys zs body ret)
+
 end
 
 let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html: regalloc_f) *)
