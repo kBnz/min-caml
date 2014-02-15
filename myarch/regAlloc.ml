@@ -116,7 +116,10 @@ struct
   let addNode ((nl,el):graph) n = ((n::nl),el)
   let addNodes ((nl,el):graph) nl2 = ((nl2@nl),el)
   let mk_edge ((nl,el):graph) from_n to_n =
-    (nl,(simple_list ((from_n,to_n)::el) (fun x y -> x==y)))
+    (nl,(simple_list ((from_n,to_n)::el) (fun x y -> x=y)))
+  let mk_udedge ((nl,el):graph) from_n to_n = (*無向辺*)
+    (nl,(simple_list ((from_n,to_n)::el)
+           (fun (xt,xf) (yt,yf) ->(xt==yt && xf==yf)or(xt==yf && xf==yt))))
   let mk_edges ((nl,el):graph) el2 = (nl,(el2@el))
   let rm_edge ((nl,el):graph) from_n to_n =
     let rec loop = function
@@ -362,7 +365,7 @@ struct
         List.fold_left add_node2 g3 y) g2 l in
     let make_edge2 g2 from_n to_n =
       let g3 = add_node2 (add_node2 g2 from_n) to_n in
-        IGraph.mk_edge g3 (ref_node from_n g3) (ref_node to_n g3) in
+        IGraph.mk_udedge g3 (ref_node from_n g3) (ref_node to_n g3) in
     let make_edge3 g2 l =
       List.fold_left
         (fun g3 x ->
@@ -442,23 +445,17 @@ struct
         | (a,b)::l -> if a==x then (a,y)::l else (a,b)::(add_list x y l)
         | _ -> [(x,y)] in        
       let rec loop l =
-        let print_ids l2 =
-          List.map (fun (n,y) ->
-            print_string ((string_of_int (Graph.node_to_int g n))^":");
-            List.map (fun x -> print_string (x^" ")) y;
-            print_newline ()) l2
-        in
         let l4 =
           List.fold_left
             (fun l2 p -> 
               add_list p (List.fold_left
                             (fun l3 s->
-                              l3@((rm_list2 (mymap s l)
-                                     (mymap s def2))@(mymap s use2)))
+                              simple_list (l3@((rm_list2 (mymap s l)
+                                     (mymap s def2))@(mymap s use2))) (fun x y -> x=y))
                             [] (Graph.succ g p)) l2)
             l nl
         in
-          if l = l4 then l else (print_ids l4;loop l4)
+          if l = l4 then l else loop l4
       in loop [] in
       
     let live2 = make_live control in
@@ -528,7 +525,7 @@ struct
     idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@
       (List.fold_left (fun l1 v ->(v,Type.Float)::l1) [] zs)@(!idt);
    (h2 x ys zs body ret)
-
+     
 end
 
 let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html: regalloc_f) *)
