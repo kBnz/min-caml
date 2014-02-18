@@ -21,7 +21,10 @@ module Flow 生存解析用の処理及び干渉グラフの記述
 ・intとfloatで干渉グラフを分ける  (終了)
 ・debug
 ・単純化
-・選択 
+・GraphからAsm.progへの変換  
+・選択
+・関数呼び出しのためのmovを減らすemit.mlも見る
+・inline展開するとerror  
 *)
 (*
 Debug用チェックリスト
@@ -29,12 +32,13 @@ Debug用チェックリスト
   ・idtは正確か？
   ・配列を使ってもうまく行くか
   ・外部変数があっても
+・changeNodeを使った後はliveとかを更新しないといけない  
 *)
 
 open Asm
 let reg_size = 32
 let freg_size = 32
-  
+type branch = Normal | Then | Else  
 module type ItemType = sig
   type t
   val to_string : t -> string
@@ -68,7 +72,7 @@ let idt = ref []
 exception IDT_ERROR
 exception Map_Error
 exception Spill
-exception The_Others  
+exception The_Others of string  
 let string_of_type = function
   | Type.Unit -> "unit"
   | Type.Bool -> "bool"
@@ -113,7 +117,7 @@ struct
   let to_node (i:Item.t)= ref i
   let to_item (n:node)= !n
   let newGraph () = (([],[]) : graph)
-  let addNode ((nl,el):graph) n = ((n::nl),el)
+  let addNode ((nl,el):graph) n = ((n::nl),el)    
   let addNodes ((nl,el):graph) nl2 = ((nl2@nl),el)
   let mk_edge ((nl,el):graph) from_n to_n =
     (nl,(simple_list ((from_n,to_n)::el) (fun x y -> x=y)))
@@ -165,6 +169,13 @@ struct
       | x::z -> if x == n then z else x::(loop2 z)
       | _ -> []
     in ((loop2 nl),(loop1 el))        
+  let changeNode ((nl,el):graph) n n2 = (*nをn2に変える*)
+    let g = (nl,el) in
+      rm_node
+        (List.fold_left (fun g2 n3 -> mk_edge g2 n3 n2)
+        (List.fold_left (fun g2 n3-> mk_edge g2 n2 n3)
+           (addNode g n2) (succ g n))
+        (pred g n)) n    
   let print_graph ((nl,el):graph) =
     List.map
       (fun x ->
@@ -178,10 +189,18 @@ end
 
 module Flow =
 struct
-  type statement = Exp of Asm.exp | Set of Id.t*exp | BrEq of Id.t*id_or_imm
+  type statement =   Exp of Asm.exp | Set of (Id.t*Type.t)*exp
+                   | BrEq of Id.t*id_or_imm
                    | BrLE of Id.t*id_or_imm | BrGE of Id.t*id_or_imm
                    | BrFLE of Id.t*Id.t | BrFEq of Id.t*Id.t
                    | Empty
+
+  let t_list = ref [] (*thenのedge*)
+  let e_list = ref [] (*elseのedge*)
+  let is_t_edge e =
+    List.exists (fun x->e=x) (!t_list)
+  let is_e_edge e =
+    List.exists (fun x->e=x) (!e_list)
   let exp_to_string = function
     | Nop -> "Nop"
     | Asm.Set(x) -> ("Set "^(string_of_int x))
@@ -216,7 +235,7 @@ struct
     type t = statement
     let to_string  = function
       | Exp e       -> "Exp "^(exp_to_string e)
-      | Set (i,e)   -> "Set "^i^" "^(exp_to_string e)
+      | Set ((i,t),e)   -> "Set "^i^" "^(exp_to_string e)
       | BrEq (x,y)  -> "BrEq "^x^" "^(string_of_id_or_imm y)
       | BrGE (x,y)  -> "BrGE "^x^" "^(string_of_id_or_imm y)
       | BrLE (x,y)  -> "BrLE "^x^" "^(string_of_id_or_imm y)
@@ -231,14 +250,70 @@ struct
   end
   module IGraph = MakeGraph(Str)  
   module Graph = MakeGraph(Statement)
+  let changeNode2 (nl,el) n n2 =
+    (*changeNodeにthen_edge else_edgeの処理を追加*)
+    let rm_list2 nl2 =
+      List.map (fun (fn,tn) ->
+        if fn=n then (n2,tn) else (if tn=n then (fn,n2) else (fn,tn))) nl2
+    in
+      t_list := (rm_list2 (!t_list));
+      e_list := (rm_list2 (!e_list));
+      Graph.changeNode (nl,el) n n2
   type flowgraph =
       {control: Graph.graph; def: (Graph.node*(Id.t list)) list;
        use: (Graph.node*(Id.t list)) list;
        live: (Graph.node*(Id.t list)) list;
        name: string; arg: (Id.t list)*(Id.t list); (*int,float0*)
        start_n: Graph.node; end_n: Graph.node; igraphi:IGraph.graph;
-       igraphf:IGraph.graph; cmap:(((IGraph.node*int) list)*((IGraph.node*int) list))}
-
+       igraphf:IGraph.graph; cmap:(((IGraph.node*string) list)*((IGraph.node*string) list))}
+  let to_body {control = g; def = d; use = u; name = n; live=live; arg=(argi,argf);
+         start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf;cmap=(cmap,fcmap)} =
+    (*Graph.graphをAsm.tに変換*)
+    let ret_name = n^".min_caml_ret_reg" in
+    let rec node_conv n = (*ノードの変換処理*)
+      let next_nlist = Graph.succ g n in
+        match !n with
+          | Set((i,t),e) ->
+            if List.length next_nlist != 1 then
+              raise (The_Others("node_conv:succの数"))
+            else
+              (if (List.exists (fun x->x=end_n) next_nlist) then Ans(e) else
+                  let next_nt = node_conv (List.nth next_nlist 0) in
+                    Asm.Let((i,t),e,next_nt))
+          | BrEq(i1,i2) | BrGE(i1,i2) | BrLE(i1,i2) ->
+            (if List.length next_nlist != 2 then
+              raise (The_Others("node_conv:succの数"))
+            else
+              let n0 = List.nth next_nlist 0 in
+              let n1 = List.nth next_nlist 1 in
+              let br_ntt = node_conv (if is_t_edge (n,n0) then n0 else
+                  (if is_t_edge (n,n1) then n1 else raise (The_Others("node_conv:条件分岐のedge")))) in
+              let br_nte = node_conv (if is_e_edge (n,n0) then n0 else
+                  (if is_e_edge (n,n1) then n1 else raise (The_Others("node_conv:条件分岐のedge")))) in
+                (match !n with
+                  | BrEq(i1,i2) -> Ans(IfEq(i1,i2,br_ntt,br_nte))
+                  | BrGE(i1,i2) -> Ans(IfGE(i1,i2,br_ntt,br_nte))
+                  | BrLE(i1,i2) -> Ans(IfLE(i1,i2,br_ntt,br_nte))))
+          | BrFEq(i1,i2) | BrFLE(i1,i2) ->
+            (if List.length next_nlist != 2 then
+              raise (The_Others("node_conv:succの数"))
+            else
+              let n0 = List.nth next_nlist 0 in
+              let n1 = List.nth next_nlist 1 in
+              let br_ntt = node_conv (if is_t_edge (n,n0) then n0 else
+                  (if is_t_edge (n,n1) then n1 else raise (The_Others("node_conv:条件分岐のedge")))) in
+              let br_nte = node_conv (if is_e_edge (n,n0) then n0 else
+                  (if is_e_edge (n,n1) then n1 else raise (The_Others("node_conv:条件分岐のedge")))) in
+                (match !n with
+                  | BrFEq(i1,i2) -> Ans(IfFEq(i1,i2,br_ntt,br_nte))
+                  | BrFLE(i1,i2) -> Ans(IfFLE(i1,i2,br_ntt,br_nte))))
+          | Exp(e) -> Ans(e)
+          | Empty -> raise (The_Others("node_conv:empty"))
+    in
+    let sn_list = Graph.succ g start_n in
+      if (List.length sn_list) != 1 then raise (The_Others("sn_list")) else
+        node_conv (List.nth sn_list 0)
+      
   let newFlow ()=
     let start_n = Graph.to_node Empty in
     let end_n = Graph.to_node Empty in
@@ -250,12 +325,16 @@ struct
   let print_flow f =
     let {control = g; def = d; use = u; name = n; live=live; arg=(argi,argf);
          start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf;cmap=(cmap,fcmap)}= f in
+    let (nl,el) = g in
       print_string ("****Graph "^n^" int {"^
                        (List.fold_left (fun a b->a^" "^b) " " argi)^"}"
                        ^" float {"^
                        (List.fold_left (fun a b->a^" "^b) " " argf)^"}"
                     ^"****\n");
       Graph.print_graph g;
+      List.map (fun x -> print_string
+        (if is_t_edge x then "t," else (if is_e_edge x then "e," else "n,"))) el;
+      print_newline () (*;
      let print_ids l =
        List.map (fun (n,y) ->
          print_string ((string_of_int (Graph.node_to_int g n))^":");
@@ -263,7 +342,7 @@ struct
          print_newline ()) l
      in
      let print_coloring cmap =
-       List.map (fun (x,c) -> print_string ("("^(!x)^","^(string_of_int c)^")")) cmap;
+       List.map (fun (x,c) -> print_string ("("^(!x)^","^c^")")) cmap;
        print_newline ()
      in
        print_string ("***def***\n");
@@ -277,7 +356,7 @@ struct
        print_coloring cmap;
        print_string ("***igraph(float)***\n");
        IGraph.print_graph igf;
-       print_coloring fcmap
+       print_coloring fcmap *)
 
   let list_size l =
     let rec loop = function
@@ -299,12 +378,12 @@ struct
       let (curr_g,curr_st) = push_nodes prev_g prev_st in
         if curr_st = prev_st then (curr_g,curr_st) else loop curr_g curr_st
     in
-      push_nodes (nl,el) []
-  let rec select ((nl,el):IGraph.graph) size st args ret=
+      push_nodes (nl,el) []        
+  let rec select ((nl,el):IGraph.graph) size st args ret=(*色を選ぶ*)
     let g = (nl,el) in
     let cl =
       let rec make_list i =
-        if i<size then i::(make_list (i+1)) else [] in
+        if i<size then (string_of_int i)::(make_list (i+1)) else [] in
         make_list 0
     in
     let enable_colors n cmap = (*nodeの色塗りに使える色*)
@@ -325,25 +404,93 @@ struct
     let cmap = (*引数と返り値に色を塗りほかは塗っていない(-1)color_map*)
       let rec num_of_ele n = function
         | x::y -> if x=n then 0 else 1+(num_of_ele n y)
-        | _ -> raise The_Others in
+        | _ -> raise (The_Others("cmap")) in
       List.map
         (fun x -> if (List.exists (fun y->(!x)=y) args)
-          then (x,(num_of_ele !x args)) else (x,(if (!x)=ret then 0 else -1))) nl in
+          then (x,(string_of_int (num_of_ele !x args))) else (x,(if (!x)=ret then "0"else "-1"))) nl in
     let rec main cmap2 = function
-      | x::y -> if is_arg_or_ret x then main cmap2 y (*もう色がついている*)else
-        main (simple_list2 cmap2
+      | x::y -> if is_arg_or_ret x
+        then main cmap2 y (*もう色がついている*)else
+          main (simple_list2 cmap2
                        (x, select_color (enable_colors x cmap2))
                        (fun (n,_) (n2,_) -> n=n2)) y
       | _ -> cmap2
     in main cmap st
       
-  let reg_coloring igi igf (args,fargs) name =
-    let main ig args2 size =
+  let reg_coloring igi igf (args,fargs) name = (*変数からレジスタへのマッピング*)
+    let main ig args2 size pre =
       let (_,st) = simplify ig size in
-        select ig size st args2 (name^".min_caml_ret_reg")
+        List.map (fun (x,y) -> (x,(pre^y)))
+          (select ig size st args2 (name^".min_caml_ret_reg"))
     in
-      ((main igi args reg_size),(main igf fargs freg_size))
-        
+      ((main igi args reg_size "%"),(main igf fargs freg_size "%f"))
+
+  let reg_alloc {control=control;def=def;use=use;name=name;
+                 arg=arg;live=live;start_n=start_n;
+                 end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)} =
+    let map = List.map (fun (x,y)->(!x,y)) (cmapi@cmapf) in
+    let id_to_reg i =
+      let rec loop = function
+        | (i2,r)::y ->if i2=i then r else loop y
+        | _ -> i
+      in
+        loop map
+    in
+    let idorimm_to_reg = function
+      | V(t) -> (V(id_to_reg t))
+      | C(i) -> C(i)
+    in
+    let rec exp_regalloc = function
+      | Mov(t) -> Mov(id_to_reg t)
+      | Neg(t) -> Neg(id_to_reg t)
+      | Add(t,i) -> Add((id_to_reg t),(idorimm_to_reg i))
+      | Sub(t,i) -> Sub((id_to_reg t),(idorimm_to_reg i))
+      | SLL(t,i) -> SLL((id_to_reg t),(idorimm_to_reg i))
+      | Ld(t,i) -> Ld((id_to_reg t),(idorimm_to_reg i))
+      | St(t1,t2,i) -> St((id_to_reg t1),(id_to_reg t2),(idorimm_to_reg i))
+      | FMovD(t) -> FMovD(id_to_reg t)
+      | FNegD(t) -> FNegD(id_to_reg t)
+      | FAddD(t1,t2) -> FAddD((id_to_reg t1),(id_to_reg t2))
+      | FSubD(t1,t2) -> FSubD((id_to_reg t1),(id_to_reg t2))
+      | FMulD(t1,t2) -> FMulD((id_to_reg t1),(id_to_reg t2))
+      | FDivD(t1,t2) -> FDivD((id_to_reg t1),(id_to_reg t2))
+      | LdDF(t,i) -> Ld((id_to_reg t),(idorimm_to_reg i))
+      | StDF(t1,t2,i) ->
+        St((id_to_reg t1),(id_to_reg t2),(idorimm_to_reg i))
+      | IfEq(_) | IfLE(_) | IfGE(_)
+      | IfFLE(_) | IfFEq(_) -> raise (The_Others("exp_to_reg"))
+      | CallCls(t,tl1,tl2) ->
+        CallCls((id_to_reg t),(List.map id_to_reg tl1),
+                (List.map id_to_reg tl2))
+      | CallDir(l,tl1,tl2) ->
+        CallDir(l,(List.map id_to_reg tl1),
+                (List.map id_to_reg tl2))
+      | Save(t1,t2) -> Save((id_to_reg t1),(id_to_reg t2))
+      | Restore(t) -> Restore(id_to_reg t)
+      | x -> x
+    in
+    let rec statement_regalloc = function
+      | Exp(e)-> Exp(exp_regalloc (exp_regalloc e))
+      | Set((i,t),e) -> Set(((id_to_reg i),t),(exp_regalloc e))
+      | BrEq(i1,i2) -> BrEq((id_to_reg i1),(idorimm_to_reg i2))
+      | BrGE(i1,i2) -> BrGE((id_to_reg i1),(idorimm_to_reg i2))
+      | BrLE(i1,i2) -> BrLE((id_to_reg i1),(idorimm_to_reg i2))
+      | Empty -> raise (The_Others("statement_regalloc"))
+    in
+    let rec main g n newl=
+      let ra_n = ref (statement_regalloc (!n)) in
+      let g2 = changeNode2 g n ra_n in
+      let newl2 = ra_n::newl in
+        List.fold_left
+          (fun (g3,newl3) n2->
+            if (List.exists (fun x->n2=x) newl3) or n2=end_n then (g3,newl3)
+            else (main g3 n2 newl3)) (g2,newl2) (Graph.succ g2 ra_n)
+    in
+    let (g,_) = main control (List.nth (Graph.succ control start_n) 0) []
+    in {control=g;def=def;
+        use=use;name=name;arg=arg;live=live;
+        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)}      
+          
   let make_igraph {control=control;def=def;
                    use=use;name=name;arg=arg;live=live;
                    start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} =
@@ -416,7 +563,7 @@ struct
               | Comment _ | Asm.Set(_) | SetL(_) | SetF(_) | Nop -> []
         in
           match !s with
-            | Set(i,e) -> make_exp_use e
+            | Set(it,e) -> make_exp_use e
             | Exp(e) -> make_exp_use e
             | BrEq(x,y) | BrGE(x,y) | BrLE(x,y) -> id_list [x] y
             | BrFLE(x,y) | BrFEq(x,y) -> x::[y]
@@ -427,7 +574,7 @@ struct
     let make_def (nl,el) =
       let make_statement_def s =
         match !s with
-          | Set(i,e) -> [i]
+          | Set((i,t),e) -> [i]
           | _ -> []
       in
         List.map (fun x -> (x,(make_statement_def x))) nl
@@ -464,24 +611,29 @@ struct
        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in      
     let (igi2,igf2) = make_igraph fg in
     let (cmap,fcmap) = reg_coloring igi2 igf2 arg name in
-      {control=control;def=(make_def control);
+      reg_alloc {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)}
-      
   let h2 x ys zs body ret=
     let fl = newFlow () in
     let {control=control;def=def;use=use;live=live;name=name;arg=arg;
          start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} = fl in
-    let new_block_list curr prevl g2=
+    let new_block_list curr (prevl:(statement ref list)) g2 br=
+      List.map (fun p ->
+        (match br with
+          | Then -> (t_list:= ((p,curr)::(!t_list)); ())
+          | Else -> (e_list:= ((p,curr)::(!e_list)); ())
+          | _ -> ())) prevl; 
       List.fold_left
-        (fun g3 p ->Graph.mk_edge g3 p curr)
+        (fun g3 p ->
+          Graph.mk_edge g3 p curr)
         (Graph.addNode g2 curr) prevl in
      (*Asm.t -> Graph*)
     let main () =
       let g = control in
        (*Asm.t -> Graph.node -> Graph -> (Graph.node list*Graph)*)  
-      let rec loop_t t p g2 i1 =
-        let rec loop_exp e i2 g3 =
+      let rec loop_t t p g2 it1 br =
+        let rec loop_exp e it2 g3 =
           match e with
             | Asm.IfEq(i3,i4,e1,e2) | Asm.IfLE(i3,i4,e1,e2)
             | Asm.IfGE(i3,i4,e1,e2) ->
@@ -490,46 +642,46 @@ struct
                     IfEq(_) -> ref (BrEq(i3,i4))
                   | IfLE(_) -> ref (BrLE(i3,i4))
                   | IfGE(_) -> ref (BrGE(i3,i4))) in
-              let g4 = new_block_list cur p g3 in
-              let (nl,g5) = loop_t e1 [cur] g4 i2 in
-              let (nl2,g6) = loop_t e2 [cur] g5 i2 in
+              let g4 = new_block_list cur p g3 br in
+              let (nl,g5) = loop_t e1 [cur] g4 it2 Then in
+              let (nl2,g6) = loop_t e2 [cur] g5 it2 Else in
                 ((nl@nl2),g6)
             | Asm.IfFEq(i3,i4,e1,e2) | Asm.IfFLE(i3,i4,e1,e2) ->
               let cur =
                 (match e with
                     IfFEq(_) -> ref (BrFEq(i3,i4))
                   | IfFLE(_) -> ref (BrFLE(i3,i4))) in
-              let g4 = new_block_list cur p g3 in
-              let (nl,g5) = loop_t e1 [cur] g4 i1 in
-              let (nl2,g6) = loop_t e2 [cur] g5 i2 in
+              let g4 = new_block_list cur p g3 br in
+              let (nl,g5) = loop_t e1 [cur] g4 it2 Then in
+              let (nl2,g6) = loop_t e2 [cur] g5 it2 Else in
                 ((nl@nl2),g6)              
             | _ ->
-              let cur = ref (Set(i2,e)) in
-                ([cur],(new_block_list cur p g3))
+              let cur = ref (Set(it2,e)) in
+                ([cur],(new_block_list cur p g3 br))
         in
           match t with
             | Let((i,ty),e,t1) ->
               idt:=(i,ty)::(!idt);
-              let (p2,g3) = loop_exp e i g2 in loop_t t1 p2 g3 i1
-            | Ans(e) -> loop_exp e i1 g2
+              let (p2,g3) = loop_exp e (i,ty) g2 in loop_t t1 p2 g3 it1 Normal
+            | Ans(e) -> loop_exp e it1 g2
       in
-      let (p,g2) = loop_t body [start_n] g (x^".min_caml_ret_reg") in
+      let (p,g2) = loop_t body [start_n] g ((x^".min_caml_ret_reg"),ret) Normal in
         List.fold_left
           (fun g3 p2 ->Graph.mk_edge g3 p2 end_n) g2 p
     in
       make_def_and_use {control=main ();def=def;use=use;live=live;name=x;arg=(ys,zs);
                         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap}
-
   let h { Asm.name = Id.L(x); args = ys;
           fargs = zs; body = body; ret = ret } =
     idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@
       (List.fold_left (fun l1 v ->(v,Type.Float)::l1) [] zs)@(!idt);
    (h2 x ys zs body ret)
-     
 end
 
 let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html: regalloc_f) *)
-  List.map (fun x -> Flow.print_flow (Flow.h x)) fundefs;
-  Flow.print_flow (Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit});
-  print_idt ();
-  raise Exit
+  let fl = List.map (fun x -> let {name=n;args=a;fargs=fa;body=b;ret=r} = x in let fg = (Flow.h x) in Flow.print_flow fg;{Asm.name=n;args=a;fargs=fa;body=Flow.to_body fg;ret=r}) fundefs in
+  let fg_of_e = Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit} in
+  let e2 = Flow.to_body fg_of_e in
+    Flow.print_flow fg_of_e;
+    (*Mydebug.print_regalloc (Prog(data,fl,e2));*)
+    Prog(data,fl,e2)

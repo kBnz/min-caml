@@ -23,7 +23,7 @@ syntax.ml parser.mly lexer.mll typing.mli typing.ml kNormal.mli kNormal.ml \
 alpha.mli alpha.ml beta.mli beta.ml assoc.mli assoc.ml \
 inline.mli inline.ml constFold.mli constFold.ml elim.mli elim.ml \
 closure.mli closure.ml asm.mli asm.ml virtual.mli virtual.ml \
-simm.mli simm.ml regAlloc.mli regAlloc.ml emit.mli emit.ml mydebug.mli mydebug.ml dataflow2.mli dataflow2.ml\
+simm.mli simm.ml mydebug.mli mydebug.ml regAlloc.mli regAlloc.ml emit.mli emit.ml  dataflow2.mli dataflow2.ml\
 main.mli main.ml
 
 # ↓テストプログラムが増えたら、これも増やす
