@@ -5,8 +5,8 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%1, 21600
-	mov	%0, 337500
+	mov	%1, 216
+	mov	%0, 3375
 	mov	%30, %1
 	mov	%1, %0
 	mov	%0, %30

@@ -206,14 +206,14 @@ let rec print_asm3 a =
        | Mov(x) -> print_string ("Mov "^x); print_newline ()
        | Neg(x) -> print_string ("Neg "^x); print_newline ()
        | Add(x, i) ->
-	   print_string ("Add "^x^(string_of_id_or_imm i)); print_newline ()
+	   print_string ("Add "^x^" "^(string_of_id_or_imm i)); print_newline ()
        | Sub(x,i) ->
-	   print_string ("Sub "^x^(string_of_id_or_imm i)); print_newline ()
+	   print_string ("Sub "^x^" "^(string_of_id_or_imm i)); print_newline ()
        | SLL(x,i) ->
-	   print_string ("SLL "^x^(string_of_id_or_imm i)); print_newline ()      
+	   print_string ("SLL "^x^" "^(string_of_id_or_imm i)); print_newline ()      
        
        | Ld(x,y) ->
-	   print_string ("Ld "^x^(string_of_id_or_imm y));
+	   print_string ("Ld "^x^" "^(string_of_id_or_imm y));
 	   print_newline ()	
        | St(x,y,z) ->
 	   print_string
@@ -227,7 +227,7 @@ let rec print_asm3 a =
        | FDivD(x,y) -> print_string ("FDivD "^x^" "^y); print_newline ()
        | LdDF(x,y) ->
 	   print_string
-	     ("LdDf "^x^(string_of_id_or_imm y));      
+	     ("LdDf "^x^" "^(string_of_id_or_imm y));      
 	   print_newline ()      
        | StDF(x,y,z) ->
 	   print_string
@@ -240,11 +240,11 @@ let rec print_asm3 a =
 	   print_asm3 t1; print_asm3 t2;
 	   print_newline ()
        | IfLE(x,y,t1,t2) ->
-	   print_string("IfLE(virtual) "^x^(string_of_id_or_imm y));
+	   print_string("IfLE(virtual) "^x^" "^(string_of_id_or_imm y));
 	   print_asm3 t1; print_asm3 t2;
 	   print_newline ()
        | IfGE(x,y,t1,t2) ->
-	   print_string("IfGE(virtual) "^x^(string_of_id_or_imm y));
+	   print_string("IfGE(virtual) "^x^" "^(string_of_id_or_imm y));
 	   print_asm3 t1; print_asm3 t2;
 	   print_newline ()
        | IfFEq(x,y,t1,t2) ->

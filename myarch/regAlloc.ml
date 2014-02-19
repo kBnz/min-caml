@@ -24,7 +24,8 @@ module Flow 生存解析用の処理及び干渉グラフの記述
 ・GraphからAsm.progへの変換  
 ・選択
 ・関数呼び出しのためのmovを減らすemit.mlも見る
-・inline展開するとerror  
+・inline展開するとerror
+・node_convの無限ループ防止  
 *)
 (*
 Debug用チェックリスト
@@ -33,8 +34,7 @@ Debug用チェックリスト
   ・配列を使ってもうまく行くか
   ・外部変数があっても
 ・changeNodeを使った後はliveとかを更新しないといけない  
-*)
-
+*)  
 open Asm
 let reg_size = 32
 let freg_size = 32
@@ -119,18 +119,6 @@ struct
   let newGraph () = (([],[]) : graph)
   let addNode ((nl,el):graph) n = ((n::nl),el)    
   let addNodes ((nl,el):graph) nl2 = ((nl2@nl),el)
-  let mk_edge ((nl,el):graph) from_n to_n =
-    (nl,(simple_list ((from_n,to_n)::el) (fun x y -> x=y)))
-  let mk_udedge ((nl,el):graph) from_n to_n = (*無向辺*)
-    (nl,(simple_list ((from_n,to_n)::el)
-           (fun (xt,xf) (yt,yf) ->(xt==yt && xf==yf)or(xt==yf && xf==yt))))
-  let mk_edges ((nl,el):graph) el2 = (nl,(el2@el))
-  let rm_edge ((nl,el):graph) from_n to_n =
-    let rec loop = function
-      | (f,t)::y ->
-        if (eq from_n f) && (eq to_n t) then y else (f,t)::(loop y)
-      | _ -> []
-    in (nl,(loop el))
   exception Node_Not_Found
   let node_to_int ((nl,el):graph) n =
     let rec loop nth = function
@@ -148,6 +136,29 @@ struct
     List.map
       (fun x -> print_string((string_of_int (node_to_int g x))^" ")) nl;
     print_newline ()
+  let print_node g n =
+    print_string ((node_to_string g n)^"\n")
+  let print_graph ((nl,el):graph) =
+    List.map
+      (fun x ->
+        print_string (node_to_string (nl,el) x);
+        print_newline ()) nl;
+    List.map
+      (fun x ->
+        print_string ((edge_to_string (nl,el) x)^" ")) el; print_newline ()
+  let edge_eq (xf,xt) (yf,yt) = (xf==yf) && (xt==yt)
+  let mk_edge ((nl,el):graph) from_n to_n =
+    (nl,(simple_list ((from_n,to_n)::el) edge_eq))
+  let mk_udedge ((nl,el):graph) from_n to_n = (*無向辺*)
+    (nl,(simple_list ((from_n,to_n)::el)
+           (fun (xt,xf) (yt,yf) ->(xt==yt && xf==yf)or(xt==yf && xf==yt))))
+  let mk_edges ((nl,el):graph) el2 = (nl,(el2@el))
+  let rm_edge ((nl,el):graph) from_n to_n =
+    let rec loop = function
+      | (f,t)::y ->
+        if (eq from_n f) && (eq to_n t) then y else (f,t)::(loop y)
+      | _ -> []
+    in (nl,(loop el))
   let map_nodes ((nl,el):graph) f =
     List.map (fun x -> f (to_item x)) nl
   let map_edges ((nl,el):graph) f =
@@ -168,23 +179,14 @@ struct
     let rec loop2 = function
       | x::z -> if x == n then z else x::(loop2 z)
       | _ -> []
-    in ((loop2 nl),(loop1 el))        
+    in ((loop2 nl),(loop1 el))
   let changeNode ((nl,el):graph) n n2 = (*nをn2に変える*)
     let g = (nl,el) in
       rm_node
         (List.fold_left (fun g2 n3 -> mk_edge g2 n3 n2)
-        (List.fold_left (fun g2 n3-> mk_edge g2 n2 n3)
+        (List.fold_left (fun g3 n4-> mk_edge g3 n2 n4)
            (addNode g n2) (succ g n))
         (pred g n)) n    
-  let print_graph ((nl,el):graph) =
-    List.map
-      (fun x ->
-        print_string (node_to_string (nl,el) x);
-        print_newline ()) nl;
-    List.map
-      (fun x ->
-        print_string (edge_to_string (nl,el) x);
-        print_newline ()) el; ()
 end
 
 module Flow =
@@ -195,12 +197,6 @@ struct
                    | BrFLE of Id.t*Id.t | BrFEq of Id.t*Id.t
                    | Empty
 
-  let t_list = ref [] (*thenのedge*)
-  let e_list = ref [] (*elseのedge*)
-  let is_t_edge e =
-    List.exists (fun x->e=x) (!t_list)
-  let is_e_edge e =
-    List.exists (fun x->e=x) (!e_list)
   let exp_to_string = function
     | Nop -> "Nop"
     | Asm.Set(x) -> ("Set "^(string_of_int x))
@@ -208,18 +204,18 @@ struct
     | SetF(Id.L x)  -> ("SetF "^x)
     | Mov(x) -> ("Mov "^x)
     | Neg(x) -> ("Neg "^x)
-    | Add(x, i) -> ("Add "^x^(string_of_id_or_imm i))
-    | Sub(x,i) -> ("Sub "^x^(string_of_id_or_imm i))
-    | SLL(x,i) -> ("SLL "^x^(string_of_id_or_imm i))       
-    | Ld(x,y) -> ("Ld "^x^(string_of_id_or_imm y))
-    | St(x,y,z) -> ("St "^x^" "^y^(string_of_id_or_imm z))
+    | Add(x, i) -> ("Add "^x^" "^(string_of_id_or_imm i))
+    | Sub(x,i) -> ("Sub "^x^" "^(string_of_id_or_imm i))
+    | SLL(x,i) -> ("SLL "^x^" "^(string_of_id_or_imm i))       
+    | Ld(x,y) -> ("Ld "^x^" "^(string_of_id_or_imm y))
+    | St(x,y,z) -> ("St "^x^" "^y^" "^(string_of_id_or_imm z))
     | FMovD(x) -> ("FMovD "^x)
     | FNegD(x) -> ("FNegD "^x)
     | FAddD(x,y) -> ("FAddD "^x^" "^y)
     | FSubD(x,y) -> ("FSubD "^x^" "^y)
     | FMulD(x,y) -> ("FMulD "^x^" "^y)
     | FDivD(x,y) -> ("FDivD "^x^" "^y)
-    | LdDF(x,y) -> ("LdDf "^x^(string_of_id_or_imm y))      
+    | LdDF(x,y) -> ("LdDf "^x^" "^(string_of_id_or_imm y))      
     | StDF(x,y,z) -> ("St "^x^" "^y^(string_of_id_or_imm z))
     | Comment(x) -> ("comment "^x)
     | CallCls(x,yl,zl) ->("CallCls "^x^" {"^(String.concat "," yl)^"} "^
@@ -250,11 +246,17 @@ struct
   end
   module IGraph = MakeGraph(Str)  
   module Graph = MakeGraph(Statement)
+  let t_list = ref [] (*thenのedge*)
+  let e_list = ref [] (*elseのedge*)
+  let is_t_edge e =
+    List.exists (fun x->Graph.edge_eq e x) (!t_list)
+  let is_e_edge e =
+    List.exists (fun x->Graph.edge_eq e x) (!e_list)
   let changeNode2 (nl,el) n n2 =
     (*changeNodeにthen_edge else_edgeの処理を追加*)
     let rm_list2 nl2 =
       List.map (fun (fn,tn) ->
-        if fn=n then (n2,tn) else (if tn=n then (fn,n2) else (fn,tn))) nl2
+        if fn==n then (n2,tn) else (if tn==n then (fn,n2) else (fn,tn))) nl2
     in
       t_list := (rm_list2 (!t_list));
       e_list := (rm_list2 (!e_list));
@@ -275,14 +277,14 @@ struct
         match !n with
           | Set((i,t),e) ->
             if List.length next_nlist != 1 then
-              raise (The_Others("node_conv:succの数"))
+              (Graph.print_node g n;raise (The_Others("node_conv:succの数")))
             else
-              (if (List.exists (fun x->x=end_n) next_nlist) then Ans(e) else
+              (if (List.exists (fun x->x==end_n) next_nlist) then Ans(e) else
                   let next_nt = node_conv (List.nth next_nlist 0) in
                     Asm.Let((i,t),e,next_nt))
           | BrEq(i1,i2) | BrGE(i1,i2) | BrLE(i1,i2) ->
             (if List.length next_nlist != 2 then
-              raise (The_Others("node_conv:succの数"))
+              (Graph.print_node g n;raise (The_Others("node_conv:succの数")))
             else
               let n0 = List.nth next_nlist 0 in
               let n1 = List.nth next_nlist 1 in
@@ -296,7 +298,7 @@ struct
                   | BrLE(i1,i2) -> Ans(IfLE(i1,i2,br_ntt,br_nte))))
           | BrFEq(i1,i2) | BrFLE(i1,i2) ->
             (if List.length next_nlist != 2 then
-              raise (The_Others("node_conv:succの数"))
+              (Graph.print_node g n;raise (The_Others("node_conv:succの数")))
             else
               let n0 = List.nth next_nlist 0 in
               let n1 = List.nth next_nlist 1 in
@@ -334,7 +336,7 @@ struct
       Graph.print_graph g;
       List.map (fun x -> print_string
         (if is_t_edge x then "t," else (if is_e_edge x then "e," else "n,"))) el;
-      print_newline () (*;
+      print_newline ();
      let print_ids l =
        List.map (fun (n,y) ->
          print_string ((string_of_int (Graph.node_to_int g n))^":");
@@ -345,18 +347,19 @@ struct
        List.map (fun (x,c) -> print_string ("("^(!x)^","^c^")")) cmap;
        print_newline ()
      in
-       print_string ("***def***\n");
+       
+      (* print_string ("***def***\n");
        print_ids d;
        print_string ("***use***\n");
        print_ids u;
        print_string ("***live***\n");
        print_ids live;
-       print_string ("***igraph(int)***\n");
+       print_string ("***igraph(int)***\n"); *)
        IGraph.print_graph igi;
        print_coloring cmap;
        print_string ("***igraph(float)***\n");
        IGraph.print_graph igf;
-       print_coloring fcmap *)
+       print_coloring fcmap 
 
   let list_size l =
     let rec loop = function
@@ -475,18 +478,17 @@ struct
       | BrEq(i1,i2) -> BrEq((id_to_reg i1),(idorimm_to_reg i2))
       | BrGE(i1,i2) -> BrGE((id_to_reg i1),(idorimm_to_reg i2))
       | BrLE(i1,i2) -> BrLE((id_to_reg i1),(idorimm_to_reg i2))
-      | Empty -> raise (The_Others("statement_regalloc"))
+      | BrFEq(i1,i2) -> BrFEq((id_to_reg i1),(id_to_reg i2))
+      | BrFLE(i1,i2) -> BrFLE((id_to_reg i1),(id_to_reg i2))
+      | Empty -> raise (The_Others("reg_alloc:empty"))
     in
-    let rec main g n newl=
+    let main g n =
+      if n=start_n or n=end_n then g else
       let ra_n = ref (statement_regalloc (!n)) in
-      let g2 = changeNode2 g n ra_n in
-      let newl2 = ra_n::newl in
-        List.fold_left
-          (fun (g3,newl3) n2->
-            if (List.exists (fun x->n2=x) newl3) or n2=end_n then (g3,newl3)
-            else (main g3 n2 newl3)) (g2,newl2) (Graph.succ g2 ra_n)
+        changeNode2 g n ra_n
     in
-    let (g,_) = main control (List.nth (Graph.succ control start_n) 0) []
+    let (nl,el) = control in
+    let g = List.fold_left main control (List.rev nl)
     in {control=g;def=def;
         use=use;name=name;arg=arg;live=live;
         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)}      
@@ -517,7 +519,7 @@ struct
       List.fold_left
         (fun g3 x ->
           (List.fold_left
-             (fun g4 y -> if x=y then g4 else make_edge2 g4 x y)
+             (fun g4 y -> if x==y then g4 else make_edge2 g4 x y)
              g3 l)) g2 l in
     let type_of_id i =
       let rec loop = function
@@ -608,9 +610,10 @@ struct
     let live2 = make_live control in
     let fg = {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in      
+       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
     let (igi2,igf2) = make_igraph fg in
     let (cmap,fcmap) = reg_coloring igi2 igf2 arg name in
+      print_flow fg;
       reg_alloc {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)}
@@ -683,5 +686,5 @@ let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html:
   let fg_of_e = Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit} in
   let e2 = Flow.to_body fg_of_e in
     Flow.print_flow fg_of_e;
-    (*Mydebug.print_regalloc (Prog(data,fl,e2));*)
+    Mydebug.print_regalloc (Prog(data,fl,e2));
     Prog(data,fl,e2)
