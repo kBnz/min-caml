@@ -25,7 +25,8 @@ module Flow 生存解析用の処理及び干渉グラフの記述
 ・選択
 ・関数呼び出しのためのmovを減らすemit.mlも見る
 ・inline展開するとerror
-・node_convの無限ループ防止  
+・node_convの無限ループ防止
+・Arrayの処理(終了)  
 *)
 (*
 Debug用チェックリスト
@@ -521,9 +522,12 @@ struct
           (List.fold_left
              (fun g4 y -> if x==y then g4 else make_edge2 g4 x y)
              g3 l)) g2 l in
-    let type_of_id i =
+    let type_of_id i = (*Arrayはint*)
       let rec loop = function
-        | (xi,xt)::y -> if xi=i then xt else loop y
+        | (xi,xt)::y -> if xi=i then
+            (match xt with
+              | Type.Array(_) -> Type.Int
+              | _ -> xt) else loop y
         | _ -> print_string i;raise IDT_ERROR
       in
         loop !idt
@@ -687,4 +691,5 @@ let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html:
   let e2 = Flow.to_body fg_of_e in
     Flow.print_flow fg_of_e;
     Mydebug.print_regalloc (Prog(data,fl,e2));
+    print_idt();
     Prog(data,fl,e2)
