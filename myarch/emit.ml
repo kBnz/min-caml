@@ -108,6 +108,12 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       assert (List.mem x allfregs);
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
       Printf.fprintf oc "\tfld\t%s, %s\n" x reg_tmp
+    (*(try
+      assert (List.mem x allfregs);
+      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+      Printf.fprintf oc "\tfld\t%s, %s\n" x reg_tmp
+    with
+      | _ ->  print_string (x^" "^y))*)
   (* 末尾だったら計算結果を第一レジスタにセットしてret (caml2html: emit_tailret) *)
   | Tail, (Nop | St _ | StDF _ | Comment _ | Save _ as exp) ->
       g' oc (NonTail(Id.gentmp Type.Unit), exp);
