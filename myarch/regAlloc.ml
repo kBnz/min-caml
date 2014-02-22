@@ -524,9 +524,14 @@ struct
     in            
       (*save restoreする必要のある変数を返す*)
     let sr_node_list n =
-      match !n with
-        | Set(it,e) -> if sr_exp (e) then live_map n else []
+      let rec rm_list2 x = function
+        | y::z -> if x=y then (rm_list2 x z) else y::(rm_list2 x z)
         | _ -> []
+      in
+        match !n with
+          | Set((i,t),e) -> if sr_exp (e) then
+              rm_list2 i (live_map n) else []
+          | _ -> []
     in
       (*then_edge else_edgeの処理*)
     let te_insert ins_n target_n =
@@ -904,6 +909,9 @@ struct
       in loop [] in
       
     let live2 = make_live control in
+      print_flow {control=control;def=(make_def control);
+       use=(make_use control);name=name;arg=arg;live=live2;
+       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} true;
     let control2 = save_and_restore {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in

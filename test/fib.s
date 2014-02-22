@@ -5,7 +5,26 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%1, 10
+	mov	%0, 10
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, fib.110
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_int
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	call	%30, min_caml_end
+fib.110:
+	cmp	%26, %0, 1
+	brle	bgt_else.123, %26
+	sub	%1, %0, 1
 	add	%30, %29, 0
 	st	%0, %30
 	mov	%0, %1
@@ -17,21 +36,8 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%0, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_print_int
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	call	%30, min_caml_end
-fib.110:
-	cmp	%26, %0, 1
-	brle	bgt_else.126, %26
-	sub	%1, %0, 1
-	add	%30, %29, 0
-	st	%0, %30
+	ld	%1, %30
+	sub	%1, %1, 2
 	add	%30, %29, 4
 	st	%0, %30
 	mov	%0, %1
@@ -44,28 +50,9 @@ fib.110:
 	ld	%27, %30
 	add	%30, %29, 4
 	ld	%1, %30
-	add	%30, %29, 0
-	ld	%2, %30
-	sub	%1, %1, 2
-	add	%30, %29, 8
-	st	%0, %30
-	add	%30, %29, 12
-	st	%2, %30
-	mov	%0, %1
-	add	%30, %29, 20
-	st	%27, %30
-	add	%29, %29, 24
-	call	%27, fib.110
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 12
-	ld	%0, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%0, %0, %1
+	add	%0, %1, %0
 	call	%30, %27
-bgt_else.126:
+bgt_else.123:
 	call	%30, %27
 .section	".rodata"
 .align	8
