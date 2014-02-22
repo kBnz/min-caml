@@ -1,0 +1,15 @@
+#!/bin/bash
+source=("ack" "adder" "cls-bug" "cls-rec" "even-odd" "fib" "float"
+        "funcomp" "gcd" "inprod-loop" "inprod-rec")        
+for ((i=0; i<${#source[@]}; i++))
+do
+./cal test/${source[$i]}
+done
+for ((i=0; i<${#source[@]}; i++))
+do
+echo ${source[$i]}
+ocaml test/${source[$i]}.ml
+echo
+../sim/sim ../sim/${source[$i]}.s
+echo
+done

@@ -40,7 +40,7 @@ min_caml_start:
 	call	%30, min_caml_end
 fib.117:
 	cmp	%26, %0, 2
-	brle	bgt_else.138, %26
+	brle	bgt_else.137, %26
 	sub	%1, %0, 1
 	add	%30, %29, 0
 	st	%0, %30
@@ -69,7 +69,7 @@ fib.117:
 	ld	%1, %30
 	add	%0, %1, %0
 	call	%30, %27
-bgt_else.138:
+bgt_else.137:
 	mov	%0, 1
 	call	%30, %27
 .section	".rodata"
@@ -257,6 +257,10 @@ min_caml_print_int:
 	call	%30, %27
 .global min_caml_print_byte
 min_caml_print_byte:
+	inout	%30, %0, -2
+	call	%30, %27
+.global min_caml_print_char
+min_caml_print_char:
 	inout	%30, %0, -2
 	call	%30, %27
 .global min_caml_print_float

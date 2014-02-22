@@ -351,7 +351,7 @@ struct
     let rec loop = function
       | (xi,xt)::y -> if xi=i then
           (match xt with
-            | Type.Array(_) -> Type.Int
+            | Type.Array(_) | Type.Fun(_) -> Type.Int              
             | _ -> xt) else loop y
       | _ -> print_string i;raise IDT_ERROR
     in
@@ -467,9 +467,17 @@ struct
                 | Set((i,t),CallCls(_)) | Set((i,t),CallDir(_)) -> i::l
                 | _ -> l) [] nl2            
       in
+      let init_color x =
+        if (List.exists (fun y->(!x)=y) args) then
+          (string_of_int (num_of_ele !x args))
+        else
+          (if (!x)=ret or (List.exists (fun n->(!x)=n) call_v) then "0"
+           else (if (!x)="%31" then "31" else
+               (if (!x)="%28" then "28" else "-1")))
+      in
         (List.map
-           (fun x -> if (List.exists (fun y->(!x)=y) args)
-             then (x,(string_of_int (num_of_ele !x args))) else (x,(if (!x)=ret or (List.exists (fun n->(!x)=n) call_v) then "0"else "-1"))) nl) in
+           (fun x -> (x,(init_color x))) nl)
+    in
     let rec node_color n = function
       | (n2,c)::y -> if n==n2 then c else node_color n y
       | _ -> raise (The_Others("color error")) in
@@ -842,7 +850,21 @@ struct
   let make_def_and_use {control=control;def=def;
                          use=use;name=name;arg=arg;live=live;
                          start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} =
+    let make_def (nl,el) =
+      let make_statement_def s =
+        match !s with
+          | Set((i,t),e) -> [i]
+          | _ -> []
+      in
+        List.map (fun x -> (x,(make_statement_def x))) nl
+    in
     let make_use (nl,el) =
+      let def2 = make_def (nl,el) in
+      (*関数内で使える変数(defされたものと引数),"%31"
+        callcls(x,y,z)のxが関数名かどうか*)
+      let (iarg,farg) = arg in
+      let varlist= "%31"::(iarg@farg@
+                             (List.fold_left (fun vl (x,l) -> vl@l) [] def2)) in
       let make_statement_use s =
         let id_list i = function
           | V(x) -> x::i
@@ -858,7 +880,8 @@ struct
               | FDivD(x,y)  -> x::[y]
               | Save(x,y) -> [y]
               | Restore(x) -> []
-              | CallCls(x,y,z) -> x::(y@z)
+              | CallCls(x,y,z) ->
+                if List.exists (fun i->i=x) varlist then x::(y@z) else (y@z)
               | CallDir(x,y,z) -> y@z
               | Comment _ | Asm.Set(_) | SetL(_) | SetF(_) | Nop -> []
         in
@@ -870,14 +893,6 @@ struct
             | _ -> []
       in
         List.map (fun x -> (x,(make_statement_use x))) nl
-    in
-    let make_def (nl,el) =
-      let make_statement_def s =
-        match !s with
-          | Set((i,t),e) -> [i]
-          | _ -> []
-      in
-        List.map (fun x -> (x,(make_statement_def x))) nl
     in
     let make_live (nl,el) =
       let g = (nl,el) in
@@ -893,7 +908,7 @@ struct
         | _ -> [] in        
       let rec add_list x y = function
         | (a,b)::l -> if a==x then (a,y)::l else (a,b)::(add_list x y l)
-        | _ -> [(x,y)] in        
+        | _ -> [(x,y)] in
       let rec loop l =
         let l4 =
           List.fold_left
@@ -967,8 +982,11 @@ struct
               let (nl2,g6) = loop_t e2 [cur] g5 it2 Else in
                 ((nl@nl2),g6)              
             | _ ->
+              ((match e with
+                | Ld(i3,_) | Mov(i3)->(if i3=reg_cl then (idt:=(i3,Type.Int)::(!idt);()) else ())
+                | _ -> ());
               let cur = ref (Set(it2,e)) in
-                ([cur],(new_block_list cur p g3 br))
+                ([cur],(new_block_list cur p g3 br)))
         in
           match t with
             | Let((i,ty),e,t1) ->

@@ -1,42 +1,62 @@
 .section	".rodata"
 .align	8
-#l.132:	 0xc0fc7ae1
-#l.130:	 0x4091eb85
-#l.128:	 0x3f000000
+#l.461:	 0x41400000
+#l.457:	 0x41300000
+#l.453:	 0x41200000
+#l.449:	 0x41100000
+#l.445:	 0x41000000
+#l.441:	 0x40e00000
+#l.437:	 0x40c00000
+#l.433:	 0x40a00000
+#l.429:	 0x40800000
+#l.425:	 0x40400000
+#l.421:	 0x40000000
+#l.417:	 0x3f800000
+#l.412:	 0x0
 #l.0:	 0x0
 .section	".text"
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	fmov	%0, #l.128
+	mov	%0, 0
+	fmov	%0, #l.412
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_truncate
+	call	%27, min_caml_create_float_array
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	fmov	%0, #l.130
+	mov	%2, 2
+	mov	%1, 3
 	add	%30, %29, 0
 	st	%0, %30
+	mov	%30, %2
+	mov	%2, %0
+	mov	%0, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_truncate
+	call	%27, make.265
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%1, %30
-	fmov	%0, #l.132
+	mov	%3, 3
+	mov	%2, 2
 	add	%30, %29, 4
 	st	%0, %30
 	add	%30, %29, 8
 	st	%1, %30
+	mov	%0, %3
+	mov	%30, %2
+	mov	%2, %1
+	mov	%1, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, min_caml_truncate
+	call	%27, make.265
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -44,125 +64,403 @@ min_caml_start:
 	ld	%1, %30
 	add	%30, %29, 4
 	ld	%2, %30
+	mov	%4, 2
+	mov	%3, 2
+	add	%30, %29, 12
+	st	%0, %30
+	add	%30, %29, 16
+	st	%2, %30
+	mov	%2, %1
+	mov	%0, %4
+	mov	%1, %3
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, make.265
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 16
+	ld	%1, %30
+	add	%30, %29, 12
+	ld	%2, %30
+	add	%30, %1, 0
+	ld	%3, %30
+	fmov	%0, #l.417
+	add	%30, %3, 0
+	st	%0, %30
+	add	%30, %1, 0
+	ld	%3, %30
+	fmov	%0, #l.421
+	add	%30, %3, 4
+	st	%0, %30
+	add	%30, %1, 0
+	ld	%3, %30
+	fmov	%0, #l.425
+	add	%30, %3, 8
+	st	%0, %30
+	add	%30, %1, 4
+	ld	%3, %30
+	fmov	%0, #l.429
+	add	%30, %3, 0
+	st	%0, %30
+	add	%30, %1, 4
+	ld	%3, %30
+	fmov	%0, #l.433
+	add	%30, %3, 4
+	st	%0, %30
+	add	%30, %1, 4
+	ld	%3, %30
+	fmov	%0, #l.437
+	add	%30, %3, 8
+	st	%0, %30
+	add	%30, %2, 0
+	ld	%3, %30
+	fmov	%0, #l.441
+	add	%30, %3, 0
+	st	%0, %30
+	add	%30, %2, 0
+	ld	%3, %30
+	fmov	%0, #l.445
+	add	%30, %3, 4
+	st	%0, %30
+	add	%30, %2, 4
+	ld	%3, %30
+	fmov	%0, #l.449
+	add	%30, %3, 0
+	st	%0, %30
+	add	%30, %2, 4
+	ld	%3, %30
+	fmov	%0, #l.453
+	add	%30, %3, 4
+	st	%0, %30
+	add	%30, %2, 8
+	ld	%3, %30
+	fmov	%0, #l.457
+	add	%30, %3, 0
+	st	%0, %30
+	add	%30, %2, 8
+	ld	%3, %30
+	fmov	%0, #l.461
+	add	%30, %3, 4
+	st	%0, %30
+	mov	%5, 2
+	mov	%4, 3
+	mov	%3, 2
+	add	%30, %29, 20
+	st	%0, %30
+	mov	%30, %5
+	mov	%5, %0
+	mov	%0, %30
+	mov	%30, %4
+	mov	%4, %2
+	mov	%2, %3
+	mov	%3, %1
+	mov	%1, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, mul.253
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %0, 0
+	ld	%1, %30
+	add	%30, %1, 0
+	ld	%0, %30
+	add	%30, %29, 24
+	st	%0, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, min_caml_truncate
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 24
+	ld	%1, %30
+	add	%30, %29, 28
+	st	%1, %30
+	add	%30, %29, 36
+	st	%27, %30
+	add	%29, %29, 40
+	call	%27, min_caml_print_int
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	add	%30, %29, 28
+	ld	%0, %30
+	add	%30, %0, 0
+	ld	%1, %30
+	add	%30, %1, 4
+	ld	%0, %30
+	add	%30, %29, 32
+	st	%0, %30
+	add	%30, %29, 36
+	st	%27, %30
+	add	%29, %29, 40
+	call	%27, min_caml_truncate
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	add	%30, %29, 32
+	ld	%1, %30
+	add	%30, %29, 36
+	st	%1, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, min_caml_print_int
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	add	%30, %29, 36
+	ld	%0, %30
+	add	%30, %0, 4
+	ld	%1, %30
+	add	%30, %1, 0
+	ld	%0, %30
+	add	%30, %29, 40
+	st	%0, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, min_caml_truncate
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	add	%30, %29, 40
+	ld	%1, %30
+	add	%30, %29, 44
+	st	%1, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, min_caml_print_int
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 44
+	ld	%0, %30
+	add	%30, %0, 4
+	ld	%0, %30
+	add	%30, %0, 4
+	ld	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, min_caml_truncate
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, min_caml_print_int
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	call	%30, min_caml_end
+loop3.232:
+	cmp	%26, %1, 0
+	sub	%26, 0, %26
+	brle	bgt_else.502, %26
+	call	%30, %27
+bgt_else.502:
+	sh	%6, %0, 2
+	add	%30, %5, %6
+	ld	%8, %30
+	sh	%6, %0, 2
+	add	%30, %5, %6
+	ld	%7, %30
+	sh	%6, %2, 2
+	add	%30, %7, %6
+	ld	%2, %30
+	sh	%6, %0, 2
+	add	%30, %3, %6
+	ld	%7, %30
+	sh	%6, %1, 2
+	add	%30, %7, %6
+	ld	%1, %30
+	sh	%6, %1, 2
+	add	%30, %4, %6
+	ld	%7, %30
+	sh	%6, %2, 2
+	add	%30, %7, %6
+	ld	%0, %30
+	fmul	%0, %1, %0
+	fadd	%0, %2, %0
+	sh	%6, %2, 2
+	add	%30, %8, %6
+	st	%0, %30
+	sub	%1, %1, 1
+	call	%30, loop3.232
+loop2.239:
+	cmp	%26, %2, 0
+	sub	%26, 0, %26
+	brle	bgt_else.504, %26
+	call	%30, %27
+bgt_else.504:
+	sub	%6, %1, 1
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%1, %30
+	add	%30, %29, 8
+	st	%3, %30
+	add	%30, %29, 12
+	st	%4, %30
+	add	%30, %29, 16
+	st	%5, %30
+	add	%30, %29, 20
+	st	%2, %30
+	mov	%1, %6
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, loop3.232
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %29, 16
+	ld	%1, %30
+	add	%30, %29, 12
+	ld	%2, %30
+	add	%30, %29, 8
+	ld	%3, %30
+	add	%30, %29, 4
+	ld	%4, %30
+	add	%30, %29, 0
+	ld	%5, %30
+	sub	%0, %0, 1
+	mov	%30, %5
+	mov	%5, %1
+	mov	%1, %4
+	mov	%4, %2
+	mov	%2, %0
+	mov	%0, %30
+	call	%30, loop2.239
+loop1.246:
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.137, %26
+	brle	bgt_else.506, %26
+	call	%30, %27
+bgt_else.506:
+	sub	%6, %2, 1
+	add	%30, %29, 0
+	st	%1, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%3, %30
+	add	%30, %29, 12
+	st	%4, %30
+	add	%30, %29, 16
+	st	%5, %30
+	add	%30, %29, 20
+	st	%0, %30
+	mov	%2, %6
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, loop2.239
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %29, 16
+	ld	%1, %30
+	add	%30, %29, 12
+	ld	%2, %30
+	add	%30, %29, 8
+	ld	%3, %30
+	add	%30, %29, 4
+	ld	%4, %30
+	add	%30, %29, 0
+	ld	%5, %30
+	sub	%0, %0, 1
+	mov	%30, %5
+	mov	%5, %1
+	mov	%1, %30
+	mov	%30, %4
 	mov	%4, %2
-	cmp	%26, %1, 0
-	brle	bgt_else.139, %26
-	mov	%3, %0
-	add	%3, %4, %3
-	cmp	%26, %2, 0
+	mov	%2, %30
+	call	%30, loop1.246
+mul.253:
+	sub	%0, %0, 1
+	call	%30, loop1.246
+init.261:
+	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.141, %26
+	brle	bgt_else.508, %26
+	call	%30, %27
+bgt_else.508:
+	fmov	%0, #l.412
+	add	%30, %29, 0
+	st	%1, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%0, %30
 	mov	%0, %1
-	add	%0, %3, %0
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, min_caml_print_int
+	call	%27, min_caml_create_float_array
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.142
-bgt_else.141:
-	add	%0, %3, %0
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	add	%30, %29, 0
+	ld	%3, %30
+	sh	%4, %1, 2
+	add	%30, %2, %4
+	st	%0, %30
+	sub	%0, %1, 1
+	mov	%1, %3
+	call	%30, init.261
+make.265:
+	add	%30, %29, 0
+	st	%1, %30
+	add	%30, %29, 4
+	st	%0, %30
+	mov	%1, %2
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, min_caml_print_int
+	call	%27, min_caml_create_array
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.142:
-	call	%30, bgt_cont.140
-bgt_else.139:
-	mov	%3, %2
-	add	%3, %4, %3
-	cmp	%26, %2, 0
-	sub	%26, 0, %26
-	brle	bgt_else.143, %26
+	add	%30, %29, 4
+	ld	%1, %30
+	add	%30, %29, 0
+	ld	%2, %30
+	sub	%1, %1, 1
+	add	%30, %29, 8
+	st	%0, %30
+	mov	%30, %2
+	mov	%2, %0
 	mov	%0, %1
-	add	%0, %3, %0
+	mov	%1, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, min_caml_print_int
+	call	%27, init.261
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.144
-bgt_else.143:
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-bgt_cont.144:
-bgt_cont.140:
-	call	%30, bgt_cont.138
-bgt_else.137:
-	mov	%4, %1
-	cmp	%26, %1, 0
-	brle	bgt_else.145, %26
-	mov	%3, %0
-	add	%3, %4, %3
-	cmp	%26, %2, 0
-	sub	%26, 0, %26
-	brle	bgt_else.147, %26
-	mov	%0, %1
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	call	%30, bgt_cont.148
-bgt_else.147:
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-bgt_cont.148:
-	call	%30, bgt_cont.146
-bgt_else.145:
-	mov	%3, %2
-	add	%3, %4, %3
-	cmp	%26, %2, 0
-	sub	%26, 0, %26
-	brle	bgt_else.149, %26
-	mov	%0, %1
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	call	%30, bgt_cont.150
-bgt_else.149:
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-bgt_cont.150:
-bgt_cont.146:
-bgt_cont.138:
-	call	%30, min_caml_end
+	add	%30, %29, 8
+	ld	%0, %30
+	call	%30, %27
 .section	".rodata"
 .align	8
 #l.14:	 0x3fc90fdb
