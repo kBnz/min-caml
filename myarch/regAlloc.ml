@@ -247,7 +247,7 @@ struct
     | FMulD(x,y) -> ("FMulD "^x^" "^y)
     | FDivD(x,y) -> ("FDivD "^x^" "^y)
     | LdDF(x,y) -> ("LdDf "^x^" "^(string_of_id_or_imm y))      
-    | StDF(x,y,z) -> ("St "^x^" "^y^(string_of_id_or_imm z))
+    | StDF(x,y,z) -> ("StDF "^x^" "^y^(string_of_id_or_imm z))
     | Comment(x) -> ("comment "^x)
     | CallCls(x,yl,zl) ->("CallCls "^x^" {"^(String.concat "," yl)^"} "^
 			                 (String.concat "," zl));
@@ -347,11 +347,11 @@ struct
       if (List.length sn_list) != 1 then
         raise (The_Others("sn_list")) else
         node_conv (List.nth sn_list 0)
-  let type_of_id i = (*Arrayはint*)
+  let type_of_id i = (*Array Fun Tupleはint*)
     let rec loop = function
       | (xi,xt)::y -> if xi=i then
           (match xt with
-            | Type.Array(_) | Type.Fun(_) -> Type.Int              
+            | Type.Array(_) | Type.Fun(_) | Type.Tuple(_)-> Type.Int
             | _ -> xt) else loop y
       | _ -> print_string i;raise IDT_ERROR
     in
@@ -520,7 +520,8 @@ struct
     let rec iaf_list = function (*変数のリストからint array floatを抽出*)
       | x::y ->
         (match (type_of_id_normal x) with
-          | Type.Int | Type.Float | Type.Array(_) -> x::(iaf_list y)
+          | Type.Int | Type.Float | Type.Array(_) | Type.Fun(_) | Type.Tuple(_)
+            -> x::(iaf_list y)
           | _ -> (iaf_list y))
       | _ -> []
     in
@@ -538,7 +539,7 @@ struct
       in
         match !n with
           | Set((i,t),e) -> if sr_exp (e) then
-              rm_list2 i (live_map n) else []
+              List.fold_left (fun l i -> rm_list2 i l) (live_map n) [i;"%28"] else []
           | _ -> []
     in
       (*then_edge else_edgeの処理*)
@@ -674,7 +675,7 @@ struct
           | FNegD(t) -> FNegD(map_v n t (!nvm))
           | FAddD(t1,t2) -> FAddD((map_v n t1 (!nvm)),(map_v n t2 (!nvm)))
           | FSubD(t1,t2) -> FSubD((map_v n t1 (!nvm)),(map_v n t2 (!nvm)))
-          | FMulD(t1,t2) -> FMulD((map_v n t1 (!nvm)),(map_v n t2) (!nvm))
+          | FMulD(t1,t2) -> FMulD((map_v n t1 (!nvm)),(map_v n t2 (!nvm)))
           | FDivD(t1,t2) -> FDivD((map_v n t1 (!nvm)),(map_v n t2 (!nvm)))
           | LdDF(t,i) -> LdDF((map_v n t (!nvm)),(change_idorimm n i))
           | StDF(t1,t2,i) -> StDF((map_v n t1 (!nvm)),
@@ -743,6 +744,9 @@ struct
          arg=arg;live=live;start_n=start_n;
          end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)} = fg in
     let map = List.map (fun (x,y)->(!x,y)) (cmapi@cmapf) in
+    let (iarg,farg)=arg in
+    let varlist= "%31"::(iarg@farg@
+                           (List.fold_left (fun vl (x,l) -> vl@l) [] def)) in
     let id_to_reg i =
       let rec loop = function
         | (i2,r)::y ->if i2=i then r else loop y
@@ -768,13 +772,13 @@ struct
       | FSubD(t1,t2) -> FSubD((id_to_reg t1),(id_to_reg t2))
       | FMulD(t1,t2) -> FMulD((id_to_reg t1),(id_to_reg t2))
       | FDivD(t1,t2) -> FDivD((id_to_reg t1),(id_to_reg t2))
-      | LdDF(t,i) -> Ld((id_to_reg t),(idorimm_to_reg i))
+      | LdDF(t,i) -> LdDF((id_to_reg t),(idorimm_to_reg i))
       | StDF(t1,t2,i) ->
-        St((id_to_reg t1),(id_to_reg t2),(idorimm_to_reg i))
+        StDF((id_to_reg t1),(id_to_reg t2),(idorimm_to_reg i))
       | IfEq(_) | IfLE(_) | IfGE(_)
       | IfFLE(_) | IfFEq(_) -> raise (The_Others("exp_to_reg"))
       | CallCls(t,tl1,tl2) ->
-        CallCls((id_to_reg t),(List.map id_to_reg tl1),
+        CallCls((id_to_reg (if List.exists (fun i->i=t) varlist then t else "%31")),(List.map id_to_reg tl1),
                 (List.map id_to_reg tl2))
       | CallDir(l,tl1,tl2) ->
         CallDir(l,(List.map id_to_reg tl1),
@@ -881,7 +885,7 @@ struct
               | Save(x,y) -> [y]
               | Restore(x) -> []
               | CallCls(x,y,z) ->
-                if List.exists (fun i->i=x) varlist then x::(y@z) else (y@z)
+                if List.exists (fun i->i=x) varlist then x::(y@z) else "%31"::(y@z)
               | CallDir(x,y,z) -> y@z
               | Comment _ | Asm.Set(_) | SetL(_) | SetF(_) | Nop -> []
         in
@@ -924,6 +928,7 @@ struct
       in loop [] in
       
     let live2 = make_live control in
+      print_string "\nafter_live\n";
       print_flow {control=control;def=(make_def control);
        use=(make_use control);name=name;arg=arg;live=live2;
        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} true;
@@ -936,7 +941,10 @@ struct
        start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
     let (igi2,igf2) = make_igraph fg in
     let (cmap,fcmap) = reg_coloring control2 igi2 igf2 arg name in
-      print_flow fg true;
+      print_string "\nafter_restore\n";
+      print_flow {control=control2;def=(make_def control2);
+       use=(make_use control2);name=name;arg=arg;live=live3;
+       start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)} true;
       reg_alloc {control=control2;def=(make_def control2);
        use=(make_use control2);name=name;arg=arg;live=live3;
        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)}
@@ -1012,6 +1020,5 @@ let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html:
   let fg_of_e = Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit} in
   let e2 = Flow.to_body fg_of_e in
     Flow.print_flow fg_of_e false;
-    Mydebug.print_regalloc (Prog(data,fl,e2));
     print_idt();
     Prog(data,fl,e2)

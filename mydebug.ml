@@ -231,7 +231,7 @@ let rec print_asm3 a =
 	   print_newline ()      
        | StDF(x,y,z) ->
 	   print_string
-	     ("St "^x^" "^y^(string_of_id_or_imm z));
+	     ("StDF "^x^" "^y^(string_of_id_or_imm z));
 	   print_newline ()      
        | Comment(x) -> print_string ("comment "^x); print_newline ()
 	   (* virtual instructions *)

@@ -1,41 +1,5 @@
 .section	".rodata"
 .align	8
-#l.113:	 0x4039999a
-#l.0:	 0x0
-.section	".text"
-.global	min_caml_start
-min_caml_start:
-	mov	%28, 32764
-	fmov	%0, #l.113
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, f.105
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_print_float
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	call	%30, min_caml_end
-f.105:
-	mov	%0, 3
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_create_float_array
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %0, 4
-	fld	%0, %30
-	call	%30, %27
-.section	".rodata"
-.align	8
 #l.14:	 0x3fc90fdb
 #l.61:	 0x0
 #l.59:	 0xbf800000

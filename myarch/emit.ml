@@ -99,7 +99,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
       savef y;
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
       Printf.fprintf oc "\tfst\t%s, %s\n" x reg_tmp
-  | NonTail(_), Save(x, y) -> assert (S.mem y !stackset); ()
+  | NonTail(_), Save(x, y) -> print_string (y^" "); assert (S.mem y !stackset); ()
   (* 復帰の仮想命令の実装 (caml2html: emit_restore) *)
   | NonTail(x), Restore(y) when List.mem x allregs ->
       Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
