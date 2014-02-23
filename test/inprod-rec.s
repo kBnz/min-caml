@@ -35,6 +35,8 @@ min_caml_start:
 	fmov	%0, #l.147
 	mov	%2, 2
 	add	%30, %29, 4
+	st	%0, %30
+	add	%30, %29, 8
 	fst	%0, %30
 	mov	%30, %1
 	mov	%1, %0
@@ -46,8 +48,10 @@ min_caml_start:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	add	%30, %29, 4
+	add	%30, %29, 8
 	fld	%1, %30
+	add	%30, %29, 4
+	ld	%0, %30
 	fmul	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -67,10 +71,10 @@ min_caml_start:
 inprod.117:
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.152, %26
+	brle	bgt_else.155, %26
 	fmov	%0, #l.139
 	call	%30, %27
-bgt_else.152:
+bgt_else.155:
 	sh	%3, %2, 2
 	add	%30, %0, %3
 	fld	%1, %30

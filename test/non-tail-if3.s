@@ -1,90 +1,69 @@
 .section	".rodata"
 .align	8
-#l.150:	 0x0
-#l.148:	 0x42c80000
-#l.146:	 0x4091eb85
-#l.144:	 0x3f9d70a4
 #l.0:	 0x0
 .section	".text"
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
 	mov	%0, 3
-	fmov	%0, #l.144
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_create_float_array
+	call	%27, f.109
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%1, 3
-	fmov	%0, #l.146
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_int
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	call	%30, min_caml_end
+inc.107:
+	add	%0, %0, 10
+	call	%30, %27
+f.109:
+	mov	%1, %0
+	cmp	%26, %1, 0
+	breq	brne_else.123, %26
+	mov	%0, 1
+	add	%0, %1, %0
+	call	%30, %27
+brne_else.123:
 	add	%30, %29, 0
-	st	%0, %30
+	st	%1, %30
 	mov	%0, %1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_create_float_array
+	call	%27, inc.107
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%1, %30
-	fmov	%1, #l.148
-	fmov	%0, #l.150
-	mov	%2, 2
+	mov	%2, %0
 	add	%30, %29, 4
-	st	%0, %30
+	st	%1, %30
 	add	%30, %29, 8
-	fst	%1, %30
-	mov	%30, %1
-	mov	%1, %0
-	mov	%0, %30
+	st	%2, %30
+	mov	%0, %1
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, inprod.118
+	call	%27, inc.107
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 8
-	fld	%1, %30
+	ld	%2, %30
 	add	%30, %29, 4
-	ld	%0, %30
-	fmul	%0, %1, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_int_of_float
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	call	%30, min_caml_end
-inprod.118:
-	cmp	%26, %2, 0
-	sub	%26, 0, %26
-	brle	bgt_else.157, %26
+	ld	%1, %30
+	add	%0, %2, %0
+	add	%0, %1, %0
 	call	%30, %27
-bgt_else.157:
-	sh	%3, %2, 2
-	add	%30, %0, %3
-	fld	%2, %30
-	sh	%3, %2, 2
-	add	%30, %1, %3
-	fld	%1, %30
-	fmul	%1, %2, %1
-	fadd	%0, %0, %1
-	sub	%2, %2, 1
-	call	%30, inprod.118
 .section	".rodata"
 .align	8
 #l.14:	 0x3fc90fdb

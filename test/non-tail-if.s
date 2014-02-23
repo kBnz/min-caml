@@ -46,38 +46,11 @@ min_caml_start:
 	ld	%2, %30
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.137, %26
+	brle	bgt_else.139, %26
 	mov	%4, %2
 	cmp	%26, %1, 0
-	brle	bgt_else.139, %26
-	mov	%3, %0
-	add	%3, %4, %3
-	cmp	%26, %2, 0
-	sub	%26, 0, %26
 	brle	bgt_else.141, %26
-	mov	%0, %1
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	call	%30, bgt_cont.142
-bgt_else.141:
-	add	%0, %3, %0
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-bgt_cont.142:
-	call	%30, bgt_cont.140
-bgt_else.139:
-	mov	%3, %2
+	mov	%3, %0
 	add	%3, %4, %3
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
@@ -102,17 +75,13 @@ bgt_else.143:
 	add	%30, %29, 12
 	ld	%27, %30
 bgt_cont.144:
-bgt_cont.140:
-	call	%30, bgt_cont.138
-bgt_else.137:
-	mov	%4, %1
-	cmp	%26, %1, 0
-	brle	bgt_else.145, %26
-	mov	%3, %0
+	call	%30, bgt_cont.142
+bgt_else.141:
+	mov	%3, %2
 	add	%3, %4, %3
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.147, %26
+	brle	bgt_else.145, %26
 	mov	%0, %1
 	add	%0, %3, %0
 	add	%30, %29, 12
@@ -122,8 +91,8 @@ bgt_else.137:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.148
-bgt_else.147:
+	call	%30, bgt_cont.146
+bgt_else.145:
 	add	%0, %3, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -132,10 +101,14 @@ bgt_else.147:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.148:
-	call	%30, bgt_cont.146
-bgt_else.145:
-	mov	%3, %2
+bgt_cont.146:
+bgt_cont.142:
+	call	%30, bgt_cont.140
+bgt_else.139:
+	mov	%4, %1
+	cmp	%26, %1, 0
+	brle	bgt_else.147, %26
+	mov	%3, %0
 	add	%3, %4, %3
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
@@ -160,8 +133,35 @@ bgt_else.149:
 	add	%30, %29, 12
 	ld	%27, %30
 bgt_cont.150:
-bgt_cont.146:
-bgt_cont.138:
+	call	%30, bgt_cont.148
+bgt_else.147:
+	mov	%3, %2
+	add	%3, %4, %3
+	cmp	%26, %2, 0
+	sub	%26, 0, %26
+	brle	bgt_else.151, %26
+	mov	%0, %1
+	add	%0, %3, %0
+	add	%30, %29, 12
+	st	%27, %30
+	add	%29, %29, 16
+	call	%27, min_caml_print_int
+	sub	%29, %29, 16
+	add	%30, %29, 12
+	ld	%27, %30
+	call	%30, bgt_cont.152
+bgt_else.151:
+	add	%0, %3, %0
+	add	%30, %29, 12
+	st	%27, %30
+	add	%29, %29, 16
+	call	%27, min_caml_print_int
+	sub	%29, %29, 16
+	add	%30, %29, 12
+	ld	%27, %30
+bgt_cont.152:
+bgt_cont.148:
+bgt_cont.140:
 	call	%30, min_caml_end
 .section	".rodata"
 .align	8

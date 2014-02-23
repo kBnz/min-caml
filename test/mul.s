@@ -13,7 +13,10 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	sh	%0, %0, 2
+	sh	%1, %0, 2
+	add	%30, %29, 0
+	st	%0, %30
+	mov	%0, %1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -21,7 +24,10 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%0, 6
+	add	%30, %29, 0
+	ld	%0, %30
+	mov	%1, 6
+	mov	%0, %1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -40,7 +46,7 @@ min_caml_start:
 	call	%30, min_caml_end
 fib.117:
 	cmp	%26, %0, 2
-	brle	bgt_else.137, %26
+	brle	bgt_else.139, %26
 	sub	%1, %0, 1
 	add	%30, %29, 0
 	st	%0, %30
@@ -69,7 +75,7 @@ fib.117:
 	ld	%1, %30
 	add	%0, %1, %0
 	call	%30, %27
-bgt_else.137:
+bgt_else.139:
 	mov	%0, 1
 	call	%30, %27
 .section	".rodata"
