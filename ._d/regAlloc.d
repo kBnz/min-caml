@@ -1,2 +1,2 @@
-regAlloc.cmo: type.cmo id.cmo asm.cmi regAlloc.cmi
-regAlloc.cmx: type.cmx id.cmx asm.cmx regAlloc.cmi
+regAlloc.cmo: type.cmo mydebug.cmi id.cmo asm.cmi regAlloc.cmi
+regAlloc.cmx: type.cmx mydebug.cmx id.cmx asm.cmx regAlloc.cmi

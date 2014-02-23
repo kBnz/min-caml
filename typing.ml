@@ -153,7 +153,27 @@ let rec g env e = (* 型推論ルーチン (caml2html: typing_g) *)
 
 let f e =
 (*  let extenv_var = [("screen", (Type.Array (Type.Float)));("vp", (Type.Array (Type.Float)));("viewpoint", (Type.Array (Type.Float)));("view", (Type.Array (Type.Float)));("light", (Type.Array (Type.Float)));("cos_v", (Type.Array (Type.Float)));("sin_v", (Type.Array (Type.Float)));("beam", (Type.Array (Type.Float)));("and_net", (Type.Array (Type.Float)));("", (Type.Array (Type.Float)));] in *)
-  extenv := M.add_list ([("floor", (Type.Fun ([Type.Float],Type.Float))); ("sin", (Type.Fun ([Type.Float],Type.Float))); ("cos", (Type.Fun ([Type.Float],Type.Float))); ("atan", (Type.Fun ([Type.Float],Type.Float))); ("abs_float", (Type.Fun ([Type.Float],Type.Float))); ("sqrt", (Type.Fun ([Type.Float],Type.Float))); ("float_of_int", (Type.Fun ([Type.Int],Type.Float))); ("int_of_float", (Type.Fun ([Type.Float],Type.Int)))](*@extenv_var*)) M.empty;
+  extenv := M.add_list
+    ([("floor", (Type.Fun ([Type.Float],Type.Float)));
+      ("sin", (Type.Fun ([Type.Float],Type.Float)));
+      ("cos", (Type.Fun ([Type.Float],Type.Float)));
+      ("atan", (Type.Fun ([Type.Float],Type.Float)));
+      ("abs_float", (Type.Fun ([Type.Float],Type.Float)));
+      ("sqrt", (Type.Fun ([Type.Float],Type.Float)));
+      ("float_of_int", (Type.Fun ([Type.Int],Type.Float)));
+      ("int_of_float", (Type.Fun ([Type.Float],Type.Int)));
+      ("truncate", (Type.Fun ([Type.Float],Type.Int)));
+      ("print_int", (Type.Fun ([Type.Int],Type.Unit)));
+      ("print_byte", (Type.Fun ([Type.Int],Type.Unit)));
+      ("print_char", (Type.Fun ([Type.Int],Type.Unit)));
+      ("print_float", (Type.Fun ([Type.Float],Type.Unit)));
+      ("read_int", (Type.Fun ([Type.Unit],Type.Int)));
+      ("read_float", (Type.Fun ([Type.Unit],Type.Float)));
+      ("abs_float", (Type.Fun ([Type.Float],Type.Float)));
+      ("create_array", (Type.Fun ([Type.Int;Type.Int],Type.Array(Type.Int))));
+      ("create_float_array",
+       (Type.Fun ([Type.Int;Type.Float],Type.Array(Type.Float))));
+     ](*@extenv_var*)) M.empty;
 (*
   (match deref_typ (g M.empty e) with
   | Type.Unit -> ()

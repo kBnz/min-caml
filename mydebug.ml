@@ -324,3 +324,4 @@ let print_regalloc (Asm.Prog (ifl, fl, t)) = print_string "****RegAlloc****";
   List.map print_asm2 fl; print_newline ();
   print_asm3 t;
   (Asm.Prog (ifl, fl, t))
+let print_asmbody b = print_asm2 b; ()

@@ -6,3 +6,4 @@ val print_closure : Closure.prog -> Closure.prog
 val print_virtual : Asm.prog -> Asm.prog
 val print_regalloc : Asm.prog -> Asm.prog
 val print_simm : Asm.prog -> Asm.prog
+val print_asmbody : Asm.fundef -> unit

@@ -74,7 +74,6 @@ let string_of_id_or_imm = function
 let idt = ref []
 exception IDT_ERROR
 exception Map_Error
-exception Spill
 exception The_Others of string  
 let string_of_type = function
   | Type.Unit -> "unit"
@@ -407,7 +406,7 @@ struct
        print_coloring cmap;
        print_string ("***igraph(float)***\n");
        IGraph.print_graph igf;
-       print_coloring fcmap 
+       print_coloring fcmap
 
   let list_size l =
     let rec loop = function
@@ -429,7 +428,8 @@ struct
       let (curr_g,curr_st) = push_nodes prev_g prev_st in
         if curr_st = prev_st then (curr_g,curr_st) else loop curr_g curr_st
     in
-      push_nodes (nl,el) []        
+      push_nodes (nl,el) []
+  exception Spill of IGraph.node        
   let rec select control ((nl,el):IGraph.graph) size st args ret intflag=(*色を選ぶ*)
     let g = (nl,el) in
     let cl =
@@ -448,9 +448,9 @@ struct
       let adj_colors = List.map (fun n ->node_color n cmap) adj_nodes in
         List.fold_right rm_list2 adj_colors cl
     in
-    let select_color = function
+    let select_color i= function
       | x::y -> x
-      | _ -> raise Spill in
+      | _ -> raise (Spill(i)) in
     let is_arg_or_ret x = (List.exists (fun y->(!x)=y) args) or (!x)=ret in
     let id_to_node i = (*idに対応するnode*)
       List.find (fun x->(!x)=i) nl in
@@ -487,7 +487,7 @@ struct
       | x::y -> if is_colored x cmap2
         then main cmap2 y (*もう色がついている*)else
           main (simple_list2 cmap2
-                       (x, select_color (enable_colors x cmap2))
+                       (x, select_color x (enable_colors x cmap2))
                        (fun (n,_) (n2,_) -> n=n2)) y
       | _ -> cmap2
     in
@@ -509,7 +509,7 @@ struct
   let save_and_restore {control=control;def=def;use=use;name=name;
                         arg=arg;live=live;start_n=start_n;
                         end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)}
-      = (*関数呼び出し用のsaveとrestore*)
+      = (*関数呼び出し用のsaveとrestore*)    
     let count_id = ref 0 (*restore用*) in
     let get_count_id () =
       count_id:=(!count_id)+1; (string_of_int (!count_id)) in
@@ -805,7 +805,8 @@ struct
     in
     let (nl,el) = control in
     let g = List.fold_left main control (List.rev nl)
-    in {control=g;def=def;
+    in
+      {control=g;def=def;
         use=use;name=name;arg=arg;live=live;
         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)}      
           
@@ -829,13 +830,15 @@ struct
       List.fold_left (fun g3 (x,y)->
         List.fold_left add_node2 g3 y) g2 l in
     let make_edge2 g2 from_n to_n =
-      let g3 = add_node2 (add_node2 g2 from_n) to_n in
-        IGraph.mk_udedge g3 (ref_node from_n g3) (ref_node to_n g3) in
+      (*let g3 = add_node2 (add_node2 g2 from_n) to_n in
+      IGraph.mk_udedge g3 (ref_node from_n g3) (ref_node to_n g3)*)
+      IGraph.mk_udedge g2 (ref_node from_n g2) (ref_node to_n g2)
+    in
     let make_edge3 g2 l =
       List.fold_left
         (fun g3 x ->
           (List.fold_left
-             (fun g4 y -> if x==y then g4 else make_edge2 g4 x y)
+             (fun g4 y -> if x=y then g4 else make_edge2 g4 x y)
              g3 l)) g2 l in
     let type_def_use_live vt = (*ある型の変数のみのdef,use,liveを返す*)
       let rec select = function
@@ -847,6 +850,15 @@ struct
     in
     let (defi,usei,livei) = type_def_use_live Type.Int in
     let (deff,usef,livef) = type_def_use_live Type.Float in
+      print_int 
+        (List.fold_left (fun x (y,z) -> let l=List.length z in l*l+x) 0 livei);
+      
+      let l0 = List.nth livei 1 in
+      let (i0,ll0) = l0 in
+        print_int (List.length ll0);
+        IGraph.print_graph (List.fold_left (fun x (y,z) -> make_edge3 x z)
+           (add_nodes g (defi@usei)) [l0]);
+        (*raise Exit;*)
       ((List.fold_left (fun x (y,z) -> make_edge3 x z)
         (add_nodes g (defi@usei)) livei),
        (List.fold_left (fun x (y,z) -> make_edge3 x z)
@@ -915,6 +927,19 @@ struct
       let rec add_list x y = function
         | (a,b)::l -> if a==x then (a,y)::l else (a,b)::(add_list x y l)
         | _ -> [(x,y)] in
+      let for_unused_var l=
+      (*defされているノードで生きていない変数はliveに加える
+        (例)... let a =f x in...aが使われていないと他の変数の値
+        を上書きするかもしれない
+      *)
+        List.map (fun (x,l) ->
+          let def3 = mymap x def2 in
+            if List.length def3 > 0 then
+              let v = List.nth def3 0 in
+                (if List.exists (fun i->i=v) l then (x,l)
+                 else (x,v::l))
+            else (x,l)) l
+      in              
       let rec loop l =
         let l4 =
           List.fold_left
@@ -927,23 +952,37 @@ struct
             l nl
         in
           if l = l4 then l else loop l4
-      in loop [] in
+      in for_unused_var (loop []) in
       
     let live2 = make_live control in
       print_string "\nafter_live\n";
       print_flow {control=control;def=(make_def control);
-       use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} true;
-    let control2 = save_and_restore {control=control;def=(make_def control);
-       use=(make_use control);name=name;arg=arg;live=live2;
-       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
-    let live3 = make_live control2 in
-    let fg = {control=control2;def=(make_def control2);
-       use=(make_use control2);name=name;arg=arg;live=live3;
-       start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
-    let (igi2,igf2) = make_igraph fg in
-    let (cmap,fcmap) = reg_coloring control2 igi2 igf2 arg name in
+                  use=(make_use control);name=name;arg=arg;live=live2;
+                  start_n=start_n;end_n=end_n;
+                  igraphi=igi;igraphf=igf;cmap=cmap} true;
+      let control2 = save_and_restore
+        {control=control;def=(make_def control);
+         use=(make_use control);name=name;arg=arg;live=live2;
+         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
+      let live3 = make_live control2 in
+
+      let fg = {control=control2;def=(make_def control2);
+                use=(make_use control2);name=name;arg=arg;live=live3;
+                start_n=start_n;end_n=end_n;
+                igraphi=igi;igraphf=igf;cmap=cmap} in
+        print_flow fg;
+     let (igi2,igf2) = make_igraph fg in
+     let (cmap,fcmap) = reg_coloring control2 igi2 igf2 arg name in
       print_string "\nafter_restore\n";
+       Mydebug.print_asmbody
+         {Asm.name=Id.L(name); args=[];fargs=[];
+          body= (to_body 
+                {control=control2;def=(make_def control2);
+                 use=(make_use control2);name=name;arg=arg;live=live3;
+                 start_n=start_n;end_n=end_n;igraphi=igi2;
+                 igraphf=igf2;cmap=(cmap,fcmap)});
+          ret=Type.Unit};
+               
       print_flow {control=control2;def=(make_def control2);
        use=(make_use control2);name=name;arg=arg;live=live3;
        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)} true;
@@ -1144,7 +1183,13 @@ struct
     let {control=control2;def=_;use=_; live=_;name=_;arg=_;
          start_n=_;end_n=_;igraphi=_; igraphf=_;cmap=_} = main body in
     let body2 = arg_mov (arg_conf_list control2) (ys,zs) body in
+      print_string "\nafter_arg_mov\n";
+      Mydebug.print_asmbody {Asm.name=Id.L(x); args=ys; fargs=zs;body=body2;ret=ret};
       main body2
+  (* try
+        ( main body2)
+      with
+        | x -> raise x*)
   let h2 x ys zs body ret=
     let fl = newFlow () in
     let {control=control;def=def;use=use;live=live;name=name;arg=arg;

@@ -200,7 +200,6 @@ min_caml_start:
 	ld	%2, %30
 	add	%30, %2, 4
 	fld	%0, %30
-	mov	%0, %1
 	add	%30, %29, 36
 	st	%0, %30
 	add	%30, %29, 44
@@ -231,7 +230,6 @@ min_caml_start:
 	ld	%2, %30
 	add	%30, %2, 0
 	fld	%0, %30
-	mov	%0, %1
 	add	%30, %29, 48
 	st	%0, %30
 	add	%30, %29, 52
