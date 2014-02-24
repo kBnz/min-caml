@@ -23,7 +23,7 @@ min_caml_start:
 	call	%30, min_caml_end
 sum.107:
 	cmp	%26, %0, 0
-	brle	bgt_else.116, %26
+	brle	bgt_else.117, %26
 	sub	%1, %0, 1
 	add	%30, %29, 0
 	st	%0, %30
@@ -39,7 +39,7 @@ sum.107:
 	ld	%1, %30
 	add	%0, %0, %1
 	call	%30, %27
-bgt_else.116:
+bgt_else.117:
 	mov	%0, 0
 	call	%30, %27
 .section	".rodata"

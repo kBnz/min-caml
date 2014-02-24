@@ -12,8 +12,9 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
+	mov	%4, %0
 	add	%30, %29, 0
-	st	%0, %30
+	st	%4, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23,8 +24,9 @@ min_caml_start:
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%1, %30
+	mov	%3, %0
 	add	%30, %29, 4
-	st	%0, %30
+	st	%3, %30
 	add	%30, %29, 8
 	st	%1, %30
 	add	%30, %29, 12
@@ -39,10 +41,10 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%2, %30
 	cmp	%26, %0, 0
-	breq	brne_else.133, %26
+	breq	brne_else.135, %26
 	sub	%0, %2, %1
-	add	%0, %0, %1
-	add	%0, %0, %2
+	add	%0, %0, %4
+	add	%0, %0, %3
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -50,11 +52,11 @@ min_caml_start:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, brne_cont.134
-brne_else.133:
+	call	%30, brne_cont.136
+brne_else.135:
 	sub	%0, %1, %2
-	add	%0, %0, %1
-	add	%0, %0, %2
+	add	%0, %0, %4
+	add	%0, %0, %3
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -62,7 +64,7 @@ brne_else.133:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-brne_cont.134:
+brne_cont.136:
 	call	%30, min_caml_end
 f.112:
 	mov	%0, 123

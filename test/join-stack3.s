@@ -12,10 +12,11 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	cmp	%26, %0, 0
-	brle	bgt_else.126, %26
+	mov	%2, %0
+	cmp	%26, %2, 0
+	brle	bgt_else.127, %26
 	add	%30, %29, 0
-	st	%0, %30
+	st	%2, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -25,7 +26,7 @@ min_caml_start:
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%1, %30
-	add	%0, %0, %1
+	add	%0, %0, %2
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -33,10 +34,10 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	call	%30, bgt_cont.127
-bgt_else.126:
+	call	%30, bgt_cont.128
+bgt_else.127:
 	add	%30, %29, 0
-	st	%0, %30
+	st	%2, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -46,7 +47,7 @@ bgt_else.126:
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%1, %30
-	add	%0, %0, %1
+	add	%0, %0, %2
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -54,7 +55,7 @@ bgt_else.126:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-bgt_cont.127:
+bgt_cont.128:
 	call	%30, min_caml_end
 f.110:
 	mov	%0, 123

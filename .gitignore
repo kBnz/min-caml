@@ -5,3 +5,4 @@
 *.di
 min-caml
 min-caml.*
+*.s

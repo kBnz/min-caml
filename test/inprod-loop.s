@@ -72,9 +72,9 @@ min_caml_start:
 inprod.118:
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.157, %26
+	brle	bgt_else.160, %26
 	call	%30, %27
-bgt_else.157:
+bgt_else.160:
 	sh	%3, %2, 2
 	add	%30, %0, %3
 	fld	%2, %30

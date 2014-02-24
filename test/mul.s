@@ -46,7 +46,7 @@ min_caml_start:
 	call	%30, min_caml_end
 fib.117:
 	cmp	%26, %0, 2
-	brle	bgt_else.139, %26
+	brle	bgt_else.142, %26
 	sub	%1, %0, 1
 	add	%30, %29, 0
 	st	%0, %30
@@ -75,7 +75,7 @@ fib.117:
 	ld	%1, %30
 	add	%0, %1, %0
 	call	%30, %27
-bgt_else.139:
+bgt_else.142:
 	mov	%0, 1
 	call	%30, %27
 .section	".rodata"

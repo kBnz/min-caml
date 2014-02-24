@@ -35,7 +35,7 @@ f.108:
 	add	%30, %31, 4
 	ld	%1, %30
 	cmp	%26, %0, 0
-	breq	brne_else.120, %26
+	breq	brne_else.121, %26
 	sub	%0, %0, 1
 	add	%30, %29, 0
 	st	%1, %30
@@ -51,7 +51,7 @@ f.108:
 	ld	%1, %30
 	add	%0, %1, %0
 	call	%30, %27
-brne_else.120:
+brne_else.121:
 	mov	%0, 0
 	call	%30, %27
 .section	".rodata"
