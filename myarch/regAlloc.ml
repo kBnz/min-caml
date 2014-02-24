@@ -515,9 +515,10 @@ struct
       in
       let rec loop = function (*元からあった変数をspill*)
         | x::y ->
-          if List.exists (fun z->x=z) (!original_varlist) &&
+          if (*List.exists (fun z->x=z) (!original_varlist) &&*)
             not(List.exists (fun z->x=z) (!spill_list))
           then x else loop y
+        | _ -> (List.map print_string (!spill_list);raise Exit)
       in        
         (*どの変数をspillするかの処理(今は手抜き)*)
         if List.length uncolored_list > 0 then
@@ -585,8 +586,9 @@ struct
         t_list := inner (!t_list); e_list := inner (!e_list); ()
     in
       (*idを変換する*)
-    let change_var v t= let nv = (v^("."^(get_count_id ())))
-                        in idt:=(nv,t)::(!idt); nv in
+    let change_var v t= if v="%31" then v else
+        (let nv = (v^("."^(get_count_id ())))
+         in idt:=(nv,t)::(!idt); nv) in
     let rec map_nv n = function
       | (n2,l2)::y -> if n2==n then l2 else map_nv n y
       | _ -> raise (The_Others("map_nv error")) in
@@ -610,10 +612,16 @@ struct
       | (n2,l2)::y -> if n==n2 then (n,l)::y else (n2,l2)::(sub_nv n l y)
       | _ -> raise (The_Others("update error")) in
     let count_of_id bv av = (*変数のカウントを返す*)
-      let fmt = print_string ("("^av^" "^bv^")"); (Scanf.format_from_string (bv^".%d") "%d") in
-      Scanf.sscanf av fmt (fun x->x) in
+      if bv.[0] =av.[0] then (*変数名が違うとscanfがerror(応急処置)*)
+        let fmt =(Scanf.format_from_string (bv^".%d") "%d") in
+          Scanf.sscanf av fmt (fun x->x)
+      else
+        -1
+    in
     let is_newer bv av1 av2 = (*av1がav2より若いか*)
-      if (count_of_id bv av1) < (count_of_id bv av2) then true else false in
+      if bv="%31" then false
+      else
+        if (count_of_id bv av1) < (count_of_id bv av2) then true else false in
     let merge_vl n1 n2 nvm2 = (*n1とn2合流後のvlを決める*)
       let l1 = map_nv n1 nvm2 in
       let l2 = map_nv n2 nvm2 in
