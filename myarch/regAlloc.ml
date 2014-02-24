@@ -39,8 +39,9 @@ Debug用チェックリスト
 ・save restoreした後のtrue elseのedge管理  
 *)  
 open Asm
-let reg_size = 32
+let reg_size = 26
 let freg_size = 32
+let print_flag = false
 type branch = Normal | Then | Else  
 module type ItemType = sig
   type t
@@ -149,13 +150,17 @@ struct
         print_newline ()) nl;
     List.map
       (fun x ->
-        print_string ((edge_to_string (nl,el) x)^" ")) el; print_newline ()
+        print_string ((edge_to_string (nl,el) x)^" ")) el;
+    print_newline ()
   let edge_eq (xf,xt) (yf,yt) = (xf==yf) && (xt==yt)
   let mk_edge ((nl,el):graph) from_n to_n =
-    (nl,(simple_list ((from_n,to_n)::el) edge_eq))
+    if List.exists (fun e->edge_eq (from_n,to_n) e) el then (nl,el)
+    else (nl,((from_n,to_n)::el))
   let mk_udedge ((nl,el):graph) from_n to_n = (*無向辺*)
-    (nl,(simple_list ((from_n,to_n)::el)
-           (fun (xt,xf) (yt,yf) ->(xt==yt && xf==yf)or(xt==yf && xf==yt))))
+    if List.exists
+      (fun (xf,xt) ->(xf==from_n && xt==to_n)
+        or(xt==from_n && xf==to_n)) el then (nl,el)
+    else (nl,((from_n,to_n)::el))
   let mk_edges ((nl,el):graph) el2 = (nl,(el2@el))
   let rm_edge ((nl,el):graph) from_n to_n =
     let rec loop = function
@@ -279,6 +284,9 @@ struct
   module Graph = MakeGraph(Statement)
   let t_list = ref [] (*thenのedge*)
   let e_list = ref [] (*elseのedge*)
+  let original_varlist = ref [] (*元からあった変数*)
+  let spill_flg = ref false
+  let spill_list = ref []
   let is_t_edge e =
     List.exists (fun x->Graph.edge_eq e x) (!t_list)
   let is_e_edge e =
@@ -429,7 +437,7 @@ struct
         if curr_st = prev_st then (curr_g,curr_st) else loop curr_g curr_st
     in
       push_nodes (nl,el) []
-  exception Spill of IGraph.node        
+  exception Spill of (Id.t*Type.t)        
   let rec select control ((nl,el):IGraph.graph) size st args ret intflag=(*色を選ぶ*)
     let g = (nl,el) in
     let cl =
@@ -450,7 +458,7 @@ struct
     in
     let select_color i= function
       | x::y -> x
-      | _ -> raise (Spill(i)) in
+      | _ -> raise (The_Others("select_color")) in
     let is_arg_or_ret x = (List.exists (fun y->(!x)=y) args) or (!x)=ret in
     let id_to_node i = (*idに対応するnode*)
       List.find (fun x->(!x)=i) nl in
@@ -500,7 +508,29 @@ struct
         List.map (fun (x,y) -> (x,(pre^y)))
           (select control ig size st args2 (name^".min_caml_ret_reg") flg)
     in
-      ((main igi args reg_size "%" true),(main igf fargs freg_size "%f" false))
+    let select_spill pre cmap =
+      let uncolored_list = (*今の段階で色の塗れない変数のリスト*)
+        List.fold_left
+          (fun l (x,y) -> if y=(pre^"-1") then (!x)::l else l) [] cmap
+      in
+      let rec loop = function (*元からあった変数をspill*)
+        | x::y ->
+          if List.exists (fun z->x=z) (!original_varlist) &&
+            not(List.exists (fun z->x=z) (!spill_list))
+          then x else loop y
+      in        
+        (*どの変数をspillするかの処理(今は手抜き)*)
+        if List.length uncolored_list > 0 then
+          let sv = loop uncolored_list in
+          raise (Spill(sv,(type_of_id_normal sv)))
+        else
+          ()
+    in
+    let cmapi = (main igi args reg_size "%" true) in
+    let cmapf = (main igf fargs freg_size "%f" false) in
+      select_spill "%" cmapi;
+      select_spill "%f" cmapf;
+      (cmapi,cmapf)
 
   let seq2 e =
     let tmp = Id.gentmp Type.Unit in idt := (tmp,Type.Unit)::(!idt);
@@ -511,6 +541,7 @@ struct
                         end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)}
       = (*関数呼び出し用のsaveとrestore*)    
     let count_id = ref 0 (*restore用*) in
+    (*無駄がある restore(x)のxは変更しなくていい*)
     let get_count_id () =
       count_id:=(!count_id)+1; (string_of_int (!count_id)) in
     
@@ -579,7 +610,7 @@ struct
       | (n2,l2)::y -> if n==n2 then (n,l)::y else (n2,l2)::(sub_nv n l y)
       | _ -> raise (The_Others("update error")) in
     let count_of_id bv av = (*変数のカウントを返す*)
-      let fmt = (Scanf.format_from_string (bv^".%d") "%d") in
+      let fmt = print_string ("("^av^" "^bv^")"); (Scanf.format_from_string (bv^".%d") "%d") in
       Scanf.sscanf av fmt (fun x->x) in
     let is_newer bv av1 av2 = (*av1がav2より若いか*)
       if (count_of_id bv av1) < (count_of_id bv av2) then true else false in
@@ -690,7 +721,7 @@ struct
             CallDir(l,(List.map (fun t1->(map_v n t1 (!nvm))) tl1),
                     (List.map (fun t2->(map_v n t2 (!nvm))) tl2))
           | Save(t1,t2) -> Save((map_v n t1 (!nvm)),(map_v n t2 (!nvm)))
-          | Restore(t) -> Restore(map_rnvm n)
+          | Restore(t) -> Restore(t)(*Restore(map_rnvm n)*)
           | x -> x
         in
         let change_statement n =
@@ -832,13 +863,13 @@ struct
     let make_edge2 g2 from_n to_n =
       (*let g3 = add_node2 (add_node2 g2 from_n) to_n in
       IGraph.mk_udedge g3 (ref_node from_n g3) (ref_node to_n g3)*)
-      IGraph.mk_udedge g2 (ref_node from_n g2) (ref_node to_n g2)
+      IGraph.mk_udedge g2 from_n to_n
     in
     let make_edge3 g2 l =
       List.fold_left
         (fun g3 x ->
           (List.fold_left
-             (fun g4 y -> if x=y then g4 else make_edge2 g4 x y)
+             (fun g4 y -> if x==y then g4 else make_edge2 g4 x y)
              g3 l)) g2 l in
     let type_def_use_live vt = (*ある型の変数のみのdef,use,liveを返す*)
       let rec select = function
@@ -850,19 +881,22 @@ struct
     in
     let (defi,usei,livei) = type_def_use_live Type.Int in
     let (deff,usef,livef) = type_def_use_live Type.Float in
-      print_int 
-        (List.fold_left (fun x (y,z) -> let l=List.length z in l*l+x) 0 livei);
-      
+      (*raise Exit;
       let l0 = List.nth livei 1 in
       let (i0,ll0) = l0 in
         print_int (List.length ll0);
         IGraph.print_graph (List.fold_left (fun x (y,z) -> make_edge3 x z)
            (add_nodes g (defi@usei)) [l0]);
-        (*raise Exit;*)
-      ((List.fold_left (fun x (y,z) -> make_edge3 x z)
-        (add_nodes g (defi@usei)) livei),
-       (List.fold_left (fun x (y,z) -> make_edge3 x z)
-        (add_nodes g (deff@usef)) livef))
+        (*raise Exit;*)*)
+      let ag1 =(add_nodes g (defi@usei)) in
+      let reflist1 = List.map (fun (x,l) ->
+        (x, (List.map (fun y->ref_node y ag1) l))) livei in
+      let ag2 =(add_nodes g (deff@usef)) in
+      let reflist2 = List.map (fun (x,l) ->
+        (x, (List.map (fun y->ref_node y ag2) l))) livef in
+
+      ((List.fold_left (fun x (y,z) -> make_edge3 x z) ag1 reflist1),
+       (List.fold_left (fun x (y,z) -> make_edge3 x z) ag2 reflist2))
         
   let make_def_and_use {control=control;def=def;
                          use=use;name=name;arg=arg;live=live;
@@ -953,43 +987,54 @@ struct
         in
           if l = l4 then l else loop l4
       in for_unused_var (loop []) in
-      
-    let live2 = make_live control in
-      print_string "\nafter_live\n";
-      print_flow {control=control;def=(make_def control);
+    let (argi,argf) = arg in      
+      (if not(!spill_flg) then
+        (original_varlist := 
+           (List.fold_left (fun l (x,l2)->l@l2)
+              [] (make_def control))@argi@argf; ())
+      else ());
+      let live2 = make_live control in
+        (if print_flag then
+         (print_string "\nafter_live\n";
+          print_flow {control=control;def=(make_def control);
                   use=(make_use control);name=name;arg=arg;live=live2;
                   start_n=start_n;end_n=end_n;
-                  igraphi=igi;igraphf=igf;cmap=cmap} true;
+                  igraphi=igi;igraphf=igf;cmap=cmap} true;)
+        else ());
       let control2 = save_and_restore
         {control=control;def=(make_def control);
          use=(make_use control);name=name;arg=arg;live=live2;
-         start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} in
+         start_n=start_n;end_n=end_n;igraphi=igi;
+         igraphf=igf;cmap=cmap} in
       let live3 = make_live control2 in
-
       let fg = {control=control2;def=(make_def control2);
                 use=(make_use control2);name=name;arg=arg;live=live3;
                 start_n=start_n;end_n=end_n;
                 igraphi=igi;igraphf=igf;cmap=cmap} in
-        print_flow fg;
+        (if print_flag then (print_flow fg; ()) else ());
      let (igi2,igf2) = make_igraph fg in
-     let (cmap,fcmap) = reg_coloring control2 igi2 igf2 arg name in
-      print_string "\nafter_restore\n";
-       Mydebug.print_asmbody
-         {Asm.name=Id.L(name); args=[];fargs=[];
-          body= (to_body 
-                {control=control2;def=(make_def control2);
-                 use=(make_use control2);name=name;arg=arg;live=live3;
-                 start_n=start_n;end_n=end_n;igraphi=igi2;
-                 igraphf=igf2;cmap=(cmap,fcmap)});
-          ret=Type.Unit};
-               
-      print_flow {control=control2;def=(make_def control2);
-       use=(make_use control2);name=name;arg=arg;live=live3;
-       start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)} true;
+     let (cmap,fcmap) =
+       reg_coloring control2 igi2 igf2 arg name  in
+       print_string "\nafter_restore\n";
+       (if print_flag then
+           (Mydebug.print_asmbody
+             {Asm.name=Id.L(name); args=[];fargs=[];
+              body= (to_body 
+                       {control=control2;def=(make_def control2);
+                        use=(make_use control2);name=name;arg=arg;live=live3;
+                        start_n=start_n;end_n=end_n;igraphi=igi2;
+                        igraphf=igf2;cmap=(cmap,fcmap)});
+              ret=Type.Unit};
+            print_flow {control=control2;def=(make_def control2);
+                        use=(make_use control2);name=name;arg=arg;live=live3;
+                        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)} true;
+            ())
+        else
+           ());
       reg_alloc {control=control2;def=(make_def control2);
        use=(make_use control2);name=name;arg=arg;live=live3;
        start_n=start_n;end_n=end_n;igraphi=igi2;igraphf=igf2;cmap=(cmap,fcmap)}
-  let to_control x ys zs body ret=
+  let to_control x ys zs body ret mov_flg =
     let arg_conf_list (nl,el)=
     (*返り値のレジスタで衝突する変数のlist(Id.t*Type.t)*)
       let check_st = function
@@ -1182,19 +1227,150 @@ struct
     in
     let {control=control2;def=_;use=_; live=_;name=_;arg=_;
          start_n=_;end_n=_;igraphi=_; igraphf=_;cmap=_} = main body in
-    let body2 = arg_mov (arg_conf_list control2) (ys,zs) body in
-      print_string "\nafter_arg_mov\n";
-      Mydebug.print_asmbody {Asm.name=Id.L(x); args=ys; fargs=zs;body=body2;ret=ret};
+      
+    let body2 =
+      if mov_flg then
+        (print_string "\nafter_arg_mov\n";
+         arg_mov (arg_conf_list control2) (ys,zs) body)
+      else
+        (print_string "\nafter_spill\n";
+         body)
+    in
+      (if print_flag then 
+        (Mydebug.print_asmbody
+          {Asm.name=Id.L(x); args=ys; fargs=zs;body=body2;ret=ret};())
+       else ());
       main body2
-  (* try
-        ( main body2)
-      with
-        | x -> raise x*)
-  let h2 x ys zs body ret=
+  (*変数のスピル*)      
+  let spill body (sv,st) ys zs=
+    let id_list i = function
+      | V(x) -> x::i
+      | C(_) -> i
+    in
+    let make_exp_use e = (*直近(分岐前)のexpで使われる変数*)      
+      match e with
+        | Mov(x) | Neg(x) | FMovD(x) | FNegD(x) -> [x]
+        | Add(x,i) | Sub(x,i) | SLL(x,i)
+        | Ld(x,i) | LdDF(x,i)-> id_list [x] i
+        | St(x,y,z) | StDF(x,y,z) -> id_list (x::[y]) z
+        | FAddD(x,y) | FSubD(x,y) | FMulD(x,y)
+        | FDivD(x,y)  -> x::[y]
+        | Save(x,y) -> [y]
+        | Restore(x) -> []
+        | CallCls(x,y,z) -> x::(y@z)
+        | CallDir(x,y,z) -> y@z            
+        | IfEq(t,i,asmt1,asmt2) ->
+          id_list [t] i (*asmt1 asmt2はあとで調べる*)
+        | IfLE(t,i,asmt1,asmt2) ->
+          id_list [t] i (*asmt1 asmt2はあとで調べる*)
+        | IfGE(t,i,asmt1,asmt2) ->
+          id_list [t] i (*asmt1 asmt2はあとで調べる*)
+        | IfFEq(t1,t2,asmt1,asmt2) -> t1::[t2]
+        | IfFLE(t1,t2,asmt1,asmt2) -> t1::[t2]
+        | _ -> []
+    in
+    let rec change_t bv av t=
+      match t with
+        | Let(it,e,t2) -> Let(it,(change_exp bv av e),(change_t bv av t))
+        | Ans(e) -> Ans(change_exp bv av e)      
+    and change_exp bv av e=
+      let change_id i = if i=bv then av else i in
+      let change_ioi = function
+        | V(i) -> V(change_id i)
+        | x -> x in
+      let change_idl il = List.map change_id il in
+        match e with
+          | Mov(x) -> Mov(change_id x)
+          | Neg(x) -> Neg(change_id x)
+          | FMovD(x) -> FMovD(change_id x)
+          | FNegD(x) -> FNegD(change_id x)
+          | Add(x,i) -> Add((change_id x),(change_ioi i))
+          | Sub(x,i) -> Sub((change_id x),(change_ioi i))
+          | SLL(x,i) -> SLL((change_id x),(change_ioi i))
+          | Ld(x,i) -> Ld((change_id x),(change_ioi i))
+          | LdDF(x,i) -> LdDF((change_id x),(change_ioi i))
+          | St(x,y,z) -> St((change_id x),(change_id y),(change_ioi z))
+          | StDF(x,y,z) -> StDF((change_id x),(change_id y),(change_ioi z))
+          | FAddD(x,y) -> FAddD((change_id x),(change_id y))
+          | FSubD(x,y) -> FSubD((change_id x),(change_id y))
+          | FMulD(x,y) -> FMulD((change_id x),(change_id y))
+          | FDivD(x,y) -> FDivD((change_id x),(change_id y))
+          | Save(x,y) -> Save((change_id x),(change_id y))
+          | CallCls(x,y,z) ->
+            CallCls((change_id x),(change_idl y),(change_idl z))
+          | CallDir(x,y,z) ->
+            CallDir(x,(change_idl y),(change_idl z))
+          | IfEq(t,i,asmt1,asmt2) ->
+            IfEq((change_id t),(change_ioi i),
+                 (change_t bv av asmt1),(change_t bv av asmt2))
+          | IfLE(t,i,asmt1,asmt2) ->
+            IfLE((change_id t),(change_ioi i),
+                 (change_t bv av asmt1),(change_t bv av asmt2))
+          | IfGE(t,i,asmt1,asmt2) ->
+            IfGE((change_id t),(change_ioi i),
+                 (change_t bv av asmt1),(change_t bv av asmt2))
+          | IfFEq(t1,t2,asmt1,asmt2) ->
+            IfFEq((change_id t1),(change_id t2),
+                  (change_t bv av asmt1),(change_t bv av asmt2))          
+          | IfFLE(t1,t2,asmt1,asmt2) ->
+            IfFLE((change_id t2),(change_id t2),
+                  (change_t bv av asmt1),(change_t bv av asmt2))
+          | x -> x (*idが含まれないものとrestore*)
+    in
+    let rec main_t = function
+      | Let((i,t),e,t2) ->
+        if i = sv then Let((i,t),e,(seq ((Save(sv,sv)),(main_t t2))))          
+        else
+          (if List.exists (fun x->sv=x) (make_exp_use e) then
+              let sav = (Id.gentmp st) in (*restore後の変数名*)
+              let ae = change_exp sv sav e in
+                Let((sav,st),(Restore(sv)),(Let((i,t),ae,(main_t t2))))
+           else
+              Let((i,t), (main_exp e), (main_t t2)))
+      | Ans(e) ->
+        if List.exists (fun x->sv=x) (make_exp_use e) then
+          let sav = (Id.gentmp st) in (*restore後の変数名*)
+          let ae = change_exp sv sav e in
+            Let((sav,st),(Restore(sv)),(Ans(ae)))
+        else
+          Ans(main_exp e)
+    and main_exp = function
+      | IfEq(t,i,asmt1,asmt2) ->
+        IfEq(t,i,(main_t asmt1),(main_t asmt2))
+      | IfLE(t,i,asmt1,asmt2) ->
+        IfLE(t,i,(main_t asmt1),(main_t asmt2))
+      | IfGE(t,i,asmt1,asmt2) ->
+        IfGE(t,i,(main_t asmt1),(main_t asmt2))
+      | IfFEq(t1,t2,asmt1,asmt2) ->
+        IfFEq(t1,t2,(main_t asmt1),(main_t asmt2))
+      | IfFLE(t1,t2,asmt1,asmt2) ->
+        IfFLE(t1,t2,(main_t asmt1),(main_t asmt2))
+      | x -> x
+    in
+      (if List.exists (fun x->x=sv) (ys@zs) then (*引数なら最初にセーブ*)
+          main_t (seq ((Save(sv,sv)),body))
+       else
+          main_t body)                         
+  let rec h2 x ys zs body ret=
     let fl = newFlow () in
     let {control=control;def=def;use=use;live=live;name=name;arg=arg;
          start_n=start_n;end_n=end_n;igraphi=igi;igraphf=igf;cmap=cmap} = fl in
-      make_def_and_use (to_control x ys zs body ret)
+    let rec loop first body=
+      try
+           make_def_and_use (to_control x ys zs body ret first)
+      with
+        | Spill((i,t)) ->          
+          (print_string ("\nspill "^i^"\n");
+           spill_flg:=true;
+           spill_list:=i::(!spill_list);
+           t_list:= [];
+           e_list:= [];
+           idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@
+             (List.fold_left (fun l1 v ->(v,Type.Float)::l1) [] zs);
+           loop false (spill body (i,t) ys zs))
+        | x -> raise x
+    in
+      loop true body
   let h { Asm.name = Id.L(x); args = ys;
           fargs = zs; body = body; ret = ret } =
     idt := ((x^".min_caml_ret_reg"),ret)::(List.fold_left (fun l1 v ->(v,Type.Int)::l1) [] ys)@

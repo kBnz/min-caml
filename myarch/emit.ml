@@ -17,6 +17,7 @@ let savef x =
       (*if List.length !stackmap mod 2 = 0 then [] else*) [Id.gentmp Type.Int] in
     stackmap := !stackmap @ pad @ [x; x])*)
 let locate x =
+  print_string (x^" ");
   let rec loc = function
     | [] -> []
     | y :: zs when x = y -> 0 :: List.map succ (loc zs)
@@ -131,7 +132,7 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   (*    Printf.fprintf oc "\tretl\n";
         Printf.fprintf oc "\tnop\n" *)
   | Tail, (Restore(x) as exp) ->
-      (match locate x with
+    (match locate x with
       | [i] -> g' oc (NonTail(regs.(0)), exp)
       | [i; j] when i + 1 = j -> g' oc (NonTail(fregs.(0)), exp)
       | _ -> assert false);
