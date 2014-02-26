@@ -31,9 +31,9 @@ ack.115:
 	cmp	%26, %1, 0
 	brle	bgt_else.135, %26
 	sub	%2, %0, 1
-	sub	%1, %1, 1
 	add	%30, %29, 0
 	st	%2, %30
+	sub	%1, %1, 1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -48,11 +48,8 @@ ack.115:
 	mov	%0, %30
 	call	%30, ack.115
 bgt_else.135:
-	sub	%1, %0, 1
-	mov	%0, 1
-	mov	%30, %1
-	mov	%1, %0
-	mov	%0, %30
+	sub	%0, %0, 1
+	mov	%1, 1
 	call	%30, ack.115
 bgt_else.134:
 	add	%0, %1, 1

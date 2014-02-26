@@ -1,16 +1,16 @@
 .section	".rodata"
 .align	8
-#l.147:	 0x42c80000
-#l.145:	 0x4091eb85
-#l.143:	 0x3f9d70a4
-#l.139:	 0x0
+#l.145:	 0x42c80000
+#l.143:	 0x4091eb85
+#l.141:	 0x3f9d70a4
+#l.137:	 0x0
 #l.0:	 0x0
 .section	".text"
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
 	mov	%0, 3
-	fmov	%0, #l.143
+	fmov	%0, #l.141
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -19,7 +19,7 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	mov	%1, 3
-	fmov	%0, #l.145
+	fmov	%0, #l.143
 	add	%30, %29, 0
 	st	%0, %30
 	mov	%0, %1
@@ -30,65 +30,54 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
+	fmov	%0, #l.145
+	add	%30, %29, 4
+	fst	%0, %30
+	mov	%2, 2
 	add	%30, %29, 0
 	ld	%1, %30
-	fmov	%0, #l.147
-	mov	%2, 2
-	add	%30, %29, 4
-	st	%0, %30
-	add	%30, %29, 8
-	fst	%0, %30
 	mov	%30, %1
 	mov	%1, %0
 	mov	%0, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, inprod.117
+	call	%27, inprod.116
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	add	%30, %29, 8
-	fld	%1, %30
 	add	%30, %29, 4
-	ld	%0, %30
+	fld	%1, %30
 	fmul	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, min_caml_int_of_float
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, min_caml_print_int
+	call	%27, min_caml_print_float
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	call	%30, min_caml_end
-inprod.117:
+inprod.116:
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.159, %26
-	fmov	%0, #l.139
+	brle	bgt_else.154, %26
+	fmov	%0, #l.137
 	call	%30, %27
-bgt_else.159:
+bgt_else.154:
 	sh	%3, %2, 2
 	add	%30, %0, %3
-	fld	%1, %30
+	fld	%0, %30
 	sh	%3, %2, 2
 	add	%30, %1, %3
-	fld	%0, %30
-	fmul	%0, %1, %0
-	sub	%2, %2, 1
+	fld	%1, %30
+	fmul	%0, %0, %1
 	add	%30, %29, 0
 	fst	%0, %30
+	sub	%2, %2, 1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, inprod.117
+	call	%27, inprod.116
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30

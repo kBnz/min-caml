@@ -5,24 +5,25 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%3, %28
+	mov	%0, %28
 	add	%28, %28, 8
-	mov	%0, dbl.110
-	add	%30, %3, 0
-	st	%0, %30
-	mov	%2, %28
+	mov	%1, dbl.110
+	add	%30, %0, 0
+	st	%1, %30
+	mov	%1, %28
+	add	%30, %29, 0
+	st	%1, %30
 	add	%28, %28, 8
-	mov	%0, inc.112
+	mov	%1, inc.112
+	add	%30, %29, 0
+	ld	%2, %30
 	add	%30, %2, 0
-	st	%0, %30
+	st	%1, %30
 	mov	%1, %28
 	add	%28, %28, 8
-	mov	%0, dec.114
+	mov	%2, dec.114
 	add	%30, %1, 0
-	st	%0, %30
-	add	%30, %29, 0
 	st	%2, %30
-	mov	%0, %3
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -63,11 +64,11 @@ min_caml_start:
 	call	%30, min_caml_end
 composed.122:
 	add	%30, %31, 8
-	ld	%2, %30
-	add	%30, %31, 4
 	ld	%1, %30
 	add	%30, %29, 0
-	st	%2, %30
+	st	%1, %30
+	add	%30, %31, 4
+	ld	%1, %30
 	mov	%31, %1
 	add	%30, %29, 4
 	st	%27, %30

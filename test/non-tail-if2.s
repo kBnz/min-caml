@@ -5,11 +5,8 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%1, 10
-	mov	%0, 3
-	mov	%30, %1
-	mov	%1, %0
-	mov	%0, %30
+	mov	%0, 10
+	mov	%1, 3
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -19,6 +16,8 @@ min_caml_start:
 	ld	%27, %30
 	add	%30, %0, 0
 	ld	%1, %30
+	add	%30, %29, 0
+	st	%0, %30
 	cmp	%26, %1, 3
 	breq	brne_else.133, %26
 	mov	%0, 7
@@ -31,8 +30,6 @@ min_caml_start:
 	ld	%27, %30
 	call	%30, brne_cont.134
 brne_else.133:
-	add	%30, %29, 0
-	st	%0, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

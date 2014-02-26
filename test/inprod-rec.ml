@@ -3,4 +3,5 @@ let rec inprod v1 v2 i =
   v1.(i) *. v2.(i) +. inprod v1 v2 (i - 1) in
 let v1 = Array.create 3 1.23 in
 let v2 = Array.create 3 4.56 in
-print_int (int_of_float (100. *. inprod v1 v2 2))
+  print_float (100. *. inprod v1 v2 2)
+ (* print_int (int_of_float (100. *. inprod v1 v2 2))*)

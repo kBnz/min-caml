@@ -30,15 +30,51 @@ min_caml_start:
 	call	%30, min_caml_end
 foo.112:
 	add	%30, %29, 0
-	st	%5, %30
+	st	%1, %30
 	add	%30, %29, 4
-	st	%4, %30
+	st	%2, %30
 	add	%30, %29, 8
 	st	%3, %30
 	add	%30, %29, 12
-	st	%2, %30
+	st	%4, %30
 	add	%30, %29, 16
-	st	%1, %30
+	st	%5, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, min_caml_print_int
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%0, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, min_caml_print_int
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, min_caml_print_int
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 8
+	ld	%0, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, min_caml_print_int
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 12
+	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
@@ -48,74 +84,6 @@ foo.112:
 	ld	%27, %30
 	add	%30, %29, 16
 	ld	%0, %30
-	add	%30, %29, 12
-	ld	%1, %30
-	add	%30, %29, 8
-	ld	%2, %30
-	add	%30, %29, 4
-	ld	%3, %30
-	add	%30, %29, 0
-	ld	%4, %30
-	add	%30, %29, 20
-	st	%4, %30
-	add	%30, %29, 24
-	st	%3, %30
-	add	%30, %29, 28
-	st	%2, %30
-	add	%30, %29, 32
-	st	%1, %30
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, min_caml_print_int
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 12
-	ld	%1, %30
-	add	%30, %29, 8
-	ld	%2, %30
-	add	%30, %29, 4
-	ld	%3, %30
-	add	%30, %29, 0
-	ld	%4, %30
-	mov	%0, %1
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, min_caml_print_int
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 8
-	ld	%2, %30
-	add	%30, %29, 4
-	ld	%3, %30
-	add	%30, %29, 0
-	ld	%4, %30
-	mov	%0, %2
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, min_caml_print_int
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 4
-	ld	%3, %30
-	add	%30, %29, 0
-	ld	%4, %30
-	mov	%0, %3
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, min_caml_print_int
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%4, %30
-	mov	%0, %4
 	call	%30, min_caml_print_int
 bar.119:
 	mov	%30, %5

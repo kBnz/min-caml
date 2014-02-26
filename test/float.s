@@ -38,12 +38,12 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	fmov	%1, #l.137
-	fadd	%2, %0, %1
-	fmov	%1, #l.139
-	fsub	%1, %2, %1
-	mov	%0, 100
+	fadd	%1, %0, %1
+	fmov	%2, #l.139
+	fsub	%1, %1, %2
 	add	%30, %29, 0
 	fst	%1, %30
+	mov	%0, 100
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

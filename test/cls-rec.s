@@ -34,11 +34,11 @@ min_caml_start:
 f.108:
 	add	%30, %31, 4
 	ld	%1, %30
+	add	%30, %29, 0
+	st	%1, %30
 	cmp	%26, %0, 0
 	breq	brne_else.121, %26
 	sub	%0, %0, 1
-	add	%30, %29, 0
-	st	%1, %30
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31

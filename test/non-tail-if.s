@@ -17,9 +17,8 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	fmov	%0, #l.130
-	mov	%4, %0
 	add	%30, %29, 0
-	st	%4, %30
+	st	%0, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -27,14 +26,9 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	add	%30, %29, 0
-	ld	%1, %30
 	fmov	%0, #l.132
-	mov	%3, %0
 	add	%30, %29, 4
-	st	%3, %30
-	add	%30, %29, 8
-	st	%1, %30
+	st	%0, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -42,21 +36,24 @@ min_caml_start:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	add	%30, %29, 0
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.141, %26
-	cmp	%26, %4, 0
-	brle	bgt_else.143, %26
-	mov	%1, %0
-	add	%1, %2, %1
-	cmp	%26, %3, 0
+	brle	bgt_else.144, %26
+	add	%30, %29, 4
+	ld	%1, %30
+	add	%30, %29, 0
+	ld	%2, %30
+	cmp	%26, %2, 0
+	brle	bgt_else.146, %26
+	mov	%2, %0
+	add	%1, %1, %2
+	add	%30, %29, 4
+	ld	%2, %30
+	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.145, %26
-	mov	%0, %4
+	brle	bgt_else.148, %26
+	add	%30, %29, 0
+	ld	%0, %30
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -65,8 +62,8 @@ min_caml_start:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.146
-bgt_else.145:
+	call	%30, bgt_cont.149
+bgt_else.148:
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -75,15 +72,19 @@ bgt_else.145:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.146:
-	call	%30, bgt_cont.144
-bgt_else.143:
-	mov	%1, %3
-	add	%1, %2, %1
-	cmp	%26, %3, 0
+bgt_cont.149:
+	call	%30, bgt_cont.147
+bgt_else.146:
+	add	%30, %29, 4
+	ld	%2, %30
+	add	%1, %1, %2
+	add	%30, %29, 4
+	ld	%2, %30
+	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.147, %26
-	mov	%0, %4
+	brle	bgt_else.150, %26
+	add	%30, %29, 0
+	ld	%0, %30
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -92,8 +93,8 @@ bgt_else.143:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.148
-bgt_else.147:
+	call	%30, bgt_cont.151
+bgt_else.150:
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -102,19 +103,25 @@ bgt_else.147:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.148:
-bgt_cont.144:
-	call	%30, bgt_cont.142
-bgt_else.141:
-	mov	%2, %1
-	cmp	%26, %4, 0
-	brle	bgt_else.149, %26
-	mov	%1, %0
-	add	%1, %2, %1
-	cmp	%26, %3, 0
+bgt_cont.151:
+bgt_cont.147:
+	call	%30, bgt_cont.145
+bgt_else.144:
+	add	%30, %29, 0
+	ld	%1, %30
+	add	%30, %29, 0
+	ld	%2, %30
+	cmp	%26, %2, 0
+	brle	bgt_else.152, %26
+	mov	%2, %0
+	add	%1, %1, %2
+	add	%30, %29, 4
+	ld	%2, %30
+	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.151, %26
-	mov	%0, %4
+	brle	bgt_else.154, %26
+	add	%30, %29, 0
+	ld	%0, %30
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -123,8 +130,8 @@ bgt_else.141:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.152
-bgt_else.151:
+	call	%30, bgt_cont.155
+bgt_else.154:
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -133,15 +140,19 @@ bgt_else.151:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.152:
-	call	%30, bgt_cont.150
-bgt_else.149:
-	mov	%1, %3
-	add	%1, %2, %1
-	cmp	%26, %3, 0
+bgt_cont.155:
+	call	%30, bgt_cont.153
+bgt_else.152:
+	add	%30, %29, 4
+	ld	%2, %30
+	add	%1, %1, %2
+	add	%30, %29, 4
+	ld	%2, %30
+	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.153, %26
-	mov	%0, %4
+	brle	bgt_else.156, %26
+	add	%30, %29, 0
+	ld	%0, %30
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -150,8 +161,8 @@ bgt_else.149:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-	call	%30, bgt_cont.154
-bgt_else.153:
+	call	%30, bgt_cont.157
+bgt_else.156:
 	add	%0, %1, %0
 	add	%30, %29, 12
 	st	%27, %30
@@ -160,9 +171,9 @@ bgt_else.153:
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
-bgt_cont.154:
-bgt_cont.150:
-bgt_cont.142:
+bgt_cont.157:
+bgt_cont.153:
+bgt_cont.145:
 	call	%30, min_caml_end
 .section	".rodata"
 .align	8
