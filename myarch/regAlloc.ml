@@ -479,8 +479,9 @@ struct
     let rec degree_list (nl2,el2)=
       List.map (fun x -> (x, IGraph.count_degree (nl2,el2) x)) nl2 in
     let rec push_nodes (nl2,el2) st =
+      (*reg_clは他の変数と干渉しない*)
       List.fold_left (fun (g2,st2) (n,d)->
-        if d <= size then ((IGraph.rm_node g2 n), n::st2)
+        if d <= size or (!n)="%31" then ((IGraph.rm_node g2 n), n::st2)
         else ((IGraph.rm_node g2 n),st2))
         ((nl2,el2), st) (degree_list (nl2,el2))
     in
@@ -589,6 +590,10 @@ struct
           | _ -> []
         in
           (t_list := loop (!t_list); e_list := loop (!e_list);
+           (if print_flag then
+             (print_string "inserta:";Graph.print_node2 ins_n;
+              Graph.print_node2 target_n;print_newline ())
+            else ());
            Graph.insertAfter g ins_n target_n)
       in
       let insert_before g ins_n target_n =
@@ -599,8 +604,10 @@ struct
           | _ -> []
         in
           (t_list := loop (!t_list); e_list := loop (!e_list);
-           print_string "insert:";Graph.print_node2 ins_n;
-           Graph.print_node2 target_n;print_newline ();
+           (if print_flag then
+             (print_string "insertb:";Graph.print_node2 ins_n;
+              Graph.print_node2 target_n;print_newline ())
+            else ());
            Graph.insertBefore g ins_n target_n)
       in
       let rename_node bv_av_l n =
@@ -697,7 +704,7 @@ struct
         (*defは各ノードに高々一つしかないのでvar_exist_nodeでOK*)
         print_string ("\n save "^v^"\n");
         let def_nl = var_exist_node v (make_def g) in
-        let def_n = if List.length def_nl > 0
+        let def_n = if List.length def_nl > 0 && (v<>"%31")
           then List.nth def_nl 0 else start_n in
           insert_after g (ref(seq2 (Save(v,v)))) def_n
       in
