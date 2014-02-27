@@ -46,6 +46,17 @@ let rec shuffle sw xys =
   | xys, acyc -> acyc @ shuffle sw xys
 
 type dest = Tail | NonTail of Id.t (* 末尾かどうかを表すデータ型 (caml2html: emit_dest) *)
+let imm_resize oc s x y z = (*即値サイズ調整*)
+  let rec loop n first =
+    let u = if first then y else x in
+      if n < 512 then
+        Printf.fprintf oc s x u n
+      else
+        (Printf.fprintf oc s x u 511;loop (n-511) false)
+  in
+    loop z true
+      
+  
 let rec g oc = function (* 命令列のアセンブリ生成 (caml2html: emit_g) *)
   | dest, Ans(exp) -> g' oc (dest, exp)
   | dest, Let((x, t), exp, e) ->
@@ -93,21 +104,21 @@ and g' oc = function (* 各命令のアセンブリ生成 (caml2html: emit_gprime) *)
   | NonTail(_), Comment(s) -> Printf.fprintf oc "\t! %s\n" s
   (* 退避の仮想命令の実装 (caml2html: emit_save) *)
   | NonTail(_), Save(x, y) when List.mem x allregs && not (S.mem y !stackset) ->
-      save y;
-      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
-      Printf.fprintf oc "\tst\t%s, %s\n" x reg_tmp
+    save y;
+    imm_resize oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+    Printf.fprintf oc "\tst\t%s, %s\n" x reg_tmp
   | NonTail(_), Save(x, y) when List.mem x allfregs && not (S.mem y !stackset) ->
-      savef y;
-      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
-      Printf.fprintf oc "\tfst\t%s, %s\n" x reg_tmp
+    savef y;
+    imm_resize oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+    Printf.fprintf oc "\tfst\t%s, %s\n" x reg_tmp
   | NonTail(_), Save(x, y) -> print_string (y^" "); assert (S.mem y !stackset); ()
   (* 復帰の仮想命令の実装 (caml2html: emit_restore) *)
   | NonTail(x), Restore(y) when List.mem x allregs ->
-      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
-      Printf.fprintf oc "\tld\t%s, %s\n" x reg_tmp
+    imm_resize oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+    Printf.fprintf oc "\tld\t%s, %s\n" x reg_tmp
   | NonTail(x), Restore(y) ->
       assert (List.mem x allfregs);
-      Printf.fprintf oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
+      imm_resize oc "\tadd\t%s, %s, %d\n" reg_tmp reg_sp (offset y);
       Printf.fprintf oc "\tfld\t%s, %s\n" x reg_tmp
     (*(try
       assert (List.mem x allfregs);

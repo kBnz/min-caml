@@ -1,5 +1,80 @@
 .section	".rodata"
 .align	8
+#l.0:	 0x0
+.section	".text"
+.global	min_caml_start
+min_caml_start:
+	mov	%28, 32764
+	mov	%0, 5
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, f.111
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_int
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	call	%30, min_caml_end
+g.109:
+	add	%0, %0, 1
+	call	%30, %27
+f.111:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 0
+	ld	%0, %30
+	cmp	%26, %0, 0
+	breq	brne_else.127, %26
+	add	%30, %29, 0
+	ld	%0, %30
+	cmp	%26, %0, 1
+	breq	brne_else.128, %26
+	mov	%0, 3
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, g.109
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%1, %30
+	add	%0, %0, %1
+	call	%30, %27
+brne_else.128:
+	mov	%0, 2
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, g.109
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%1, %30
+	add	%0, %0, %1
+	call	%30, %27
+brne_else.127:
+	mov	%0, 1
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, g.109
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%1, %30
+	add	%0, %0, %1
+	call	%30, %27
+.section	".rodata"
+.align	8
 #l.14:	 0x3fc90fdb
 #l.61:	 0x0
 #l.59:	 0xbf800000

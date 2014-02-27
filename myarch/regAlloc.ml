@@ -42,6 +42,11 @@ open Asm
 let reg_size = 26(*26*)
 let freg_size = 32
 let print_flag = true
+let print_stringf x = if print_flag then print_string x else ()
+let print_newlinef () = if print_flag then print_newline () else ()
+let print_intf i = if print_flag then print_int i else ()
+let print_floatf f = if print_flag then print_float f else ()
+    
 type branch = Normal | Then | Else  
 module type ItemType = sig
   type t
@@ -87,13 +92,13 @@ let string_of_type = function
   | Type.Var(_) -> "var"  
 let print_idt () =
   let rec loop = function
-    | (id,ty)::y -> print_string ("("^id^","^(string_of_type ty)^")\n");
+    | (id,ty)::y -> print_stringf ("("^id^","^(string_of_type ty)^")\n");
       loop y
     | _ -> ()
   in
-    print_string "*****id->type*****{\n";
+    print_stringf "*****id->type*****{\n";
     loop (!idt);
-    print_string "}\n";
+    print_stringf "}\n";
     
 module MakeGraph(Item: ItemType)  =
 struct
@@ -135,23 +140,23 @@ struct
         ","^(string_of_int (node_to_int g to_n))^")")
   let print_nodes g nl =
     List.map
-      (fun x -> print_string((string_of_int (node_to_int g x))^" ")) nl;
-    print_newline ()
+      (fun x -> print_stringf((string_of_int (node_to_int g x))^" ")) nl;
+    print_newlinef ()
   let print_node g n =
-    print_string ((node_to_string g n)^"\n")
+    print_stringf ((node_to_string g n)^"\n")
   let print_node2 n =
-    print_string (Item.to_string (!n))
+    print_stringf (Item.to_string (!n))
   let addNode ((nl,el):graph) n = ((n::nl),el)
   let addNodes ((nl,el):graph) nl2 = ((nl2@nl),el)
   let print_graph ((nl,el):graph) =
     List.map
       (fun x ->
-        print_string (node_to_string (nl,el) x);
-        print_newline ()) nl;
+        print_stringf (node_to_string (nl,el) x);
+        print_newlinef ()) nl;
     List.map
       (fun x ->
-        print_string ((edge_to_string (nl,el) x)^" ")) el;
-    print_newline ()
+        print_stringf ((edge_to_string (nl,el) x)^" ")) el;
+    print_newlinef ()
   let edge_eq (xf,xt) (yf,yt) = (xf==yf) && (xt==yt)
   let mk_edge ((nl,el):graph) from_n to_n =
     if List.exists (fun e->edge_eq (from_n,to_n) e) el then (nl,el)
@@ -318,10 +323,10 @@ struct
       List.map (fun x -> (x,(make_statement_def x))) nl
   let make_use (nl,el) arg =
     let def2 = make_def (nl,el) in
-      (*関数内で使える変数(defされたものと引数),"%31"
+      (*関数内で使える変数(defされたものと引数),reg_cl
         callcls(x,y,z)のxが関数名かどうか*)
     let (iarg,farg) = arg in
-    let varlist= "%31"::(iarg@farg@
+    let varlist= reg_cl::(iarg@farg@
                            (List.fold_left (fun vl (x,l) -> vl@l) [] def2)) in
     let make_statement_use s =
       let id_list i = function
@@ -339,7 +344,7 @@ struct
           | Save(x,y) -> [y]
           | Restore(x) -> []
           | CallCls(x,y,z) ->
-            if List.exists (fun i->i=x) varlist then x::(y@z) else "%31"::(y@z)
+            if List.exists (fun i->i=x) varlist then x::(y@z) else reg_cl::(y@z)
           | CallDir(x,y,z) -> y@z
           | Comment _ | Asm.Set(_) | SetL(_) | SetF(_) | Nop -> []
       in
@@ -406,15 +411,15 @@ struct
     let rec loop = function
       | (xi,xt)::y -> if xi=i then
           (match xt with
-            | Type.Array(_) | Type.Fun(_) | Type.Tuple(_)-> Type.Int
+            | Type.Array(_) | Type.Fun(_) | Type.Tuple(_) | Type.Bool -> Type.Int
             | _ -> xt) else loop y
-      | _ -> print_string i;raise IDT_ERROR
+      | _ -> print_stringf i;raise IDT_ERROR
     in
       loop (!idt)
   let type_of_id_normal i = 
     let rec loop = function
       | (xi,xt)::y -> if xi=i then xt else loop y
-      | _ -> print_string i;raise IDT_ERROR
+      | _ -> print_stringf i;raise IDT_ERROR
     in
       loop (!idt)
         
@@ -430,36 +435,36 @@ struct
     let {control = g; def = d; use = u; name = n; live=live; arg=(argi,argf);
          start_n = start_n; end_n = end_n; igraphi=igi;igraphf=igf;cmap=(cmap,fcmap)}= f in
     let (nl,el) = g in
-      print_string ("****Graph "^n^" int {"^
+      print_stringf ("****Graph "^n^" int {"^
                        (List.fold_left (fun a b->a^" "^b) " " argi)^"}"
                     ^" float {"^
                       (List.fold_left (fun a b->a^" "^b) " " argf)^"}"
                     ^"****\n");
       Graph.print_graph g;
-      List.map (fun x -> print_string
+      List.map (fun x -> print_stringf
         (if is_t_edge x then "t," else (if is_e_edge x then "e," else "n,"))) el;
-      print_newline ();
+      print_newlinef ();
       let print_ids l =
         List.map (fun (n,y) ->
-          print_string ((string_of_int (Graph.node_to_int g n))^":");
-          List.map (fun x -> print_string (x^" ")) y;
-          print_newline ()) l
+          print_stringf ((string_of_int (Graph.node_to_int g n))^":");
+          List.map (fun x -> print_stringf (x^" ")) y;
+          print_newlinef ()) l
       in
       let print_coloring cmap =
-        List.map (fun (x,c) -> print_string ("("^(!x)^","^c^")")) cmap;
-        print_newline ()
+        List.map (fun (x,c) -> print_stringf ("("^(!x)^","^c^")")) cmap;
+        print_newlinef ()
       in
         
-        (if flag then (print_string ("***def***\n");
+        (if flag then (print_stringf ("***def***\n");
                        print_ids d;
-                       print_string ("***use***\n");
+                       print_stringf ("***use***\n");
                        print_ids u;
-                       print_string ("***live***\n");
+                       print_stringf ("***live***\n");
                        print_ids live;
-                       print_string ("***igraph(int)***\n")) else ());
+                       print_stringf ("***igraph(int)***\n")) else ());
         IGraph.print_graph igi;
         print_coloring cmap;
-        print_string ("***igraph(float)***\n");
+        print_stringf ("***igraph(float)***\n");
         IGraph.print_graph igf;
         print_coloring fcmap
 
@@ -481,7 +486,7 @@ struct
     let rec push_nodes (nl2,el2) st =
       (*reg_clは他の変数と干渉しない*)
       List.fold_left (fun (g2,st2) (n,d)->
-        if d <= size or (!n)="%31" then ((IGraph.rm_node g2 n), n::st2)
+        if d <= size or (!n)=reg_cl or (!n)=reg_hp then ((IGraph.rm_node g2 n), n::st2)
         else ((IGraph.rm_node g2 n),st2))
         ((nl2,el2), st) (degree_list (nl2,el2))
     in
@@ -534,8 +539,8 @@ struct
           (string_of_int (num_of_ele !x args))
         else
           (if (!x)=ret or (List.exists (fun n->(!x)=n) call_v) then "0"
-           else (if (!x)="%31" then "31" else
-               (if (!x)="%28" then "28" else "-1")))
+           else (if (!x)=reg_cl then "31" else
+               (if (!x)=reg_hp then "28" else "-1")))
       in
         (List.map
            (fun x -> (x,(init_color x))) nl)
@@ -552,7 +557,7 @@ struct
                   (fun (n,_) (n2,_) -> n=n2)) y
       | _ -> cmap2
     in
-      List.map (fun (x,i)->print_string ("#("^(!x)^","^i^")")) cmap;
+      List.map (fun (x,i)->print_stringf ("#("^(!x)^","^i^")")) cmap;
       main cmap st
         
   let reg_coloring {control=control;def=def;
@@ -565,7 +570,7 @@ struct
         List.map (fun (x,y) -> (x,(pre^y)))
           (select control ig size st args2 (name^".min_caml_ret_reg") flg)
     in
-    let varlist= "%31"::(args@fargs@
+    let varlist= reg_cl::(args@fargs@
                            (List.fold_left
                               (fun vl (x,l) -> vl@l) [] def))
     in  
@@ -575,12 +580,15 @@ struct
           List.fold_left (fun l (x,y) -> if y=(pre^"-1")
             then (!x)::l else l) [] cmap2
         in
-          if (!spill_flg) then
-            ul
-          else
-            List.fold_left
-              (fun l i-> if List.exists (fun x->i=x) l then l else i::l) ul
-              csp
+        let rec rm_list2 x = function
+          | y::z -> if y=x then z else y::(rm_list2 x z)
+          | _ -> [] in          
+          rm_list reg_hp (if (!spill_flg) then
+              ul
+            else
+              List.fold_left
+                (fun l i-> if List.exists (fun x->i=x) l then l else i::l) ul
+                csp)
       in
       let insert_after g ins_n target_n =
         let rec loop = function
@@ -591,22 +599,22 @@ struct
         in
           (t_list := loop (!t_list); e_list := loop (!e_list);
            (if print_flag then
-             (print_string "inserta:";Graph.print_node2 ins_n;
-              Graph.print_node2 target_n;print_newline ())
+             (print_stringf "inserta:";Graph.print_node2 ins_n;
+              Graph.print_node2 target_n;print_newlinef ())
             else ());
            Graph.insertAfter g ins_n target_n)
       in
       let insert_before g ins_n target_n =
         let rec loop = function
           | (f,t)::l -> if t==target_n then
-             ( Graph.print_node2 f;Graph.print_node2 ins_n;print_newline();
+             ( Graph.print_node2 f;Graph.print_node2 ins_n;print_newlinef();
             (f,ins_n)::(loop l)) else (f,t)::(loop l)
           | _ -> []
         in
           (t_list := loop (!t_list); e_list := loop (!e_list);
            (if print_flag then
-             (print_string "insertb:";Graph.print_node2 ins_n;
-              Graph.print_node2 target_n;print_newline ())
+             (print_stringf "insertb:";Graph.print_node2 ins_n;
+              Graph.print_node2 target_n;print_newlinef ())
             else ());
            Graph.insertBefore g ins_n target_n)
       in
@@ -701,14 +709,16 @@ struct
         | (n2,l2)::y -> if n2==n then l2 else map_nv n y
         | _ -> raise (The_Others("map_nv error")) in    
       let save_after_def v g=
-        (*defは各ノードに高々一つしかないのでvar_exist_nodeでOK*)
-        print_string ("\n save "^v^"\n");
+        (*defは各ノードに高々一つしかないがひとつの変数が複数のノードで
+          defされる場合がある(if文)*)
+        print_stringf ("\n save "^v^"\n");
         let def_nl = var_exist_node v (make_def g) in
-        let def_n = if List.length def_nl > 0 && (v<>"%31")
-          then List.nth def_nl 0 else start_n in
-          insert_after g (ref(seq2 (Save(v,v)))) def_n
+        let def_nl2 = if List.length def_nl > 0 && (v<>reg_cl)
+          then def_nl else [start_n] in
+          List.fold_left
+            (fun g n -> insert_after g (ref(seq2 (Save(v,v)))) n) g def_nl2
       in
-      let new_id v vt = if v="%31" then v else
+      let new_id v vt = if v=reg_cl then v else
           let ni = Id.gentmp vt in
             (idt:=(ni,vt)::(!idt);ni)             
       in
@@ -783,7 +793,7 @@ struct
       | x::y ->
         (match (type_of_id_normal x) with
           | Type.Int | Type.Float | Type.Array(_)
-          | Type.Fun(_) | Type.Tuple(_)
+          | Type.Fun(_) | Type.Tuple(_) | Type.Bool
             -> x::(iaf_list y)
           | _ -> (iaf_list y))
       | _ -> []
@@ -803,13 +813,13 @@ struct
         match !n with
           | Set((i,t),e) -> if sr_exp (e) then
               List.fold_left (fun l i -> rm_list2 i l)
-                (live_map n) [i;"%28"] else []
+                (live_map n) [i;reg_hp] else []
           | _ -> []
     in
     let graph_spill_list =
       List.fold_left (fun l n-> l@(node_spill_list n)) [] nl
     in
-      List.map (fun i ->print_string("\nspill "^i)) graph_spill_list;
+      List.map (fun i ->print_stringf("\nspill "^i)) graph_spill_list;
       callspill:=(List.fold_left
         (fun l i->
           if List.exists (fun i2->i2=i) l
@@ -821,7 +831,7 @@ struct
          end_n=end_n;igraphi=igi;igraphf=igf;cmap=(cmapi,cmapf)} = fg in
     let map = List.map (fun (x,y)->(!x,y)) (cmapi@cmapf) in
     let (iarg,farg)=arg in
-    let varlist= "%31"::(iarg@farg@
+    let varlist= reg_cl::(iarg@farg@
                            (List.fold_left (fun vl (x,l) -> vl@l) [] def)) in
     let id_to_reg i =
       let rec loop = function
@@ -854,7 +864,7 @@ struct
       | IfEq(_) | IfLE(_) | IfGE(_)
       | IfFLE(_) | IfFEq(_) -> raise (The_Others("exp_to_reg"))
       | CallCls(t,tl1,tl2) ->
-        CallCls((id_to_reg (if List.exists (fun i->i=t) varlist then t else "%31")),(List.map id_to_reg tl1),
+        CallCls((id_to_reg (if List.exists (fun i->i=t) varlist then t else reg_cl)),(List.map id_to_reg tl1),
                 (List.map id_to_reg tl2))
       | CallDir(l,tl1,tl2) ->
         CallDir(l,(List.map id_to_reg tl1),
@@ -925,13 +935,6 @@ struct
     in
     let (defi,usei,livei) = type_def_use_live Type.Int in
     let (deff,usef,livef) = type_def_use_live Type.Float in
-      (*raise Exit;
-        let l0 = List.nth livei 1 in
-        let (i0,ll0) = l0 in
-        print_int (List.length ll0);
-        IGraph.print_graph (List.fold_left (fun x (y,z) -> make_edge3 x z)
-        (add_nodes g (defi@usei)) [l0]);
-      (*raise Exit;*)*)
     let ag1 =(add_nodes g (defi@usei)) in
     let reflist1 = List.map (fun (x,l) ->
       (x, (List.map (fun y->ref_node y ag1) l))) livei in
@@ -996,7 +999,7 @@ struct
     in
     let _ =
       (if print_flag then
-          (print_string "\nafter_live\n";
+          (print_stringf "\nafter_live\n";
            print_flow fg true;)
        else ());
       (if (!spill_flg) then () else call_spill fg)
@@ -1010,7 +1013,7 @@ struct
         in
         let cmap2 = reg_coloring fg2
         in
-          (print_string "\nafter_reg_coloring\n";
+          (print_stringf "\nafter_reg_coloring\n";
             print_flow fg (print_flag);
             Mydebug.print_asmbody
               {Asm.name=Id.L(name);args=[];fargs=[];
@@ -1023,7 +1026,7 @@ struct
       with
         | Spill(fg) ->
           (spill_flg:=true;
-           print_string "\nafter_spill\n";
+           print_stringf "\nafter_spill\n";
            print_flow fg (print_flag);
            make_def_and_use fg)
         | x -> raise x
@@ -1035,7 +1038,7 @@ struct
         | Set((i,t),CallCls(_)) | Set((i,t),CallDir(_)) ->
           (match t with
             | Type.Int | Type.Array(_) | Type.Fun(_)
-            | Type.Tuple(_) -> ([(i,t)],[])
+            | Type.Tuple(_) | Type.Bool-> ([(i,t)],[])
             | Type.Float ->([],[(i,t)])
             | _ -> ([],[]))
         | _ -> ([],[])
@@ -1223,7 +1226,7 @@ struct
          start_n=_;end_n=_;igraphi=_; igraphf=_;cmap=_} = main body in
       
     let body2 =
-      (print_string "\nafter_arg_mov\n";
+      (print_stringf "\nafter_arg_mov\n";
        arg_mov (arg_conf_list control2) (ys,zs) body)
     in
       (if print_flag then 
@@ -1358,10 +1361,10 @@ struct
 end
 
 let f (Prog(data, fundefs, e)) = (* プログラム全体のレジスタ割り当て (caml2html: regalloc_f) *)
-  let fl = List.map (fun x -> let {name=n;args=a;fargs=fa;body=b;ret=r} = x in let fg = (Flow.h x) in print_string "\nin f\n";Flow.print_flow fg false;{Asm.name=n;args=a;fargs=fa;body=Flow.to_body fg;ret=r}) fundefs in
+  let fl = List.map (fun x -> let {name=n;args=a;fargs=fa;body=b;ret=r} = x in let fg = (Flow.h x) in print_stringf "\nin f\n";Flow.print_flow fg false;{Asm.name=n;args=a;fargs=fa;body=Flow.to_body fg;ret=r}) fundefs in
   let fg_of_e = Flow.h {Asm.name=Id.L("min_caml_top"); args=[]; fargs=[];body=e;ret=Type.Unit} in
   let e2 = Flow.to_body fg_of_e in
-    print_string "\nin f\n";    
+    print_stringf "\nin f\n";    
     Flow.print_flow fg_of_e false;
     print_idt();
     Prog(data,fl,e2)

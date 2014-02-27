@@ -1,9 +1,6 @@
-(*spill (レジスタの数を変更してtest)*)
-let rec f x y =
-  let a = x+x in
-  let b = x+y in
-  let c = y+y in
-  let d = y+y in
-    a+b+c+d
+let rec f x = if x=0 then true else false in
+let rec g i =
+  if f i then 0 else (print_int i; g (i-1))
 in
-  print_int (f 1 2)
+  print_int (g 5)
+    
