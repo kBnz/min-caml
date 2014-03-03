@@ -13,9 +13,9 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%1, 7
+	mov	%25, 7
 	mov	%31, %0
-	mov	%0, %1
+	mov	%0, %25
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -34,18 +34,18 @@ min_caml_start:
 	call	%30, min_caml_end
 adder.111:
 	add	%30, %31, 4
-	ld	%1, %30
-	add	%0, %1, %0
+	ld	%25, %30
+	add	%0, %25, %0
 	call	%30, %27
 make_adder.105:
-	mov	%2, %28
+	mov	%24, %28
 	add	%28, %28, 8
-	mov	%1, adder.111
-	add	%30, %2, 0
-	st	%1, %30
-	add	%30, %2, 4
+	mov	%25, adder.111
+	add	%30, %24, 0
+	st	%25, %30
+	add	%30, %24, 4
 	st	%0, %30
-	mov	%0, %2
+	mov	%0, %24
 	call	%30, %27
 .section	".rodata"
 .align	8

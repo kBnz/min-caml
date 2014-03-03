@@ -7,11 +7,8 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	fmov	%1, #l.108
-	fmov	%0, #l.110
-	fmov	%31, %1
-	fmov	%1, %0
-	fmov	%0, %31
+	fmov	%0, #l.108
+	fmov	%1, #l.110
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

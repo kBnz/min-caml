@@ -5,20 +5,20 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%2, %28
+	mov	%23, %28
 	add	%28, %28, 8
-	mov	%0, f.106
-	add	%30, %2, 0
-	st	%0, %30
-	mov	%1, %28
+	mov	%25, f.106
+	add	%30, %23, 0
+	st	%25, %30
+	mov	%24, %28
 	add	%28, %28, 8
-	mov	%0, g.108
-	add	%30, %1, 0
-	st	%0, %30
-	add	%30, %1, 4
-	st	%2, %30
+	mov	%25, g.108
+	add	%30, %24, 0
+	st	%25, %30
+	add	%30, %24, 4
+	st	%23, %30
 	mov	%0, 456
-	mov	%31, %1
+	mov	%31, %24
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -27,9 +27,9 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%1, 789
+	mov	%25, 789
 	mov	%31, %0
-	mov	%0, %1
+	mov	%0, %25
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -51,7 +51,8 @@ f.106:
 	call	%30, %27
 g.108:
 	add	%30, %31, 4
-	ld	%0, %30
+	ld	%25, %30
+	mov	%0, %25
 	call	%30, %27
 .section	".rodata"
 .align	8

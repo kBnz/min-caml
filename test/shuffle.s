@@ -5,21 +5,12 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%5, 1
-	mov	%4, 2
-	mov	%3, 3
-	mov	%2, 4
-	mov	%1, 5
-	mov	%0, 6
-	mov	%30, %5
-	mov	%5, %0
-	mov	%0, %30
-	mov	%30, %4
-	mov	%4, %1
-	mov	%1, %30
-	mov	%30, %3
-	mov	%3, %2
-	mov	%2, %30
+	mov	%0, 1
+	mov	%1, 2
+	mov	%2, 3
+	mov	%3, 4
+	mov	%4, 5
+	mov	%5, 6
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

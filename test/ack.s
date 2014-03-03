@@ -5,11 +5,8 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%1, 3
-	mov	%0, 10
-	mov	%30, %1
-	mov	%1, %0
-	mov	%0, %30
+	mov	%0, 3
+	mov	%1, 10
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -30,9 +27,9 @@ ack.115:
 	brle	bgt_else.134, %26
 	cmp	%26, %1, 0
 	brle	bgt_else.135, %26
-	sub	%2, %0, 1
+	sub	%25, %0, 1
 	add	%30, %29, 0
-	st	%2, %30
+	st	%25, %30
 	sub	%1, %1, 1
 	add	%30, %29, 4
 	st	%27, %30
@@ -42,10 +39,9 @@ ack.115:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%1, %30
-	mov	%30, %1
+	ld	%25, %30
 	mov	%1, %0
-	mov	%0, %30
+	mov	%0, %25
 	call	%30, ack.115
 bgt_else.135:
 	sub	%0, %0, 1

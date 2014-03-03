@@ -5,11 +5,8 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%1, 0
-	mov	%0, 10000
-	mov	%30, %1
-	mov	%1, %0
-	mov	%0, %30
+	mov	%0, 0
+	mov	%1, 10000
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -28,10 +25,8 @@ min_caml_start:
 sum.108:
 	cmp	%26, %1, 0
 	brle	bgt_else.118, %26
-	add	%2, %0, %1
-	sub	%0, %1, 1
-	mov	%1, %0
-	mov	%0, %2
+	add	%0, %0, %1
+	sub	%1, %1, 1
 	call	%30, sum.108
 bgt_else.118:
 	call	%30, %27

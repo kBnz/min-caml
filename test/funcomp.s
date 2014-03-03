@@ -7,23 +7,23 @@ min_caml_start:
 	mov	%28, 32764
 	mov	%0, %28
 	add	%28, %28, 8
-	mov	%1, dbl.110
+	mov	%25, dbl.110
 	add	%30, %0, 0
-	st	%1, %30
-	mov	%1, %28
+	st	%25, %30
+	mov	%25, %28
 	add	%30, %29, 0
-	st	%1, %30
+	st	%25, %30
 	add	%28, %28, 8
-	mov	%1, inc.112
+	mov	%25, inc.112
 	add	%30, %29, 0
-	ld	%2, %30
-	add	%30, %2, 0
-	st	%1, %30
+	ld	%24, %30
+	add	%30, %24, 0
+	st	%25, %30
 	mov	%1, %28
 	add	%28, %28, 8
-	mov	%2, dec.114
+	mov	%25, dec.114
 	add	%30, %1, 0
-	st	%2, %30
+	st	%25, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -32,10 +32,9 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%1, %30
-	mov	%30, %1
+	ld	%25, %30
 	mov	%1, %0
-	mov	%0, %30
+	mov	%0, %25
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -43,9 +42,9 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%1, 123
+	mov	%25, 123
 	mov	%31, %0
-	mov	%0, %1
+	mov	%0, %25
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -64,12 +63,12 @@ min_caml_start:
 	call	%30, min_caml_end
 composed.122:
 	add	%30, %31, 8
-	ld	%1, %30
+	ld	%25, %30
 	add	%30, %29, 0
-	st	%1, %30
+	st	%25, %30
 	add	%30, %31, 4
-	ld	%1, %30
-	mov	%31, %1
+	ld	%25, %30
+	mov	%31, %25
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -79,21 +78,21 @@ composed.122:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%1, %30
-	mov	%31, %1
+	ld	%25, %30
+	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
 compose.107:
-	mov	%3, %28
+	mov	%24, %28
 	add	%28, %28, 16
-	mov	%2, composed.122
-	add	%30, %3, 0
-	st	%2, %30
-	add	%30, %3, 8
+	mov	%25, composed.122
+	add	%30, %24, 0
+	st	%25, %30
+	add	%30, %24, 8
 	st	%1, %30
-	add	%30, %3, 4
+	add	%30, %24, 4
 	st	%0, %30
-	mov	%0, %3
+	mov	%0, %24
 	call	%30, %27
 dbl.110:
 	add	%0, %0, %0

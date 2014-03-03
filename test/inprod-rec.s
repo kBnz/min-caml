@@ -18,11 +18,10 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%1, 3
-	fmov	%0, #l.143
 	add	%30, %29, 0
 	st	%0, %30
-	mov	%0, %1
+	mov	%0, 3
+	fmov	%0, #l.143
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -30,15 +29,14 @@ min_caml_start:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	fmov	%0, #l.145
+	fmov	%30, #l.145
 	add	%30, %29, 4
-	fst	%0, %30
+	fst	%30, %30
 	mov	%2, 2
 	add	%30, %29, 0
-	ld	%1, %30
-	mov	%30, %1
+	ld	%25, %30
 	mov	%1, %0
-	mov	%0, %30
+	mov	%0, %25
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -47,8 +45,8 @@ min_caml_start:
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 4
-	fld	%1, %30
-	fmul	%0, %1, %0
+	fld	%30, %30
+	fmul	%0, %30, %0
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -60,19 +58,19 @@ min_caml_start:
 inprod.116:
 	cmp	%26, %2, 0
 	sub	%26, 0, %26
-	brle	bgt_else.154, %26
+	brle	bgt_else.153, %26
 	fmov	%0, #l.137
 	call	%30, %27
-bgt_else.154:
-	sh	%3, %2, 2
-	add	%30, %0, %3
-	fld	%0, %30
-	sh	%3, %2, 2
-	add	%30, %1, %3
-	fld	%1, %30
-	fmul	%0, %0, %1
+bgt_else.153:
+	sh	%25, %2, 2
+	add	%30, %0, %25
+	fld	%30, %30
+	sh	%25, %2, 2
+	add	%30, %1, %25
+	fld	%29, %30
+	fmul	%30, %30, %29
 	add	%30, %29, 0
-	fst	%0, %30
+	fst	%30, %30
 	sub	%2, %2, 1
 	add	%30, %29, 4
 	st	%27, %30
@@ -82,8 +80,8 @@ bgt_else.154:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	fld	%1, %30
-	fadd	%0, %1, %0
+	fld	%30, %30
+	fadd	%0, %30, %0
 	call	%30, %27
 .section	".rodata"
 .align	8

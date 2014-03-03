@@ -28,15 +28,15 @@ f.109:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 0
-	ld	%0, %30
-	cmp	%26, %0, 0
-	breq	brne_else.127, %26
-	mov	%0, 1
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.125, %26
+	mov	%25, 1
 	add	%30, %29, 0
-	ld	%1, %30
-	add	%0, %1, %0
+	ld	%24, %30
+	add	%0, %24, %25
 	call	%30, %27
-brne_else.127:
+brne_else.125:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 4
@@ -58,11 +58,11 @@ brne_else.127:
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 4
-	ld	%1, %30
-	add	%0, %1, %0
+	ld	%25, %30
+	add	%25, %25, %0
 	add	%30, %29, 0
-	ld	%1, %30
-	add	%0, %1, %0
+	ld	%24, %30
+	add	%0, %24, %25
 	call	%30, %27
 .section	".rodata"
 .align	8

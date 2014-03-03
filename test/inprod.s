@@ -12,31 +12,33 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	fmov	%0, #l.163
+	fmov	%30, #l.163
 	add	%30, %29, 0
-	fst	%0, %30
-	fmov	%0, #l.165
-	fmov	%1, #l.167
-	fmov	%2, #l.169
-	mov	%0, %28
+	fst	%30, %30
+	fmov	%30, #l.165
+	fmov	%29, #l.167
+	fmov	%28, #l.169
+	mov	%25, %28
 	add	%28, %28, 24
-	add	%30, %0, 16
-	fst	%2, %30
-	add	%30, %0, 8
-	fst	%1, %30
-	add	%30, %0, 0
-	fst	%0, %30
-	fmov	%0, #l.175
-	fmov	%1, #l.177
-	fmov	%2, #l.179
-	mov	%1, %28
+	add	%30, %25, 16
+	fst	%28, %30
+	add	%30, %25, 8
+	fst	%29, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, %25
+	fmov	%30, #l.175
+	fmov	%29, #l.177
+	fmov	%28, #l.179
+	mov	%25, %28
 	add	%28, %28, 24
-	add	%30, %1, 16
-	fst	%2, %30
-	add	%30, %1, 8
-	fst	%1, %30
-	add	%30, %1, 0
-	fst	%0, %30
+	add	%30, %25, 16
+	fst	%28, %30
+	add	%30, %25, 8
+	fst	%29, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%1, %25
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -45,8 +47,8 @@ min_caml_start:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	fld	%1, %30
-	fmul	%0, %1, %0
+	fld	%30, %30
+	fmul	%0, %30, %0
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -64,15 +66,18 @@ min_caml_start:
 	call	%30, min_caml_end
 getx.123:
 	add	%30, %0, 0
-	fld	%0, %30
+	fld	%30, %30
+	fmov	%0, %30
 	call	%30, %27
 gety.125:
 	add	%30, %0, 8
-	fld	%0, %30
+	fld	%30, %30
+	fmov	%0, %30
 	call	%30, %27
 getz.127:
 	add	%30, %0, 16
-	fld	%0, %30
+	fld	%30, %30
+	fmov	%0, %30
 	call	%30, %27
 inprod.129:
 	add	%30, %29, 0
@@ -100,10 +105,10 @@ inprod.129:
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 8
-	fld	%1, %30
-	fmul	%1, %1, %0
+	fld	%30, %30
+	fmul	%30, %30, %0
 	add	%30, %29, 12
-	fst	%1, %30
+	fst	%30, %30
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 20
@@ -125,13 +130,13 @@ inprod.129:
 	add	%30, %29, 20
 	ld	%27, %30
 	add	%30, %29, 16
-	fld	%1, %30
-	fmul	%2, %1, %0
+	fld	%30, %30
+	fmul	%29, %30, %0
 	add	%30, %29, 12
-	fld	%1, %30
-	fadd	%1, %1, %2
+	fld	%30, %30
+	fadd	%30, %30, %29
 	add	%30, %29, 20
-	fst	%1, %30
+	fst	%30, %30
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 28
@@ -153,11 +158,11 @@ inprod.129:
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 24
-	fld	%1, %30
-	fmul	%1, %1, %0
+	fld	%30, %30
+	fmul	%29, %30, %0
 	add	%30, %29, 20
-	fld	%0, %30
-	fadd	%0, %0, %1
+	fld	%30, %30
+	fadd	%0, %30, %29
 	call	%30, %27
 .section	".rodata"
 .align	8

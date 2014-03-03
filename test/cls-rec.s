@@ -5,16 +5,16 @@
 .global	min_caml_start
 min_caml_start:
 	mov	%28, 32764
-	mov	%2, 10
-	mov	%1, %28
+	mov	%23, 10
+	mov	%24, %28
 	add	%28, %28, 8
-	mov	%0, f.108
-	add	%30, %1, 0
-	st	%0, %30
-	add	%30, %1, 4
-	st	%2, %30
+	mov	%25, f.108
+	add	%30, %24, 0
+	st	%25, %30
+	add	%30, %24, 4
+	st	%23, %30
 	mov	%0, 123
-	mov	%31, %1
+	mov	%31, %24
 	add	%30, %29, 4
 	st	%27, %30
 	ld	%30, %31
@@ -33,9 +33,9 @@ min_caml_start:
 	call	%30, min_caml_end
 f.108:
 	add	%30, %31, 4
-	ld	%1, %30
+	ld	%25, %30
 	add	%30, %29, 0
-	st	%1, %30
+	st	%25, %30
 	cmp	%26, %0, 0
 	breq	brne_else.121, %26
 	sub	%0, %0, 1
@@ -48,8 +48,8 @@ f.108:
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%1, %30
-	add	%0, %1, %0
+	ld	%25, %30
+	add	%0, %25, %0
 	call	%30, %27
 brne_else.121:
 	mov	%0, 0

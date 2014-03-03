@@ -1,46 +1,6 @@
-(*
-  var idt 変数名と型の組のlist(floatとintで干渉グラフを分けるのに使う)  
-  module MakeGraph グラフのmodule ノードやエッジの追加などグラフの基本的な処理を記述
-  module Flow 生存解析用の処理及び干渉グラフの記述
-  type statement ->代入、条件分岐、普通の計算を表す型 nodeはStatement ref型になる
-  module IGraph -> 干渉グラフのmodule
-  module Graph -> 生存解析のグラフ
-  type flowgraph -> 生存解析用のデータを表す型
-  control -> 生存解析のグラフ def,use,live -> 各ノードのdef,use,live
-  name -> 関数名 arg -> 引数名 start_n,end_n ->グラフのstart,endに相当するnode
-  igraph -> 干渉グラフ
-  fun newFlow -> 空のflowgraphを返す
-  fun print_flow -> flowgrpahの出力
-  fun make_igraph -> flowgraphからigraph作成
-  fun make_def_and_use -> def.useを作る
-  fun make_live -> liveを作る
-  fun h2 -> controlを作る
-*)
-(*
-  やること
-  ・intとfloatで干渉グラフを分ける  (終了)
-  ・debug
-  ・単純化
-  ・GraphからAsm.progへの変換  
-  ・選択
-  ・関数呼び出しのためのmovを減らすemit.mlも見る
-  ・inline展開するとerror
-  ・node_convの無限ループ防止
-  ・Arrayの処理(終了)
-  ・引数と返り値のレジスタ衝突の処理  
-*)
-(*
-  Debug用チェックリスト
-  ・干渉グラフはできているか？
-  ・idtは正確か？
-  ・配列を使ってもうまく行くか
-  ・外部変数があっても
-  ・changeNodeを使った後はliveとかを更新しないといけない
-  ・save restoreした後のtrue elseのedge管理  
-*)  
 open Asm
-let reg_size = 26(*26*)
-let freg_size = 32
+let reg_size = 26
+let freg_size = 31
 let print_flag = true
 let print_stringf x = if print_flag then print_string x else ()
 let print_newlinef () = if print_flag then print_newline () else ()
@@ -293,6 +253,9 @@ struct
   let spill_flg = ref false
   let callspill = ref []    
   let spill_list = ref []
+  let reg_iarg = ref []
+  let reg_farg = ref []
+    
   let is_t_edge e =
     List.exists (fun x->Graph.edge_eq e x) (!t_list)
   let is_e_edge e =
@@ -500,8 +463,11 @@ struct
     let g = (nl,el) in
     let cl =
       let rec make_list i =
+      if i<size then (string_of_int (size-1-i))::(make_list (i+1)) else [] in
+         make_list 0
+      (*let rec make_list i =
         if i<size then (string_of_int i)::(make_list (i+1)) else [] in
-        make_list 0
+        make_list 0*)
     in
     let enable_colors n cmap = (*nodeの色塗りに使える色*)
       let rec rm_list2 x = function
@@ -514,8 +480,21 @@ struct
       let adj_colors = List.map (fun n ->node_color n cmap) adj_nodes in
         List.fold_right rm_list2 adj_colors cl
     in
+    let call_arg i =
+      let rec loop = function
+        | (i2,r)::l -> if i=i2 then r else loop l
+        | _ -> "-1"
+      in
+      let l = if intflag then (!reg_iarg) else (!reg_farg) in        
+        loop l
+    in
     let select_color i= function
-      | x::y -> x
+      | x::y ->
+        let r = call_arg (!i) in (*なるべく引数の番号に合わせる*)
+          if  r<>"-1" &&List.exists (fun z->r=z) (x::y) then
+            r
+          else
+            x
       | _ -> raise (The_Others("select_color")) in
     let is_arg_or_ret x = (List.exists (fun y->(!x)=y) args) or (!x)=ret in
     let id_to_node i = (*idに対応するnode*)
@@ -945,11 +924,53 @@ struct
       ((List.fold_left (fun x (y,z) -> make_edge3 x z) ag1 reflist1),
        (List.fold_left (fun x (y,z) -> make_edge3 x z) ag2 reflist2))
 
+  let call_reg_arg g start_n=
+    let main argt =
+      let nl = ref [] in
+      let make_list l=
+        let (l2,_) =
+          List.fold_left (fun (l3,i) a->
+            (((a,(string_of_int i))::l3)),(i+1)) ([],0) l in
+          l2
+      in
+      let rec e_loop = function
+        | CallDir(_,il,fl) 
+        | CallCls(_,il,fl) ->
+          let l2 = if argt=Type.Int then il else fl in
+            make_list l2
+        | _ -> []
+      in
+      let rec t_loop n=
+        if List.exists (fun n2->n2==n) (!nl) then
+          []
+        else
+          (let sl = Graph.succ g n in
+             nl:=n::(!nl);
+             (match (!n) with
+               | Set(_,e) -> (e_loop e)
+               | Exp(e) -> (e_loop e)
+               | _ -> [])@
+               (List.fold_left (fun l n-> l@(t_loop n)) [] sl))
+      in
+        t_loop start_n
+    in
+    let add_list l =
+      List.fold_left (fun l (a,i)->
+        if (List.exists (fun (a2,_) ->a2=a) l)
+        then l else (a,i)::l) [] l
+    in
+      reg_iarg:=(add_list (main Type.Int));
+      reg_farg:=(add_list (main Type.Float));
+      ()
+
   let rec make_def_and_use {control=control;def=def;
                         use=use;name=name;arg=arg;live=live;
                         start_n=start_n;end_n=end_n;igraphi=igi;
                         igraphf=igf;cmap=cmap} =
-    let make_live (nl,el) =
+    (call_reg_arg control start_n;
+     (*List.map (fun (a,i)->print_string ("\nireg"^a^":"^i^"\n")) (!reg_iarg);
+     List.map (fun (a,i)->print_string ("\nfreg"^a^":"^i^"\n")) (!reg_farg);*)
+     let make_live (nl,el) =
       let g = (nl,el) in
       let def2 = (make_def g) in
       let use2 = (make_use g arg) in
@@ -1026,13 +1047,15 @@ struct
       with
         | Spill(fg) ->
           (spill_flg:=true;
+           reg_iarg := [];
+           reg_farg := [];
            print_stringf "\nafter_spill\n";
-           print_flow fg (print_flag);
+           print_flow fg (print_flag);           
            make_def_and_use fg)
-        | x -> raise x
+        | x -> raise x)
           
   let to_control x ys zs body ret =
-    let arg_conf_list (nl,el)=
+   (* let arg_conf_list (nl,el)=
       (*返り値のレジスタで衝突する変数のlist(Id.t*Type.t)*)
       let check_st = function
         | Set((i,t),CallCls(_)) | Set((i,t),CallDir(_)) ->
@@ -1157,7 +1180,7 @@ struct
       let farg0 = if List.length farg>0 then (List.nth farg 0,(Type.Float))
         else ("",Type.Unit) in
         main_t farg0 vlf (main_t iarg0 vli body2)
-    in  
+    in  *)
     let new_block_list curr (prevl:(statement ref list)) g2 br=
       List.map (fun p ->
         (match br with
@@ -1225,15 +1248,15 @@ struct
     let {control=control2;def=_;use=_; live=_;name=_;arg=_;
          start_n=_;end_n=_;igraphi=_; igraphf=_;cmap=_} = main body in
       
-    let body2 =
+    (*let body2 =
       (print_stringf "\nafter_arg_mov\n";
        arg_mov (arg_conf_list control2) (ys,zs) body)
     in
       (if print_flag then 
           (Mydebug.print_asmbody
              {Asm.name=Id.L(x); args=ys; fargs=zs;body=body2;ret=ret};())
-       else ());
-      main body2
+       else ());*)
+      main body
   (*変数のスピル*)      
   let spill body (sv,st) ys zs=
     let id_list i = function
