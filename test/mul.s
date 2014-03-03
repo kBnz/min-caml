@@ -41,11 +41,9 @@ min_caml_start:
 fib.117:
 	add	%30, %29, 0
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 2
+	cmp	%26, %0, 2
 	brle	bgt_else.141, %26
-	sub	%0, %25, 1
+	sub	%0, %0, 1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

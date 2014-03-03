@@ -24,11 +24,9 @@ min_caml_start:
 fib.110:
 	add	%30, %29, 0
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 1
+	cmp	%26, %0, 1
 	brle	bgt_else.128, %26
-	sub	%0, %25, 1
+	sub	%0, %0, 1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -53,7 +51,6 @@ fib.110:
 	add	%0, %25, %0
 	call	%30, %27
 bgt_else.128:
-	mov	%0, %25
 	call	%30, %27
 .section	".rodata"
 .align	8

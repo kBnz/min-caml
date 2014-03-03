@@ -14,10 +14,9 @@ min_caml_start:
 	ld	%27, %30
 	add	%30, %29, 0
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 0
+	cmp	%26, %0, 0
 	brle	bgt_else.125, %26
+	mov	%25, %0
 	add	%30, %29, 0
 	ld	%24, %30
 	add	%0, %25, %24

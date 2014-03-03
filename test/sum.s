@@ -24,11 +24,9 @@ min_caml_start:
 sum.107:
 	add	%30, %29, 0
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 0
+	cmp	%26, %0, 0
 	brle	bgt_else.119, %26
-	sub	%0, %25, 1
+	sub	%0, %0, 1
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8

@@ -612,14 +612,14 @@ struct
     in
       change_t n
 
-  let elim_restore control start_n end_n =
+  let elim_restore control start_n end_n (iarg,farg)=
     let rec elim_end =function
       | n::l -> if n==end_n then elim_end l else (n::(elim_end l))
       | _->[]
     in
     let nl = ref [] in (*処理済みのノード*)
     let rm_node2 (nl,el) n =(*restoreを消す*)
-      let pl = Graph.pred (nl,el) n (*size 1~2*) in
+      let pl = Graph.pred (nl,el) n (*size 1~*) in
       let s = List.nth (Graph.succ (nl,el) n) 0 (*size 1*) in
       let g = Graph.rm_node (nl,el) n in
         if is_t_edge ((List.nth pl 0),n) then (*分岐だったらplのsize 1*)
@@ -638,24 +638,25 @@ struct
     in
     let rec main g t ba ba2= (*graphと合流後のノードのリスト*)
       (*ある変数をrestoreして使う場合useするたびにrestoreしていることが前提*)
-      Graph.print_node2 t;(if List.exists (fun n->n==t) (!nl) or t==end_n then (g,[])
+      (if List.exists (fun n->n==t) (!nl) or t==end_n then (g,[])
       else
         (nl:=t::(!nl);
         let sl = Graph.succ g t in
         let pl = Graph.pred g t in
           if List.length pl <> 1 && t!=start_n then (g,[t])
           else
-            (Graph.print_node2 t;match (!t) with
+            (match (!t) with
               | Set((i2,it),(Restore(i))) ->
                 let s = List.nth sl 0 in
                   if List.exists (fun n->i=n) (!callspill) then
-                    let i3 = map_ba i i2 ba in
+                    (let i3 = map_ba i i2 ba in
+                     Graph.print_node2 t;print_string ("("^i2^","^i3^")");
                     let ba3 = if i2=i3 then ((i,i2)::ba) else ba in 
                     let ba4 = (i2,i3)::ba2 in
                     let g2 = (if i2<>i3
                       then rm_node2 g t (*restoreを消す*)else g)
                     in
-                      main g2 s ba3 ba4
+                      main g2 s ba3 ba4)
                   else
                     main g s ba ba2 (*call関係以外のspillは無視*)
               | _ ->
@@ -664,32 +665,44 @@ struct
                   let rt2 = if (!t)<> rt then ref rt else t in
                   let g2 = if (!t)<> rt then
                       (changeNode2 g t rt2) else g in
+                  let ba3 =
+                    (match (!rt2) with
+                      | Set((i,it),_) ->
+                            [(i,i)]
+                      | _ -> [])
+                  in
                     (match (!rt2) with
                       | Set(_,CallCls(_))| Set(_,CallDir(_))
                       | Exp(CallCls(_)) | Exp(CallDir(_)) ->
                         if List.length sl = 2 then
                           (let s0 = List.nth sl 0 in
                            let s1 = List.nth sl 1 in
-                           let (g0,l0) = main g2 s0 [] [] in
-                           let (g1,l1) = main g0 s1 [] [] in
+                           let (g0,l0) = main g2 s0 (ba3@[]) [] in
+                           let (g1,l1) = main g0 s1 (ba3@[]) [] in
                              (g1,(l1@l0)))
                         else
-                          main g2 s [] []
+                          main g2 s (ba3@[]) []
                       | _ ->
                         if List.length sl = 2 then
                           (let s0 = List.nth sl 0 in
                            let s1 = List.nth sl 1 in
-                           let (g0,l0) = main g2 s0 ba ba2 in
-                           let (g1,l1) = main g0 s1 ba ba2 in
+                           let (g0,l0) = main g2 s0 (ba3@ba) ba2 in
+                           let (g1,l1) = main g0 s1 (ba3@ba) ba2 in
                              (g1,(l1@l0)))
                         else
-                          (print_string "ok";main g2 s ba ba2))
+                          (main g2 s (ba3@ba) ba2))
             )))
     in
     let rec loop g l=
       let (g2,l2)= List.fold_left (fun (g,l) n->
-        let (g2,l2) = main g n [] []in
-          (g2,(l2@l))) (g,[]) l
+        if n==start_n then
+          let (g2,l2) =
+            main g n (List.map (fun i->(i,i)) (iarg@farg)) []
+          in
+            (g2,(l2@l))
+        else
+          let (g2,l2) = main g n [] []in
+            (g2,(l2@l))) (g,[]) l
       in
         if l2=[] then g2 else loop g2 l2
     in
@@ -840,7 +853,7 @@ struct
       if ti or tf then
         let fl = {control=(if (!spill_flg) or Graph.size gf >500
           then gf else
-            elim_restore gf start_n end_n);
+            elim_restore gf start_n end_n (args,fargs));
               def=[];use=[];name=name;
               arg=(args,fargs);live=[];
               start_n=start_n;end_n=end_n;igraphi=([],[]);
