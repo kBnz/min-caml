@@ -446,23 +446,20 @@ struct
   (*fundef -> flowgraph*)
   exception Map_Error
   let simplify ((nl,el):IGraph.graph) size =
-    (*単純化 グラフとレジスタ数を受け取りGraphとStackを返す*)
+    (*単純化 グラフとレジスタ数を受け取りGraphとStackと
+      (* 失敗する可能性のあるStack *)を返す*)
     let rec degree_list (nl2,el2)=
       List.map (fun x -> (x, IGraph.count_degree (nl2,el2) x)) nl2 in
-    let rec push_nodes (nl2,el2) st =
+    let rec push_nodes (nl2,el2) =
       (*reg_clは他の変数と干渉しない*)
-      List.fold_left (fun (g2,st2) (n,d)->
-        if d <= size or (!n)=reg_cl or (!n)=reg_hp then ((IGraph.rm_node g2 n), n::st2)
-        else ((IGraph.rm_node g2 n),st2))
-        ((nl2,el2), st) (degree_list (nl2,el2))
+      List.fold_left (fun (g2,st2,st3) (n,d)->
+        if d <= size or (!n)=reg_cl or (!n)=reg_hp then ((IGraph.rm_node g2 n), (n::st2), st3)
+        else ((IGraph.rm_node g2 n),st2,(n::st3)))
+        ((nl2,el2), [], []) (degree_list (nl2,el2))
     in
-    let rec loop prev_g prev_st=
-      let (curr_g,curr_st) = push_nodes prev_g prev_st in
-        if curr_st = prev_st then (curr_g,curr_st) else loop curr_g curr_st
-    in
-      push_nodes (nl,el) []
+      push_nodes (nl,el)
   exception Spill of (flowgraph)
-  let rec select control ((nl,el):IGraph.graph) size st args ret intflag=(*色を選ぶ*)
+  let rec select control ((nl,el):IGraph.graph) size st args ret cmap0 sflag intflag=(*色を選ぶ*)
     let g = (nl,el) in
     let cl =
       let rec make_list i =
@@ -498,34 +495,35 @@ struct
             r
           else
             x
-      | _ -> raise (The_Others("select_color")) in
+      | _ -> if sflag then "-1" else raise (The_Others("select_color")) in
     let is_arg_or_ret x = (List.exists (fun y->(!x)=y) args) or (!x)=ret in
     let id_to_node i = (*idに対応するnode*)
       List.find (fun x->(!x)=i) nl in
     let cmap =
+      if sflag then cmap0 else
       (*引数と返り値と関数呼び出しの返り値に
         色を塗りほかは塗っていない(-1)color_map*)
-      let rec num_of_ele n = function
-        | x::y -> if x=n then 0 else 1+(num_of_ele n y)
-        | _ -> raise (The_Others("cmap")) in
-      let call_v = (*関数呼び出しの返り値*)
-        let (nl2,_) = control in
-          List.fold_left
-            (fun l n->
-              match !n with
-                | Set((i,t),CallCls(_)) | Set((i,t),CallDir(_)) -> i::l
-                | _ -> l) [] nl2            
-      in
-      let init_color x =
-        if (List.exists (fun y->(!x)=y) args) then
-          (string_of_int (num_of_ele !x args))
-        else
-          (if (!x)=ret or (List.exists (fun n->(!x)=n) call_v) then "0"
-           else (if (!x)=reg_cl then "31" else
-               (if (!x)=reg_hp then "28" else "-1")))
-      in
-        (List.map
-           (fun x -> (x,(init_color x))) nl)
+        let rec num_of_ele n = function
+          | x::y -> if x=n then 0 else 1+(num_of_ele n y)
+          | _ -> raise (The_Others("cmap")) in
+        let call_v = (*関数呼び出しの返り値*)
+          let (nl2,_) = control in
+            List.fold_left
+              (fun l n->
+                match !n with
+                  | Set((i,t),CallCls(_)) | Set((i,t),CallDir(_)) -> i::l
+                  | _ -> l) [] nl2            
+        in
+        let init_color x =
+          if (List.exists (fun y->(!x)=y) args) then
+            (string_of_int (num_of_ele !x args))
+          else
+            (if (!x)=ret or (List.exists (fun n->(!x)=n) call_v) then "0"
+             else (if (!x)=reg_cl then "31" else
+                 (if (!x)=reg_hp then "28" else "-1")))
+        in
+          (List.map
+             (fun x -> (x,(init_color x))) nl)
     in
     let rec node_color n = function
       | (n2,c)::y -> if n==n2 then c else node_color n y
@@ -703,9 +701,12 @@ struct
                     igraphf=igf;cmap=cmap} =
     (*変数からレジスタへのマッピング*)
     let main ig args2 size pre flg=
-      let (_,st) = simplify ig size in
+      let (_,st,st2) = simplify ig size in
+      let cmap0 = select control ig size st
+        args2 (name^".min_caml_ret_reg") [] false flg in
         List.map (fun (x,y) -> (x,(pre^y)))
-          (select control ig size st args2 (name^".min_caml_ret_reg") flg)
+          (select control ig size st2
+             args2 (name^".min_caml_ret_reg") cmap0 true flg)
     in
     let varlist= reg_cl::(args@fargs@
                             (List.fold_left
