@@ -1,37 +1,37 @@
 .section	".rodata"
 .align	8
-#l.6845:	 0x43000000
-#l.6796:	 0x3f666666
-#l.6794:	 0x3e4ccccd
-#l.6687:	 0x43160000
-#l.6684:	 0xc3160000
-#l.6665:	 0x3dcccccd
-#l.6661:	 0xc0000000
-#l.6658:	 0x3b800000
-#l.6626:	 0x41a00000
-#l.6624:	 0x3d4ccccd
-#l.6616:	 0x3e800000
-#l.6607:	 0x41200000
-#l.6602:	 0x3e99999a
-#l.6600:	 0x437f0000
-#l.6596:	 0x3f000000
-#l.6594:	 0x3e19999a
-#l.6587:	 0x40490fdb
-#l.6585:	 0x41f00000
-#l.6583:	 0x41700000
-#l.6581:	 0x38d1b717
-#l.6532:	 0x4cbebc20
-#l.6526:	 0x4e6e6b28
-#l.6503:	 0xbdcccccd
-#l.6489:	 0x3c23d70a
-#l.6487:	 0xbe4ccccd
-#l.6232:	 0xc3480000
-#l.6229:	 0x43480000
-#l.6224:	 0x3c8efa35
-#l.6136:	 0xbf800000
-#l.6134:	 0x3f800000
-#l.6131:	 0x40000000
-#l.6125:	 0x0
+#l.6887:	 0x43000000
+#l.6838:	 0x3f666666
+#l.6836:	 0x3e4ccccd
+#l.6731:	 0x43160000
+#l.6728:	 0xc3160000
+#l.6709:	 0x3dcccccd
+#l.6705:	 0xc0000000
+#l.6702:	 0x3b800000
+#l.6670:	 0x41a00000
+#l.6668:	 0x3d4ccccd
+#l.6660:	 0x3e800000
+#l.6651:	 0x41200000
+#l.6646:	 0x3e99999a
+#l.6644:	 0x437f0000
+#l.6640:	 0x3f000000
+#l.6638:	 0x3e19999a
+#l.6631:	 0x40490fdb
+#l.6629:	 0x41f00000
+#l.6627:	 0x41700000
+#l.6625:	 0x38d1b717
+#l.6576:	 0x4cbebc20
+#l.6570:	 0x4e6e6b28
+#l.6547:	 0xbdcccccd
+#l.6533:	 0x3c23d70a
+#l.6531:	 0xbe4ccccd
+#l.6276:	 0xc3480000
+#l.6273:	 0x43480000
+#l.6268:	 0x3c8efa35
+#l.6180:	 0xbf800000
+#l.6178:	 0x3f800000
+#l.6175:	 0x40000000
+#l.6169:	 0x0
 #l.0:	 0x0
 .section	".text"
 .global	min_caml_start
@@ -49,7 +49,7 @@ min_caml_start:
 	add	%30, %29, 0
 	st	%0, %30
 	mov	%0, 0
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -99,7 +99,7 @@ min_caml_start:
 	add	%30, %29, 4
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -110,7 +110,7 @@ min_caml_start:
 	add	%30, %29, 8
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -121,7 +121,7 @@ min_caml_start:
 	add	%30, %29, 12
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
@@ -132,7 +132,7 @@ min_caml_start:
 	add	%30, %29, 16
 	st	%0, %30
 	mov	%0, 1
-	fmov	%0, #l.6600
+	fmov	%0, #l.6644
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
@@ -196,7 +196,7 @@ min_caml_start:
 	add	%30, %29, 36
 	st	%0, %30
 	mov	%0, 1
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
@@ -218,7 +218,7 @@ min_caml_start:
 	add	%30, %29, 44
 	st	%0, %30
 	mov	%0, 1
-	fmov	%0, #l.6526
+	fmov	%0, #l.6570
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
@@ -229,7 +229,7 @@ min_caml_start:
 	add	%30, %29, 48
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
@@ -251,7 +251,7 @@ min_caml_start:
 	add	%30, %29, 56
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
@@ -262,7 +262,7 @@ min_caml_start:
 	add	%30, %29, 60
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
@@ -273,7 +273,7 @@ min_caml_start:
 	add	%30, %29, 64
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
@@ -284,7 +284,7 @@ min_caml_start:
 	add	%30, %29, 68
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
@@ -317,7 +317,7 @@ min_caml_start:
 	add	%30, %29, 80
 	st	%0, %30
 	mov	%0, 1
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
@@ -328,7 +328,7 @@ min_caml_start:
 	add	%30, %29, 84
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
@@ -339,7 +339,7 @@ min_caml_start:
 	add	%30, %29, 88
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
@@ -350,7 +350,7 @@ min_caml_start:
 	add	%30, %29, 92
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
@@ -361,7 +361,7 @@ min_caml_start:
 	add	%30, %29, 96
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
@@ -372,7 +372,7 @@ min_caml_start:
 	add	%30, %29, 100
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 108
 	st	%27, %30
 	add	%29, %29, 112
@@ -383,7 +383,7 @@ min_caml_start:
 	add	%30, %29, 104
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 108
 	st	%27, %30
 	add	%29, %29, 112
@@ -396,7 +396,7 @@ min_caml_start:
 	mov	%25, 0
 	add	%30, %29, 112
 	st	%25, %30
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 112
 	ld	%0, %30
 	add	%30, %29, 116
@@ -473,7 +473,7 @@ min_caml_start:
 	mov	%25, 0
 	add	%30, %29, 144
 	st	%25, %30
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 144
 	ld	%0, %30
 	add	%30, %29, 148
@@ -488,7 +488,7 @@ min_caml_start:
 	mov	%25, 3
 	add	%30, %29, 152
 	st	%25, %30
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 152
 	ld	%0, %30
 	add	%30, %29, 156
@@ -535,7 +535,7 @@ min_caml_start:
 	mov	%25, 0
 	add	%30, %29, 172
 	st	%25, %30
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 172
 	ld	%0, %30
 	add	%30, %29, 180
@@ -585,7 +585,7 @@ min_caml_start:
 	mov	%25, 0
 	add	%30, %29, 196
 	st	%25, %30
-	fmov	%30, #l.6125
+	fmov	%30, #l.6169
 	mov	%25, %28
 	add	%30, %29, 200
 	st	%25, %30
@@ -644,7 +644,7 @@ min_caml_start:
 	add	%30, %29, 220
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, read_screen_settings.2717
+	mov	%25, read_screen_settings.2739
 	add	%30, %29, 224
 	st	%25, %30
 	add	%30, %29, 224
@@ -687,7 +687,7 @@ min_caml_start:
 	add	%30, %29, 228
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, read_light.2719
+	mov	%25, read_light.2741
 	add	%30, %29, 232
 	st	%25, %30
 	add	%30, %29, 232
@@ -712,7 +712,7 @@ min_caml_start:
 	add	%30, %29, 236
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, read_nth_object.2724
+	mov	%25, read_nth_object.2746
 	add	%30, %29, 240
 	st	%25, %30
 	add	%30, %29, 240
@@ -731,7 +731,7 @@ min_caml_start:
 	add	%30, %29, 244
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, read_object.2726
+	mov	%25, read_object.2748
 	add	%30, %29, 248
 	st	%25, %30
 	add	%30, %29, 248
@@ -756,7 +756,7 @@ min_caml_start:
 	add	%30, %29, 252
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, read_all_object.2728
+	mov	%25, read_all_object.2750
 	add	%30, %29, 256
 	st	%25, %30
 	add	%30, %29, 256
@@ -775,7 +775,7 @@ min_caml_start:
 	add	%30, %29, 260
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, read_and_network.2734
+	mov	%25, read_and_network.2756
 	add	%30, %29, 264
 	st	%25, %30
 	add	%30, %29, 264
@@ -794,7 +794,7 @@ min_caml_start:
 	add	%30, %29, 268
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, read_parameter.2736
+	mov	%25, read_parameter.2758
 	add	%30, %29, 272
 	st	%25, %30
 	add	%30, %29, 272
@@ -837,7 +837,7 @@ min_caml_start:
 	add	%30, %29, 276
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_rect_surface.2738
+	mov	%25, solver_rect_surface.2760
 	add	%30, %29, 280
 	st	%25, %30
 	add	%30, %29, 280
@@ -856,7 +856,7 @@ min_caml_start:
 	add	%30, %29, 284
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_rect.2747
+	mov	%25, solver_rect.2769
 	add	%30, %29, 288
 	st	%25, %30
 	add	%30, %29, 288
@@ -875,7 +875,7 @@ min_caml_start:
 	add	%30, %29, 292
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_surface.2753
+	mov	%25, solver_surface.2775
 	add	%30, %29, 296
 	st	%25, %30
 	add	%30, %29, 296
@@ -894,7 +894,7 @@ min_caml_start:
 	add	%30, %29, 300
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_second.2772
+	mov	%25, solver_second.2794
 	add	%30, %29, 304
 	st	%25, %30
 	add	%30, %29, 304
@@ -913,7 +913,7 @@ min_caml_start:
 	add	%30, %29, 308
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, solver.2778
+	mov	%25, solver.2800
 	add	%30, %29, 312
 	st	%25, %30
 	add	%30, %29, 312
@@ -950,7 +950,7 @@ min_caml_start:
 	add	%30, %29, 316
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_rect_fast.2782
+	mov	%25, solver_rect_fast.2804
 	add	%30, %29, 320
 	st	%25, %30
 	add	%30, %29, 320
@@ -969,7 +969,7 @@ min_caml_start:
 	add	%30, %29, 324
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_surface_fast.2789
+	mov	%25, solver_surface_fast.2811
 	add	%30, %29, 328
 	st	%25, %30
 	add	%30, %29, 328
@@ -988,7 +988,7 @@ min_caml_start:
 	add	%30, %29, 332
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_second_fast.2795
+	mov	%25, solver_second_fast.2817
 	add	%30, %29, 336
 	st	%25, %30
 	add	%30, %29, 336
@@ -1007,7 +1007,7 @@ min_caml_start:
 	add	%30, %29, 340
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, solver_fast.2801
+	mov	%25, solver_fast.2823
 	add	%30, %29, 344
 	st	%25, %30
 	add	%30, %29, 344
@@ -1044,7 +1044,7 @@ min_caml_start:
 	add	%30, %29, 348
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_surface_fast2.2805
+	mov	%25, solver_surface_fast2.2827
 	add	%30, %29, 352
 	st	%25, %30
 	add	%30, %29, 352
@@ -1063,7 +1063,7 @@ min_caml_start:
 	add	%30, %29, 356
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, solver_second_fast2.2812
+	mov	%25, solver_second_fast2.2834
 	add	%30, %29, 360
 	st	%25, %30
 	add	%30, %29, 360
@@ -1082,7 +1082,7 @@ min_caml_start:
 	add	%30, %29, 364
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, solver_fast2.2819
+	mov	%25, solver_fast2.2841
 	add	%30, %29, 368
 	st	%25, %30
 	add	%30, %29, 368
@@ -1119,7 +1119,7 @@ min_caml_start:
 	add	%30, %29, 372
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, iter_setup_dirvec_constants.2831
+	mov	%25, iter_setup_dirvec_constants.2853
 	add	%30, %29, 376
 	st	%25, %30
 	add	%30, %29, 376
@@ -1138,7 +1138,7 @@ min_caml_start:
 	add	%30, %29, 380
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, setup_dirvec_constants.2834
+	mov	%25, setup_dirvec_constants.2856
 	add	%30, %29, 384
 	st	%25, %30
 	add	%30, %29, 384
@@ -1163,7 +1163,7 @@ min_caml_start:
 	add	%30, %29, 388
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, setup_startp_constants.2836
+	mov	%25, setup_startp_constants.2858
 	add	%30, %29, 392
 	st	%25, %30
 	add	%30, %29, 392
@@ -1182,7 +1182,7 @@ min_caml_start:
 	add	%30, %29, 396
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, setup_startp.2839
+	mov	%25, setup_startp.2861
 	add	%30, %29, 400
 	st	%25, %30
 	add	%30, %29, 400
@@ -1213,7 +1213,7 @@ min_caml_start:
 	add	%30, %29, 404
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, check_all_inside.2861
+	mov	%25, check_all_inside.2883
 	add	%30, %29, 408
 	st	%25, %30
 	add	%30, %29, 408
@@ -1232,7 +1232,7 @@ min_caml_start:
 	add	%30, %29, 412
 	st	%25, %30
 	add	%28, %28, 32
-	mov	%25, shadow_check_and_group.2867
+	mov	%25, shadow_check_and_group.2889
 	add	%30, %29, 416
 	st	%25, %30
 	add	%30, %29, 416
@@ -1287,7 +1287,7 @@ min_caml_start:
 	add	%30, %29, 420
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, shadow_check_one_or_group.2870
+	mov	%25, shadow_check_one_or_group.2892
 	add	%30, %29, 424
 	st	%25, %30
 	add	%30, %29, 424
@@ -1312,7 +1312,7 @@ min_caml_start:
 	add	%30, %29, 428
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, shadow_check_one_or_matrix.2873
+	mov	%25, shadow_check_one_or_matrix.2895
 	add	%30, %29, 432
 	st	%25, %30
 	add	%30, %29, 432
@@ -1355,7 +1355,7 @@ min_caml_start:
 	add	%30, %29, 436
 	st	%25, %30
 	add	%28, %28, 40
-	mov	%25, solve_each_element.2876
+	mov	%25, solve_each_element.2898
 	add	%30, %29, 440
 	st	%25, %30
 	add	%30, %29, 440
@@ -1422,7 +1422,7 @@ min_caml_start:
 	add	%30, %29, 444
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, solve_one_or_network.2880
+	mov	%25, solve_one_or_network.2902
 	add	%30, %29, 448
 	st	%25, %30
 	add	%30, %29, 448
@@ -1447,7 +1447,7 @@ min_caml_start:
 	add	%30, %29, 452
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, trace_or_matrix.2884
+	mov	%25, trace_or_matrix.2906
 	add	%30, %29, 456
 	st	%25, %30
 	add	%30, %29, 456
@@ -1490,7 +1490,7 @@ min_caml_start:
 	add	%30, %29, 460
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, judge_intersection.2888
+	mov	%25, judge_intersection.2910
 	add	%30, %29, 464
 	st	%25, %30
 	add	%30, %29, 464
@@ -1521,7 +1521,7 @@ min_caml_start:
 	add	%30, %29, 468
 	st	%25, %30
 	add	%28, %28, 40
-	mov	%25, solve_each_element_fast.2890
+	mov	%25, solve_each_element_fast.2912
 	add	%30, %29, 472
 	st	%25, %30
 	add	%30, %29, 472
@@ -1588,7 +1588,7 @@ min_caml_start:
 	add	%30, %29, 476
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, solve_one_or_network_fast.2894
+	mov	%25, solve_one_or_network_fast.2916
 	add	%30, %29, 480
 	st	%25, %30
 	add	%30, %29, 480
@@ -1613,7 +1613,7 @@ min_caml_start:
 	add	%30, %29, 484
 	st	%25, %30
 	add	%28, %28, 24
-	mov	%25, trace_or_matrix_fast.2898
+	mov	%25, trace_or_matrix_fast.2920
 	add	%30, %29, 488
 	st	%25, %30
 	add	%30, %29, 488
@@ -1650,7 +1650,7 @@ min_caml_start:
 	add	%30, %29, 492
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, judge_intersection_fast.2902
+	mov	%25, judge_intersection_fast.2924
 	add	%30, %29, 496
 	st	%25, %30
 	add	%30, %29, 496
@@ -1681,7 +1681,7 @@ min_caml_start:
 	add	%30, %29, 500
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, get_nvector_rect.2904
+	mov	%25, get_nvector_rect.2926
 	add	%30, %29, 504
 	st	%25, %30
 	add	%30, %29, 504
@@ -1706,7 +1706,7 @@ min_caml_start:
 	add	%30, %29, 508
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, get_nvector_plane.2906
+	mov	%25, get_nvector_plane.2928
 	add	%30, %29, 511
 	add	%30, %30, 1
 	st	%25, %30
@@ -1728,7 +1728,7 @@ min_caml_start:
 	add	%30, %30, 5
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, get_nvector_second.2908
+	mov	%25, get_nvector_second.2930
 	add	%30, %29, 511
 	add	%30, %30, 9
 	st	%25, %30
@@ -1759,7 +1759,7 @@ min_caml_start:
 	add	%30, %30, 13
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, get_nvector.2910
+	mov	%25, get_nvector.2932
 	add	%30, %29, 511
 	add	%30, %30, 17
 	st	%25, %30
@@ -1798,7 +1798,7 @@ min_caml_start:
 	add	%30, %30, 21
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, utexture.2913
+	mov	%25, utexture.2935
 	add	%30, %29, 511
 	add	%30, %30, 25
 	st	%25, %30
@@ -1822,7 +1822,7 @@ min_caml_start:
 	add	%30, %30, 29
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, add_light.2916
+	mov	%25, add_light.2938
 	add	%30, %29, 511
 	add	%30, %30, 33
 	st	%25, %30
@@ -1853,7 +1853,7 @@ min_caml_start:
 	add	%30, %30, 37
 	st	%25, %30
 	add	%28, %28, 40
-	mov	%25, trace_reflections.2920
+	mov	%25, trace_reflections.2942
 	add	%30, %29, 511
 	add	%30, %30, 41
 	st	%25, %30
@@ -1927,7 +1927,7 @@ min_caml_start:
 	add	%30, %30, 45
 	st	%25, %30
 	add	%28, %28, 88
-	mov	%25, trace_ray.2925
+	mov	%25, trace_ray.2947
 	add	%30, %29, 511
 	add	%30, %30, 49
 	st	%25, %30
@@ -2086,7 +2086,7 @@ min_caml_start:
 	add	%30, %30, 53
 	st	%25, %30
 	add	%28, %28, 56
-	mov	%25, trace_diffuse_ray.2931
+	mov	%25, trace_diffuse_ray.2953
 	add	%30, %29, 511
 	add	%30, %30, 57
 	st	%25, %30
@@ -2189,7 +2189,7 @@ min_caml_start:
 	add	%30, %30, 61
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, iter_trace_diffuse_rays.2934
+	mov	%25, iter_trace_diffuse_rays.2956
 	add	%30, %29, 511
 	add	%30, %30, 61
 	ld	%24, %30
@@ -2208,7 +2208,7 @@ min_caml_start:
 	add	%30, %30, 65
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, trace_diffuse_rays.2939
+	mov	%25, trace_diffuse_rays.2961
 	add	%30, %29, 511
 	add	%30, %30, 65
 	ld	%24, %30
@@ -2231,7 +2231,7 @@ min_caml_start:
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 16
-	mov	%24, trace_diffuse_ray_80percent.2943
+	mov	%24, trace_diffuse_ray_80percent.2965
 	add	%30, %25, 0
 	st	%24, %30
 	add	%30, %29, 511
@@ -2248,7 +2248,7 @@ min_caml_start:
 	add	%30, %30, 69
 	st	%24, %30
 	add	%28, %28, 16
-	mov	%24, calc_diffuse_using_1point.2947
+	mov	%24, calc_diffuse_using_1point.2969
 	add	%30, %29, 511
 	add	%30, %30, 69
 	ld	%23, %30
@@ -2278,7 +2278,7 @@ min_caml_start:
 	add	%30, %30, 73
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, calc_diffuse_using_5points.2950
+	mov	%25, calc_diffuse_using_5points.2972
 	add	%30, %29, 511
 	add	%30, %30, 73
 	ld	%24, %30
@@ -2303,7 +2303,7 @@ min_caml_start:
 	add	%30, %30, 77
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, do_without_neighbors.2956
+	mov	%25, do_without_neighbors.2978
 	add	%30, %29, 511
 	add	%30, %30, 77
 	ld	%24, %30
@@ -2322,7 +2322,7 @@ min_caml_start:
 	add	%30, %30, 81
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, neighbors_exist.2959
+	mov	%25, neighbors_exist.2981
 	add	%30, %29, 511
 	add	%30, %30, 81
 	ld	%24, %30
@@ -2340,7 +2340,7 @@ min_caml_start:
 	add	%30, %30, 85
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, try_exploit_neighbors.2972
+	mov	%25, try_exploit_neighbors.2994
 	add	%30, %29, 511
 	add	%30, %30, 89
 	st	%25, %30
@@ -2373,7 +2373,7 @@ min_caml_start:
 	add	%30, %30, 93
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, write_ppm_header.2979
+	mov	%25, write_rgb.3005
 	add	%30, %29, 511
 	add	%30, %30, 97
 	st	%25, %30
@@ -2382,54 +2382,30 @@ min_caml_start:
 	ld	%25, %30
 	add	%30, %29, 511
 	add	%30, %30, 93
-	ld	%24, %30
-	add	%30, %24, 0
-	st	%25, %30
-	add	%30, %29, 76
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 93
-	ld	%24, %30
-	add	%30, %24, 4
-	st	%25, %30
-	mov	%25, %28
-	add	%30, %29, 511
-	add	%30, %30, 101
-	st	%25, %30
-	add	%28, %28, 8
-	mov	%25, write_rgb.2983
-	add	%30, %29, 511
-	add	%30, %30, 105
-	st	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 105
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 101
 	ld	%24, %30
 	add	%30, %24, 0
 	st	%25, %30
 	add	%30, %29, 72
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 101
+	add	%30, %30, 93
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 109
+	add	%30, %30, 101
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, pretrace_diffuse_rays.2985
+	mov	%25, pretrace_diffuse_rays.3007
 	add	%30, %29, 511
-	add	%30, %30, 113
+	add	%30, %30, 105
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 113
+	add	%30, %30, 105
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 109
+	add	%30, %30, 101
 	ld	%24, %30
 	add	%30, %24, 0
 	st	%25, %30
@@ -2437,45 +2413,45 @@ min_caml_start:
 	add	%30, %30, 65
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 109
+	add	%30, %30, 101
 	ld	%24, %30
 	add	%30, %24, 12
 	st	%25, %30
 	add	%30, %29, 140
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 109
+	add	%30, %30, 101
 	ld	%24, %30
 	add	%30, %24, 8
 	st	%25, %30
 	add	%30, %29, 68
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 109
+	add	%30, %30, 101
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	st	%25, %30
 	add	%28, %28, 40
-	mov	%25, pretrace_pixels.2988
+	mov	%25, pretrace_pixels.3010
 	add	%30, %29, 511
-	add	%30, %30, 121
+	add	%30, %30, 113
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 121
+	add	%30, %30, 113
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 0
 	st	%25, %30
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 36
 	st	%25, %30
@@ -2483,44 +2459,91 @@ min_caml_start:
 	add	%30, %30, 45
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 32
 	st	%25, %30
 	add	%30, %29, 88
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 28
 	st	%25, %30
 	add	%30, %29, 96
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 24
 	st	%25, %30
 	add	%30, %29, 84
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 20
 	st	%25, %30
 	add	%30, %29, 72
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 16
 	st	%25, %30
 	add	%30, %29, 108
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 117
+	add	%30, %30, 109
 	ld	%24, %30
 	add	%30, %24, 12
+	st	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 101
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 109
+	ld	%24, %30
+	add	%30, %24, 8
+	st	%25, %30
+	add	%30, %29, 80
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 109
+	ld	%24, %30
+	add	%30, %24, 4
+	st	%25, %30
+	mov	%25, %28
+	add	%30, %29, 511
+	add	%30, %30, 117
+	st	%25, %30
+	add	%28, %28, 32
+	mov	%25, pretrace_line.3017
+	add	%30, %29, 511
+	add	%30, %30, 117
+	ld	%24, %30
+	add	%30, %24, 0
+	st	%25, %30
+	add	%30, %29, 104
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 117
+	ld	%24, %30
+	add	%30, %24, 24
+	st	%25, %30
+	add	%30, %29, 100
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 117
+	ld	%24, %30
+	add	%30, %24, 20
+	st	%25, %30
+	add	%30, %29, 84
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 117
+	ld	%24, %30
+	add	%30, %24, 16
 	st	%25, %30
 	add	%30, %29, 511
 	add	%30, %30, 109
@@ -2528,76 +2551,29 @@ min_caml_start:
 	add	%30, %29, 511
 	add	%30, %30, 117
 	ld	%24, %30
-	add	%30, %24, 8
-	st	%25, %30
-	add	%30, %29, 80
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 117
-	ld	%24, %30
-	add	%30, %24, 4
-	st	%25, %30
-	mov	%25, %28
-	add	%30, %29, 511
-	add	%30, %30, 125
-	st	%25, %30
-	add	%28, %28, 32
-	mov	%25, pretrace_line.2995
-	add	%30, %29, 511
-	add	%30, %30, 125
-	ld	%24, %30
-	add	%30, %24, 0
-	st	%25, %30
-	add	%30, %29, 104
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 125
-	ld	%24, %30
-	add	%30, %24, 24
-	st	%25, %30
-	add	%30, %29, 100
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 125
-	ld	%24, %30
-	add	%30, %24, 20
-	st	%25, %30
-	add	%30, %29, 84
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 125
-	ld	%24, %30
-	add	%30, %24, 16
-	st	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 117
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 125
-	ld	%24, %30
 	add	%30, %24, 12
 	st	%25, %30
 	add	%30, %29, 76
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 125
+	add	%30, %30, 117
 	ld	%24, %30
 	add	%30, %24, 8
 	st	%25, %30
 	add	%30, %29, 80
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 125
+	add	%30, %30, 117
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 32
-	mov	%24, scan_pixel.2999
+	mov	%24, scan_pixel.3021
 	add	%30, %25, 0
 	st	%24, %30
 	add	%30, %29, 511
-	add	%30, %30, 101
+	add	%30, %30, 93
 	ld	%24, %30
 	add	%30, %25, 24
 	st	%24, %30
@@ -2626,56 +2602,56 @@ min_caml_start:
 	st	%24, %30
 	mov	%24, %28
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	st	%24, %30
 	add	%28, %28, 16
-	mov	%24, scan_line.3005
+	mov	%24, scan_line.3027
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	ld	%23, %30
 	add	%30, %23, 0
 	st	%24, %30
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	ld	%24, %30
 	add	%30, %24, 12
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 125
+	add	%30, %30, 117
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	ld	%24, %30
 	add	%30, %24, 8
 	st	%25, %30
 	add	%30, %29, 76
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 133
+	add	%30, %30, 125
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, create_pixelline.3018
+	mov	%25, create_pixelline.3040
 	add	%30, %29, 511
-	add	%30, %30, 133
+	add	%30, %30, 125
 	ld	%24, %30
 	add	%30, %24, 0
 	st	%25, %30
 	add	%30, %29, 76
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 133
+	add	%30, %30, 125
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 8
-	mov	%24, calc_dirvec.3025
+	mov	%24, calc_dirvec.3047
 	add	%30, %25, 0
 	st	%24, %30
 	add	%30, %29, 140
@@ -2684,141 +2660,123 @@ min_caml_start:
 	st	%24, %30
 	mov	%24, %28
 	add	%28, %28, 8
-	mov	%23, calc_dirvecs.3033
+	mov	%23, calc_dirvecs.3055
 	add	%30, %24, 0
 	st	%23, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 137
+	add	%30, %30, 129
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, calc_dirvec_rows.3038
+	mov	%25, calc_dirvec_rows.3060
 	add	%30, %29, 511
-	add	%30, %30, 137
+	add	%30, %30, 129
 	ld	%23, %30
 	add	%30, %23, 0
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 137
+	add	%30, %30, 129
 	ld	%25, %30
 	add	%30, %25, 4
 	st	%24, %30
 	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 141
+	add	%30, %30, 133
 	st	%25, %30
 	add	%28, %28, 8
-	mov	%25, create_dirvec.3042
+	mov	%25, create_dirvec.3064
 	add	%30, %29, 511
-	add	%30, %30, 141
+	add	%30, %30, 133
 	ld	%24, %30
 	add	%30, %24, 0
 	st	%25, %30
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 141
+	add	%30, %30, 133
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 8
-	mov	%24, create_dirvec_elements.3044
+	mov	%24, create_dirvec_elements.3066
 	add	%30, %25, 0
 	st	%24, %30
 	add	%30, %29, 511
-	add	%30, %30, 141
-	ld	%24, %30
-	add	%30, %25, 4
-	st	%24, %30
-	mov	%24, %28
-	add	%30, %29, 511
-	add	%30, %30, 145
-	st	%24, %30
-	add	%28, %28, 16
-	mov	%24, create_dirvecs.3047
-	add	%30, %29, 511
-	add	%30, %30, 145
-	ld	%23, %30
-	add	%30, %23, 0
-	st	%24, %30
-	add	%30, %29, 140
-	ld	%24, %30
-	add	%30, %29, 511
-	add	%30, %30, 145
-	ld	%23, %30
-	add	%30, %23, 12
-	st	%24, %30
-	add	%30, %29, 511
-	add	%30, %30, 145
-	ld	%24, %30
-	add	%30, %24, 8
-	st	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 141
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 145
-	ld	%24, %30
-	add	%30, %24, 4
-	st	%25, %30
-	mov	%25, %28
-	add	%28, %28, 8
-	mov	%24, init_dirvec_constants.3049
-	add	%30, %25, 0
-	st	%24, %30
-	add	%30, %29, 380
+	add	%30, %30, 133
 	ld	%24, %30
 	add	%30, %25, 4
 	st	%24, %30
 	mov	%24, %28
 	add	%28, %28, 16
-	mov	%23, init_vecset_constants.3052
+	mov	%23, create_dirvecs.3069
 	add	%30, %24, 0
+	st	%23, %30
+	add	%30, %29, 140
+	ld	%23, %30
+	add	%30, %24, 12
 	st	%23, %30
 	add	%30, %24, 8
 	st	%25, %30
-	add	%30, %29, 140
+	add	%30, %29, 511
+	add	%30, %30, 133
 	ld	%25, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
+	add	%28, %28, 8
+	mov	%23, init_dirvec_constants.3071
+	add	%30, %25, 0
+	st	%23, %30
+	add	%30, %29, 380
+	ld	%23, %30
+	add	%30, %25, 4
+	st	%23, %30
+	mov	%23, %28
+	add	%28, %28, 16
+	mov	%22, init_vecset_constants.3074
+	add	%30, %23, 0
+	st	%22, %30
+	add	%30, %23, 8
+	st	%25, %30
+	add	%30, %29, 140
+	ld	%25, %30
+	add	%30, %23, 4
+	st	%25, %30
+	mov	%25, %28
 	add	%30, %29, 511
-	add	%30, %30, 149
+	add	%30, %30, 137
 	st	%25, %30
 	add	%28, %28, 16
-	mov	%25, init_dirvecs.3054
+	mov	%25, init_dirvecs.3076
 	add	%30, %29, 511
-	add	%30, %30, 149
-	ld	%23, %30
-	add	%30, %23, 0
-	st	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 149
-	ld	%25, %30
-	add	%30, %25, 12
-	st	%24, %30
-	add	%30, %29, 511
-	add	%30, %30, 145
-	ld	%25, %30
-	add	%30, %29, 511
-	add	%30, %30, 149
-	ld	%24, %30
-	add	%30, %24, 8
+	add	%30, %30, 137
+	ld	%22, %30
+	add	%30, %22, 0
 	st	%25, %30
 	add	%30, %29, 511
 	add	%30, %30, 137
 	ld	%25, %30
+	add	%30, %25, 12
+	st	%23, %30
 	add	%30, %29, 511
-	add	%30, %30, 149
+	add	%30, %30, 137
+	ld	%25, %30
+	add	%30, %25, 8
+	st	%24, %30
+	add	%30, %29, 511
+	add	%30, %30, 129
+	ld	%25, %30
+	add	%30, %29, 511
+	add	%30, %30, 137
 	ld	%24, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 16
-	mov	%24, add_reflection.3056
+	mov	%24, add_reflection.3078
 	add	%30, %25, 0
 	st	%24, %30
 	add	%30, %29, 380
@@ -2830,13 +2788,13 @@ min_caml_start:
 	add	%30, %25, 8
 	st	%24, %30
 	add	%30, %29, 511
-	add	%30, %30, 141
+	add	%30, %30, 133
 	ld	%24, %30
 	add	%30, %25, 4
 	st	%24, %30
 	mov	%24, %28
 	add	%28, %28, 16
-	mov	%23, setup_rect_reflection.3063
+	mov	%23, setup_rect_reflection.3085
 	add	%30, %24, 0
 	st	%23, %30
 	add	%30, %24, 12
@@ -2849,7 +2807,7 @@ min_caml_start:
 	st	%25, %30
 	mov	%23, %28
 	add	%28, %28, 16
-	mov	%22, setup_surface_reflection.3066
+	mov	%22, setup_surface_reflection.3088
 	add	%30, %23, 0
 	st	%22, %30
 	add	%30, %23, 12
@@ -2862,7 +2820,7 @@ min_caml_start:
 	st	%25, %30
 	mov	%25, %28
 	add	%28, %28, 16
-	mov	%22, setup_reflections.3069
+	mov	%22, setup_reflections.3091
 	add	%30, %25, 0
 	st	%22, %30
 	add	%30, %25, 12
@@ -2874,14 +2832,9 @@ min_caml_start:
 	add	%30, %25, 4
 	st	%24, %30
 	mov	%24, %28
-	add	%28, %28, 64
-	mov	%23, rt.3071
+	add	%28, %28, 56
+	mov	%23, rt.3093
 	add	%30, %24, 0
-	st	%23, %30
-	add	%30, %29, 511
-	add	%30, %30, 93
-	ld	%23, %30
-	add	%30, %24, 56
 	st	%23, %30
 	add	%30, %24, 52
 	st	%25, %30
@@ -2894,7 +2847,7 @@ min_caml_start:
 	add	%30, %24, 44
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 129
+	add	%30, %30, 121
 	ld	%25, %30
 	add	%30, %24, 40
 	st	%25, %30
@@ -2903,7 +2856,7 @@ min_caml_start:
 	add	%30, %24, 36
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 125
+	add	%30, %30, 117
 	ld	%25, %30
 	add	%30, %24, 32
 	st	%25, %30
@@ -2920,7 +2873,7 @@ min_caml_start:
 	add	%30, %24, 20
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 149
+	add	%30, %30, 137
 	ld	%25, %30
 	add	%30, %24, 16
 	st	%25, %30
@@ -2933,102 +2886,102 @@ min_caml_start:
 	add	%30, %24, 8
 	st	%25, %30
 	add	%30, %29, 511
-	add	%30, %30, 133
+	add	%30, %30, 125
 	ld	%25, %30
 	add	%30, %24, 4
 	st	%25, %30
 	mov	%0, 128
 	mov	%1, 128
 	mov	%31, %24
-	add	%30, %29, 668
+	add	%30, %29, 652
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 672
+	add	%29, %29, 656
 	call	%27, %30
-	sub	%29, %29, 672
-	add	%30, %29, 668
+	sub	%29, %29, 656
+	add	%30, %29, 652
 	ld	%27, %30
 	call	%30, min_caml_end
-fispos.2537:
-	fmov	%30, #l.6125
+fispos.2559:
+	fmov	%30, #l.6169
 	fcmp	%26, %30, %0
-	brle	bgt_else.10540, %26
+	brle	bgt_else.10582, %26
 	mov	%0, 0
 	call	%30, %27
-bgt_else.10540:
-	fmov	%30, #l.6125
+bgt_else.10582:
+	fmov	%30, #l.6169
 	fcmp	%26, %0, %30
-	breq	brne_else.10541, %26
+	breq	brne_else.10583, %26
 	mov	%0, 1
 	call	%30, %27
-brne_else.10541:
+brne_else.10583:
 	mov	%0, 0
 	call	%30, %27
-fless.2539:
+fless.2561:
 	fcmp	%26, %0, %1
-	brle	bgt_else.10542, %26
+	brle	bgt_else.10584, %26
 	mov	%0, 0
 	call	%30, %27
-bgt_else.10542:
+bgt_else.10584:
 	fcmp	%26, %0, %1
-	breq	brne_else.10543, %26
+	breq	brne_else.10585, %26
 	mov	%0, 1
 	call	%30, %27
-brne_else.10543:
+brne_else.10585:
 	mov	%0, 0
 	call	%30, %27
-fisneg.2545:
-	fmov	%30, #l.6125
+fisneg.2567:
+	fmov	%30, #l.6169
 	fcmp	%26, %0, %30
-	brle	bgt_else.10544, %26
+	brle	bgt_else.10586, %26
 	mov	%0, 0
 	call	%30, %27
-bgt_else.10544:
-	fmov	%30, #l.6125
+bgt_else.10586:
+	fmov	%30, #l.6169
 	fcmp	%26, %0, %30
-	breq	brne_else.10545, %26
+	breq	brne_else.10587, %26
 	mov	%0, 1
 	call	%30, %27
-brne_else.10545:
+brne_else.10587:
 	mov	%0, 0
 	call	%30, %27
-fiszero.2547:
-	fmov	%30, #l.6125
+fiszero.2569:
+	fmov	%30, #l.6169
 	fcmp	%26, %0, %30
-	breq	brne_else.10546, %26
+	breq	brne_else.10588, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10546:
+brne_else.10588:
 	mov	%0, 1
 	call	%30, %27
-fneg.2549:
+fneg.2571:
 	fmov	%31, #l.0
 	fsub	%0, %31, %0
 	call	%30, %27
-fhalf.2551:
-	fmov	%30, #l.6131
+fhalf.2573:
+	fmov	%30, #l.6175
 	finv	%31, %30
 	fmul	%0, %0, %31
 	call	%30, %27
-fsqr.2553:
+fsqr.2575:
 	fmul	%0, %0, %0
 	call	%30, %27
-fabs.2555:
+fabs.2577:
 	call	%30, min_caml_abs_float
-xor.2587:
+xor.2609:
 	cmp	%26, %0, 0
-	breq	brne_else.10547, %26
+	breq	brne_else.10589, %26
 	cmp	%26, %1, 0
-	breq	brne_else.10548, %26
+	breq	brne_else.10590, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10548:
+brne_else.10590:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10547:
+brne_else.10589:
 	mov	%0, %1
 	call	%30, %27
-sgn.2590:
+sgn.2612:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 0
@@ -3036,48 +2989,48 @@ sgn.2590:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10549, %26
-	fmov	%0, #l.6125
+	breq	brne_else.10591, %26
+	fmov	%0, #l.6169
 	call	%30, %27
-brne_else.10549:
+brne_else.10591:
 	add	%30, %29, 0
 	fld	%0, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10550, %26
-	fmov	%0, #l.6134
+	breq	brne_else.10592, %26
+	fmov	%0, #l.6178
 	call	%30, %27
-brne_else.10550:
-	fmov	%0, #l.6136
+brne_else.10592:
+	fmov	%0, #l.6180
 	call	%30, %27
-fneg_cond.2592:
+fneg_cond.2614:
 	cmp	%26, %0, 0
-	breq	brne_else.10551, %26
+	breq	brne_else.10593, %26
 	call	%30, %27
-brne_else.10551:
-	call	%30, fneg.2549
-add_mod5.2595:
+brne_else.10593:
+	call	%30, fneg.2571
+add_mod5.2617:
 	add	%25, %0, %1
 	cmp	%26, %25, 5
 	sub	%26, 0, %26
-	brle	bgt_else.10552, %26
+	brle	bgt_else.10594, %26
 	mov	%0, %25
 	call	%30, %27
-bgt_else.10552:
+bgt_else.10594:
 	sub	%0, %25, 5
 	call	%30, %27
-vecset.2598:
+vecset.2620:
 	add	%30, %0, 0
 	fst	%0, %30
 	add	%30, %0, 4
@@ -3085,7 +3038,7 @@ vecset.2598:
 	add	%30, %0, 8
 	fst	%2, %30
 	call	%30, %27
-vecfill.2603:
+vecfill.2625:
 	add	%30, %0, 0
 	fst	%0, %30
 	add	%30, %0, 4
@@ -3093,10 +3046,10 @@ vecfill.2603:
 	add	%30, %0, 8
 	fst	%0, %30
 	call	%30, %27
-vecbzero.2606:
-	fmov	%0, #l.6125
-	call	%30, vecfill.2603
-veccpy.2608:
+vecbzero.2628:
+	fmov	%0, #l.6169
+	call	%30, vecfill.2625
+veccpy.2630:
 	add	%30, %1, 0
 	fld	%30, %30
 	add	%30, %0, 0
@@ -3110,7 +3063,7 @@ veccpy.2608:
 	add	%30, %0, 8
 	fst	%30, %30
 	call	%30, %27
-vecunit_sgn.2616:
+vecunit_sgn.2638:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -3122,7 +3075,7 @@ vecunit_sgn.2616:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -3135,7 +3088,7 @@ vecunit_sgn.2616:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -3151,7 +3104,7 @@ vecunit_sgn.2616:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -3172,13 +3125,13 @@ vecunit_sgn.2616:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10556, %26
-	fmov	%29, #l.6134
+	breq	brne_else.10598, %26
+	fmov	%29, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 0
@@ -3207,12 +3160,12 @@ vecunit_sgn.2616:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10556:
+brne_else.10598:
 	add	%30, %29, 0
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10558, %26
-	fmov	%29, #l.6136
+	breq	brne_else.10600, %26
+	fmov	%29, #l.6180
 	add	%30, %29, 16
 	fld	%30, %30
 	finv	%31, %30
@@ -3245,8 +3198,8 @@ brne_else.10556:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10558:
-	fmov	%29, #l.6134
+brne_else.10600:
+	fmov	%29, #l.6178
 	add	%30, %29, 16
 	fld	%30, %30
 	finv	%31, %30
@@ -3279,7 +3232,7 @@ brne_else.10558:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-veciprod.2619:
+veciprod.2641:
 	add	%30, %0, 0
 	fld	%29, %30
 	add	%30, %1, 0
@@ -3298,7 +3251,7 @@ veciprod.2619:
 	fmul	%30, %29, %30
 	fadd	%0, %28, %30
 	call	%30, %27
-veciprod2.2622:
+veciprod2.2644:
 	add	%30, %0, 0
 	fld	%30, %30
 	fmul	%29, %30, %0
@@ -3311,7 +3264,7 @@ veciprod2.2622:
 	fmul	%30, %30, %2
 	fadd	%0, %29, %30
 	call	%30, %27
-vecaccum.2627:
+vecaccum.2649:
 	add	%30, %0, 0
 	fld	%29, %30
 	add	%30, %1, 0
@@ -3337,7 +3290,7 @@ vecaccum.2627:
 	add	%30, %0, 8
 	fst	%30, %30
 	call	%30, %27
-vecadd.2631:
+vecadd.2653:
 	add	%30, %0, 0
 	fld	%29, %30
 	add	%30, %1, 0
@@ -3360,7 +3313,7 @@ vecadd.2631:
 	add	%30, %0, 8
 	fst	%30, %30
 	call	%30, %27
-vecscale.2637:
+vecscale.2659:
 	add	%30, %0, 0
 	fld	%30, %30
 	fmul	%30, %30, %0
@@ -3377,7 +3330,7 @@ vecscale.2637:
 	add	%30, %0, 8
 	fst	%30, %30
 	call	%30, %27
-vecaccumv.2640:
+vecaccumv.2662:
 	add	%30, %0, 0
 	fld	%28, %30
 	add	%30, %1, 0
@@ -3409,202 +3362,202 @@ vecaccumv.2640:
 	add	%30, %0, 8
 	fst	%30, %30
 	call	%30, %27
-o_texturetype.2644:
+o_texturetype.2666:
 	add	%30, %0, 0
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_form.2646:
+o_form.2668:
 	add	%30, %0, 4
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_reflectiontype.2648:
+o_reflectiontype.2670:
 	add	%30, %0, 8
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_isinvert.2650:
+o_isinvert.2672:
 	add	%30, %0, 24
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_isrot.2652:
+o_isrot.2674:
 	add	%30, %0, 12
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_param_a.2654:
+o_param_a.2676:
 	add	%30, %0, 16
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
 	call	%30, %27
-o_param_b.2656:
+o_param_b.2678:
 	add	%30, %0, 16
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%0, %30
 	call	%30, %27
-o_param_c.2658:
+o_param_c.2680:
 	add	%30, %0, 16
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%0, %30
 	call	%30, %27
-o_param_abc.2660:
+o_param_abc.2682:
 	add	%30, %0, 16
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-o_param_x.2662:
+o_param_x.2684:
 	add	%30, %0, 20
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
 	call	%30, %27
-o_param_y.2664:
+o_param_y.2686:
 	add	%30, %0, 20
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%0, %30
 	call	%30, %27
-o_param_z.2666:
+o_param_z.2688:
 	add	%30, %0, 20
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%0, %30
 	call	%30, %27
-o_diffuse.2668:
+o_diffuse.2690:
 	add	%30, %0, 28
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
 	call	%30, %27
-o_hilight.2670:
+o_hilight.2692:
 	add	%30, %0, 28
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%0, %30
 	call	%30, %27
-o_color_red.2672:
+o_color_red.2694:
 	add	%30, %0, 32
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
 	call	%30, %27
-o_color_green.2674:
+o_color_green.2696:
 	add	%30, %0, 32
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%0, %30
 	call	%30, %27
-o_color_blue.2676:
+o_color_blue.2698:
 	add	%30, %0, 32
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%0, %30
 	call	%30, %27
-o_param_r1.2678:
+o_param_r1.2700:
 	add	%30, %0, 36
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
 	call	%30, %27
-o_param_r2.2680:
+o_param_r2.2702:
 	add	%30, %0, 36
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%0, %30
 	call	%30, %27
-o_param_r3.2682:
+o_param_r3.2704:
 	add	%30, %0, 36
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%0, %30
 	call	%30, %27
-o_param_ctbl.2684:
+o_param_ctbl.2706:
 	add	%30, %0, 40
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_rgb.2686:
+p_rgb.2708:
 	add	%30, %0, 0
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_intersection_points.2688:
+p_intersection_points.2710:
 	add	%30, %0, 4
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_surface_ids.2690:
+p_surface_ids.2712:
 	add	%30, %0, 8
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_calc_diffuse.2692:
+p_calc_diffuse.2714:
 	add	%30, %0, 12
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_energy.2694:
+p_energy.2716:
 	add	%30, %0, 16
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_received_ray_20percent.2696:
+p_received_ray_20percent.2718:
 	add	%30, %0, 20
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-p_group_id.2698:
+p_group_id.2720:
 	add	%30, %0, 24
 	ld	%25, %30
 	add	%30, %25, 0
 	ld	%0, %30
 	call	%30, %27
-p_set_group_id.2700:
+p_set_group_id.2722:
 	add	%30, %0, 24
 	ld	%25, %30
 	add	%30, %25, 0
 	st	%1, %30
 	call	%30, %27
-p_nvectors.2703:
+p_nvectors.2725:
 	add	%30, %0, 28
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-d_vec.2705:
+d_vec.2727:
 	add	%30, %0, 0
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-d_const.2707:
+d_const.2729:
 	add	%30, %0, 4
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-r_surface_id.2709:
+r_surface_id.2731:
 	add	%30, %0, 0
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-r_dvec.2711:
+r_dvec.2733:
 	add	%30, %0, 4
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-r_bright.2713:
+r_bright.2735:
 	add	%30, %0, 8
 	fld	%30, %30
 	fmov	%0, %30
 	call	%30, %27
-rad.2715:
-	fmov	%30, #l.6224
+rad.2737:
+	fmov	%30, #l.6268
 	fmul	%0, %0, %30
 	call	%30, %27
-read_screen_settings.2717:
+read_screen_settings.2739:
 	add	%30, %31, 20
 	ld	%25, %30
 	add	%30, %29, 0
@@ -3668,7 +3621,7 @@ read_screen_settings.2717:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, rad.2715
+	call	%27, rad.2737
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -3706,7 +3659,7 @@ read_screen_settings.2717:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, rad.2715
+	call	%27, rad.2737
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -3735,52 +3688,40 @@ read_screen_settings.2717:
 	add	%30, %29, 40
 	fst	%0, %30
 	add	%30, %29, 24
-	fld	%30, %30
+	fld	%27, %30
 	add	%30, %29, 40
-	fld	%29, %30
-	fmul	%29, %30, %29
-	fmov	%30, #l.6229
+	fld	%0, %30
+	fmul	%29, %27, %0
+	fmov	%30, #l.6273
 	fmul	%30, %29, %30
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	fmov	%29, #l.6232
+	fmov	%29, #l.6276
 	add	%30, %29, 28
 	fld	%30, %30
 	fmul	%30, %30, %29
-	add	%30, %29, 4
-	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 24
-	fld	%30, %30
 	add	%30, %29, 36
-	fld	%29, %30
-	fmul	%29, %30, %29
-	fmov	%30, #l.6229
-	fmul	%30, %29, %30
-	add	%30, %29, 4
-	ld	%25, %30
+	fld	%28, %30
+	fmul	%30, %27, %28
+	fmov	%29, #l.6273
+	fmul	%30, %30, %29
 	add	%30, %25, 8
 	fst	%30, %30
 	add	%30, %29, 12
 	ld	%25, %30
-	add	%30, %29, 36
-	fld	%30, %30
 	add	%30, %25, 0
-	fst	%30, %30
-	fmov	%30, #l.6125
-	add	%30, %29, 12
-	ld	%25, %30
+	fst	%28, %30
+	fmov	%30, #l.6169
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 40
-	fld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -3793,7 +3734,7 @@ read_screen_settings.2717:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -3809,7 +3750,7 @@ read_screen_settings.2717:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -3822,7 +3763,7 @@ read_screen_settings.2717:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -3834,46 +3775,34 @@ read_screen_settings.2717:
 	add	%30, %25, 8
 	fst	%30, %30
 	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%23, %30
+	add	%30, %23, 0
 	fld	%29, %30
 	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%24, %30
+	add	%30, %24, 0
 	fld	%30, %30
 	fsub	%30, %29, %30
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 4
+	add	%30, %23, 4
 	fld	%29, %30
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 4
+	add	%30, %24, 4
 	fld	%30, %30
 	fsub	%30, %29, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
+	add	%30, %23, 8
 	fld	%29, %30
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 8
+	add	%30, %24, 8
 	fld	%30, %30
 	fsub	%30, %29, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-read_light.2719:
+read_light.2741:
 	add	%30, %31, 8
 	ld	%25, %30
 	add	%30, %29, 0
@@ -3899,7 +3828,7 @@ read_light.2719:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, rad.2715
+	call	%27, rad.2737
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -3917,7 +3846,7 @@ read_light.2719:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -3935,7 +3864,7 @@ read_light.2719:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, rad.2715
+	call	%27, rad.2737
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -3996,7 +3925,7 @@ read_light.2719:
 	add	%30, %25, 0
 	fst	%0, %30
 	call	%30, %27
-rotate_quadratic_matrix.2721:
+rotate_quadratic_matrix.2743:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -4078,79 +4007,50 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 16
-	fld	%30, %30
+	fld	%28, %30
 	add	%30, %29, 24
 	fld	%29, %30
-	fmul	%30, %30, %29
+	fmul	%30, %28, %29
 	add	%30, %29, 28
 	fst	%30, %30
 	add	%30, %29, 12
-	fld	%30, %30
+	fld	%26, %30
 	add	%30, %29, 20
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 24
-	fld	%30, %30
-	fmul	%29, %29, %30
+	fld	%27, %30
+	fmul	%30, %26, %27
+	fmul	%24, %30, %29
 	add	%30, %29, 8
-	fld	%30, %30
-	fmul	%30, %30, %0
-	fsub	%30, %29, %30
+	fld	%25, %30
+	fmul	%30, %25, %0
+	fsub	%30, %24, %30
 	add	%30, %29, 32
 	fst	%30, %30
-	add	%30, %29, 8
-	fld	%30, %30
-	add	%30, %29, 20
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 24
-	fld	%30, %30
-	fmul	%29, %29, %30
-	add	%30, %29, 12
-	fld	%30, %30
-	fmul	%30, %30, %0
-	fadd	%30, %29, %30
+	fmul	%30, %25, %27
+	fmul	%30, %30, %29
+	fmul	%24, %26, %0
+	fadd	%30, %30, %24
 	add	%30, %29, 36
 	fst	%30, %30
-	add	%30, %29, 16
-	fld	%30, %30
-	fmul	%30, %30, %0
+	fmul	%30, %28, %0
 	add	%30, %29, 40
 	fst	%30, %30
-	add	%30, %29, 12
-	fld	%30, %30
-	add	%30, %29, 20
-	fld	%29, %30
-	fmul	%30, %30, %29
-	fmul	%28, %30, %0
-	add	%30, %29, 8
-	fld	%30, %30
-	add	%30, %29, 24
-	fld	%29, %30
-	fmul	%30, %30, %29
-	fadd	%30, %28, %30
+	fmul	%30, %26, %27
+	fmul	%30, %30, %0
+	fmul	%28, %25, %29
+	fadd	%30, %30, %28
 	add	%30, %29, 44
 	fst	%30, %30
-	add	%30, %29, 8
-	fld	%30, %30
-	add	%30, %29, 20
-	fld	%29, %30
-	fmul	%30, %30, %29
-	fmul	%28, %30, %0
-	add	%30, %29, 12
-	fld	%30, %30
-	add	%30, %29, 24
-	fld	%29, %30
-	fmul	%30, %30, %29
-	fsub	%30, %28, %30
+	fmul	%30, %25, %27
+	fmul	%30, %30, %0
+	fmul	%29, %26, %29
+	fsub	%30, %30, %29
 	add	%30, %29, 48
 	fst	%30, %30
-	add	%30, %29, 20
-	fld	%0, %30
+	fmov	%0, %27
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -4165,8 +4065,6 @@ rotate_quadratic_matrix.2721:
 	fst	%30, %30
 	add	%30, %29, 8
 	fld	%30, %30
-	add	%30, %29, 16
-	fld	%29, %30
 	fmul	%30, %30, %29
 	add	%30, %29, 60
 	fst	%30, %30
@@ -4176,14 +4074,10 @@ rotate_quadratic_matrix.2721:
 	fld	%30, %30
 	add	%30, %29, 64
 	fst	%30, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	add	%30, %29, 68
 	fst	%30, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
 	add	%30, %29, 72
@@ -4193,7 +4087,7 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -4207,16 +4101,16 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
 	add	%30, %29, 68
 	fld	%30, %30
-	fmul	%29, %30, %0
+	fmul	%30, %30, %0
 	add	%30, %29, 76
-	fld	%30, %30
-	fadd	%30, %30, %29
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 80
 	fst	%30, %30
 	add	%30, %29, 52
@@ -4224,16 +4118,16 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
 	add	%30, %29, 72
 	fld	%30, %30
-	fmul	%29, %30, %0
+	fmul	%30, %30, %0
 	add	%30, %29, 80
-	fld	%30, %30
-	fadd	%30, %30, %29
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -4243,7 +4137,7 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
@@ -4257,16 +4151,16 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	add	%30, %29, 68
 	fld	%30, %30
-	fmul	%29, %30, %0
+	fmul	%30, %30, %0
 	add	%30, %29, 84
-	fld	%30, %30
-	fadd	%30, %30, %29
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 88
 	fst	%30, %30
 	add	%30, %29, 56
@@ -4274,16 +4168,16 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	add	%30, %29, 72
 	fld	%30, %30
-	fmul	%29, %30, %0
+	fmul	%30, %30, %0
 	add	%30, %29, 88
-	fld	%30, %30
-	fadd	%30, %30, %29
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 4
@@ -4293,7 +4187,7 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -4307,16 +4201,16 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
 	add	%30, %29, 68
 	fld	%30, %30
-	fmul	%29, %30, %0
+	fmul	%30, %30, %0
 	add	%30, %29, 92
-	fld	%30, %30
-	fadd	%30, %30, %29
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 96
 	fst	%30, %30
 	add	%30, %29, 60
@@ -4324,118 +4218,126 @@ rotate_quadratic_matrix.2721:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
 	add	%30, %29, 72
 	fld	%30, %30
-	fmul	%29, %30, %0
-	add	%30, %29, 96
+	add	%30, %29, 100
+	fst	%30, %30
+	add	%30, %29, 100
 	fld	%30, %30
-	fadd	%30, %30, %29
+	fmul	%30, %30, %0
+	add	%30, %29, 96
+	fld	%29, %30
+	fadd	%30, %29, %30
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 8
 	fst	%30, %30
-	fmov	%27, #l.6131
+	fmov	%30, #l.6175
 	add	%30, %29, 64
-	fld	%30, %30
+	fld	%29, %30
+	add	%30, %29, 104
+	fst	%29, %30
 	add	%30, %29, 32
 	fld	%29, %30
-	fmul	%29, %30, %29
+	add	%30, %29, 108
+	fst	%29, %30
+	add	%30, %29, 104
+	fld	%29, %30
+	add	%30, %29, 108
+	fld	%28, %30
+	fmul	%29, %29, %28
 	add	%30, %29, 36
-	fld	%30, %30
-	fmul	%28, %29, %30
+	fld	%28, %30
+	fmul	%29, %29, %28
 	add	%30, %29, 68
-	fld	%30, %30
+	fld	%27, %30
+	add	%30, %29, 112
+	fst	%27, %30
 	add	%30, %29, 44
-	fld	%29, %30
-	fmul	%29, %30, %29
+	fld	%27, %30
+	add	%30, %29, 116
+	fst	%27, %30
+	add	%30, %29, 112
+	fld	%27, %30
+	add	%30, %29, 116
+	fld	%26, %30
+	fmul	%27, %27, %26
 	add	%30, %29, 48
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 72
-	fld	%30, %30
+	fld	%26, %30
+	fmul	%27, %27, %26
+	fadd	%29, %29, %27
 	add	%30, %29, 56
-	fld	%29, %30
-	fmul	%29, %30, %29
+	fld	%27, %30
+	add	%30, %29, 120
+	fst	%27, %30
+	add	%30, %29, 100
+	fld	%27, %30
+	add	%30, %29, 120
+	fld	%25, %30
+	fmul	%27, %27, %25
 	add	%30, %29, 60
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%30, %28, %30
-	fmul	%30, %27, %30
+	fld	%25, %30
+	fmul	%27, %27, %25
+	fadd	%29, %29, %27
+	fmul	%30, %30, %29
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	fmov	%27, #l.6131
-	add	%30, %29, 64
-	fld	%30, %30
+	fmov	%30, #l.6175
 	add	%30, %29, 28
 	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 36
-	fld	%30, %30
-	fmul	%28, %29, %30
-	add	%30, %29, 68
-	fld	%30, %30
+	add	%30, %29, 104
+	fld	%27, %30
+	fmul	%27, %27, %29
+	fmul	%27, %27, %28
 	add	%30, %29, 40
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 48
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 72
-	fld	%30, %30
+	fld	%28, %30
+	add	%30, %29, 112
+	fld	%24, %30
+	fmul	%24, %24, %28
+	fmul	%26, %24, %26
+	fadd	%27, %27, %26
 	add	%30, %29, 52
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 60
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%30, %28, %30
-	fmul	%30, %27, %30
-	add	%30, %29, 4
-	ld	%25, %30
+	fld	%26, %30
+	add	%30, %29, 100
+	fld	%24, %30
+	fmul	%24, %24, %26
+	fmul	%25, %24, %25
+	fadd	%27, %27, %25
+	fmul	%30, %30, %27
 	add	%30, %25, 4
 	fst	%30, %30
-	fmov	%27, #l.6131
-	add	%30, %29, 64
-	fld	%30, %30
-	add	%30, %29, 28
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 32
-	fld	%30, %30
-	fmul	%28, %29, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	add	%30, %29, 40
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 44
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 72
-	fld	%30, %30
-	add	%30, %29, 52
-	fld	%29, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 56
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%30, %28, %30
-	fmul	%30, %27, %30
-	add	%30, %29, 4
-	ld	%25, %30
+	fmov	%30, #l.6175
+	add	%30, %29, 104
+	fld	%27, %30
+	fmul	%29, %27, %29
+	add	%30, %29, 108
+	fld	%27, %30
+	fmul	%29, %29, %27
+	add	%30, %29, 112
+	fld	%27, %30
+	fmul	%28, %27, %28
+	add	%30, %29, 116
+	fld	%27, %30
+	fmul	%28, %28, %27
+	fadd	%29, %29, %28
+	add	%30, %29, 100
+	fld	%28, %30
+	fmul	%28, %28, %26
+	add	%30, %29, 120
+	fld	%27, %30
+	fmul	%28, %28, %27
+	fadd	%29, %29, %28
+	fmul	%30, %30, %29
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-read_nth_object.2724:
+read_nth_object.2746:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 4
@@ -4454,7 +4356,7 @@ read_nth_object.2724:
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, -1
-	breq	brne_else.10569, %26
+	breq	brne_else.10611, %26
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -4483,7 +4385,7 @@ read_nth_object.2724:
 	add	%30, %29, 20
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
@@ -4527,7 +4429,7 @@ read_nth_object.2724:
 	add	%30, %25, 8
 	fst	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
@@ -4580,14 +4482,14 @@ read_nth_object.2724:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	add	%30, %29, 32
 	st	%0, %30
 	mov	%0, 2
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
@@ -4620,7 +4522,7 @@ read_nth_object.2724:
 	add	%30, %25, 4
 	fst	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
@@ -4664,7 +4566,7 @@ read_nth_object.2724:
 	add	%30, %25, 8
 	fst	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
@@ -4677,1436 +4579,77 @@ read_nth_object.2724:
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10570, %26
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, min_caml_read_float
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rad.2715
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, min_caml_read_float
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rad.2715
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, min_caml_read_float
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rad.2715
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.10571, %26
-	add	%30, %29, 32
-	ld	%25, %30
-	add	%30, %29, 48
-	st	%25, %30
-	mov	%0, 4
-	fmov	%0, #l.6125
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, min_caml_create_float_array
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	mov	%24, %28
-	add	%28, %28, 48
-	add	%30, %24, 40
-	st	%0, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %24, 36
-	st	%25, %30
-	add	%30, %29, 40
-	ld	%25, %30
-	add	%30, %24, 32
-	st	%25, %30
-	add	%30, %29, 36
-	ld	%25, %30
-	add	%30, %24, 28
-	st	%25, %30
-	add	%30, %29, 48
-	ld	%25, %30
-	add	%30, %24, 24
-	st	%25, %30
-	add	%30, %29, 28
-	ld	%25, %30
-	add	%30, %24, 20
-	st	%25, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %24, 16
-	st	%25, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %24, 12
-	st	%25, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %24, 8
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %24, 4
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%25, %30
-	add	%30, %24, 0
-	st	%25, %30
-	mov	%23, %24
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, %24
-	st	%23, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.10572, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.10573, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10574, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10574:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10573:
-	add	%30, %29, 32
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10575, %26
-	mov	%1, 0
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10576, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10576:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10575:
-	mov	%1, 1
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10577, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10577:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10572:
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fiszero.2547
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10578, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	add	%30, %29, 56
-	fst	%30, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fiszero.2547
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10579, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10580, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10581, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10581:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10580:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, sgn.2590
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fsqr.2553
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10582, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10582:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10579:
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, sgn.2590
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 68
-	fst	%0, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10583, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10584, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10584:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10583:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10585, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10585:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10578:
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 72
-	fst	%0, %30
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 72
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	add	%30, %29, 56
-	fst	%30, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10586, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10587, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10588, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10588:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10587:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10589, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10589:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10586:
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fst	%0, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10590, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10591, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10591:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10590:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10592, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10592:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10571:
-	mov	%25, 1
-	add	%30, %29, 48
-	st	%25, %30
-	mov	%0, 4
-	fmov	%0, #l.6125
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, min_caml_create_float_array
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%24, %28
-	add	%28, %28, 48
-	add	%30, %24, 40
-	st	%0, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %24, 36
-	st	%25, %30
-	add	%30, %29, 40
-	ld	%25, %30
-	add	%30, %24, 32
-	st	%25, %30
-	add	%30, %29, 36
-	ld	%25, %30
-	add	%30, %24, 28
-	st	%25, %30
-	add	%30, %29, 48
-	ld	%25, %30
-	add	%30, %24, 24
-	st	%25, %30
-	add	%30, %29, 28
-	ld	%25, %30
-	add	%30, %24, 20
-	st	%25, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %24, 16
-	st	%25, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %24, 12
-	st	%25, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %24, 8
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %24, 4
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%25, %30
-	add	%30, %24, 0
-	st	%25, %30
-	mov	%23, %24
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, %24
-	st	%23, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.10593, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.10594, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10595, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10595:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10594:
-	add	%30, %29, 32
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10596, %26
-	mov	%1, 0
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10597, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10597:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10596:
-	mov	%1, 1
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10598, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10598:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10593:
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10599, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	add	%30, %29, 56
-	fst	%30, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10600, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10601, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10602, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10602:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10601:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10603, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10603:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10600:
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fst	%0, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10604, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10605, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10605:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10604:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10606, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10606:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10599:
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 72
-	fst	%0, %30
-	add	%30, %29, 52
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 72
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	add	%30, %29, 56
-	fst	%30, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10607, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10608, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10609, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10609:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10608:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10610, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10610:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10607:
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fst	%0, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10611, %26
-	fmov	%30, #l.6125
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
 	breq	brne_else.10612, %26
-	add	%30, %29, 24
-	ld	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, min_caml_read_float
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, rad.2737
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
 	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10612:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10611:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
+	ld	%25, %30
+	add	%30, %25, 0
 	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 56
+	call	%27, min_caml_read_float
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, rad.2737
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 44
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, min_caml_read_float
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, rad.2737
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 44
 	ld	%25, %30
 	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10613, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10613:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10570:
+	fst	%0, %30
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10614, %26
+	breq	brne_else.10613, %26
 	add	%30, %29, 32
 	ld	%25, %30
 	add	%30, %29, 48
 	st	%25, %30
 	mov	%0, 4
-	fmov	%0, #l.6125
-	add	%30, %29, 76
+	fmov	%0, #l.6169
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 80
+	add	%29, %29, 56
 	call	%27, min_caml_create_float_array
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
 	mov	%24, %28
 	add	%28, %28, 48
@@ -6163,45 +4706,76 @@ brne_else.10570:
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 3
-	breq	brne_else.10615, %26
+	breq	brne_else.10614, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10616, %26
+	breq	brne_else.10615, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10617, %26
+	breq	brne_else.10616, %26
 	add	%30, %29, 24
 	ld	%0, %30
 	add	%30, %29, 44
 	ld	%1, %30
-	add	%30, %29, 76
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 56
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10617:
 	mov	%0, 1
 	call	%30, %27
 brne_else.10616:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10615:
 	add	%30, %29, 32
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10618, %26
+	breq	brne_else.10617, %26
 	mov	%1, 0
 	add	%30, %29, 24
 	ld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 56
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10618, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10618:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10617:
+	mov	%1, 1
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
@@ -6211,50 +4785,19 @@ brne_else.10616:
 	ld	%0, %30
 	add	%30, %29, 44
 	ld	%1, %30
-	add	%30, %29, 76
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 56
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
 	mov	%0, 1
 	call	%30, %27
 brne_else.10619:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10618:
-	mov	%1, 1
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10620, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10620:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10615:
+brne_else.10614:
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 0
@@ -6263,16 +4806,16 @@ brne_else.10615:
 	fst	%30, %30
 	add	%30, %29, 52
 	fld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 64
+	call	%27, fiszero.2569
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10621, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10620, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 0
@@ -6285,16 +4828,16 @@ brne_else.10615:
 	fst	%30, %30
 	add	%30, %29, 56
 	fld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 64
+	call	%27, fiszero.2569
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10622, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10621, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 4
@@ -6307,16 +4850,65 @@ brne_else.10615:
 	fst	%30, %30
 	add	%30, %29, 60
 	fld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 68
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fiszero.2547
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10622, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10623, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10623:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10622:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, sgn.2612
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fsqr.2575
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -6329,76 +4921,27 @@ brne_else.10615:
 	ld	%0, %30
 	add	%30, %29, 44
 	ld	%1, %30
-	add	%30, %29, 76
+	add	%30, %29, 68
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 72
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 72
+	add	%30, %29, 68
 	ld	%27, %30
 	mov	%0, 1
 	call	%30, %27
 brne_else.10624:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10623:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10625, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10625:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10622:
+brne_else.10621:
 	add	%30, %29, 56
 	fld	%0, %30
-	add	%30, %29, 76
+	add	%30, %29, 68
 	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
+	add	%29, %29, 72
+	call	%27, sgn.2612
+	sub	%29, %29, 72
+	add	%30, %29, 68
 	ld	%27, %30
 	add	%30, %29, 68
 	fst	%0, %30
@@ -6407,7 +4950,7 @@ brne_else.10622:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6430,13 +4973,62 @@ brne_else.10622:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10625, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10626, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10626:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10625:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -6452,7 +5044,7 @@ brne_else.10622:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6461,62 +5053,13 @@ brne_else.10622:
 brne_else.10627:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10626:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10628, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10628:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10621:
+brne_else.10620:
 	add	%30, %29, 52
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6527,7 +5070,7 @@ brne_else.10621:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6550,13 +5093,13 @@ brne_else.10621:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10629, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10628, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 4
@@ -6572,13 +5115,62 @@ brne_else.10621:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10629, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10630, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10630:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10629:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -6594,7 +5186,7 @@ brne_else.10621:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6603,62 +5195,13 @@ brne_else.10621:
 brne_else.10631:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10630:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10632, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10632:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10629:
+brne_else.10628:
 	add	%30, %29, 56
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6669,7 +5212,7 @@ brne_else.10629:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6692,13 +5235,62 @@ brne_else.10629:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10632, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10633, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10633:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10632:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -6714,7 +5306,7 @@ brne_else.10629:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6723,61 +5315,12 @@ brne_else.10629:
 brne_else.10634:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10633:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10635, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10635:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10614:
+brne_else.10613:
 	mov	%25, 1
 	add	%30, %29, 48
 	st	%25, %30
 	mov	%0, 4
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
@@ -6840,15 +5383,15 @@ brne_else.10614:
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 3
-	breq	brne_else.10636, %26
+	breq	brne_else.10635, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10637, %26
+	breq	brne_else.10636, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10638, %26
+	breq	brne_else.10637, %26
 	add	%30, %29, 24
 	ld	%0, %30
 	add	%30, %29, 44
@@ -6856,27 +5399,58 @@ brne_else.10614:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10638:
+brne_else.10637:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10637:
+brne_else.10636:
 	add	%30, %29, 32
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10639, %26
+	breq	brne_else.10638, %26
 	mov	%1, 0
 	add	%30, %29, 24
 	ld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10639, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10639:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10638:
+	mov	%1, 1
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecunit_sgn.2638
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6891,7 +5465,7 @@ brne_else.10637:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -6900,38 +5474,7 @@ brne_else.10637:
 brne_else.10640:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10639:
-	mov	%1, 1
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecunit_sgn.2616
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10641, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10641:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10636:
+brne_else.10635:
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 0
@@ -6943,13 +5486,13 @@ brne_else.10636:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10642, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10641, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 0
@@ -6965,13 +5508,13 @@ brne_else.10636:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10643, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10642, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 4
@@ -6987,13 +5530,62 @@ brne_else.10636:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10643, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10644, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10644:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10643:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -7009,7 +5601,7 @@ brne_else.10636:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7018,62 +5610,13 @@ brne_else.10636:
 brne_else.10645:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10644:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10646, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10646:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10643:
+brne_else.10642:
 	add	%30, %29, 56
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7084,7 +5627,7 @@ brne_else.10643:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7107,13 +5650,62 @@ brne_else.10643:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10646, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10647, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10647:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10646:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -7129,7 +5721,7 @@ brne_else.10643:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7138,62 +5730,13 @@ brne_else.10643:
 brne_else.10648:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10647:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10649, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10649:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10642:
+brne_else.10641:
 	add	%30, %29, 52
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7204,7 +5747,7 @@ brne_else.10642:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7227,13 +5770,13 @@ brne_else.10642:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10650, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10649, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 4
@@ -7249,13 +5792,62 @@ brne_else.10642:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10650, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10651, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10651:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10650:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -7271,7 +5863,7 @@ brne_else.10642:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7280,62 +5872,13 @@ brne_else.10642:
 brne_else.10652:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10651:
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, sgn.2590
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fst	%0, %30
-	add	%30, %29, 60
-	fld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, fsqr.2553
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 64
-	fld	%30, %30
-	finv	%31, %0
-	fmul	%30, %30, %31
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fst	%30, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10653, %26
-	add	%30, %29, 24
-	ld	%0, %30
-	add	%30, %29, 44
-	ld	%1, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10653:
-	mov	%0, 1
-	call	%30, %27
-brne_else.10650:
+brne_else.10649:
 	add	%30, %29, 56
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7346,7 +5889,7 @@ brne_else.10650:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7369,13 +5912,62 @@ brne_else.10650:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10653, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
 	breq	brne_else.10654, %26
-	fmov	%30, #l.6125
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10654:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10653:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 8
@@ -7391,7 +5983,7 @@ brne_else.10650:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7400,13 +5992,264 @@ brne_else.10650:
 brne_else.10655:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10654:
+brne_else.10612:
+	add	%30, %29, 12
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.10656, %26
+	add	%30, %29, 32
+	ld	%25, %30
+	add	%30, %29, 48
+	st	%25, %30
+	mov	%0, 4
+	fmov	%0, #l.6169
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, min_caml_create_float_array
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%24, %28
+	add	%28, %28, 48
+	add	%30, %24, 40
+	st	%0, %30
+	add	%30, %29, 44
+	ld	%25, %30
+	add	%30, %24, 36
+	st	%25, %30
+	add	%30, %29, 40
+	ld	%25, %30
+	add	%30, %24, 32
+	st	%25, %30
+	add	%30, %29, 36
+	ld	%25, %30
+	add	%30, %24, 28
+	st	%25, %30
+	add	%30, %29, 48
+	ld	%25, %30
+	add	%30, %24, 24
+	st	%25, %30
+	add	%30, %29, 28
+	ld	%25, %30
+	add	%30, %24, 20
+	st	%25, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %24, 16
+	st	%25, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %24, 12
+	st	%25, %30
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %24, 8
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %24, 4
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%25, %30
+	add	%30, %24, 0
+	st	%25, %30
+	mov	%23, %24
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 4
+	ld	%25, %30
+	add	%30, %25, %24
+	st	%23, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.10657, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.10658, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10659, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10659:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10658:
+	add	%30, %29, 32
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10660, %26
+	mov	%1, 0
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10661, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10661:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10660:
+	mov	%1, 1
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10662, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10662:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10657:
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10663, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	add	%30, %29, 56
+	fst	%30, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10664, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
 	add	%30, %29, 60
 	fld	%0, %30
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, sgn.2590
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10665, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10666, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10666:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10665:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7417,7 +6260,7 @@ brne_else.10654:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -7432,7 +6275,7 @@ brne_else.10654:
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10656, %26
+	breq	brne_else.10667, %26
 	add	%30, %29, 24
 	ld	%0, %30
 	add	%30, %29, 44
@@ -7440,19 +6283,1078 @@ brne_else.10654:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, rotate_quadratic_matrix.2721
+	call	%27, rotate_quadratic_matrix.2743
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10656:
+brne_else.10667:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10569:
+brne_else.10664:
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fst	%0, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10668, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10669, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10669:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10668:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10670, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10670:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10663:
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 72
+	fst	%0, %30
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 72
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	add	%30, %29, 56
+	fst	%30, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10671, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10672, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10673, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10673:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10672:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10674, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10674:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10671:
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fst	%0, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10675, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10676, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10676:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10675:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10677, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10677:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10656:
+	mov	%25, 1
+	add	%30, %29, 48
+	st	%25, %30
+	mov	%0, 4
+	fmov	%0, #l.6169
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, min_caml_create_float_array
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%24, %28
+	add	%28, %28, 48
+	add	%30, %24, 40
+	st	%0, %30
+	add	%30, %29, 44
+	ld	%25, %30
+	add	%30, %24, 36
+	st	%25, %30
+	add	%30, %29, 40
+	ld	%25, %30
+	add	%30, %24, 32
+	st	%25, %30
+	add	%30, %29, 36
+	ld	%25, %30
+	add	%30, %24, 28
+	st	%25, %30
+	add	%30, %29, 48
+	ld	%25, %30
+	add	%30, %24, 24
+	st	%25, %30
+	add	%30, %29, 28
+	ld	%25, %30
+	add	%30, %24, 20
+	st	%25, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %24, 16
+	st	%25, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %24, 12
+	st	%25, %30
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %24, 8
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %24, 4
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%25, %30
+	add	%30, %24, 0
+	st	%25, %30
+	mov	%23, %24
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 4
+	ld	%25, %30
+	add	%30, %25, %24
+	st	%23, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.10678, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.10679, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10680, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10680:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10679:
+	add	%30, %29, 32
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10681, %26
+	mov	%1, 0
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10682, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10682:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10681:
+	mov	%1, 1
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecunit_sgn.2638
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10683, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10683:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10678:
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10684, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	add	%30, %29, 56
+	fst	%30, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10685, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10686, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10687, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10687:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10686:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10688, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10688:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10685:
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fst	%0, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10689, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10690, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10690:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10689:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10691, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10691:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10684:
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 72
+	fst	%0, %30
+	add	%30, %29, 52
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 72
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	add	%30, %29, 56
+	fst	%30, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10692, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10693, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10694, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10694:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10693:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10695, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10695:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10692:
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fst	%0, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 68
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fst	%30, %30
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fiszero.2569
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10696, %26
+	fmov	%30, #l.6169
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10697, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10697:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10696:
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, sgn.2612
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fst	%0, %30
+	add	%30, %29, 60
+	fld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, fsqr.2575
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 64
+	fld	%30, %30
+	finv	%31, %0
+	fmul	%30, %30, %31
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fst	%30, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10698, %26
+	add	%30, %29, 24
+	ld	%0, %30
+	add	%30, %29, 44
+	ld	%1, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, rotate_quadratic_matrix.2743
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10698:
+	mov	%0, 1
+	call	%30, %27
+brne_else.10611:
 	mov	%0, 0
 	call	%30, %27
-read_object.2726:
+read_object.2748:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -7468,12 +7370,10 @@ read_object.2726:
 	add	%30, %29, 8
 	st	%24, %30
 	add	%30, %29, 0
-	ld	%24, %30
-	cmp	%26, %24, 60
-	sub	%26, 0, %26
-	brle	bgt_else.10657, %26
-	add	%30, %29, 0
 	ld	%0, %30
+	cmp	%26, %0, 60
+	sub	%26, 0, %26
+	brle	bgt_else.10699, %26
 	mov	%31, %25
 	add	%30, %29, 12
 	st	%27, %30
@@ -7484,7 +7384,7 @@ read_object.2726:
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10658, %26
+	breq	brne_else.10700, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
@@ -7492,7 +7392,7 @@ read_object.2726:
 	ld	%31, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10658:
+brne_else.10700:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %29, 8
@@ -7500,16 +7400,16 @@ brne_else.10658:
 	add	%30, %24, 0
 	st	%25, %30
 	call	%30, %27
-bgt_else.10657:
+bgt_else.10699:
 	call	%30, %27
-read_all_object.2728:
+read_all_object.2750:
 	add	%30, %31, 4
 	ld	%25, %30
 	mov	%0, 0
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-read_net_item.2730:
+read_net_item.2752:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -7524,14 +7424,14 @@ read_net_item.2730:
 	add	%30, %29, 4
 	ld	%25, %30
 	cmp	%26, %25, -1
-	breq	brne_else.10661, %26
+	breq	brne_else.10703, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, read_net_item.2730
+	call	%27, read_net_item.2752
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -7543,38 +7443,38 @@ read_net_item.2730:
 	add	%30, %0, %25
 	st	%24, %30
 	call	%30, %27
-brne_else.10661:
+brne_else.10703:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
 	mov	%1, -1
 	call	%30, min_caml_create_array
-read_or_network.2732:
+read_or_network.2754:
 	add	%30, %29, 0
 	st	%0, %30
 	mov	%0, 0
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, read_net_item.2730
+	call	%27, read_net_item.2752
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	add	%30, %29, 4
 	st	%0, %30
 	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%1, %30
+	add	%30, %1, 0
 	ld	%25, %30
 	cmp	%26, %25, -1
-	breq	brne_else.10662, %26
+	breq	brne_else.10704, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, read_or_network.2732
+	call	%27, read_or_network.2754
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -7586,14 +7486,12 @@ read_or_network.2732:
 	add	%30, %0, %25
 	st	%24, %30
 	call	%30, %27
-brne_else.10662:
+brne_else.10704:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
-	add	%30, %29, 4
-	ld	%1, %30
 	call	%30, min_caml_create_array
-read_and_network.2734:
+read_and_network.2756:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -7608,31 +7506,29 @@ read_and_network.2734:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, read_net_item.2730
+	call	%27, read_net_item.2752
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %0, 0
 	ld	%25, %30
 	cmp	%26, %25, -1
-	breq	brne_else.10663, %26
+	breq	brne_else.10705, %26
 	add	%30, %29, 0
 	ld	%25, %30
-	sh	%25, %25, 2
+	sh	%24, %25, 2
 	add	%30, %29, 8
-	ld	%24, %30
-	add	%30, %24, %25
+	ld	%23, %30
+	add	%30, %23, %24
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%0, %25, 1
 	add	%30, %29, 4
 	ld	%31, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10663:
+brne_else.10705:
 	call	%30, %27
-read_parameter.2736:
+read_parameter.2758:
 	add	%30, %31, 20
 	ld	%25, %30
 	add	%30, %31, 16
@@ -7698,7 +7594,7 @@ read_parameter.2736:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, read_or_network.2732
+	call	%27, read_or_network.2754
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -7707,7 +7603,7 @@ read_parameter.2736:
 	add	%30, %25, 0
 	st	%0, %30
 	call	%30, %27
-solver_rect_surface.2738:
+solver_rect_surface.2760:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -7738,21 +7634,21 @@ solver_rect_surface.2738:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10666, %26
+	breq	brne_else.10708, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10666:
+brne_else.10708:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_abc.2660
+	call	%27, o_param_abc.2682
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -7763,7 +7659,7 @@ brne_else.10666:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -7779,7 +7675,7 @@ brne_else.10666:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -7790,7 +7686,7 @@ brne_else.10666:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -7804,7 +7700,7 @@ brne_else.10666:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -7813,10 +7709,10 @@ brne_else.10666:
 	fsub	%29, %0, %30
 	add	%30, %29, 16
 	ld	%25, %30
-	sh	%24, %25, 2
+	sh	%25, %25, 2
 	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, %24
+	ld	%24, %30
+	add	%30, %24, %25
 	fld	%30, %30
 	finv	%31, %30
 	fmul	%30, %29, %31
@@ -7824,21 +7720,19 @@ brne_else.10666:
 	fst	%30, %30
 	add	%30, %29, 20
 	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, %24
-	fld	%29, %30
-	add	%30, %29, 44
+	sh	%25, %25, 2
+	add	%30, %24, %25
 	fld	%30, %30
-	fmul	%29, %30, %29
+	add	%30, %29, 44
+	fld	%29, %30
+	fmul	%29, %29, %30
 	add	%30, %29, 4
 	fld	%30, %30
 	fadd	%0, %29, %30
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -7852,12 +7746,12 @@ brne_else.10666:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10667, %26
+	breq	brne_else.10709, %26
 	add	%30, %29, 28
 	ld	%25, %30
 	sh	%24, %25, 2
@@ -7874,7 +7768,7 @@ brne_else.10666:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -7888,12 +7782,12 @@ brne_else.10666:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10668, %26
+	breq	brne_else.10710, %26
 	add	%30, %29, 32
 	ld	%25, %30
 	add	%30, %29, 44
@@ -7902,13 +7796,13 @@ brne_else.10666:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10668:
+brne_else.10710:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10667:
+brne_else.10709:
 	mov	%0, 0
 	call	%30, %27
-solver_rect.2747:
+solver_rect.2769:
 	add	%30, %29, 0
 	fst	%1, %30
 	add	%30, %29, 4
@@ -7948,10 +7842,10 @@ solver_rect.2747:
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10669, %26
+	breq	brne_else.10711, %26
 	mov	%0, 1
 	call	%30, %27
-brne_else.10669:
+brne_else.10711:
 	mov	%2, 1
 	mov	%3, 2
 	mov	%4, 0
@@ -7977,10 +7871,10 @@ brne_else.10669:
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10670, %26
+	breq	brne_else.10712, %26
 	mov	%0, 2
 	call	%30, %27
-brne_else.10670:
+brne_else.10712:
 	mov	%2, 2
 	mov	%3, 0
 	mov	%4, 1
@@ -8006,13 +7900,13 @@ brne_else.10670:
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10671, %26
+	breq	brne_else.10713, %26
 	mov	%0, 3
 	call	%30, %27
-brne_else.10671:
+brne_else.10713:
 	mov	%0, 0
 	call	%30, %27
-solver_surface.2753:
+solver_surface.2775:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -8028,7 +7922,7 @@ solver_surface.2753:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_abc.2660
+	call	%27, o_param_abc.2682
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -8041,7 +7935,7 @@ solver_surface.2753:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8052,12 +7946,12 @@ solver_surface.2753:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10672, %26
+	breq	brne_else.10714, %26
 	add	%30, %29, 20
 	ld	%0, %30
 	add	%30, %29, 8
@@ -8069,14 +7963,14 @@ solver_surface.2753:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, veciprod2.2622
+	call	%27, veciprod2.2644
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8090,10 +7984,10 @@ solver_surface.2753:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10672:
+brne_else.10714:
 	mov	%0, 0
 	call	%30, %27
-quadratic.2759:
+quadratic.2781:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -8107,7 +8001,7 @@ quadratic.2759:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -8118,7 +8012,7 @@ quadratic.2759:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -8132,7 +8026,7 @@ quadratic.2759:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8143,7 +8037,7 @@ quadratic.2759:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8160,7 +8054,7 @@ quadratic.2759:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8171,7 +8065,7 @@ quadratic.2759:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8188,12 +8082,12 @@ quadratic.2759:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isrot.2652
+	call	%27, o_isrot.2674
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10673, %26
+	breq	brne_else.10715, %26
 	add	%30, %29, 4
 	fld	%30, %30
 	add	%30, %29, 0
@@ -8206,7 +8100,7 @@ quadratic.2759:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -8230,7 +8124,7 @@ quadratic.2759:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -8254,7 +8148,7 @@ quadratic.2759:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -8265,12 +8159,12 @@ quadratic.2759:
 	fld	%30, %30
 	fadd	%0, %30, %29
 	call	%30, %27
-brne_else.10673:
+brne_else.10715:
 	add	%30, %29, 36
 	fld	%30, %30
 	fmov	%0, %30
 	call	%30, %27
-bilinear.2764:
+bilinear.2786:
 	add	%30, %29, 0
 	fst	%5, %30
 	add	%30, %29, 4
@@ -8297,7 +8191,7 @@ bilinear.2764:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8318,7 +8212,7 @@ bilinear.2764:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -8342,7 +8236,7 @@ bilinear.2764:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -8359,12 +8253,12 @@ bilinear.2764:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_isrot.2652
+	call	%27, o_isrot.2674
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10674, %26
+	breq	brne_else.10716, %26
 	add	%30, %29, 4
 	fld	%30, %30
 	add	%30, %29, 8
@@ -8383,7 +8277,7 @@ bilinear.2764:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -8410,7 +8304,7 @@ bilinear.2764:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -8440,7 +8334,7 @@ bilinear.2764:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -8453,7 +8347,7 @@ bilinear.2764:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -8461,12 +8355,12 @@ bilinear.2764:
 	fld	%30, %30
 	fadd	%0, %30, %0
 	call	%30, %27
-brne_else.10674:
+brne_else.10716:
 	add	%30, %29, 48
 	fld	%30, %30
 	fmov	%0, %30
 	call	%30, %27
-solver_second.2772:
+solver_second.2794:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -8485,12 +8379,8 @@ solver_second.2772:
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%1, %30
-	add	%30, %29, 12
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%2, %30
 	add	%30, %29, 16
@@ -8498,7 +8388,7 @@ solver_second.2772:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8509,25 +8399,21 @@ solver_second.2772:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10675, %26
+	breq	brne_else.10717, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10675:
+brne_else.10717:
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%1, %30
-	add	%30, %29, 12
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%2, %30
 	add	%30, %29, 16
@@ -8541,7 +8427,7 @@ brne_else.10675:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, bilinear.2764
+	call	%27, bilinear.2786
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8558,7 +8444,7 @@ brne_else.10675:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8569,12 +8455,12 @@ brne_else.10675:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 3
-	breq	brne_else.10676, %26
+	breq	brne_else.10718, %26
 	add	%30, %29, 32
 	fld	%30, %30
 	add	%30, %29, 36
@@ -8584,7 +8470,7 @@ brne_else.10675:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -8601,12 +8487,12 @@ brne_else.10675:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10677, %26
+	breq	brne_else.10719, %26
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -8623,12 +8509,12 @@ brne_else.10675:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10678, %26
+	breq	brne_else.10720, %26
 	add	%30, %29, 44
 	fld	%30, %30
 	fmov	%0, %30
@@ -8645,13 +8531,13 @@ brne_else.10675:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10678:
+brne_else.10720:
 	add	%30, %29, 44
 	fld	%0, %30
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -8668,11 +8554,11 @@ brne_else.10678:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10677:
+brne_else.10719:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10676:
-	fmov	%29, #l.6134
+brne_else.10718:
+	fmov	%29, #l.6178
 	add	%30, %29, 32
 	fld	%30, %30
 	fsub	%30, %30, %29
@@ -8683,7 +8569,7 @@ brne_else.10676:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -8700,12 +8586,12 @@ brne_else.10676:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10679, %26
+	breq	brne_else.10721, %26
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 52
@@ -8722,12 +8608,12 @@ brne_else.10676:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10680, %26
+	breq	brne_else.10722, %26
 	add	%30, %29, 44
 	fld	%30, %30
 	fmov	%0, %30
@@ -8744,13 +8630,13 @@ brne_else.10676:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10680:
+brne_else.10722:
 	add	%30, %29, 44
 	fld	%0, %30
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -8767,10 +8653,10 @@ brne_else.10680:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10679:
+brne_else.10721:
 	mov	%0, 0
 	call	%30, %27
-solver.2778:
+solver.2800:
 	add	%30, %29, 0
 	st	%2, %30
 	add	%30, %29, 4
@@ -8805,7 +8691,7 @@ solver.2778:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -8825,7 +8711,7 @@ solver.2778:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8845,7 +8731,7 @@ solver.2778:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -8859,14 +8745,14 @@ solver.2778:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.10681, %26
+	breq	brne_else.10723, %26
 	cmp	%26, %0, 2
-	breq	brne_else.10682, %26
+	breq	brne_else.10724, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 20
@@ -8882,7 +8768,7 @@ solver.2778:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10682:
+brne_else.10724:
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %29, 20
@@ -8898,7 +8784,7 @@ brne_else.10682:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10681:
+brne_else.10723:
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %29, 20
@@ -8914,7 +8800,7 @@ brne_else.10681:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-solver_rect_fast.2782:
+solver_rect_fast.2804:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -8938,8 +8824,6 @@ solver_rect_fast.2782:
 	add	%30, %29, 4
 	fld	%30, %30
 	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	fmul	%30, %29, %30
@@ -8958,7 +8842,7 @@ solver_rect_fast.2782:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8969,7 +8853,7 @@ solver_rect_fast.2782:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -8980,1225 +8864,199 @@ solver_rect_fast.2782:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 40
 	add	%30, %29, 36
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10683, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 28
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, fabs.2555
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 36
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, o_param_c.2658
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	add	%30, %29, 36
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, fless.2539
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10684, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, fiszero.2547
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10685, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10686, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 28
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10686:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 8
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 40
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, fabs.2555
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	add	%30, %29, 44
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, o_param_a.2654
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 44
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, fless.2539
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10687, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, fabs.2555
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 48
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, o_param_c.2658
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 48
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, fless.2539
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10688, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, fiszero.2547
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10689, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10690, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10690:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fabs.2555
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, o_param_a.2654
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fless.2539
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10691, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fabs.2555
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10692, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10693, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10694, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10694:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10693:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10695, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10695:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10692:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10696, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10696:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10691:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10697, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10697:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10689:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10698, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10698:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10699, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10700, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10701, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10702, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10702:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10701:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10703, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10703:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10700:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10704, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10704:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10699:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10705, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10705:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10688:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10706, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10706:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10707, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10708, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10709, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10710, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10710:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10709:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10711, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10711:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10708:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10712, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10712:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10707:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10713, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10713:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10687:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10714, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10714:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10715, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10716, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10717, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10718, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10718:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10717:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10719, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10719:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10716:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10720, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10720:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10715:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10721, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10721:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10685:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10722, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 28
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 1
-	call	%30, %27
-brne_else.10722:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 8
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 40
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 44
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 44
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10723, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_c.2658
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10724, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10725, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 28
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 36
+	st	%27, %30
+	add	%29, %29, 40
+	call	%27, fabs.2577
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	add	%30, %29, 36
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, o_param_c.2680
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	add	%30, %29, 36
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, fless.2561
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10726, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%0, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, fiszero.2569
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10727, %26
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10726, %26
+	breq	brne_else.10728, %26
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 40
+	add	%30, %29, 28
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	mov	%0, 2
+	mov	%0, 1
 	call	%30, %27
-brne_else.10726:
+brne_else.10728:
 	add	%30, %29, 20
 	ld	%25, %30
-	add	%30, %25, 16
+	add	%30, %25, 8
 	fld	%29, %30
-	add	%30, %29, 0
+	add	%30, %29, 8
 	fld	%30, %30
 	fsub	%29, %29, %30
 	add	%30, %29, 20
 	ld	%25, %30
-	add	%30, %25, 20
+	add	%30, %25, 12
 	fld	%30, %30
 	fmul	%30, %29, %30
-	add	%30, %29, 52
+	add	%30, %29, 40
 	fst	%30, %30
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%29, %30
-	add	%30, %29, 52
+	add	%30, %29, 40
 	fld	%30, %30
 	fmul	%29, %30, %29
 	add	%30, %29, 4
 	fld	%30, %30
 	fadd	%0, %29, %30
-	add	%30, %29, 68
+	add	%30, %29, 44
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 48
+	call	%27, fabs.2577
+	sub	%29, %29, 48
+	add	%30, %29, 44
 	ld	%27, %30
-	add	%30, %29, 56
+	add	%30, %29, 44
 	fst	%0, %30
 	add	%30, %29, 16
 	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10727, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
 	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 56
+	call	%27, o_param_a.2676
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
+	add	%30, %29, 44
 	fld	%30, %30
 	fmov	%1, %0
 	fmov	%0, %30
-	add	%30, %29, 68
+	add	%30, %29, 52
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10728, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 56
+	call	%27, fless.2561
+	sub	%29, %29, 56
+	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10729, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, fabs.2577
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 48
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, o_param_c.2680
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 48
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, fless.2561
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10730, %26
-	add	%30, %29, 24
+	add	%30, %29, 20
 	ld	%25, %30
+	add	%30, %25, 12
+	fld	%0, %30
 	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10730:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10729:
-	mov	%25, 1
-	cmp	%26, %25, 0
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, fiszero.2569
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10731, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10731:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10728:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10732, %26
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10732:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10727:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10733, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10733:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10725:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10734, %26
-	add	%30, %29, 24
-	ld	%25, %30
 	add	%30, %29, 40
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10734:
+brne_else.10732:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -10223,37 +9081,37 @@ brne_else.10734:
 	add	%30, %29, 4
 	fld	%30, %30
 	fadd	%0, %29, %30
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 64
+	call	%27, fabs.2577
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 56
 	fst	%0, %30
 	add	%30, %29, 16
 	ld	%0, %30
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 64
+	call	%27, o_param_a.2676
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 56
 	fld	%30, %30
 	fmov	%1, %0
 	fmov	%0, %30
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 64
+	call	%27, fless.2561
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10735, %26
+	breq	brne_else.10733, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -10264,12 +9122,12 @@ brne_else.10734:
 	add	%30, %29, 8
 	fld	%30, %30
 	fadd	%0, %29, %30
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 64
+	call	%27, fabs.2577
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 60
 	fst	%0, %30
@@ -10278,7 +9136,7 @@ brne_else.10734:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10289,12 +9147,12 @@ brne_else.10734:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10736, %26
+	breq	brne_else.10734, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -10302,12 +9160,42 @@ brne_else.10734:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10735, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10736, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10736:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10735:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10737, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10737:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10734:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10738, %26
@@ -10322,8 +9210,8 @@ brne_else.10734:
 brne_else.10738:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10737:
-	mov	%25, 1
+brne_else.10733:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10739, %26
 	add	%30, %29, 24
@@ -10337,40 +9225,10 @@ brne_else.10737:
 brne_else.10739:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10736:
-	mov	%25, 0
+brne_else.10731:
+	mov	%25, 1
 	cmp	%26, %25, 0
 	breq	brne_else.10740, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10740:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10735:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10741, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10741:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10724:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10742, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -10379,7 +9237,7 @@ brne_else.10724:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10742:
+brne_else.10740:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -10407,7 +9265,7 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10418,7 +9276,7 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10429,12 +9287,12 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10743, %26
+	breq	brne_else.10741, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -10448,7 +9306,7 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10459,7 +9317,7 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10470,12 +9328,12 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10744, %26
+	breq	brne_else.10742, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -10483,12 +9341,42 @@ brne_else.10742:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10743, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10744, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10744:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10743:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10745, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10745:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10742:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10746, %26
@@ -10503,8 +9391,8 @@ brne_else.10742:
 brne_else.10746:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10745:
-	mov	%25, 1
+brne_else.10741:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10747, %26
 	add	%30, %29, 24
@@ -10518,40 +9406,10 @@ brne_else.10745:
 brne_else.10747:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10744:
+brne_else.10730:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10748, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10748:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10743:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10749, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10749:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10723:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10750, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -10560,7 +9418,7 @@ brne_else.10723:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10750:
+brne_else.10748:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -10588,7 +9446,7 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10599,7 +9457,7 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10610,12 +9468,12 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10751, %26
+	breq	brne_else.10749, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -10629,7 +9487,7 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10640,7 +9498,7 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10651,12 +9509,12 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10752, %26
+	breq	brne_else.10750, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -10664,12 +9522,42 @@ brne_else.10750:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10751, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10752, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10752:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10751:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10753, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10753:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10750:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10754, %26
@@ -10684,8 +9572,8 @@ brne_else.10750:
 brne_else.10754:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10753:
-	mov	%25, 1
+brne_else.10749:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10755, %26
 	add	%30, %29, 24
@@ -10699,25 +9587,131 @@ brne_else.10753:
 brne_else.10755:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10752:
+brne_else.10729:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10756, %26
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 52
+	add	%30, %29, 40
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	mov	%0, 3
+	mov	%0, 2
 	call	%30, %27
 brne_else.10756:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10751:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10757, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10758, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10759, %26
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10757, %26
+	breq	brne_else.10760, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 52
@@ -10726,13 +9720,58 @@ brne_else.10751:
 	fst	%30, %30
 	mov	%0, 3
 	call	%30, %27
-brne_else.10757:
+brne_else.10760:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10684:
+brne_else.10759:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10761, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10761:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10758:
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10758, %26
+	breq	brne_else.10762, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10762:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10757:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10763, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10763:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10727:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10764, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 28
@@ -10741,7 +9780,7 @@ brne_else.10684:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10758:
+brne_else.10764:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 8
@@ -10769,7 +9808,7 @@ brne_else.10758:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10780,7 +9819,7 @@ brne_else.10758:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -10791,250 +9830,69 @@ brne_else.10758:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10759, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_c.2658
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10760, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10761, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10762, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10762:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10763, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10764, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10765, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_c.2680
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10766, %26
-	add	%30, %29, 24
+	add	%30, %29, 20
 	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10766:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10765:
-	mov	%25, 1
-	cmp	%26, %25, 0
+	add	%30, %25, 12
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10767, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10767:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10764:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10768, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10768:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10763:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10769, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10769:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10761:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10770, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -11043,7 +9901,7 @@ brne_else.10761:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10770:
+brne_else.10768:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -11071,7 +9929,7 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11082,7 +9940,7 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11093,12 +9951,12 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10771, %26
+	breq	brne_else.10769, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -11112,7 +9970,7 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11123,7 +9981,7 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11134,12 +9992,12 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10772, %26
+	breq	brne_else.10770, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -11147,12 +10005,42 @@ brne_else.10770:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10771, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10772, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10772:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10771:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10773, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10773:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10770:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10774, %26
@@ -11167,8 +10055,8 @@ brne_else.10770:
 brne_else.10774:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10773:
-	mov	%25, 1
+brne_else.10769:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10775, %26
 	add	%30, %29, 24
@@ -11182,40 +10070,10 @@ brne_else.10773:
 brne_else.10775:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10772:
-	mov	%25, 0
+brne_else.10767:
+	mov	%25, 1
 	cmp	%26, %25, 0
 	breq	brne_else.10776, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10776:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10771:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10777, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10777:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10760:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10778, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -11224,7 +10082,7 @@ brne_else.10760:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10778:
+brne_else.10776:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -11252,7 +10110,7 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11263,7 +10121,7 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11274,12 +10132,12 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10779, %26
+	breq	brne_else.10777, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -11293,7 +10151,7 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11304,7 +10162,7 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11315,12 +10173,12 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10780, %26
+	breq	brne_else.10778, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -11328,12 +10186,42 @@ brne_else.10778:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10779, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10780, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10780:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10779:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10781, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10781:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10778:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10782, %26
@@ -11348,8 +10236,8 @@ brne_else.10778:
 brne_else.10782:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10781:
-	mov	%25, 1
+brne_else.10777:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10783, %26
 	add	%30, %29, 24
@@ -11363,40 +10251,10 @@ brne_else.10781:
 brne_else.10783:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10780:
+brne_else.10766:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10784, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10784:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10779:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10785, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10785:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10759:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10786, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -11405,7 +10263,7 @@ brne_else.10759:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10786:
+brne_else.10784:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -11433,7 +10291,7 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11444,7 +10302,7 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11455,12 +10313,12 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10787, %26
+	breq	brne_else.10785, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -11474,7 +10332,7 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11485,7 +10343,7 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11496,12 +10354,12 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10788, %26
+	breq	brne_else.10786, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -11509,12 +10367,42 @@ brne_else.10786:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10787, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10788, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10788:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10787:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10789, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10789:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10786:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10790, %26
@@ -11529,8 +10417,8 @@ brne_else.10786:
 brne_else.10790:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10789:
-	mov	%25, 1
+brne_else.10785:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10791, %26
 	add	%30, %29, 24
@@ -11544,25 +10432,131 @@ brne_else.10789:
 brne_else.10791:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10788:
+brne_else.10765:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10792, %26
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 52
+	add	%30, %29, 40
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	mov	%0, 3
+	mov	%0, 2
 	call	%30, %27
 brne_else.10792:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10787:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10793, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10794, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10795, %26
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10793, %26
+	breq	brne_else.10796, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 52
@@ -11571,13 +10565,58 @@ brne_else.10787:
 	fst	%30, %30
 	mov	%0, 3
 	call	%30, %27
-brne_else.10793:
+brne_else.10796:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10683:
+brne_else.10795:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10797, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10797:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10794:
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10794, %26
+	breq	brne_else.10798, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10798:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10793:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10799, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10799:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10726:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10800, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 28
@@ -11586,7 +10625,7 @@ brne_else.10683:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10794:
+brne_else.10800:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 8
@@ -11614,7 +10653,7 @@ brne_else.10794:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11625,7 +10664,7 @@ brne_else.10794:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11636,250 +10675,69 @@ brne_else.10794:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10795, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_c.2658
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 48
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10796, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10797, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10798, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 40
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 2
-	call	%30, %27
-brne_else.10798:
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 16
-	fld	%29, %30
-	add	%30, %29, 0
-	fld	%30, %30
-	fsub	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%30, %30
-	fmul	%30, %29, %30
-	add	%30, %29, 52
-	fst	%30, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 4
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_a.2654
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 56
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10799, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	fmul	%29, %30, %29
-	add	%30, %29, 8
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fabs.2555
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fst	%0, %30
-	add	%30, %29, 16
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, o_param_b.2656
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmov	%1, %0
-	fmov	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10800, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 20
-	fld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10801, %26
-	mov	%25, 0
-	cmp	%26, %25, 0
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_c.2680
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10802, %26
-	add	%30, %29, 24
+	add	%30, %29, 20
 	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10802:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10801:
-	mov	%25, 1
-	cmp	%26, %25, 0
+	add	%30, %25, 12
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
 	breq	brne_else.10803, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10803:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10800:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10804, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10804:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10799:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10805, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10805:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10797:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10806, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -11888,7 +10746,7 @@ brne_else.10797:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10806:
+brne_else.10804:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -11916,7 +10774,7 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11927,7 +10785,7 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11938,12 +10796,12 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10807, %26
+	breq	brne_else.10805, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -11957,7 +10815,7 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11968,7 +10826,7 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -11979,12 +10837,12 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10808, %26
+	breq	brne_else.10806, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -11992,12 +10850,42 @@ brne_else.10806:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10807, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10808, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10808:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10807:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10809, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10809:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10806:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10810, %26
@@ -12012,8 +10900,8 @@ brne_else.10806:
 brne_else.10810:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10809:
-	mov	%25, 1
+brne_else.10805:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10811, %26
 	add	%30, %29, 24
@@ -12027,40 +10915,10 @@ brne_else.10809:
 brne_else.10811:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10808:
-	mov	%25, 0
+brne_else.10803:
+	mov	%25, 1
 	cmp	%26, %25, 0
 	breq	brne_else.10812, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10812:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10807:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10813, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10813:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10796:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10814, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -12069,7 +10927,7 @@ brne_else.10796:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10814:
+brne_else.10812:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -12097,7 +10955,7 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12108,7 +10966,7 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12119,12 +10977,12 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10815, %26
+	breq	brne_else.10813, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -12138,7 +10996,7 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12149,7 +11007,7 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12160,12 +11018,12 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10816, %26
+	breq	brne_else.10814, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -12173,12 +11031,42 @@ brne_else.10814:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10815, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10816, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10816:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10815:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10817, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10817:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10814:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10818, %26
@@ -12193,8 +11081,8 @@ brne_else.10814:
 brne_else.10818:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10817:
-	mov	%25, 1
+brne_else.10813:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10819, %26
 	add	%30, %29, 24
@@ -12208,40 +11096,10 @@ brne_else.10817:
 brne_else.10819:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10816:
+brne_else.10802:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10820, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10820:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10815:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10821, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 52
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%0, 3
-	call	%30, %27
-brne_else.10821:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10795:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10822, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 40
@@ -12250,7 +11108,7 @@ brne_else.10795:
 	fst	%30, %30
 	mov	%0, 2
 	call	%30, %27
-brne_else.10822:
+brne_else.10820:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 16
@@ -12278,7 +11136,7 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12289,7 +11147,7 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12300,12 +11158,12 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10823, %26
+	breq	brne_else.10821, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -12319,7 +11177,7 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12330,7 +11188,7 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -12341,12 +11199,12 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10824, %26
+	breq	brne_else.10822, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 20
@@ -12354,12 +11212,42 @@ brne_else.10822:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
+	breq	brne_else.10823, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10824, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10824:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10823:
+	mov	%25, 1
+	cmp	%26, %25, 0
 	breq	brne_else.10825, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10825:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10822:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10826, %26
@@ -12374,8 +11262,8 @@ brne_else.10822:
 brne_else.10826:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10825:
-	mov	%25, 1
+brne_else.10821:
+	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10827, %26
 	add	%30, %29, 24
@@ -12389,25 +11277,131 @@ brne_else.10825:
 brne_else.10827:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10824:
+brne_else.10801:
 	mov	%25, 0
 	cmp	%26, %25, 0
 	breq	brne_else.10828, %26
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 52
+	add	%30, %29, 40
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	mov	%0, 3
+	mov	%0, 2
 	call	%30, %27
 brne_else.10828:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10823:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10829, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10830, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10831, %26
 	mov	%25, 0
 	cmp	%26, %25, 0
-	breq	brne_else.10829, %26
+	breq	brne_else.10832, %26
 	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %29, 52
@@ -12416,10 +11410,900 @@ brne_else.10823:
 	fst	%30, %30
 	mov	%0, 3
 	call	%30, %27
-brne_else.10829:
+brne_else.10832:
 	mov	%0, 0
 	call	%30, %27
-solver_surface_fast.2789:
+brne_else.10831:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10833, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10833:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10830:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10834, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10834:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10829:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10835, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10835:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10725:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10836, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 28
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 1
+	call	%30, %27
+brne_else.10836:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 8
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 12
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 40
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 44
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 44
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10837, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%29, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_c.2680
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 48
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10838, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 12
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10839, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10840, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 2
+	call	%30, %27
+brne_else.10840:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10841, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10842, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10843, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10844, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10844:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10843:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10845, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10845:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10842:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10846, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10846:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10841:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10847, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10847:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10839:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10848, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 2
+	call	%30, %27
+brne_else.10848:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10849, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10850, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10851, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10852, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10852:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10851:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10853, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10853:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10850:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10854, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10854:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10849:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10855, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10855:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10838:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10856, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 2
+	call	%30, %27
+brne_else.10856:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10857, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10858, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10859, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10860, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10860:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10859:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10861, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10861:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10858:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10862, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10862:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10857:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10863, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10863:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10837:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10864, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 40
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 2
+	call	%30, %27
+brne_else.10864:
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 16
+	fld	%29, %30
+	add	%30, %29, 0
+	fld	%30, %30
+	fsub	%29, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%30, %30
+	fmul	%30, %29, %30
+	add	%30, %29, 52
+	fst	%30, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 4
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_a.2676
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 56
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10865, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%29, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	fmul	%29, %30, %29
+	add	%30, %29, 8
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fabs.2577
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fst	%0, %30
+	add	%30, %29, 16
+	ld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, o_param_b.2678
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	fmov	%1, %0
+	fmov	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10866, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 20
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fiszero.2569
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10867, %26
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10868, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10868:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10867:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10869, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10869:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10866:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10870, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10870:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10865:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10871, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 52
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%0, 3
+	call	%30, %27
+brne_else.10871:
+	mov	%0, 0
+	call	%30, %27
+solver_surface_fast.2811:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -12439,12 +12323,12 @@ solver_surface_fast.2789:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10830, %26
+	breq	brne_else.10872, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 4
@@ -12452,21 +12336,17 @@ solver_surface_fast.2789:
 	add	%30, %29, 0
 	fld	%30, %30
 	fmul	%28, %29, %30
-	add	%30, %29, 12
-	ld	%25, %30
 	add	%30, %25, 8
-	fld	%29, %30
+	fld	%30, %30
 	add	%30, %29, 4
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 12
 	fld	%29, %30
-	add	%30, %29, 8
+	fmul	%30, %30, %29
+	fadd	%28, %28, %30
+	add	%30, %25, 12
 	fld	%30, %30
-	fmul	%30, %29, %30
+	add	%30, %29, 8
+	fld	%29, %30
+	fmul	%30, %30, %29
 	fadd	%30, %28, %30
 	add	%30, %29, 16
 	ld	%25, %30
@@ -12474,10 +12354,10 @@ solver_surface_fast.2789:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10830:
+brne_else.10872:
 	mov	%0, 0
 	call	%30, %27
-solver_second_fast.2795:
+solver_second_fast.2817:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -12503,52 +12383,42 @@ solver_second_fast.2795:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10831, %26
+	breq	brne_else.10873, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10831:
+brne_else.10873:
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %25, 4
-	fld	%29, %30
+	fld	%30, %30
 	add	%30, %29, 0
-	fld	%30, %30
-	fmul	%28, %29, %30
-	add	%30, %29, 16
-	ld	%25, %30
+	fld	%0, %30
+	fmul	%29, %30, %0
 	add	%30, %25, 8
-	fld	%29, %30
+	fld	%30, %30
 	add	%30, %29, 4
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 16
-	ld	%25, %30
+	fld	%1, %30
+	fmul	%30, %30, %1
+	fadd	%29, %29, %30
 	add	%30, %25, 12
-	fld	%29, %30
-	add	%30, %29, 8
 	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%30, %28, %30
+	add	%30, %29, 8
+	fld	%2, %30
+	fmul	%30, %30, %2
+	fadd	%30, %29, %30
 	add	%30, %29, 28
 	fst	%30, %30
 	add	%30, %29, 12
 	ld	%0, %30
-	add	%30, %29, 0
-	fld	%0, %30
-	add	%30, %29, 4
-	fld	%1, %30
-	add	%30, %29, 8
-	fld	%2, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -12559,12 +12429,12 @@ brne_else.10831:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 3
-	breq	brne_else.10832, %26
+	breq	brne_else.10874, %26
 	add	%30, %29, 32
 	fld	%30, %30
 	add	%30, %29, 36
@@ -12574,7 +12444,7 @@ brne_else.10831:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -12591,23 +12461,23 @@ brne_else.10831:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10833, %26
+	breq	brne_else.10875, %26
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10834, %26
+	breq	brne_else.10876, %26
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -12631,7 +12501,7 @@ brne_else.10831:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10834:
+brne_else.10876:
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -12655,11 +12525,11 @@ brne_else.10834:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10833:
+brne_else.10875:
 	mov	%0, 0
 	call	%30, %27
-brne_else.10832:
-	fmov	%29, #l.6134
+brne_else.10874:
+	fmov	%29, #l.6178
 	add	%30, %29, 32
 	fld	%30, %30
 	fsub	%30, %30, %29
@@ -12670,7 +12540,7 @@ brne_else.10832:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -12687,23 +12557,23 @@ brne_else.10832:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10835, %26
+	breq	brne_else.10877, %26
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10836, %26
+	breq	brne_else.10878, %26
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -12727,7 +12597,7 @@ brne_else.10832:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10836:
+brne_else.10878:
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -12751,10 +12621,10 @@ brne_else.10836:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10835:
+brne_else.10877:
 	mov	%0, 0
 	call	%30, %27
-solver_fast.2801:
+solver_fast.2823:
 	add	%30, %29, 0
 	st	%2, %30
 	add	%30, %29, 4
@@ -12793,7 +12663,7 @@ solver_fast.2801:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -12813,7 +12683,7 @@ solver_fast.2801:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -12833,7 +12703,7 @@ solver_fast.2801:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -12847,7 +12717,7 @@ solver_fast.2801:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, d_const.2707
+	call	%27, d_const.2729
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -12863,14 +12733,14 @@ solver_fast.2801:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.10837, %26
+	breq	brne_else.10879, %26
 	cmp	%26, %0, 2
-	breq	brne_else.10838, %26
+	breq	brne_else.10880, %26
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %29, 24
@@ -12886,7 +12756,7 @@ solver_fast.2801:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10838:
+brne_else.10880:
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 24
@@ -12902,13 +12772,13 @@ brne_else.10838:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10837:
+brne_else.10879:
 	add	%30, %29, 8
 	ld	%0, %30
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -12929,7 +12799,7 @@ brne_else.10837:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-solver_surface_fast2.2805:
+solver_surface_fast2.2827:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -12945,12 +12815,12 @@ solver_surface_fast2.2805:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10839, %26
+	breq	brne_else.10881, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -12966,10 +12836,10 @@ solver_surface_fast2.2805:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10839:
+brne_else.10881:
 	mov	%0, 0
 	call	%30, %27
-solver_second_fast2.2812:
+solver_second_fast2.2834:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -12997,15 +12867,15 @@ solver_second_fast2.2812:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10840, %26
+	breq	brne_else.10882, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10840:
+brne_else.10882:
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 4
@@ -13013,21 +12883,17 @@ brne_else.10840:
 	add	%30, %29, 0
 	fld	%30, %30
 	fmul	%28, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
 	add	%30, %25, 8
-	fld	%29, %30
+	fld	%30, %30
 	add	%30, %29, 4
-	fld	%30, %30
-	fmul	%30, %29, %30
-	fadd	%28, %28, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 12
 	fld	%29, %30
-	add	%30, %29, 8
+	fmul	%30, %30, %29
+	fadd	%28, %28, %30
+	add	%30, %25, 12
 	fld	%30, %30
-	fmul	%30, %29, %30
+	add	%30, %29, 8
+	fld	%29, %30
+	fmul	%30, %30, %29
 	fadd	%30, %28, %30
 	add	%30, %29, 32
 	fst	%30, %30
@@ -13042,7 +12908,7 @@ brne_else.10840:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -13059,23 +12925,23 @@ brne_else.10840:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10841, %26
+	breq	brne_else.10883, %26
 	add	%30, %29, 16
 	ld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10842, %26
+	breq	brne_else.10884, %26
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -13099,7 +12965,7 @@ brne_else.10840:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10842:
+brne_else.10884:
 	add	%30, %29, 40
 	fld	%0, %30
 	add	%30, %29, 44
@@ -13123,10 +12989,10 @@ brne_else.10842:
 	fst	%30, %30
 	mov	%0, 1
 	call	%30, %27
-brne_else.10841:
+brne_else.10883:
 	mov	%0, 0
 	call	%30, %27
-solver_fast2.2819:
+solver_fast2.2841:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -13157,7 +13023,7 @@ solver_fast2.2819:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_ctbl.2684
+	call	%27, o_param_ctbl.2706
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13169,14 +13035,10 @@ solver_fast2.2819:
 	fld	%30, %30
 	add	%30, %29, 28
 	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	add	%30, %29, 32
 	fst	%30, %30
-	add	%30, %29, 24
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
 	add	%30, %29, 36
@@ -13186,7 +13048,7 @@ solver_fast2.2819:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, d_const.2707
+	call	%27, d_const.2729
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -13202,14 +13064,14 @@ solver_fast2.2819:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.10843, %26
+	breq	brne_else.10885, %26
 	cmp	%26, %0, 2
-	breq	brne_else.10844, %26
+	breq	brne_else.10886, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 20
@@ -13227,7 +13089,7 @@ solver_fast2.2819:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10844:
+brne_else.10886:
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %29, 20
@@ -13245,13 +13107,13 @@ brne_else.10844:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10843:
+brne_else.10885:
 	add	%30, %29, 4
 	ld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -13272,13 +13134,13 @@ brne_else.10843:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-setup_rect_table.2822:
+setup_rect_table.2844:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
 	st	%0, %30
 	mov	%0, 6
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -13295,13 +13157,13 @@ setup_rect_table.2822:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10845, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10887, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
@@ -13313,13 +13175,13 @@ setup_rect_table.2822:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10846, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10888, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 12
@@ -13331,13 +13193,13 @@ setup_rect_table.2822:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10847, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10889, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 20
@@ -13346,13 +13208,13 @@ setup_rect_table.2822:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10847:
+brne_else.10889:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -13365,7 +13227,7 @@ brne_else.10847:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13376,7 +13238,7 @@ brne_else.10847:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13387,7 +13249,7 @@ brne_else.10847:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13396,7 +13258,7 @@ brne_else.10847:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13404,7 +13266,7 @@ brne_else.10847:
 	ld	%25, %30
 	add	%30, %25, 16
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 8
@@ -13419,13 +13281,13 @@ brne_else.10847:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10846:
+brne_else.10888:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13438,7 +13300,7 @@ brne_else.10846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13449,7 +13311,7 @@ brne_else.10846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13460,7 +13322,7 @@ brne_else.10846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13469,7 +13331,7 @@ brne_else.10846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13477,7 +13339,7 @@ brne_else.10846:
 	ld	%25, %30
 	add	%30, %25, 8
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 4
@@ -13495,13 +13357,13 @@ brne_else.10846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10848, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10890, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 20
@@ -13510,13 +13372,13 @@ brne_else.10846:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10848:
+brne_else.10890:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13529,7 +13391,7 @@ brne_else.10848:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13540,7 +13402,7 @@ brne_else.10848:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13551,7 +13413,7 @@ brne_else.10848:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13560,7 +13422,7 @@ brne_else.10848:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13568,7 +13430,7 @@ brne_else.10848:
 	ld	%25, %30
 	add	%30, %25, 16
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 8
@@ -13583,13 +13445,13 @@ brne_else.10848:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10845:
+brne_else.10887:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13602,7 +13464,7 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13613,7 +13475,7 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13624,7 +13486,7 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13633,7 +13495,7 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13641,15 +13503,13 @@ brne_else.10845:
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%24, %30
+	add	%30, %24, 0
 	fld	%29, %30
 	finv	%31, %29
 	fmul	%30, %30, %31
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	add	%30, %29, 4
@@ -13659,13 +13519,13 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10849, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10891, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 12
@@ -13677,13 +13537,13 @@ brne_else.10845:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10850, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10892, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 20
@@ -13692,13 +13552,13 @@ brne_else.10845:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10850:
+brne_else.10892:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13711,7 +13571,7 @@ brne_else.10850:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13722,7 +13582,7 @@ brne_else.10850:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13733,7 +13593,7 @@ brne_else.10850:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13742,7 +13602,7 @@ brne_else.10850:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13750,7 +13610,7 @@ brne_else.10850:
 	ld	%25, %30
 	add	%30, %25, 16
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 8
@@ -13765,13 +13625,13 @@ brne_else.10850:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10849:
+brne_else.10891:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13784,7 +13644,7 @@ brne_else.10849:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13795,7 +13655,7 @@ brne_else.10849:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13806,7 +13666,7 @@ brne_else.10849:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13815,7 +13675,7 @@ brne_else.10849:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13823,7 +13683,7 @@ brne_else.10849:
 	ld	%25, %30
 	add	%30, %25, 8
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 4
@@ -13841,13 +13701,13 @@ brne_else.10849:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10851, %26
-	fmov	%30, #l.6125
+	breq	brne_else.10893, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 20
@@ -13856,13 +13716,13 @@ brne_else.10849:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10851:
+brne_else.10893:
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13875,7 +13735,7 @@ brne_else.10851:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13886,7 +13746,7 @@ brne_else.10851:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13897,7 +13757,7 @@ brne_else.10851:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13906,7 +13766,7 @@ brne_else.10851:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg_cond.2592
+	call	%27, fneg_cond.2614
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -13914,7 +13774,7 @@ brne_else.10851:
 	ld	%25, %30
 	add	%30, %25, 16
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %25, 8
@@ -13929,13 +13789,13 @@ brne_else.10851:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-setup_surface_table.2825:
+setup_surface_table.2847:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
 	st	%1, %30
 	mov	%0, 4
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -13956,7 +13816,7 @@ setup_surface_table.2825:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -13976,7 +13836,7 @@ setup_surface_table.2825:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -13999,7 +13859,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14016,13 +13876,13 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10852, %26
-	fmov	%29, #l.6136
+	breq	brne_else.10894, %26
+	fmov	%29, #l.6180
 	add	%30, %29, 32
 	fld	%30, %30
 	finv	%31, %30
@@ -14036,7 +13896,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14047,7 +13907,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14060,7 +13920,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14071,7 +13931,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14084,7 +13944,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14095,7 +13955,7 @@ setup_surface_table.2825:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14107,8 +13967,8 @@ setup_surface_table.2825:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10852:
-	fmov	%30, #l.6125
+brne_else.10894:
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 0
@@ -14117,13 +13977,13 @@ brne_else.10852:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-setup_second_table.2828:
+setup_second_table.2850:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
 	st	%1, %30
 	mov	%0, 5
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
@@ -14137,12 +13997,8 @@ setup_second_table.2828:
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%1, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%2, %30
 	add	%30, %29, 4
@@ -14150,7 +14006,7 @@ setup_second_table.2828:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -14167,7 +14023,7 @@ setup_second_table.2828:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14177,7 +14033,7 @@ setup_second_table.2828:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14194,7 +14050,7 @@ setup_second_table.2828:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -14204,7 +14060,7 @@ setup_second_table.2828:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -14221,7 +14077,7 @@ setup_second_table.2828:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14231,7 +14087,7 @@ setup_second_table.2828:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14248,12 +14104,12 @@ setup_second_table.2828:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_isrot.2652
+	call	%27, o_isrot.2674
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10853, %26
+	breq	brne_else.10895, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 8
@@ -14265,7 +14121,7 @@ setup_second_table.2828:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -14285,7 +14141,7 @@ setup_second_table.2828:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -14298,7 +14154,7 @@ setup_second_table.2828:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -14320,7 +14176,7 @@ setup_second_table.2828:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -14340,7 +14196,7 @@ setup_second_table.2828:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -14353,7 +14209,7 @@ setup_second_table.2828:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -14375,7 +14231,7 @@ setup_second_table.2828:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -14395,7 +14251,7 @@ setup_second_table.2828:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -14408,7 +14264,7 @@ setup_second_table.2828:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -14424,18 +14280,18 @@ setup_second_table.2828:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10854, %26
+	breq	brne_else.10896, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10854:
-	fmov	%29, #l.6134
+brne_else.10896:
+	fmov	%29, #l.6178
 	add	%30, %29, 12
 	fld	%30, %30
 	finv	%31, %30
@@ -14448,21 +14304,17 @@ brne_else.10854:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10853:
+brne_else.10895:
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %29, 20
 	fld	%30, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %29, 28
 	fld	%30, %30
 	add	%30, %25, 8
 	fst	%30, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %29, 36
 	fld	%30, %30
 	add	%30, %25, 12
@@ -14472,18 +14324,18 @@ brne_else.10853:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fiszero.2547
+	call	%27, fiszero.2569
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10855, %26
+	breq	brne_else.10897, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-brne_else.10855:
-	fmov	%29, #l.6134
+brne_else.10897:
+	fmov	%29, #l.6178
 	add	%30, %29, 12
 	fld	%30, %30
 	finv	%31, %30
@@ -14496,161 +14348,7 @@ brne_else.10855:
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-iter_setup_dirvec_constants.2831:
-	add	%30, %29, 0
-	st	%1, %30
-	add	%30, %29, 4
-	st	%0, %30
-	add	%30, %29, 8
-	st	%31, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%25, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	cmp	%26, %24, 0
-	sub	%26, 0, %26
-	brle	bgt_else.10856, %26
-	call	%30, %27
-bgt_else.10856:
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
-	add	%30, %25, %24
-	ld	%25, %30
-	add	%30, %29, 12
-	st	%25, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	add	%30, %29, 20
-	st	%27, %30
-	add	%29, %29, 24
-	call	%27, d_const.2707
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 16
-	st	%0, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	add	%30, %29, 20
-	st	%27, %30
-	add	%29, %29, 24
-	call	%27, d_vec.2705
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 20
-	st	%0, %30
-	add	%30, %29, 12
-	ld	%0, %30
-	add	%30, %29, 28
-	st	%27, %30
-	add	%29, %29, 32
-	call	%27, o_form.2646
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 1
-	breq	brne_else.10858, %26
-	cmp	%26, %0, 2
-	breq	brne_else.10859, %26
-	add	%30, %29, 20
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%1, %30
-	add	%30, %29, 28
-	st	%27, %30
-	add	%29, %29, 32
-	call	%27, setup_second_table.2828
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
-	add	%30, %29, 16
-	ld	%24, %30
-	add	%30, %24, %25
-	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sub	%1, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10859:
-	add	%30, %29, 20
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%1, %30
-	add	%30, %29, 28
-	st	%27, %30
-	add	%29, %29, 32
-	call	%27, setup_surface_table.2825
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
-	add	%30, %29, 16
-	ld	%24, %30
-	add	%30, %24, %25
-	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sub	%1, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10858:
-	add	%30, %29, 20
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%1, %30
-	add	%30, %29, 28
-	st	%27, %30
-	add	%29, %29, 32
-	call	%27, setup_rect_table.2822
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
-	add	%30, %29, 16
-	ld	%24, %30
-	add	%30, %24, %25
-	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sub	%1, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	ld	%30, %31
-	call	%30, %30
-setup_dirvec_constants.2834:
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %25, 0
-	ld	%25, %30
-	sub	%1, %25, 1
-	mov	%31, %24
-	ld	%30, %31
-	call	%30, %30
-setup_startp_constants.2836:
+iter_setup_dirvec_constants.2853:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -14665,11 +14363,161 @@ setup_startp_constants.2836:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.10860, %26
+	brle	bgt_else.10898, %26
 	call	%30, %27
-bgt_else.10860:
+bgt_else.10898:
+	sh	%25, %25, 2
+	add	%30, %24, %25
+	ld	%25, %30
+	add	%30, %29, 12
+	st	%25, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, d_const.2729
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 16
+	st	%0, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	add	%30, %29, 20
+	st	%27, %30
+	add	%29, %29, 24
+	call	%27, d_vec.2727
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 20
+	st	%0, %30
+	add	%30, %29, 12
+	ld	%0, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, o_form.2668
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 1
+	breq	brne_else.10900, %26
+	cmp	%26, %0, 2
+	breq	brne_else.10901, %26
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%1, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, setup_second_table.2850
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
 	add	%30, %29, 0
 	ld	%25, %30
+	sh	%25, %25, 2
+	add	%30, %29, 16
+	ld	%24, %30
+	add	%30, %24, %25
+	st	%0, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sub	%1, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10901:
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%1, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, setup_surface_table.2847
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%25, %25, 2
+	add	%30, %29, 16
+	ld	%24, %30
+	add	%30, %24, %25
+	st	%0, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sub	%1, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10900:
+	add	%30, %29, 20
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%1, %30
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, setup_rect_table.2844
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%25, %25, 2
+	add	%30, %29, 16
+	ld	%24, %30
+	add	%30, %24, %25
+	st	%0, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sub	%1, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	ld	%30, %31
+	call	%30, %30
+setup_dirvec_constants.2856:
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %25, 0
+	ld	%25, %30
+	sub	%1, %25, 1
+	mov	%31, %24
+	ld	%30, %31
+	call	%30, %30
+setup_startp_constants.2858:
+	add	%30, %29, 0
+	st	%1, %30
+	add	%30, %29, 4
+	st	%0, %30
+	add	%30, %29, 8
+	st	%31, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 0
+	sub	%26, 0, %26
+	brle	bgt_else.10902, %26
+	call	%30, %27
+bgt_else.10902:
 	sh	%25, %25, 2
 	add	%30, %24, %25
 	ld	%25, %30
@@ -14680,7 +14528,7 @@ bgt_else.10860:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_ctbl.2684
+	call	%27, o_param_ctbl.2706
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14691,7 +14539,7 @@ bgt_else.10860:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14708,7 +14556,7 @@ bgt_else.10860:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -14730,7 +14578,7 @@ bgt_else.10860:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14752,7 +14600,7 @@ bgt_else.10860:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14760,42 +14608,34 @@ bgt_else.10860:
 	fld	%30, %30
 	fsub	%30, %30, %0
 	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
+	ld	%24, %30
+	add	%30, %24, 8
 	fst	%30, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10862, %26
-	add	%30, %29, 20
-	ld	%25, %30
+	breq	brne_else.10904, %26
 	cmp	%26, %25, 2
-	brle	bgt_else.10863, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 0
+	brle	bgt_else.10905, %26
+	add	%30, %24, 0
 	fld	%0, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 4
+	add	%30, %24, 4
 	fld	%1, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
+	add	%30, %24, 8
 	fld	%2, %30
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %25, 3
-	breq	brne_else.10864, %26
+	breq	brne_else.10906, %26
 	fmov	%30, %0
 	add	%30, %29, 16
 	ld	%25, %30
@@ -14810,8 +14650,8 @@ bgt_else.10860:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10864:
-	fmov	%30, #l.6134
+brne_else.10906:
+	fmov	%30, #l.6178
 	fsub	%30, %0, %30
 	add	%30, %29, 16
 	ld	%25, %30
@@ -14826,7 +14666,7 @@ brne_else.10864:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.10863:
+bgt_else.10905:
 	add	%30, %29, 0
 	ld	%25, %30
 	sub	%1, %25, 1
@@ -14836,13 +14676,13 @@ bgt_else.10863:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10862:
+brne_else.10904:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_abc.2660
+	call	%27, o_param_abc.2682
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14850,18 +14690,14 @@ brne_else.10862:
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%0, %30
-	add	%30, %29, 16
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%1, %30
-	add	%30, %29, 16
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%2, %30
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, veciprod2.2622
+	call	%27, veciprod2.2644
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -14878,7 +14714,7 @@ brne_else.10862:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-setup_startp.2839:
+setup_startp.2861:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 12
@@ -14896,7 +14732,7 @@ setup_startp.2839:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -14912,7 +14748,7 @@ setup_startp.2839:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-is_rect_outside.2841:
+is_rect_outside.2863:
 	add	%30, %29, 0
 	fst	%1, %30
 	add	%30, %29, 4
@@ -14922,7 +14758,7 @@ is_rect_outside.2841:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -14933,7 +14769,7 @@ is_rect_outside.2841:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14944,18 +14780,18 @@ is_rect_outside.2841:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10865, %26
+	breq	brne_else.10907, %26
 	add	%30, %29, 0
 	fld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14966,7 +14802,7 @@ is_rect_outside.2841:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14977,18 +14813,18 @@ is_rect_outside.2841:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10866, %26
+	breq	brne_else.10908, %26
 	add	%30, %29, 4
 	fld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -14999,7 +14835,7 @@ is_rect_outside.2841:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -15010,81 +14846,81 @@ is_rect_outside.2841:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10867, %26
+	breq	brne_else.10909, %26
 	add	%30, %29, 8
 	ld	%0, %30
-	call	%30, o_isinvert.2650
-brne_else.10867:
+	call	%30, o_isinvert.2672
+brne_else.10909:
 	add	%30, %29, 8
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10868, %26
+	breq	brne_else.10910, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10868:
+brne_else.10910:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10866:
+brne_else.10908:
 	mov	%0, 0
 	cmp	%26, %0, 0
-	breq	brne_else.10869, %26
+	breq	brne_else.10911, %26
 	add	%30, %29, 8
 	ld	%0, %30
-	call	%30, o_isinvert.2650
-brne_else.10869:
+	call	%30, o_isinvert.2672
+brne_else.10911:
 	add	%30, %29, 8
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10870, %26
+	breq	brne_else.10912, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10870:
+brne_else.10912:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10865:
+brne_else.10907:
 	mov	%0, 0
 	cmp	%26, %0, 0
-	breq	brne_else.10871, %26
+	breq	brne_else.10913, %26
 	add	%30, %29, 8
 	ld	%0, %30
-	call	%30, o_isinvert.2650
-brne_else.10871:
+	call	%30, o_isinvert.2672
+brne_else.10913:
 	add	%30, %29, 8
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10872, %26
+	breq	brne_else.10914, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10872:
+brne_else.10914:
 	mov	%0, 1
 	call	%30, %27
-is_plane_outside.2846:
+is_plane_outside.2868:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -15098,7 +14934,7 @@ is_plane_outside.2846:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_abc.2660
+	call	%27, o_param_abc.2682
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15111,7 +14947,7 @@ is_plane_outside.2846:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, veciprod2.2622
+	call	%27, veciprod2.2644
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15122,7 +14958,7 @@ is_plane_outside.2846:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15133,7 +14969,7 @@ is_plane_outside.2846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -15144,18 +14980,18 @@ is_plane_outside.2846:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10873, %26
+	breq	brne_else.10915, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10873:
+brne_else.10915:
 	mov	%0, 1
 	call	%30, %27
-is_second_outside.2851:
+is_second_outside.2873:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 0
@@ -15163,7 +14999,7 @@ is_second_outside.2851:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, quadratic.2759
+	call	%27, quadratic.2781
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -15174,12 +15010,12 @@ is_second_outside.2851:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 3
-	breq	brne_else.10874, %26
+	breq	brne_else.10916, %26
 	add	%30, %29, 4
 	fld	%30, %30
 	add	%30, %29, 8
@@ -15189,7 +15025,7 @@ is_second_outside.2851:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -15200,7 +15036,7 @@ is_second_outside.2851:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15211,19 +15047,19 @@ is_second_outside.2851:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10875, %26
+	breq	brne_else.10917, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10875:
+brne_else.10917:
 	mov	%0, 1
 	call	%30, %27
-brne_else.10874:
-	fmov	%29, #l.6134
+brne_else.10916:
+	fmov	%29, #l.6178
 	add	%30, %29, 4
 	fld	%30, %30
 	fsub	%30, %30, %29
@@ -15234,7 +15070,7 @@ brne_else.10874:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15245,7 +15081,7 @@ brne_else.10874:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15256,18 +15092,18 @@ brne_else.10874:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, xor.2587
+	call	%27, xor.2609
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10876, %26
+	breq	brne_else.10918, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.10876:
+brne_else.10918:
 	mov	%0, 1
 	call	%30, %27
-is_outside.2856:
+is_outside.2878:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -15281,7 +15117,7 @@ is_outside.2856:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15295,7 +15131,7 @@ is_outside.2856:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -15309,7 +15145,7 @@ is_outside.2856:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -15323,14 +15159,14 @@ is_outside.2856:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.10877, %26
+	breq	brne_else.10919, %26
 	cmp	%26, %0, 2
-	breq	brne_else.10878, %26
+	breq	brne_else.10920, %26
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 16
@@ -15339,8 +15175,8 @@ is_outside.2856:
 	fld	%1, %30
 	add	%30, %29, 24
 	fld	%2, %30
-	call	%30, is_second_outside.2851
-brne_else.10878:
+	call	%30, is_second_outside.2873
+brne_else.10920:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 16
@@ -15349,8 +15185,8 @@ brne_else.10878:
 	fld	%1, %30
 	add	%30, %29, 24
 	fld	%2, %30
-	call	%30, is_plane_outside.2846
-brne_else.10877:
+	call	%30, is_plane_outside.2868
+brne_else.10919:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 16
@@ -15359,8 +15195,8 @@ brne_else.10877:
 	fld	%1, %30
 	add	%30, %29, 24
 	fld	%2, %30
-	call	%30, is_rect_outside.2841
-check_all_inside.2861:
+	call	%30, is_rect_outside.2863
+check_all_inside.2883:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -15385,7 +15221,7 @@ check_all_inside.2861:
 	add	%30, %25, %24
 	ld	%25, %30
 	cmp	%26, %25, -1
-	breq	brne_else.10879, %26
+	breq	brne_else.10921, %26
 	sh	%25, %25, 2
 	add	%30, %23, %25
 	ld	%0, %30
@@ -15398,1564 +15234,889 @@ check_all_inside.2861:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, is_outside.2856
+	call	%27, is_outside.2878
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10880, %26
-	mov	%0, 0
-	call	%30, %27
-brne_else.10880:
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 20
-	ld	%31, %30
-	add	%30, %29, 16
-	ld	%1, %30
-	add	%30, %29, 8
-	fld	%0, %30
-	add	%30, %29, 4
-	fld	%1, %30
-	add	%30, %29, 0
-	fld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10879:
-	mov	%0, 1
-	call	%30, %27
-shadow_check_and_group.2867:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%1, %30
-	add	%30, %29, 8
-	st	%31, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 28
-	ld	%23, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 24
-	ld	%25, %30
-	add	%30, %29, 12
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 20
-	ld	%25, %30
-	add	%30, %29, 16
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 16
-	ld	%1, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 12
-	ld	%25, %30
-	add	%30, %29, 20
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 24
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%25, %30
-	add	%30, %29, 28
-	st	%25, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%25, %30
-	cmp	%26, %25, -1
-	breq	brne_else.10881, %26
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%25, %30
-	add	%30, %29, 32
-	st	%25, %30
-	add	%30, %29, 32
-	ld	%0, %30
-	add	%30, %29, 24
-	ld	%2, %30
-	mov	%31, %23
-	add	%30, %29, 36
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 40
-	call	%27, %30
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	add	%30, %29, 36
-	fst	%30, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10882, %26
-	fmov	%1, #l.6487
-	add	%30, %29, 36
-	fld	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, fless.2539
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10883, %26
-	fmov	%29, #l.6489
-	add	%30, %29, 36
-	fld	%30, %30
-	fadd	%28, %30, %29
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	fadd	%1, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	fadd	%2, %29, %30
-	mov	%0, 0
-	add	%30, %29, 28
-	ld	%25, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 44
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 48
-	call	%27, %30
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10884, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10884:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10883:
-	add	%30, %29, 32
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, o_isinvert.2650
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10885, %26
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10885:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10882:
-	mov	%0, 0
-	cmp	%26, %0, 0
-	breq	brne_else.10886, %26
-	fmov	%29, #l.6489
-	add	%30, %29, 36
-	fld	%30, %30
-	fadd	%28, %30, %29
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	fadd	%0, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	fadd	%1, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	fmul	%29, %30, %28
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	fadd	%2, %29, %30
-	mov	%0, 0
-	add	%30, %29, 28
-	ld	%25, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 44
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 48
-	call	%27, %30
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10887, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10887:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10886:
-	add	%30, %29, 32
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%0, %30
-	add	%30, %29, 44
-	st	%27, %30
-	add	%29, %29, 48
-	call	%27, o_isinvert.2650
-	sub	%29, %29, 48
-	add	%30, %29, 44
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10888, %26
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10888:
-	mov	%0, 0
-	call	%30, %27
-brne_else.10881:
-	mov	%0, 0
-	call	%30, %27
-shadow_check_one_or_group.2870:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%1, %30
-	add	%30, %29, 8
-	st	%31, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %29, 0
-	ld	%23, %30
-	sh	%23, %23, 2
-	add	%30, %29, 4
-	ld	%22, %30
-	add	%30, %22, %23
-	ld	%23, %30
-	cmp	%26, %23, -1
-	breq	brne_else.10889, %26
-	sh	%23, %23, 2
-	add	%30, %24, %23
-	ld	%1, %30
-	mov	%0, 0
-	mov	%31, %25
-	add	%30, %29, 12
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 16
-	call	%27, %30
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10890, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10890:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10889:
-	mov	%0, 0
-	call	%30, %27
-shadow_check_one_or_matrix.2873:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%1, %30
-	add	%30, %29, 8
-	st	%31, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 20
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 16
-	ld	%24, %30
-	add	%30, %29, 12
-	st	%24, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 12
-	ld	%24, %30
-	add	%30, %29, 16
-	st	%24, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%1, %30
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%2, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
-	add	%30, %29, 4
-	ld	%23, %30
-	add	%30, %23, %24
-	ld	%24, %30
-	add	%30, %29, 20
-	st	%24, %30
-	add	%30, %29, 20
-	ld	%24, %30
-	add	%30, %24, 0
-	ld	%0, %30
-	cmp	%26, %0, -1
-	breq	brne_else.10891, %26
-	cmp	%26, %0, 99
-	breq	brne_else.10892, %26
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10893, %26
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%0, %30
-	fmov	%1, #l.6503
-	add	%30, %29, 28
-	st	%27, %30
-	add	%29, %29, 32
-	call	%27, fless.2539
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10894, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10895, %26
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10896, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10897, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10897:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10896:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10895:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10898, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10899, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10899:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10898:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10894:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10900, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10901, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10901:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10900:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10893:
-	mov	%25, 0
-	cmp	%26, %25, 0
-	breq	brne_else.10902, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10903, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10903:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10902:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10892:
-	mov	%25, 1
-	cmp	%26, %25, 0
-	breq	brne_else.10904, %26
-	mov	%0, 1
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 20
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 28
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 32
-	call	%27, %30
-	sub	%29, %29, 32
-	add	%30, %29, 28
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10905, %26
-	mov	%0, 1
-	call	%30, %27
-brne_else.10905:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10904:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 8
-	ld	%31, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10891:
-	mov	%0, 0
-	call	%30, %27
-solve_each_element.2876:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%2, %30
-	add	%30, %29, 8
-	st	%1, %30
-	add	%30, %29, 12
-	st	%31, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 36
-	ld	%25, %30
-	add	%30, %29, 16
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 32
-	ld	%25, %30
-	add	%30, %29, 20
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 28
-	ld	%25, %30
-	add	%30, %29, 24
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 24
-	ld	%23, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 20
-	ld	%25, %30
-	add	%30, %29, 28
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 16
-	ld	%25, %30
-	add	%30, %29, 32
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 12
-	ld	%25, %30
-	add	%30, %29, 36
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 40
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%25, %30
-	add	%30, %29, 44
-	st	%25, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 8
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%25, %30
-	add	%30, %29, 48
-	st	%25, %30
-	add	%30, %29, 48
-	ld	%25, %30
-	cmp	%26, %25, -1
-	breq	brne_else.10906, %26
-	add	%30, %29, 48
-	ld	%0, %30
-	add	%30, %29, 4
-	ld	%1, %30
-	add	%30, %29, 20
-	ld	%2, %30
-	mov	%31, %23
-	add	%30, %29, 52
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 56
-	call	%27, %30
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 52
-	st	%0, %30
-	add	%30, %29, 52
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10907, %26
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	add	%30, %29, 56
-	fst	%30, %30
-	fmov	%0, #l.6125
-	add	%30, %29, 56
-	fld	%1, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fless.2539
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10908, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%1, %30
-	add	%30, %29, 56
-	fld	%0, %30
-	add	%30, %29, 60
-	st	%27, %30
-	add	%29, %29, 64
-	call	%27, fless.2539
-	sub	%29, %29, 64
-	add	%30, %29, 60
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10909, %26
-	fmov	%29, #l.6489
-	add	%30, %29, 56
-	fld	%30, %30
-	fadd	%30, %30, %29
-	add	%30, %29, 60
-	fst	%30, %30
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmul	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 64
-	fst	%30, %30
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmul	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 4
-	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 68
-	fst	%30, %30
-	add	%30, %29, 4
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	fmul	%29, %29, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 8
-	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 72
-	fst	%30, %30
-	mov	%0, 0
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 64
-	fld	%0, %30
-	add	%30, %29, 68
-	fld	%1, %30
-	add	%30, %29, 72
-	fld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 76
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 80
-	call	%27, %30
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10910, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 60
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 36
-	ld	%0, %30
-	add	%30, %29, 64
-	fld	%0, %30
-	add	%30, %29, 68
-	fld	%1, %30
-	add	%30, %29, 72
-	fld	%2, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, vecset.2598
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	add	%30, %29, 48
-	ld	%24, %30
-	add	%30, %29, 40
-	ld	%25, %30
-	add	%30, %25, 0
-	st	%24, %30
-	add	%30, %29, 52
-	ld	%24, %30
-	add	%30, %29, 32
-	ld	%25, %30
-	add	%30, %25, 0
-	st	%24, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10910:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10909:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10908:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10907:
-	add	%30, %29, 48
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 28
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%0, %30
-	add	%30, %29, 76
-	st	%27, %30
-	add	%29, %29, 80
-	call	%27, o_isinvert.2650
-	sub	%29, %29, 80
-	add	%30, %29, 76
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10911, %26
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10911:
-	call	%30, %27
-brne_else.10906:
-	call	%30, %27
-solve_one_or_network.2880:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%2, %30
-	add	%30, %29, 8
-	st	%1, %30
-	add	%30, %29, 12
-	st	%31, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %29, 0
-	ld	%23, %30
-	sh	%23, %23, 2
-	add	%30, %29, 8
-	ld	%22, %30
-	add	%30, %22, %23
-	ld	%23, %30
-	cmp	%26, %23, -1
-	breq	brne_else.10914, %26
-	sh	%23, %23, 2
-	add	%30, %24, %23
-	ld	%1, %30
-	mov	%0, 0
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10914:
-	call	%30, %27
-trace_or_matrix.2884:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%2, %30
-	add	%30, %29, 8
-	st	%1, %30
-	add	%30, %29, 12
-	st	%31, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 20
-	ld	%25, %30
-	add	%30, %29, 16
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 16
-	ld	%2, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 12
-	ld	%25, %30
-	add	%30, %29, 20
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %29, 24
-	st	%24, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
-	add	%30, %29, 8
-	ld	%23, %30
-	add	%30, %23, %24
-	ld	%24, %30
-	add	%30, %29, 28
-	st	%24, %30
-	add	%30, %29, 28
-	ld	%24, %30
-	add	%30, %24, 0
-	ld	%0, %30
-	cmp	%26, %0, -1
-	breq	brne_else.10916, %26
-	cmp	%26, %0, 99
-	breq	brne_else.10917, %26
-	add	%30, %29, 4
-	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 36
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 40
-	call	%27, %30
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10918, %26
-	add	%30, %29, 20
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%0, %30
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%1, %30
-	add	%30, %29, 36
-	st	%27, %30
-	add	%29, %29, 40
-	call	%27, fless.2539
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10919, %26
-	mov	%0, 1
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 28
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 36
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 40
-	call	%27, %30
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10919:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10918:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10917:
-	mov	%0, 1
-	add	%30, %29, 24
-	ld	%25, %30
-	add	%30, %29, 28
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 36
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 40
-	call	%27, %30
-	sub	%29, %29, 40
-	add	%30, %29, 36
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10916:
-	call	%30, %27
-judge_intersection.2888:
-	add	%30, %31, 12
-	ld	%23, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 0
-	st	%25, %30
-	add	%30, %31, 4
-	ld	%24, %30
-	fmov	%30, #l.6526
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	mov	%25, 0
-	add	%30, %24, 0
-	ld	%1, %30
-	mov	%2, %0
-	mov	%31, %23
-	mov	%0, %25
-	add	%30, %29, 4
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 8
-	call	%27, %30
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%30, %30
-	add	%30, %29, 4
-	fst	%30, %30
-	fmov	%0, #l.6503
-	add	%30, %29, 4
-	fld	%1, %30
-	add	%30, %29, 12
-	st	%27, %30
-	add	%29, %29, 16
-	call	%27, fless.2539
-	sub	%29, %29, 16
-	add	%30, %29, 12
-	ld	%27, %30
-	cmp	%26, %0, 0
-	breq	brne_else.10921, %26
-	fmov	%1, #l.6532
-	add	%30, %29, 4
-	fld	%0, %30
-	call	%30, fless.2539
-brne_else.10921:
-	mov	%0, 0
-	call	%30, %27
-solve_each_element_fast.2890:
-	add	%30, %29, 0
-	st	%0, %30
-	add	%30, %29, 4
-	st	%2, %30
-	add	%30, %29, 8
-	st	%1, %30
-	add	%30, %29, 12
-	st	%31, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 36
-	ld	%25, %30
-	add	%30, %29, 16
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 32
-	ld	%25, %30
-	add	%30, %29, 20
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 28
-	ld	%25, %30
-	add	%30, %29, 24
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 24
-	ld	%25, %30
-	add	%30, %29, 28
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 20
-	ld	%25, %30
-	add	%30, %29, 32
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 16
-	ld	%25, %30
-	add	%30, %29, 36
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 12
-	ld	%25, %30
-	add	%30, %29, 40
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 8
-	ld	%25, %30
-	add	%30, %29, 44
-	st	%25, %30
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %31, 4
-	ld	%25, %30
-	add	%30, %29, 48
-	st	%25, %30
-	add	%30, %29, 4
-	ld	%0, %30
-	add	%30, %29, 52
-	st	%27, %30
-	add	%29, %29, 56
-	call	%27, d_vec.2705
-	sub	%29, %29, 56
-	add	%30, %29, 52
-	ld	%27, %30
-	add	%30, %29, 52
-	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
-	add	%30, %29, 8
-	ld	%25, %30
-	add	%30, %25, %24
-	ld	%25, %30
-	add	%30, %29, 56
-	st	%25, %30
-	add	%30, %29, 56
-	ld	%25, %30
-	cmp	%26, %25, -1
 	breq	brne_else.10922, %26
-	add	%30, %29, 24
+	mov	%0, 0
+	call	%30, %27
+brne_else.10922:
+	add	%30, %29, 12
 	ld	%25, %30
-	add	%30, %29, 56
-	ld	%0, %30
-	add	%30, %29, 4
+	add	%0, %25, 1
+	add	%30, %29, 20
+	ld	%31, %30
+	add	%30, %29, 16
 	ld	%1, %30
-	mov	%31, %25
-	add	%30, %29, 60
+	add	%30, %29, 8
+	fld	%0, %30
+	add	%30, %29, 4
+	fld	%1, %30
+	add	%30, %29, 0
+	fld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10921:
+	mov	%0, 1
+	call	%30, %27
+shadow_check_and_group.2889:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%1, %30
+	add	%30, %29, 8
+	st	%31, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 28
+	ld	%22, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 24
+	ld	%25, %30
+	add	%30, %29, 12
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 20
+	ld	%25, %30
+	add	%30, %29, 16
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 16
+	ld	%1, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 12
+	ld	%25, %30
+	add	%30, %29, 20
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 24
+	st	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%25, %30
+	add	%30, %29, 28
+	st	%25, %30
+	add	%30, %29, 0
+	ld	%23, %30
+	sh	%25, %23, 2
+	add	%30, %29, 4
+	ld	%24, %30
+	add	%30, %24, %25
+	ld	%25, %30
+	cmp	%26, %25, -1
+	breq	brne_else.10923, %26
+	sh	%25, %23, 2
+	add	%30, %24, %25
+	ld	%25, %30
+	add	%30, %29, 32
+	st	%25, %30
+	add	%30, %29, 32
+	ld	%0, %30
+	add	%30, %29, 24
+	ld	%2, %30
+	mov	%31, %22
+	add	%30, %29, 36
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 64
+	add	%29, %29, 40
 	call	%27, %30
-	sub	%29, %29, 64
-	add	%30, %29, 60
+	sub	%29, %29, 40
+	add	%30, %29, 36
 	ld	%27, %30
-	add	%30, %29, 60
-	st	%0, %30
-	add	%30, %29, 60
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.10923, %26
-	add	%30, %29, 28
+	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%30, %30
-	add	%30, %29, 64
+	add	%30, %29, 36
 	fst	%30, %30
-	fmov	%0, #l.6125
-	add	%30, %29, 64
-	fld	%1, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10924, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%1, %30
-	add	%30, %29, 64
+	fmov	%1, #l.6531
+	add	%30, %29, 36
 	fld	%0, %30
-	add	%30, %29, 68
+	add	%30, %29, 44
 	st	%27, %30
-	add	%29, %29, 72
-	call	%27, fless.2539
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 48
+	call	%27, fless.2561
+	sub	%29, %29, 48
+	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10925, %26
-	fmov	%29, #l.6489
-	add	%30, %29, 64
+	fmov	%29, #l.6533
+	add	%30, %29, 36
 	fld	%30, %30
-	fadd	%30, %30, %29
-	add	%30, %29, 68
-	fst	%30, %30
-	add	%30, %29, 52
-	ld	%25, %30
-	add	%30, %25, 0
-	fld	%29, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	fmul	%29, %29, %30
+	fadd	%28, %30, %29
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 0
 	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 72
-	fst	%30, %30
-	add	%30, %29, 52
+	fmul	%29, %30, %28
+	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %25, 4
-	fld	%29, %30
-	add	%30, %29, 68
+	add	%30, %25, 0
 	fld	%30, %30
-	fmul	%29, %29, %30
+	fadd	%0, %29, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 76
-	fst	%30, %30
-	add	%30, %29, 52
+	fmul	%29, %30, %28
+	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %25, 8
-	fld	%29, %30
-	add	%30, %29, 68
+	add	%30, %25, 4
 	fld	%30, %30
-	fmul	%29, %29, %30
+	fadd	%1, %29, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
-	fadd	%30, %29, %30
-	add	%30, %29, 80
-	fst	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	fadd	%2, %29, %30
 	mov	%0, 0
-	add	%30, %29, 48
+	add	%30, %29, 28
 	ld	%25, %30
-	add	%30, %29, 8
+	add	%30, %29, 4
 	ld	%1, %30
-	add	%30, %29, 72
-	fld	%0, %30
-	add	%30, %29, 76
-	fld	%1, %30
-	add	%30, %29, 80
-	fld	%2, %30
 	mov	%31, %25
-	add	%30, %29, 84
+	add	%30, %29, 44
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 88
+	add	%29, %29, 48
 	call	%27, %30
-	sub	%29, %29, 88
-	add	%30, %29, 84
+	sub	%29, %29, 48
+	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10926, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %29, 68
-	fld	%30, %30
-	add	%30, %25, 0
-	fst	%30, %30
-	add	%30, %29, 40
-	ld	%0, %30
-	add	%30, %29, 72
-	fld	%0, %30
-	add	%30, %29, 76
-	fld	%1, %30
-	add	%30, %29, 80
-	fld	%2, %30
-	add	%30, %29, 84
-	st	%27, %30
-	add	%29, %29, 88
-	call	%27, vecset.2598
-	sub	%29, %29, 88
-	add	%30, %29, 84
-	ld	%27, %30
-	add	%30, %29, 56
-	ld	%24, %30
-	add	%30, %29, 44
-	ld	%25, %30
-	add	%30, %25, 0
-	st	%24, %30
-	add	%30, %29, 60
-	ld	%24, %30
-	add	%30, %29, 36
-	ld	%25, %30
-	add	%30, %25, 0
-	st	%24, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
+	mov	%0, 1
+	call	%30, %27
 brne_else.10926:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
 	add	%30, %29, 8
-	ld	%1, %30
+	ld	%31, %30
 	add	%30, %29, 4
-	ld	%2, %30
+	ld	%1, %30
 	ld	%30, %31
 	call	%30, %30
 brne_else.10925:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10924:
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%0, %25, 1
-	add	%30, %29, 12
-	ld	%31, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	ld	%30, %31
-	call	%30, %30
-brne_else.10923:
-	add	%30, %29, 56
+	add	%30, %29, 32
 	ld	%25, %30
 	sh	%24, %25, 2
-	add	%30, %29, 32
+	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %25, %24
 	ld	%0, %30
-	add	%30, %29, 84
+	add	%30, %29, 44
 	st	%27, %30
-	add	%29, %29, 88
-	call	%27, o_isinvert.2650
-	sub	%29, %29, 88
-	add	%30, %29, 84
+	add	%29, %29, 48
+	call	%27, o_isinvert.2672
+	sub	%29, %29, 48
+	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
 	breq	brne_else.10927, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10927:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10924:
+	mov	%0, 0
+	cmp	%26, %0, 0
+	breq	brne_else.10928, %26
+	fmov	%29, #l.6533
+	add	%30, %29, 36
+	fld	%30, %30
+	fadd	%28, %30, %29
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	fadd	%0, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 4
+	fld	%30, %30
+	fadd	%1, %29, %30
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 8
+	fld	%30, %30
+	fadd	%2, %29, %30
+	mov	%0, 0
+	add	%30, %29, 28
+	ld	%25, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 44
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 48
+	call	%27, %30
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10929, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10929:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10928:
+	add	%30, %29, 32
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, %24
+	ld	%0, %30
+	add	%30, %29, 44
+	st	%27, %30
+	add	%29, %29, 48
+	call	%27, o_isinvert.2672
+	sub	%29, %29, 48
+	add	%30, %29, 44
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10930, %26
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10930:
+	mov	%0, 0
+	call	%30, %27
+brne_else.10923:
+	mov	%0, 0
+	call	%30, %27
+shadow_check_one_or_group.2892:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%1, %30
+	add	%30, %29, 8
+	st	%31, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 0
+	ld	%23, %30
+	sh	%23, %23, 2
+	add	%30, %29, 4
+	ld	%22, %30
+	add	%30, %22, %23
+	ld	%23, %30
+	cmp	%26, %23, -1
+	breq	brne_else.10931, %26
+	sh	%23, %23, 2
+	add	%30, %24, %23
+	ld	%1, %30
+	mov	%0, 0
+	mov	%31, %25
+	add	%30, %29, 12
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 16
+	call	%27, %30
+	sub	%29, %29, 16
+	add	%30, %29, 12
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10932, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10932:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10931:
+	mov	%0, 0
+	call	%30, %27
+shadow_check_one_or_matrix.2895:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%1, %30
+	add	%30, %29, 8
+	st	%31, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 20
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 16
+	ld	%24, %30
+	add	%30, %29, 12
+	st	%24, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 12
+	ld	%24, %30
+	add	%30, %29, 16
+	st	%24, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%1, %30
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%2, %30
+	add	%30, %29, 0
+	ld	%24, %30
+	sh	%24, %24, 2
+	add	%30, %29, 4
+	ld	%23, %30
+	add	%30, %23, %24
+	ld	%24, %30
+	add	%30, %29, 20
+	st	%24, %30
+	add	%30, %29, 20
+	ld	%24, %30
+	add	%30, %24, 0
+	ld	%0, %30
+	cmp	%26, %0, -1
+	breq	brne_else.10933, %26
+	cmp	%26, %0, 99
+	breq	brne_else.10934, %26
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10935, %26
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%0, %30
+	fmov	%1, #l.6547
+	add	%30, %29, 28
+	st	%27, %30
+	add	%29, %29, 32
+	call	%27, fless.2561
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10936, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10937, %26
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10938, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10939, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10939:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10938:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10937:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10940, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10941, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10941:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10940:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10936:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10942, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10943, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10943:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10942:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10935:
+	mov	%25, 0
+	cmp	%26, %25, 0
+	breq	brne_else.10944, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10945, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10945:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10944:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10934:
+	mov	%25, 1
+	cmp	%26, %25, 0
+	breq	brne_else.10946, %26
+	mov	%0, 1
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 20
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 28
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 32
+	call	%27, %30
+	sub	%29, %29, 32
+	add	%30, %29, 28
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10947, %26
+	mov	%0, 1
+	call	%30, %27
+brne_else.10947:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10946:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 8
+	ld	%31, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10933:
+	mov	%0, 0
+	call	%30, %27
+solve_each_element.2898:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%1, %30
+	add	%30, %29, 12
+	st	%31, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 36
+	ld	%25, %30
+	add	%30, %29, 16
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 32
+	ld	%25, %30
+	add	%30, %29, 20
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 28
+	ld	%25, %30
+	add	%30, %29, 24
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 24
+	ld	%23, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 20
+	ld	%25, %30
+	add	%30, %29, 28
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 16
+	ld	%25, %30
+	add	%30, %29, 32
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 12
+	ld	%25, %30
+	add	%30, %29, 36
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 40
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%25, %30
+	add	%30, %29, 44
+	st	%25, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 8
+	ld	%25, %30
+	add	%30, %25, %24
+	ld	%25, %30
+	add	%30, %29, 48
+	st	%25, %30
+	add	%30, %29, 48
+	ld	%0, %30
+	cmp	%26, %0, -1
+	breq	brne_else.10948, %26
+	add	%30, %29, 4
+	ld	%1, %30
+	add	%30, %29, 20
+	ld	%2, %30
+	mov	%31, %23
+	add	%30, %29, 52
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 56
+	call	%27, %30
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 52
+	st	%0, %30
+	add	%30, %29, 52
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10949, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	add	%30, %29, 56
+	fst	%30, %30
+	fmov	%0, #l.6169
+	add	%30, %29, 56
+	fld	%1, %30
+	add	%30, %29, 60
+	st	%27, %30
+	add	%29, %29, 64
+	call	%27, fless.2561
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10950, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%1, %30
+	add	%30, %29, 56
+	fld	%0, %30
+	add	%30, %29, 60
+	st	%27, %30
+	add	%29, %29, 64
+	call	%27, fless.2561
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10951, %26
+	fmov	%29, #l.6533
+	add	%30, %29, 56
+	fld	%30, %30
+	fadd	%30, %30, %29
+	add	%30, %29, 60
+	fst	%30, %30
+	add	%30, %29, 4
+	ld	%24, %30
+	add	%30, %24, 0
+	fld	%30, %30
+	add	%30, %29, 60
+	fld	%28, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 64
+	fst	%30, %30
+	add	%30, %24, 4
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %25, 4
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 68
+	fst	%30, %30
+	add	%30, %24, 8
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %25, 8
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 72
+	fst	%30, %30
+	mov	%0, 0
+	add	%30, %29, 44
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 64
+	fld	%0, %30
+	add	%30, %29, 68
+	fld	%1, %30
+	add	%30, %29, 72
+	fld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 76
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 80
+	call	%27, %30
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10952, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 60
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 36
+	ld	%0, %30
+	add	%30, %29, 64
+	fld	%0, %30
+	add	%30, %29, 68
+	fld	%1, %30
+	add	%30, %29, 72
+	fld	%2, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, vecset.2620
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	add	%30, %29, 48
+	ld	%24, %30
+	add	%30, %29, 40
+	ld	%25, %30
+	add	%30, %25, 0
+	st	%24, %30
+	add	%30, %29, 52
+	ld	%24, %30
+	add	%30, %29, 32
+	ld	%25, %30
+	add	%30, %25, 0
+	st	%24, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
 	add	%30, %29, 12
 	ld	%31, %30
 	add	%30, %29, 8
@@ -16964,11 +16125,75 @@ brne_else.10923:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10927:
+brne_else.10952:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10951:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10950:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10949:
+	add	%30, %29, 48
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 28
+	ld	%25, %30
+	add	%30, %25, %24
+	ld	%0, %30
+	add	%30, %29, 76
+	st	%27, %30
+	add	%29, %29, 80
+	call	%27, o_isinvert.2672
+	sub	%29, %29, 80
+	add	%30, %29, 76
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10953, %26
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10953:
 	call	%30, %27
-brne_else.10922:
+brne_else.10948:
 	call	%30, %27
-solve_one_or_network_fast.2894:
+solve_one_or_network.2902:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -16993,7 +16218,7 @@ solve_one_or_network_fast.2894:
 	add	%30, %22, %23
 	ld	%23, %30
 	cmp	%26, %23, -1
-	breq	brne_else.10930, %26
+	breq	brne_else.10956, %26
 	sh	%23, %23, 2
 	add	%30, %24, %23
 	ld	%1, %30
@@ -17020,9 +16245,586 @@ solve_one_or_network_fast.2894:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10930:
+brne_else.10956:
 	call	%30, %27
-trace_or_matrix_fast.2898:
+trace_or_matrix.2906:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%1, %30
+	add	%30, %29, 12
+	st	%31, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 20
+	ld	%25, %30
+	add	%30, %29, 16
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 16
+	ld	%2, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 12
+	ld	%25, %30
+	add	%30, %29, 20
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 24
+	st	%24, %30
+	add	%30, %29, 0
+	ld	%24, %30
+	sh	%24, %24, 2
+	add	%30, %29, 8
+	ld	%23, %30
+	add	%30, %23, %24
+	ld	%24, %30
+	add	%30, %29, 28
+	st	%24, %30
+	add	%30, %29, 28
+	ld	%1, %30
+	add	%30, %1, 0
+	ld	%0, %30
+	cmp	%26, %0, -1
+	breq	brne_else.10958, %26
+	cmp	%26, %0, 99
+	breq	brne_else.10959, %26
+	add	%30, %29, 4
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 36
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 40
+	call	%27, %30
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10960, %26
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%0, %30
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%1, %30
+	add	%30, %29, 36
+	st	%27, %30
+	add	%29, %29, 40
+	call	%27, fless.2561
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10961, %26
+	mov	%0, 1
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 28
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 36
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 40
+	call	%27, %30
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10961:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10960:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10959:
+	mov	%0, 1
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 36
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 40
+	call	%27, %30
+	sub	%29, %29, 40
+	add	%30, %29, 36
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10958:
+	call	%30, %27
+judge_intersection.2910:
+	add	%30, %31, 12
+	ld	%23, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 0
+	st	%25, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	fmov	%30, #l.6570
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	mov	%25, 0
+	add	%30, %24, 0
+	ld	%1, %30
+	mov	%2, %0
+	mov	%31, %23
+	mov	%0, %25
+	add	%30, %29, 4
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 8
+	call	%27, %30
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	add	%30, %29, 4
+	fst	%30, %30
+	fmov	%0, #l.6547
+	add	%30, %29, 4
+	fld	%1, %30
+	add	%30, %29, 12
+	st	%27, %30
+	add	%29, %29, 16
+	call	%27, fless.2561
+	sub	%29, %29, 16
+	add	%30, %29, 12
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10963, %26
+	fmov	%1, #l.6576
+	add	%30, %29, 4
+	fld	%0, %30
+	call	%30, fless.2561
+brne_else.10963:
+	mov	%0, 0
+	call	%30, %27
+solve_each_element_fast.2912:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%1, %30
+	add	%30, %29, 12
+	st	%31, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 36
+	ld	%25, %30
+	add	%30, %29, 16
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 32
+	ld	%25, %30
+	add	%30, %29, 20
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 28
+	ld	%25, %30
+	add	%30, %29, 24
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 24
+	ld	%25, %30
+	add	%30, %29, 28
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 20
+	ld	%25, %30
+	add	%30, %29, 32
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 16
+	ld	%25, %30
+	add	%30, %29, 36
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 12
+	ld	%25, %30
+	add	%30, %29, 40
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 44
+	st	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%25, %30
+	add	%30, %29, 48
+	st	%25, %30
+	add	%30, %29, 4
+	ld	%0, %30
+	add	%30, %29, 52
+	st	%27, %30
+	add	%29, %29, 56
+	call	%27, d_vec.2727
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 52
+	st	%0, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 8
+	ld	%25, %30
+	add	%30, %25, %24
+	ld	%25, %30
+	add	%30, %29, 56
+	st	%25, %30
+	add	%30, %29, 56
+	ld	%0, %30
+	cmp	%26, %0, -1
+	breq	brne_else.10964, %26
+	add	%30, %29, 24
+	ld	%25, %30
+	add	%30, %29, 4
+	ld	%1, %30
+	mov	%31, %25
+	add	%30, %29, 60
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 64
+	call	%27, %30
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	add	%30, %29, 60
+	st	%0, %30
+	add	%30, %29, 60
+	ld	%25, %30
+	cmp	%26, %25, 0
+	breq	brne_else.10965, %26
+	add	%30, %29, 28
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	add	%30, %29, 64
+	fst	%30, %30
+	fmov	%0, #l.6169
+	add	%30, %29, 64
+	fld	%1, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10966, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%1, %30
+	add	%30, %29, 64
+	fld	%0, %30
+	add	%30, %29, 68
+	st	%27, %30
+	add	%29, %29, 72
+	call	%27, fless.2561
+	sub	%29, %29, 72
+	add	%30, %29, 68
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10967, %26
+	fmov	%29, #l.6533
+	add	%30, %29, 64
+	fld	%30, %30
+	fadd	%30, %30, %29
+	add	%30, %29, 68
+	fst	%30, %30
+	add	%30, %29, 52
+	ld	%24, %30
+	add	%30, %24, 0
+	fld	%30, %30
+	add	%30, %29, 68
+	fld	%28, %30
+	fmul	%29, %30, %28
+	add	%30, %29, 20
+	ld	%25, %30
+	add	%30, %25, 0
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 72
+	fst	%30, %30
+	add	%30, %24, 4
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %25, 4
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 76
+	fst	%30, %30
+	add	%30, %24, 8
+	fld	%30, %30
+	fmul	%29, %30, %28
+	add	%30, %25, 8
+	fld	%30, %30
+	fadd	%30, %29, %30
+	add	%30, %29, 80
+	fst	%30, %30
+	mov	%0, 0
+	add	%30, %29, 48
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 72
+	fld	%0, %30
+	add	%30, %29, 76
+	fld	%1, %30
+	add	%30, %29, 80
+	fld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 84
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 88
+	call	%27, %30
+	sub	%29, %29, 88
+	add	%30, %29, 84
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10968, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %29, 68
+	fld	%30, %30
+	add	%30, %25, 0
+	fst	%30, %30
+	add	%30, %29, 40
+	ld	%0, %30
+	add	%30, %29, 72
+	fld	%0, %30
+	add	%30, %29, 76
+	fld	%1, %30
+	add	%30, %29, 80
+	fld	%2, %30
+	add	%30, %29, 84
+	st	%27, %30
+	add	%29, %29, 88
+	call	%27, vecset.2620
+	sub	%29, %29, 88
+	add	%30, %29, 84
+	ld	%27, %30
+	add	%30, %29, 56
+	ld	%24, %30
+	add	%30, %29, 44
+	ld	%25, %30
+	add	%30, %25, 0
+	st	%24, %30
+	add	%30, %29, 60
+	ld	%24, %30
+	add	%30, %29, 36
+	ld	%25, %30
+	add	%30, %25, 0
+	st	%24, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10968:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10967:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10966:
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10965:
+	add	%30, %29, 56
+	ld	%25, %30
+	sh	%24, %25, 2
+	add	%30, %29, 32
+	ld	%25, %30
+	add	%30, %25, %24
+	ld	%0, %30
+	add	%30, %29, 84
+	st	%27, %30
+	add	%29, %29, 88
+	call	%27, o_isinvert.2672
+	sub	%29, %29, 88
+	add	%30, %29, 84
+	ld	%27, %30
+	cmp	%26, %0, 0
+	breq	brne_else.10969, %26
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10969:
+	call	%30, %27
+brne_else.10964:
+	call	%30, %27
+solve_one_or_network_fast.2916:
+	add	%30, %29, 0
+	st	%0, %30
+	add	%30, %29, 4
+	st	%2, %30
+	add	%30, %29, 8
+	st	%1, %30
+	add	%30, %29, 12
+	st	%31, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 8
+	ld	%25, %30
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 0
+	ld	%23, %30
+	sh	%23, %23, 2
+	add	%30, %29, 8
+	ld	%22, %30
+	add	%30, %22, %23
+	ld	%23, %30
+	cmp	%26, %23, -1
+	breq	brne_else.10972, %26
+	sh	%23, %23, 2
+	add	%30, %24, %23
+	ld	%1, %30
+	mov	%0, 0
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	add	%0, %25, 1
+	add	%30, %29, 12
+	ld	%31, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	ld	%30, %31
+	call	%30, %30
+brne_else.10972:
+	call	%30, %27
+trace_or_matrix_fast.2920:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -17063,13 +16865,13 @@ trace_or_matrix_fast.2898:
 	add	%30, %29, 28
 	st	%24, %30
 	add	%30, %29, 28
-	ld	%24, %30
-	add	%30, %24, 0
+	ld	%1, %30
+	add	%30, %1, 0
 	ld	%0, %30
 	cmp	%26, %0, -1
-	breq	brne_else.10932, %26
+	breq	brne_else.10974, %26
 	cmp	%26, %0, 99
-	breq	brne_else.10933, %26
+	breq	brne_else.10975, %26
 	add	%30, %29, 4
 	ld	%1, %30
 	mov	%31, %25
@@ -17082,7 +16884,7 @@ trace_or_matrix_fast.2898:
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10934, %26
+	breq	brne_else.10976, %26
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %25, 0
@@ -17094,12 +16896,12 @@ trace_or_matrix_fast.2898:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10935, %26
+	breq	brne_else.10977, %26
 	mov	%0, 1
 	add	%30, %29, 24
 	ld	%25, %30
@@ -17127,7 +16929,7 @@ trace_or_matrix_fast.2898:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10935:
+brne_else.10977:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
@@ -17139,7 +16941,7 @@ brne_else.10935:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10934:
+brne_else.10976:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%0, %25, 1
@@ -17151,12 +16953,10 @@ brne_else.10934:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10933:
+brne_else.10975:
 	mov	%0, 1
 	add	%30, %29, 24
 	ld	%25, %30
-	add	%30, %29, 28
-	ld	%1, %30
 	add	%30, %29, 4
 	ld	%2, %30
 	mov	%31, %25
@@ -17179,9 +16979,9 @@ brne_else.10933:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10932:
+brne_else.10974:
 	call	%30, %27
-judge_intersection_fast.2902:
+judge_intersection_fast.2924:
 	add	%30, %31, 12
 	ld	%23, %30
 	add	%30, %31, 8
@@ -17190,7 +16990,7 @@ judge_intersection_fast.2902:
 	st	%25, %30
 	add	%30, %31, 4
 	ld	%24, %30
-	fmov	%30, #l.6526
+	fmov	%30, #l.6570
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -17215,26 +17015,26 @@ judge_intersection_fast.2902:
 	fld	%30, %30
 	add	%30, %29, 4
 	fst	%30, %30
-	fmov	%0, #l.6503
+	fmov	%0, #l.6547
 	add	%30, %29, 4
 	fld	%1, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10937, %26
-	fmov	%1, #l.6532
+	breq	brne_else.10979, %26
+	fmov	%1, #l.6576
 	add	%30, %29, 4
 	fld	%0, %30
-	call	%30, fless.2539
-brne_else.10937:
+	call	%30, fless.2561
+brne_else.10979:
 	mov	%0, 0
 	call	%30, %27
-get_nvector_rect.2904:
+get_nvector_rect.2926:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 8
@@ -17252,17 +17052,15 @@ get_nvector_rect.2904:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, vecbzero.2606
+	call	%27, vecbzero.2628
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 8
 	ld	%25, %30
-	sub	%25, %25, 1
+	sub	%24, %25, 1
 	add	%30, %29, 12
-	st	%25, %30
-	add	%30, %29, 8
-	ld	%25, %30
+	st	%24, %30
 	sub	%25, %25, 1
 	sh	%25, %25, 2
 	add	%30, %29, 0
@@ -17272,14 +17070,14 @@ get_nvector_rect.2904:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, sgn.2590
+	call	%27, sgn.2612
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17291,7 +17089,7 @@ get_nvector_rect.2904:
 	add	%30, %24, %25
 	fst	%0, %30
 	call	%30, %27
-get_nvector_plane.2906:
+get_nvector_plane.2928:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 4
@@ -17303,14 +17101,14 @@ get_nvector_plane.2906:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -17323,14 +17121,14 @@ get_nvector_plane.2906:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -17343,14 +17141,14 @@ get_nvector_plane.2906:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -17359,7 +17157,7 @@ get_nvector_plane.2906:
 	add	%30, %25, 8
 	fst	%0, %30
 	call	%30, %27
-get_nvector_second.2908:
+get_nvector_second.2930:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 8
@@ -17381,7 +17179,7 @@ get_nvector_second.2908:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17401,7 +17199,7 @@ get_nvector_second.2908:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -17421,7 +17219,7 @@ get_nvector_second.2908:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -17435,7 +17233,7 @@ get_nvector_second.2908:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -17449,7 +17247,7 @@ get_nvector_second.2908:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -17463,7 +17261,7 @@ get_nvector_second.2908:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -17477,18 +17275,18 @@ get_nvector_second.2908:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_isrot.2652
+	call	%27, o_isrot.2674
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10940, %26
+	breq	brne_else.10982, %26
 	add	%30, %29, 0
 	ld	%0, %30
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -17502,7 +17300,7 @@ get_nvector_second.2908:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -17515,7 +17313,7 @@ get_nvector_second.2908:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -17531,7 +17329,7 @@ get_nvector_second.2908:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_r3.2682
+	call	%27, o_param_r3.2704
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -17545,7 +17343,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17558,7 +17356,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17574,7 +17372,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r2.2680
+	call	%27, o_param_r2.2702
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17588,7 +17386,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_r1.2678
+	call	%27, o_param_r1.2700
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17601,7 +17399,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, fhalf.2551
+	call	%27, fhalf.2573
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17617,7 +17415,7 @@ get_nvector_second.2908:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17625,22 +17423,18 @@ get_nvector_second.2908:
 	ld	%25, %30
 	mov	%1, %0
 	mov	%0, %25
-	call	%30, vecunit_sgn.2616
-brne_else.10940:
+	call	%30, vecunit_sgn.2638
+brne_else.10982:
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %29, 36
 	fld	%30, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	add	%30, %29, 4
-	ld	%25, %30
 	add	%30, %29, 40
 	fld	%30, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 4
-	ld	%25, %30
 	add	%30, %29, 44
 	fld	%30, %30
 	add	%30, %25, 8
@@ -17650,7 +17444,7 @@ brne_else.10940:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_isinvert.2650
+	call	%27, o_isinvert.2672
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17658,8 +17452,8 @@ brne_else.10940:
 	ld	%25, %30
 	mov	%1, %0
 	mov	%0, %25
-	call	%30, vecunit_sgn.2616
-get_nvector.2910:
+	call	%30, vecunit_sgn.2638
+get_nvector.2932:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -17681,14 +17475,14 @@ get_nvector.2910:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.10941, %26
+	breq	brne_else.10983, %26
 	cmp	%26, %0, 2
-	breq	brne_else.10942, %26
+	breq	brne_else.10984, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %29, 4
@@ -17696,7 +17490,7 @@ get_nvector.2910:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10942:
+brne_else.10984:
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %29, 4
@@ -17704,7 +17498,7 @@ brne_else.10942:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.10941:
+brne_else.10983:
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 0
@@ -17712,7 +17506,7 @@ brne_else.10941:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-utexture.2913:
+utexture.2935:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -17726,7 +17520,7 @@ utexture.2913:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, o_texturetype.2644
+	call	%27, o_texturetype.2666
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -17737,7 +17531,7 @@ utexture.2913:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_color_red.2672
+	call	%27, o_color_red.2694
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17750,7 +17544,7 @@ utexture.2913:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_color_green.2674
+	call	%27, o_color_green.2696
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17763,7 +17557,7 @@ utexture.2913:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_color_blue.2676
+	call	%27, o_color_blue.2698
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17774,21 +17568,15 @@ utexture.2913:
 	add	%30, %29, 12
 	ld	%25, %30
 	cmp	%26, %25, 1
-	breq	brne_else.10943, %26
-	add	%30, %29, 12
-	ld	%25, %30
+	breq	brne_else.10985, %26
 	cmp	%26, %25, 2
-	breq	brne_else.10944, %26
-	add	%30, %29, 12
-	ld	%25, %30
+	breq	brne_else.10986, %26
 	cmp	%26, %25, 3
-	breq	brne_else.10945, %26
-	add	%30, %29, 12
-	ld	%25, %30
+	breq	brne_else.10987, %26
 	cmp	%26, %25, 4
-	breq	brne_else.10946, %26
+	breq	brne_else.10988, %26
 	call	%30, %27
-brne_else.10946:
+brne_else.10988:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -17800,7 +17588,7 @@ brne_else.10946:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -17814,7 +17602,7 @@ brne_else.10946:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -17841,7 +17629,7 @@ brne_else.10946:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -17855,7 +17643,7 @@ brne_else.10946:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -17876,7 +17664,7 @@ brne_else.10946:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -17887,7 +17675,7 @@ brne_else.10946:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -17901,21 +17689,21 @@ brne_else.10946:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
-	fmov	%1, #l.6581
+	fmov	%1, #l.6625
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10948, %26
-	fmov	%30, #l.6583
+	breq	brne_else.10990, %26
+	fmov	%30, #l.6627
 	add	%30, %29, 48
 	fst	%30, %30
 	add	%30, %29, 48
@@ -17943,7 +17731,7 @@ brne_else.10946:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -17957,7 +17745,7 @@ brne_else.10946:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -17978,21 +17766,21 @@ brne_else.10946:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
-	fmov	%1, #l.6581
+	fmov	%1, #l.6625
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10949, %26
-	fmov	%30, #l.6583
+	breq	brne_else.10991, %26
+	fmov	%30, #l.6627
 	add	%30, %29, 68
 	fst	%30, %30
 	add	%30, %29, 68
@@ -18009,17 +17797,17 @@ brne_else.10946:
 	fsub	%30, %30, %0
 	add	%30, %29, 72
 	fst	%30, %30
-	fmov	%30, #l.6594
+	fmov	%30, #l.6638
 	add	%30, %29, 76
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 52
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
@@ -18028,14 +17816,14 @@ brne_else.10946:
 	fsub	%30, %30, %0
 	add	%30, %29, 80
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 72
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
@@ -18049,16 +17837,16 @@ brne_else.10946:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10950, %26
-	fmov	%29, #l.6125
-	fmov	%30, #l.6600
+	breq	brne_else.10992, %26
+	fmov	%29, #l.6169
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18066,13 +17854,13 @@ brne_else.10946:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10950:
+brne_else.10992:
 	add	%30, %29, 84
 	fld	%30, %30
 	fmov	%29, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18080,7 +17868,7 @@ brne_else.10950:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10949:
+brne_else.10991:
 	add	%30, %29, 64
 	fld	%30, %30
 	add	%30, %29, 44
@@ -18090,7 +17878,7 @@ brne_else.10949:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18101,9 +17889,9 @@ brne_else.10949:
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
-	fmov	%30, #l.6585
+	fmov	%30, #l.6629
 	fmul	%29, %0, %30
-	fmov	%30, #l.6587
+	fmov	%30, #l.6631
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 68
@@ -18122,17 +17910,17 @@ brne_else.10949:
 	fsub	%30, %30, %0
 	add	%30, %29, 72
 	fst	%30, %30
-	fmov	%30, #l.6594
+	fmov	%30, #l.6638
 	add	%30, %29, 76
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 52
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18141,14 +17929,14 @@ brne_else.10949:
 	fsub	%30, %30, %0
 	add	%30, %29, 80
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 72
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18162,16 +17950,16 @@ brne_else.10949:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10953, %26
-	fmov	%29, #l.6125
-	fmov	%30, #l.6600
+	breq	brne_else.10995, %26
+	fmov	%29, #l.6169
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18179,13 +17967,13 @@ brne_else.10949:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10953:
+brne_else.10995:
 	add	%30, %29, 84
 	fld	%30, %30
 	fmov	%29, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18193,7 +17981,7 @@ brne_else.10953:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10948:
+brne_else.10990:
 	add	%30, %29, 36
 	fld	%30, %30
 	add	%30, %29, 24
@@ -18203,7 +17991,7 @@ brne_else.10948:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18214,9 +18002,9 @@ brne_else.10948:
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
-	fmov	%30, #l.6585
+	fmov	%30, #l.6629
 	fmul	%29, %0, %30
-	fmov	%30, #l.6587
+	fmov	%30, #l.6631
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 48
@@ -18246,7 +18034,7 @@ brne_else.10948:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, o_param_y.2664
+	call	%27, o_param_y.2686
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18260,7 +18048,7 @@ brne_else.10948:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18281,21 +18069,21 @@ brne_else.10948:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
-	fmov	%1, #l.6581
+	fmov	%1, #l.6625
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10956, %26
-	fmov	%30, #l.6583
+	breq	brne_else.10998, %26
+	fmov	%30, #l.6627
 	add	%30, %29, 68
 	fst	%30, %30
 	add	%30, %29, 68
@@ -18312,17 +18100,17 @@ brne_else.10948:
 	fsub	%30, %30, %0
 	add	%30, %29, 72
 	fst	%30, %30
-	fmov	%30, #l.6594
+	fmov	%30, #l.6638
 	add	%30, %29, 76
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 52
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18331,14 +18119,14 @@ brne_else.10948:
 	fsub	%30, %30, %0
 	add	%30, %29, 80
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 72
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18352,16 +18140,16 @@ brne_else.10948:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10957, %26
-	fmov	%29, #l.6125
-	fmov	%30, #l.6600
+	breq	brne_else.10999, %26
+	fmov	%29, #l.6169
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18369,13 +18157,13 @@ brne_else.10948:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10957:
+brne_else.10999:
 	add	%30, %29, 84
 	fld	%30, %30
 	fmov	%29, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18383,7 +18171,7 @@ brne_else.10957:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10956:
+brne_else.10998:
 	add	%30, %29, 64
 	fld	%30, %30
 	add	%30, %29, 44
@@ -18393,7 +18181,7 @@ brne_else.10956:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fabs.2555
+	call	%27, fabs.2577
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18404,9 +18192,9 @@ brne_else.10956:
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
-	fmov	%30, #l.6585
+	fmov	%30, #l.6629
 	fmul	%29, %0, %30
-	fmov	%30, #l.6587
+	fmov	%30, #l.6631
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 68
@@ -18425,17 +18213,17 @@ brne_else.10956:
 	fsub	%30, %30, %0
 	add	%30, %29, 72
 	fst	%30, %30
-	fmov	%30, #l.6594
+	fmov	%30, #l.6638
 	add	%30, %29, 76
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 52
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18444,14 +18232,14 @@ brne_else.10956:
 	fsub	%30, %30, %0
 	add	%30, %29, 80
 	fst	%30, %30
-	fmov	%29, #l.6596
+	fmov	%29, #l.6640
 	add	%30, %29, 72
 	fld	%30, %30
 	fsub	%0, %29, %30
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18465,16 +18253,16 @@ brne_else.10956:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10960, %26
-	fmov	%29, #l.6125
-	fmov	%30, #l.6600
+	breq	brne_else.11002, %26
+	fmov	%29, #l.6169
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18482,13 +18270,13 @@ brne_else.10956:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10960:
+brne_else.11002:
 	add	%30, %29, 84
 	fld	%30, %30
 	fmov	%29, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%29, %30, %29
-	fmov	%30, #l.6602
+	fmov	%30, #l.6646
 	finv	%31, %30
 	fmul	%30, %29, %31
 	add	%30, %29, 8
@@ -18496,7 +18284,7 @@ brne_else.10960:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10945:
+brne_else.10987:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -18508,7 +18296,7 @@ brne_else.10945:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -18528,7 +18316,7 @@ brne_else.10945:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
@@ -18542,7 +18330,7 @@ brne_else.10945:
 	add	%30, %29, 108
 	st	%27, %30
 	add	%29, %29, 112
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 112
 	add	%30, %29, 108
 	ld	%27, %30
@@ -18553,7 +18341,7 @@ brne_else.10945:
 	add	%30, %29, 108
 	st	%27, %30
 	add	%29, %29, 112
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 112
 	add	%30, %29, 108
 	ld	%27, %30
@@ -18567,7 +18355,7 @@ brne_else.10945:
 	sub	%29, %29, 112
 	add	%30, %29, 108
 	ld	%27, %30
-	fmov	%30, #l.6607
+	fmov	%30, #l.6651
 	finv	%31, %30
 	fmul	%30, %0, %31
 	add	%30, %29, 108
@@ -18584,7 +18372,7 @@ brne_else.10945:
 	add	%30, %29, 108
 	fld	%30, %30
 	fsub	%29, %30, %0
-	fmov	%30, #l.6587
+	fmov	%30, #l.6631
 	fmul	%0, %29, %30
 	add	%30, %29, 116
 	st	%27, %30
@@ -18596,31 +18384,29 @@ brne_else.10945:
 	add	%30, %29, 116
 	st	%27, %30
 	add	%29, %29, 120
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 120
 	add	%30, %29, 116
 	ld	%27, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%30, %0, %30
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	fsub	%29, %30, %0
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%30, %29, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10944:
+brne_else.10986:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 4
 	fld	%29, %30
-	fmov	%30, #l.6616
+	fmov	%30, #l.6660
 	fmul	%0, %29, %30
 	add	%30, %29, 116
 	st	%27, %30
@@ -18632,26 +18418,24 @@ brne_else.10944:
 	add	%30, %29, 116
 	st	%27, %30
 	add	%29, %29, 120
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 120
 	add	%30, %29, 116
 	ld	%27, %30
-	fmov	%30, #l.6600
+	fmov	%30, #l.6644
 	fmul	%30, %30, %0
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	fmov	%29, #l.6600
-	fmov	%30, #l.6134
+	fmov	%29, #l.6644
+	fmov	%30, #l.6178
 	fsub	%30, %30, %0
 	fmul	%30, %29, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	call	%30, %27
-brne_else.10943:
+brne_else.10985:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%30, %25, 0
@@ -18663,7 +18447,7 @@ brne_else.10943:
 	add	%30, %29, 116
 	st	%27, %30
 	add	%29, %29, 120
-	call	%27, o_param_x.2662
+	call	%27, o_param_x.2684
 	sub	%29, %29, 120
 	add	%30, %29, 116
 	ld	%27, %30
@@ -18672,7 +18456,7 @@ brne_else.10943:
 	fsub	%30, %30, %0
 	add	%30, %29, 116
 	fst	%30, %30
-	fmov	%29, #l.6624
+	fmov	%29, #l.6668
 	add	%30, %29, 116
 	fld	%30, %30
 	fmul	%0, %30, %29
@@ -18683,16 +18467,16 @@ brne_else.10943:
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
-	fmov	%30, #l.6626
+	fmov	%30, #l.6670
 	fmul	%29, %0, %30
 	add	%30, %29, 116
 	fld	%30, %30
 	fsub	%0, %30, %29
-	fmov	%1, #l.6607
+	fmov	%1, #l.6651
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -18709,7 +18493,7 @@ brne_else.10943:
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, o_param_z.2666
+	call	%27, o_param_z.2688
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
@@ -18718,7 +18502,7 @@ brne_else.10943:
 	fsub	%30, %30, %0
 	add	%30, %29, 128
 	fst	%30, %30
-	fmov	%29, #l.6624
+	fmov	%29, #l.6668
 	add	%30, %29, 128
 	fld	%30, %30
 	fmul	%0, %30, %29
@@ -18729,55 +18513,55 @@ brne_else.10943:
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
-	fmov	%30, #l.6626
+	fmov	%30, #l.6670
 	fmul	%29, %0, %30
 	add	%30, %29, 128
 	fld	%30, %30
 	fsub	%0, %30, %29
-	fmov	%1, #l.6607
+	fmov	%1, #l.6651
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
 	add	%30, %29, 120
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.10965, %26
+	breq	brne_else.11007, %26
 	cmp	%26, %0, 0
-	breq	brne_else.10966, %26
-	fmov	%30, #l.6600
+	breq	brne_else.11008, %26
+	fmov	%30, #l.6644
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	call	%30, %27
-brne_else.10966:
-	fmov	%30, #l.6125
+brne_else.11008:
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	call	%30, %27
-brne_else.10965:
+brne_else.11007:
 	cmp	%26, %0, 0
-	breq	brne_else.10969, %26
-	fmov	%30, #l.6125
+	breq	brne_else.11011, %26
+	fmov	%30, #l.6169
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	call	%30, %27
-brne_else.10969:
-	fmov	%30, #l.6600
+brne_else.11011:
+	fmov	%30, #l.6644
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
 	call	%30, %27
-add_light.2916:
+add_light.2938:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -18797,12 +18581,12 @@ add_light.2916:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10972, %26
+	breq	brne_else.11014, %26
 	add	%30, %29, 16
 	ld	%0, %30
 	add	%30, %29, 12
@@ -18812,7 +18596,7 @@ add_light.2916:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, vecaccum.2627
+	call	%27, vecaccum.2649
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -18821,25 +18605,25 @@ add_light.2916:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10973, %26
+	breq	brne_else.11015, %26
 	add	%30, %29, 4
 	fld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -18874,33 +18658,33 @@ add_light.2916:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10973:
+brne_else.11015:
 	call	%30, %27
-brne_else.10972:
+brne_else.11014:
 	add	%30, %29, 4
 	fld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10976, %26
+	breq	brne_else.11018, %26
 	add	%30, %29, 4
 	fld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -18935,9 +18719,9 @@ brne_else.10972:
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.10976:
+brne_else.11018:
 	call	%30, %27
-trace_reflections.2920:
+trace_reflections.2942:
 	add	%30, %29, 0
 	fst	%1, %30
 	add	%30, %29, 4
@@ -18998,11 +18782,9 @@ trace_reflections.2920:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.10979, %26
+	brle	bgt_else.11021, %26
 	call	%30, %27
-bgt_else.10979:
-	add	%30, %29, 8
-	ld	%25, %30
+bgt_else.11021:
 	sh	%25, %25, 2
 	add	%30, %24, %25
 	ld	%25, %30
@@ -19013,7 +18795,7 @@ bgt_else.10979:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, r_dvec.2711
+	call	%27, r_dvec.2733
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -19033,7 +18815,7 @@ bgt_else.10979:
 	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10981, %26
+	breq	brne_else.11023, %26
 	add	%30, %29, 40
 	ld	%25, %30
 	add	%30, %25, 0
@@ -19051,14 +18833,14 @@ bgt_else.10979:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, r_surface_id.2709
+	call	%27, r_surface_id.2731
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 56
 	ld	%25, %30
 	cmp	%26, %25, %0
-	breq	brne_else.10982, %26
+	breq	brne_else.11024, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	sub	%0, %25, 1
@@ -19072,7 +18854,7 @@ bgt_else.10979:
 	fld	%1, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10982:
+brne_else.11024:
 	mov	%0, 0
 	add	%30, %29, 24
 	ld	%25, %30
@@ -19090,7 +18872,7 @@ brne_else.10982:
 	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10983, %26
+	breq	brne_else.11025, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	sub	%0, %25, 1
@@ -19104,13 +18886,13 @@ brne_else.10982:
 	fld	%1, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10983:
+brne_else.11025:
 	add	%30, %29, 52
 	ld	%0, %30
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -19121,7 +18903,7 @@ brne_else.10983:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -19132,7 +18914,7 @@ brne_else.10983:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, r_bright.2713
+	call	%27, r_bright.2735
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -19153,7 +18935,7 @@ brne_else.10983:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -19164,7 +18946,7 @@ brne_else.10983:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -19199,7 +18981,7 @@ brne_else.10983:
 	fld	%1, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10981:
+brne_else.11023:
 	add	%30, %29, 8
 	ld	%25, %30
 	sub	%0, %25, 1
@@ -19213,7 +18995,7 @@ brne_else.10981:
 	fld	%1, %30
 	ld	%30, %31
 	call	%30, %30
-trace_ray.2925:
+trace_ray.2947:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -19349,15 +19131,15 @@ trace_ray.2925:
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, 4
-	brle	bgt_else.10984, %26
+	brle	bgt_else.11026, %26
 	call	%30, %27
-bgt_else.10984:
+bgt_else.11026:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 108
 	st	%27, %30
 	add	%29, %29, 112
-	call	%27, p_surface_ids.2690
+	call	%27, p_surface_ids.2712
 	sub	%29, %29, 112
 	add	%30, %29, 108
 	ld	%27, %30
@@ -19377,7 +19159,7 @@ bgt_else.10984:
 	add	%30, %29, 108
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10986, %26
+	breq	brne_else.11028, %26
 	add	%30, %29, 88
 	ld	%25, %30
 	add	%30, %25, 0
@@ -19398,7 +19180,7 @@ bgt_else.10984:
 	add	%30, %29, 116
 	st	%27, %30
 	add	%29, %29, 120
-	call	%27, o_reflectiontype.2648
+	call	%27, o_reflectiontype.2670
 	sub	%29, %29, 120
 	add	%30, %29, 116
 	ld	%27, %30
@@ -19409,7 +19191,7 @@ bgt_else.10984:
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -19440,7 +19222,7 @@ bgt_else.10984:
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -19479,7 +19261,7 @@ bgt_else.10984:
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, p_intersection_points.2688
+	call	%27, p_intersection_points.2710
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -19493,7 +19275,7 @@ bgt_else.10984:
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -19502,7 +19284,7 @@ bgt_else.10984:
 	add	%30, %29, 124
 	st	%27, %30
 	add	%29, %29, 128
-	call	%27, p_calc_diffuse.2692
+	call	%27, p_calc_diffuse.2714
 	sub	%29, %29, 128
 	add	%30, %29, 124
 	ld	%27, %30
@@ -19513,20 +19295,20 @@ bgt_else.10984:
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
-	fmov	%1, #l.6596
+	fmov	%1, #l.6640
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10987, %26
+	breq	brne_else.11029, %26
 	mov	%23, 0
 	add	%30, %29, 8
 	ld	%25, %30
@@ -19535,7 +19317,7 @@ bgt_else.10984:
 	ld	%25, %30
 	add	%30, %25, %24
 	st	%23, %30
-	fmov	%30, #l.6661
+	fmov	%30, #l.6705
 	add	%30, %29, 128
 	fst	%30, %30
 	add	%30, %29, 16
@@ -19545,7 +19327,7 @@ bgt_else.10984:
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
@@ -19559,7 +19341,7 @@ bgt_else.10984:
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, vecaccum.2627
+	call	%27, vecaccum.2649
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
@@ -19568,7 +19350,7 @@ bgt_else.10984:
 	add	%30, %29, 132
 	st	%27, %30
 	add	%29, %29, 136
-	call	%27, o_hilight.2670
+	call	%27, o_hilight.2692
 	sub	%29, %29, 136
 	add	%30, %29, 132
 	ld	%27, %30
@@ -19594,7 +19376,7 @@ bgt_else.10984:
 	add	%30, %29, 140
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10988, %26
+	breq	brne_else.11030, %26
 	add	%30, %29, 48
 	ld	%25, %30
 	add	%30, %29, 84
@@ -19630,23 +19412,23 @@ bgt_else.10984:
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
-	fmov	%0, #l.6665
+	fmov	%0, #l.6709
 	add	%30, %29, 0
 	fld	%1, %30
 	add	%30, %29, 140
 	st	%27, %30
 	add	%29, %29, 144
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10989, %26
+	breq	brne_else.11031, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, 4
 	sub	%26, 0, %26
-	brle	bgt_else.10990, %26
+	brle	bgt_else.11032, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%25, %25, 1
@@ -19659,10 +19441,10 @@ bgt_else.10984:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10991, %26
+	breq	brne_else.11033, %26
 	call	%30, %27
-brne_else.10991:
-	fmov	%30, #l.6134
+brne_else.11033:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -19670,7 +19452,7 @@ brne_else.10991:
 	add	%30, %29, 140
 	st	%27, %30
 	add	%29, %29, 144
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
@@ -19698,14 +19480,14 @@ brne_else.10991:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.10990:
+bgt_else.11032:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10993, %26
+	breq	brne_else.11035, %26
 	call	%30, %27
-brne_else.10993:
-	fmov	%30, #l.6134
+brne_else.11035:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -19713,7 +19495,7 @@ brne_else.10993:
 	add	%30, %29, 140
 	st	%27, %30
 	add	%29, %29, 144
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
@@ -19741,9 +19523,9 @@ brne_else.10993:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10989:
+brne_else.11031:
 	call	%30, %27
-brne_else.10988:
+brne_else.11030:
 	add	%30, %29, 64
 	ld	%0, %30
 	add	%30, %29, 72
@@ -19751,14 +19533,14 @@ brne_else.10988:
 	add	%30, %29, 140
 	st	%27, %30
 	add	%29, %29, 144
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
 	add	%30, %29, 140
 	st	%27, %30
 	add	%29, %29, 144
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 144
 	add	%30, %29, 140
 	ld	%27, %30
@@ -19774,14 +19556,14 @@ brne_else.10988:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -19837,23 +19619,23 @@ brne_else.10988:
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
-	fmov	%0, #l.6665
+	fmov	%0, #l.6709
 	add	%30, %29, 0
 	fld	%1, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.10996, %26
+	breq	brne_else.11038, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, 4
 	sub	%26, 0, %26
-	brle	bgt_else.10997, %26
+	brle	bgt_else.11039, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%25, %25, 1
@@ -19866,10 +19648,10 @@ brne_else.10988:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.10998, %26
+	breq	brne_else.11040, %26
 	call	%30, %27
-brne_else.10998:
-	fmov	%30, #l.6134
+brne_else.11040:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -19877,7 +19659,7 @@ brne_else.10998:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -19905,14 +19687,14 @@ brne_else.10998:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.10997:
+bgt_else.11039:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.11000, %26
+	breq	brne_else.11042, %26
 	call	%30, %27
-brne_else.11000:
-	fmov	%30, #l.6134
+brne_else.11042:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -19920,7 +19702,7 @@ brne_else.11000:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -19948,9 +19730,9 @@ brne_else.11000:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.10996:
+brne_else.11038:
 	call	%30, %27
-brne_else.10987:
+brne_else.11029:
 	mov	%23, 1
 	add	%30, %29, 8
 	ld	%25, %30
@@ -19964,7 +19746,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, p_energy.2694
+	call	%27, p_energy.2716
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -19982,7 +19764,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -19993,14 +19775,14 @@ brne_else.10987:
 	ld	%25, %30
 	add	%30, %25, %24
 	ld	%0, %30
-	fmov	%29, #l.6658
+	fmov	%29, #l.6702
 	add	%30, %29, 120
 	fld	%30, %30
 	fmul	%0, %29, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, vecscale.2637
+	call	%27, vecscale.2659
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20009,7 +19791,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, p_nvectors.2703
+	call	%27, p_nvectors.2725
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20023,11 +19805,11 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
-	fmov	%30, #l.6661
+	fmov	%30, #l.6705
 	add	%30, %29, 128
 	fst	%30, %30
 	add	%30, %29, 16
@@ -20037,7 +19819,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20051,7 +19833,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, vecaccum.2627
+	call	%27, vecaccum.2649
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20060,7 +19842,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_hilight.2670
+	call	%27, o_hilight.2692
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20086,7 +19868,7 @@ brne_else.10987:
 	add	%30, %29, 148
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11003, %26
+	breq	brne_else.11045, %26
 	add	%30, %29, 48
 	ld	%25, %30
 	add	%30, %29, 84
@@ -20122,23 +19904,23 @@ brne_else.10987:
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
-	fmov	%0, #l.6665
+	fmov	%0, #l.6709
 	add	%30, %29, 0
 	fld	%1, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11004, %26
+	breq	brne_else.11046, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, 4
 	sub	%26, 0, %26
-	brle	bgt_else.11005, %26
+	brle	bgt_else.11047, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%25, %25, 1
@@ -20151,10 +19933,10 @@ brne_else.10987:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.11006, %26
+	breq	brne_else.11048, %26
 	call	%30, %27
-brne_else.11006:
-	fmov	%30, #l.6134
+brne_else.11048:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -20162,7 +19944,7 @@ brne_else.11006:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20190,14 +19972,14 @@ brne_else.11006:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11005:
+bgt_else.11047:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.11008, %26
+	breq	brne_else.11050, %26
 	call	%30, %27
-brne_else.11008:
-	fmov	%30, #l.6134
+brne_else.11050:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -20205,7 +19987,7 @@ brne_else.11008:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20233,9 +20015,9 @@ brne_else.11008:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11004:
+brne_else.11046:
 	call	%30, %27
-brne_else.11003:
+brne_else.11045:
 	add	%30, %29, 64
 	ld	%0, %30
 	add	%30, %29, 72
@@ -20243,14 +20025,14 @@ brne_else.11003:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20266,14 +20048,14 @@ brne_else.11003:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20329,23 +20111,23 @@ brne_else.11003:
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
-	fmov	%0, #l.6665
+	fmov	%0, #l.6709
 	add	%30, %29, 0
 	fld	%1, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11011, %26
+	breq	brne_else.11053, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	cmp	%26, %25, 4
 	sub	%26, 0, %26
-	brle	bgt_else.11012, %26
+	brle	bgt_else.11054, %26
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%25, %25, 1
@@ -20358,10 +20140,10 @@ brne_else.11003:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.11013, %26
+	breq	brne_else.11055, %26
 	call	%30, %27
-brne_else.11013:
-	fmov	%30, #l.6134
+brne_else.11055:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -20369,7 +20151,7 @@ brne_else.11013:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20397,14 +20179,14 @@ brne_else.11013:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11012:
+bgt_else.11054:
 	add	%30, %29, 116
 	ld	%25, %30
 	cmp	%26, %25, 2
-	breq	brne_else.11015, %26
+	breq	brne_else.11057, %26
 	call	%30, %27
-brne_else.11015:
-	fmov	%30, #l.6134
+brne_else.11057:
+	fmov	%30, #l.6178
 	add	%30, %29, 136
 	fst	%30, %30
 	add	%30, %29, 112
@@ -20412,7 +20194,7 @@ brne_else.11015:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20440,21 +20222,19 @@ brne_else.11015:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11011:
+brne_else.11053:
 	call	%30, %27
-brne_else.10986:
-	mov	%23, -1
+brne_else.11028:
+	mov	%22, -1
 	add	%30, %29, 8
-	ld	%25, %30
-	sh	%24, %25, 2
+	ld	%23, %30
+	sh	%24, %23, 2
 	add	%30, %29, 104
 	ld	%25, %30
 	add	%30, %25, %24
-	st	%23, %30
-	add	%30, %29, 8
-	ld	%25, %30
-	cmp	%26, %25, 0
-	breq	brne_else.11018, %26
+	st	%22, %30
+	cmp	%26, %23, 0
+	breq	brne_else.11060, %26
 	add	%30, %29, 16
 	ld	%0, %30
 	add	%30, %29, 72
@@ -20462,14 +20242,14 @@ brne_else.10986:
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
 	add	%30, %29, 148
 	st	%27, %30
 	add	%29, %29, 152
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 152
 	add	%30, %29, 148
 	ld	%27, %30
@@ -20480,18 +20260,18 @@ brne_else.10986:
 	add	%30, %29, 156
 	st	%27, %30
 	add	%29, %29, 160
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 160
 	add	%30, %29, 156
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11019, %26
+	breq	brne_else.11061, %26
 	add	%30, %29, 148
 	fld	%0, %30
 	add	%30, %29, 156
 	st	%27, %30
 	add	%29, %29, 160
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 160
 	add	%30, %29, 156
 	ld	%27, %30
@@ -20511,34 +20291,24 @@ brne_else.10986:
 	add	%30, %25, 0
 	fld	%30, %30
 	fadd	%30, %30, %29
-	add	%30, %29, 52
-	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	add	%30, %29, 52
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	fadd	%30, %30, %29
-	add	%30, %29, 52
-	ld	%25, %30
 	add	%30, %25, 4
 	fst	%30, %30
-	add	%30, %29, 52
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
 	fadd	%30, %30, %29
-	add	%30, %29, 52
-	ld	%25, %30
 	add	%30, %25, 8
 	fst	%30, %30
 	call	%30, %27
-brne_else.11019:
+brne_else.11061:
 	call	%30, %27
-brne_else.11018:
+brne_else.11060:
 	call	%30, %27
-trace_diffuse_ray.2931:
+trace_diffuse_ray.2953:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -20601,7 +20371,7 @@ trace_diffuse_ray.2931:
 	add	%30, %29, 52
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11023, %26
+	breq	brne_else.11065, %26
 	add	%30, %29, 40
 	ld	%25, %30
 	add	%30, %25, 0
@@ -20618,7 +20388,7 @@ trace_diffuse_ray.2931:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -20669,9 +20439,9 @@ trace_diffuse_ray.2931:
 	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11024, %26
+	breq	brne_else.11066, %26
 	call	%30, %27
-brne_else.11024:
+brne_else.11066:
 	add	%30, %29, 28
 	ld	%0, %30
 	add	%30, %29, 32
@@ -20679,14 +20449,14 @@ brne_else.11024:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -20697,12 +20467,12 @@ brne_else.11024:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, fispos.2537
+	call	%27, fispos.2559
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11026, %26
+	breq	brne_else.11068, %26
 	add	%30, %29, 56
 	fld	%30, %30
 	fmov	%29, %30
@@ -20716,7 +20486,7 @@ brne_else.11024:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -20727,9 +20497,9 @@ brne_else.11024:
 	ld	%0, %30
 	add	%30, %29, 12
 	ld	%1, %30
-	call	%30, vecaccum.2627
-brne_else.11026:
-	fmov	%29, #l.6125
+	call	%30, vecaccum.2649
+brne_else.11068:
+	fmov	%29, #l.6169
 	add	%30, %29, 0
 	fld	%30, %30
 	fmul	%30, %30, %29
@@ -20740,7 +20510,7 @@ brne_else.11026:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -20751,10 +20521,10 @@ brne_else.11026:
 	ld	%0, %30
 	add	%30, %29, 12
 	ld	%1, %30
-	call	%30, vecaccum.2627
-brne_else.11023:
+	call	%30, vecaccum.2649
+brne_else.11065:
 	call	%30, %27
-iter_trace_diffuse_rays.2934:
+iter_trace_diffuse_rays.2956:
 	add	%30, %29, 0
 	st	%3, %30
 	add	%30, %29, 4
@@ -20775,20 +20545,18 @@ iter_trace_diffuse_rays.2934:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11028, %26
+	brle	bgt_else.11070, %26
 	call	%30, %27
-bgt_else.11028:
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%24, %25, 2
+bgt_else.11070:
+	sh	%25, %25, 2
 	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, %24
+	ld	%24, %30
+	add	%30, %24, %25
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -20797,7 +20565,7 @@ bgt_else.11028:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -20808,12 +20576,12 @@ bgt_else.11028:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fisneg.2545
+	call	%27, fisneg.2567
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11030, %26
+	breq	brne_else.11072, %26
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%25, %25, 1
@@ -20822,7 +20590,7 @@ bgt_else.11028:
 	ld	%25, %30
 	add	%30, %25, %24
 	ld	%0, %30
-	fmov	%29, #l.6684
+	fmov	%29, #l.6728
 	add	%30, %29, 24
 	fld	%30, %30
 	finv	%31, %29
@@ -20851,7 +20619,7 @@ bgt_else.11028:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11030:
+brne_else.11072:
 	add	%30, %29, 0
 	ld	%25, %30
 	sh	%24, %25, 2
@@ -20859,7 +20627,7 @@ brne_else.11030:
 	ld	%25, %30
 	add	%30, %25, %24
 	ld	%0, %30
-	fmov	%29, #l.6687
+	fmov	%29, #l.6731
 	add	%30, %29, 24
 	fld	%30, %30
 	finv	%31, %29
@@ -20888,7 +20656,7 @@ brne_else.11030:
 	ld	%2, %30
 	ld	%30, %31
 	call	%30, %30
-trace_diffuse_rays.2939:
+trace_diffuse_rays.2961:
 	add	%30, %29, 0
 	st	%2, %30
 	add	%30, %29, 4
@@ -20924,7 +20692,7 @@ trace_diffuse_rays.2939:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-trace_diffuse_ray_80percent.2943:
+trace_diffuse_ray_80percent.2965:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -20942,7 +20710,7 @@ trace_diffuse_ray_80percent.2943:
 	add	%30, %29, 0
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.11031, %26
+	breq	brne_else.11073, %26
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %25, 0
@@ -20965,611 +20733,78 @@ trace_diffuse_ray_80percent.2943:
 	add	%30, %29, 0
 	ld	%25, %30
 	cmp	%26, %25, 1
-	breq	brne_else.11032, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 4
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.11033, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11034, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11035, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11035:
-	call	%30, %27
-brne_else.11034:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11037, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11037:
-	call	%30, %27
-brne_else.11033:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11039, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11040, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11040:
-	call	%30, %27
-brne_else.11039:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11042, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11042:
-	call	%30, %27
-brne_else.11032:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.11044, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11045, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11046, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11046:
-	call	%30, %27
-brne_else.11045:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11048, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11048:
-	call	%30, %27
-brne_else.11044:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11050, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11051, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11051:
-	call	%30, %27
-brne_else.11050:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11053, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11053:
-	call	%30, %27
-brne_else.11031:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 1
-	breq	brne_else.11055, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 4
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.11056, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11057, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11058, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11058:
-	call	%30, %27
-brne_else.11057:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11060, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11060:
-	call	%30, %27
-brne_else.11056:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11062, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11063, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11063:
-	call	%30, %27
-brne_else.11062:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11065, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11065:
-	call	%30, %27
-brne_else.11055:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 2
-	breq	brne_else.11067, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 8
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11068, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11069, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11069:
-	call	%30, %27
-brne_else.11068:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	breq	brne_else.11071, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 16
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	ld	%30, %31
-	call	%30, %30
-brne_else.11071:
-	call	%30, %27
-brne_else.11067:
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 3
-	breq	brne_else.11073, %26
-	add	%30, %29, 16
-	ld	%25, %30
-	add	%30, %25, 12
-	ld	%0, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %29, 8
-	ld	%1, %30
-	add	%30, %29, 4
-	ld	%2, %30
-	mov	%31, %25
-	add	%30, %29, 20
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 24
-	call	%27, %30
-	sub	%29, %29, 24
-	add	%30, %29, 20
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
 	breq	brne_else.11074, %26
 	add	%30, %29, 16
 	ld	%25, %30
+	add	%30, %25, 4
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.11075, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 8
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11076, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11077, %26
+	add	%30, %29, 16
+	ld	%25, %30
 	add	%30, %25, 16
 	ld	%0, %30
 	add	%30, %29, 12
@@ -21581,13 +20816,314 @@ brne_else.11067:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
+brne_else.11077:
+	call	%30, %27
+brne_else.11076:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11079, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11079:
+	call	%30, %27
+brne_else.11075:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11081, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11082, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11082:
+	call	%30, %27
+brne_else.11081:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11084, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11084:
+	call	%30, %27
 brne_else.11074:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.11086, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 8
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11087, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11088, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11088:
+	call	%30, %27
+brne_else.11087:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11090, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11090:
+	call	%30, %27
+brne_else.11086:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11092, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11093, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11093:
+	call	%30, %27
+brne_else.11092:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11095, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11095:
 	call	%30, %27
 brne_else.11073:
 	add	%30, %29, 0
 	ld	%25, %30
+	cmp	%26, %25, 1
+	breq	brne_else.11097, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 4
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.11098, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 8
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11099, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
 	cmp	%26, %25, 4
-	breq	brne_else.11076, %26
+	breq	brne_else.11100, %26
 	add	%30, %29, 16
 	ld	%25, %30
 	add	%30, %25, 16
@@ -21601,9 +21137,241 @@ brne_else.11073:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.11076:
+brne_else.11100:
 	call	%30, %27
-calc_diffuse_using_1point.2947:
+brne_else.11099:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11102, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11102:
+	call	%30, %27
+brne_else.11098:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11104, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11105, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11105:
+	call	%30, %27
+brne_else.11104:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11107, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11107:
+	call	%30, %27
+brne_else.11097:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 2
+	breq	brne_else.11109, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 8
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11110, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11111, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11111:
+	call	%30, %27
+brne_else.11110:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11113, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11113:
+	call	%30, %27
+brne_else.11109:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 3
+	breq	brne_else.11115, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 12
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	add	%30, %29, 20
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 24
+	call	%27, %30
+	sub	%29, %29, 24
+	add	%30, %29, 20
+	ld	%27, %30
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11116, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11116:
+	call	%30, %27
+brne_else.11115:
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 4
+	breq	brne_else.11118, %26
+	add	%30, %29, 16
+	ld	%25, %30
+	add	%30, %25, 16
+	ld	%0, %30
+	add	%30, %29, 12
+	ld	%25, %30
+	add	%30, %29, 8
+	ld	%1, %30
+	add	%30, %29, 4
+	ld	%2, %30
+	mov	%31, %25
+	ld	%30, %31
+	call	%30, %30
+brne_else.11118:
+	call	%30, %27
+calc_diffuse_using_1point.2969:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -21625,7 +21393,7 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -21636,7 +21404,7 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_nvectors.2703
+	call	%27, p_nvectors.2725
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -21647,7 +21415,7 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_intersection_points.2688
+	call	%27, p_intersection_points.2710
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -21658,7 +21426,7 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_energy.2694
+	call	%27, p_energy.2716
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -21676,7 +21444,7 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -21685,19 +21453,17 @@ calc_diffuse_using_1point.2947:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_group_id.2698
+	call	%27, p_group_id.2720
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	add	%30, %29, 4
 	ld	%25, %30
-	sh	%25, %25, 2
+	sh	%24, %25, 2
 	add	%30, %29, 24
-	ld	%24, %30
-	add	%30, %24, %25
+	ld	%23, %30
+	add	%30, %23, %24
 	ld	%1, %30
-	add	%30, %29, 4
-	ld	%25, %30
 	sh	%25, %25, 2
 	add	%30, %29, 28
 	ld	%24, %30
@@ -21725,8 +21491,8 @@ calc_diffuse_using_1point.2947:
 	ld	%0, %30
 	add	%30, %29, 16
 	ld	%2, %30
-	call	%30, vecaccumv.2640
-calc_diffuse_using_5points.2950:
+	call	%30, vecaccumv.2662
+calc_diffuse_using_5points.2972:
 	add	%30, %29, 0
 	st	%3, %30
 	add	%30, %29, 4
@@ -21751,7 +21517,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -21768,7 +21534,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -21784,7 +21550,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -21801,7 +21567,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -21817,7 +21583,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21835,7 +21601,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21851,7 +21617,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, vecadd.2631
+	call	%27, vecadd.2653
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21867,7 +21633,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, vecadd.2631
+	call	%27, vecadd.2653
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21883,7 +21649,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, vecadd.2631
+	call	%27, vecadd.2653
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21899,7 +21665,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, vecadd.2631
+	call	%27, vecadd.2653
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21913,7 +21679,7 @@ calc_diffuse_using_5points.2950:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, p_energy.2694
+	call	%27, p_energy.2716
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -21926,8 +21692,8 @@ calc_diffuse_using_5points.2950:
 	ld	%0, %30
 	add	%30, %29, 20
 	ld	%2, %30
-	call	%30, vecaccumv.2640
-do_without_neighbors.2956:
+	call	%30, vecaccumv.2662
+do_without_neighbors.2978:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -21943,15 +21709,15 @@ do_without_neighbors.2956:
 	add	%30, %29, 0
 	ld	%25, %30
 	cmp	%26, %25, 4
-	brle	bgt_else.11078, %26
+	brle	bgt_else.11120, %26
 	call	%30, %27
-bgt_else.11078:
+bgt_else.11120:
 	add	%30, %29, 4
 	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, p_surface_ids.2690
+	call	%27, p_surface_ids.2712
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -21962,31 +21728,29 @@ bgt_else.11078:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11080, %26
+	brle	bgt_else.11122, %26
 	call	%30, %27
-bgt_else.11080:
+bgt_else.11122:
 	add	%30, %29, 4
 	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, p_calc_diffuse.2692
+	call	%27, p_calc_diffuse.2714
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
+	ld	%1, %30
+	sh	%25, %1, 2
 	add	%30, %0, %25
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.11082, %26
+	breq	brne_else.11124, %26
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%30, %29, 4
 	ld	%0, %30
-	add	%30, %29, 0
-	ld	%1, %30
 	mov	%31, %25
 	add	%30, %29, 20
 	st	%27, %30
@@ -22005,7 +21769,7 @@ bgt_else.11080:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11082:
+brne_else.11124:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%1, %25, 1
@@ -22015,44 +21779,44 @@ brne_else.11082:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-neighbors_exist.2959:
+neighbors_exist.2981:
 	add	%30, %31, 4
 	ld	%23, %30
 	add	%30, %23, 4
 	ld	%24, %30
 	add	%25, %1, 1
 	cmp	%26, %24, %25
-	brle	bgt_else.11083, %26
+	brle	bgt_else.11125, %26
 	cmp	%26, %1, 0
-	brle	bgt_else.11084, %26
+	brle	bgt_else.11126, %26
 	add	%30, %23, 0
 	ld	%24, %30
 	add	%25, %0, 1
 	cmp	%26, %24, %25
-	brle	bgt_else.11085, %26
+	brle	bgt_else.11127, %26
 	cmp	%26, %0, 0
-	brle	bgt_else.11086, %26
+	brle	bgt_else.11128, %26
 	mov	%0, 1
 	call	%30, %27
-bgt_else.11086:
+bgt_else.11128:
 	mov	%0, 0
 	call	%30, %27
-bgt_else.11085:
+bgt_else.11127:
 	mov	%0, 0
 	call	%30, %27
-bgt_else.11084:
+bgt_else.11126:
 	mov	%0, 0
 	call	%30, %27
-bgt_else.11083:
+bgt_else.11125:
 	mov	%0, 0
 	call	%30, %27
-get_surface_id.2963:
+get_surface_id.2985:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, p_surface_ids.2690
+	call	%27, p_surface_ids.2712
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -22062,7 +21826,7 @@ get_surface_id.2963:
 	add	%30, %0, %25
 	ld	%0, %30
 	call	%30, %27
-neighbors_are_available.2966:
+neighbors_are_available.2988:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -22085,7 +21849,7 @@ neighbors_are_available.2966:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -22103,17 +21867,17 @@ neighbors_are_available.2966:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %0, %25
-	breq	brne_else.11087, %26
+	breq	brne_else.11129, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.11087:
+brne_else.11129:
 	add	%30, %29, 8
 	ld	%25, %30
 	sh	%25, %25, 2
@@ -22126,17 +21890,17 @@ brne_else.11087:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %0, %25
-	breq	brne_else.11088, %26
+	breq	brne_else.11130, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.11088:
+brne_else.11130:
 	add	%30, %29, 8
 	ld	%25, %30
 	sub	%25, %25, 1
@@ -22150,17 +21914,17 @@ brne_else.11088:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %0, %25
-	breq	brne_else.11089, %26
+	breq	brne_else.11131, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.11089:
+brne_else.11131:
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%25, %25, 1
@@ -22174,20 +21938,20 @@ brne_else.11089:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	add	%30, %29, 20
 	ld	%25, %30
 	cmp	%26, %0, %25
-	breq	brne_else.11090, %26
+	breq	brne_else.11132, %26
 	mov	%0, 0
 	call	%30, %27
-brne_else.11090:
+brne_else.11132:
 	mov	%0, 1
 	call	%30, %27
-try_exploit_neighbors.2972:
+try_exploit_neighbors.2994:
 	add	%30, %29, 0
 	st	%5, %30
 	add	%30, %29, 4
@@ -22224,27 +21988,25 @@ try_exploit_neighbors.2972:
 	add	%30, %29, 36
 	st	%25, %30
 	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	brle	bgt_else.11091, %26
+	ld	%1, %30
+	cmp	%26, %1, 4
+	brle	bgt_else.11133, %26
 	call	%30, %27
-bgt_else.11091:
+bgt_else.11133:
 	add	%30, %29, 36
 	ld	%0, %30
-	add	%30, %29, 0
-	ld	%1, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11093, %26
+	brle	bgt_else.11135, %26
 	call	%30, %27
-bgt_else.11093:
+bgt_else.11135:
 	add	%30, %29, 20
 	ld	%0, %30
 	add	%30, %29, 12
@@ -22258,28 +22020,28 @@ bgt_else.11093:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, neighbors_are_available.2966
+	call	%27, neighbors_are_available.2988
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11095, %26
+	breq	brne_else.11137, %26
 	add	%30, %29, 36
 	ld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, p_calc_diffuse.2692
+	call	%27, p_calc_diffuse.2714
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
 	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
+	ld	%4, %30
+	sh	%25, %4, 2
 	add	%30, %0, %25
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.11096, %26
+	breq	brne_else.11138, %26
 	add	%30, %29, 32
 	ld	%25, %30
 	add	%30, %29, 20
@@ -22290,8 +22052,6 @@ bgt_else.11093:
 	ld	%2, %30
 	add	%30, %29, 4
 	ld	%3, %30
-	add	%30, %29, 0
-	ld	%4, %30
 	mov	%31, %25
 	add	%30, %29, 44
 	st	%27, %30
@@ -22318,7 +22078,7 @@ bgt_else.11093:
 	ld	%4, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11096:
+brne_else.11138:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%5, %25, 1
@@ -22336,7 +22096,7 @@ brne_else.11096:
 	ld	%4, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11095:
+brne_else.11137:
 	add	%30, %29, 20
 	ld	%25, %30
 	sh	%25, %25, 2
@@ -22351,11 +22111,7 @@ brne_else.11095:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-write_ppm_header.2979:
-	add	%30, %31, 4
-	ld	%25, %30
-	add	%30, %29, 0
-	st	%25, %30
+write_ppm_header.3001:
 	mov	%0, 80
 	add	%30, %29, 4
 	st	%27, %30
@@ -22364,7 +22120,7 @@ write_ppm_header.2979:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%0, 51
+	mov	%0, 54
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -22380,14 +22136,27 @@ write_ppm_header.2979:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%30, %25, 0
-	ld	%0, %30
+	mov	%0, 49
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_print_int
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 50
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 56
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -22399,14 +22168,27 @@ write_ppm_header.2979:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	add	%30, %25, 4
-	ld	%0, %30
+	mov	%0, 49
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_print_int
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 50
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 56
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -22418,17 +22200,33 @@ write_ppm_header.2979:
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
-	mov	%0, 255
+	mov	%0, 50
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, min_caml_print_int
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 53
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
+	sub	%29, %29, 8
+	add	%30, %29, 4
+	ld	%27, %30
+	mov	%0, 53
+	add	%30, %29, 4
+	st	%27, %30
+	add	%29, %29, 8
+	call	%27, min_caml_print_char
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
 	mov	%0, 10
 	call	%30, min_caml_print_char
-write_rgb_element.2981:
+write_rgb_element.3003:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -22437,18 +22235,18 @@ write_rgb_element.2981:
 	add	%30, %29, 4
 	ld	%27, %30
 	cmp	%26, %0, 255
-	brle	bgt_else.11097, %26
+	brle	bgt_else.11139, %26
 	mov	%0, 255
 	call	%30, min_caml_print_int
-bgt_else.11097:
+bgt_else.11139:
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11098, %26
+	brle	bgt_else.11140, %26
 	mov	%0, 0
 	call	%30, min_caml_print_int
-bgt_else.11098:
+bgt_else.11140:
 	call	%30, min_caml_print_int
-write_rgb.2983:
+write_rgb.3005:
 	add	%30, %31, 4
 	ld	%25, %30
 	add	%30, %29, 0
@@ -22460,15 +22258,7 @@ write_rgb.2983:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, write_rgb_element.2981
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	mov	%0, 32
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_print_char
+	call	%27, write_rgb_element.3003
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -22479,15 +22269,7 @@ write_rgb.2983:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, write_rgb_element.2981
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	mov	%0, 32
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, min_caml_print_char
+	call	%27, write_rgb_element.3003
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -22495,16 +22277,8 @@ write_rgb.2983:
 	ld	%25, %30
 	add	%30, %25, 8
 	fld	%0, %30
-	add	%30, %29, 4
-	st	%27, %30
-	add	%29, %29, 8
-	call	%27, write_rgb_element.2981
-	sub	%29, %29, 8
-	add	%30, %29, 4
-	ld	%27, %30
-	mov	%0, 10
-	call	%30, min_caml_print_char
-pretrace_diffuse_rays.2985:
+	call	%30, write_rgb_element.3003
+pretrace_diffuse_rays.3007:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -22530,33 +22304,31 @@ pretrace_diffuse_rays.2985:
 	add	%30, %29, 20
 	st	%25, %30
 	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 4
-	brle	bgt_else.11099, %26
+	ld	%1, %30
+	cmp	%26, %1, 4
+	brle	bgt_else.11141, %26
 	call	%30, %27
-bgt_else.11099:
+bgt_else.11141:
 	add	%30, %29, 4
 	ld	%0, %30
-	add	%30, %29, 0
-	ld	%1, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, get_surface_id.2963
+	call	%27, get_surface_id.2985
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
 	cmp	%26, %0, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11101, %26
+	brle	bgt_else.11143, %26
 	call	%30, %27
-bgt_else.11101:
+bgt_else.11143:
 	add	%30, %29, 4
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_calc_diffuse.2692
+	call	%27, p_calc_diffuse.2714
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -22566,13 +22338,13 @@ bgt_else.11101:
 	add	%30, %0, %25
 	ld	%25, %30
 	cmp	%26, %25, 0
-	breq	brne_else.11103, %26
+	breq	brne_else.11145, %26
 	add	%30, %29, 4
 	ld	%0, %30
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_group_id.2698
+	call	%27, p_group_id.2720
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -22583,7 +22355,7 @@ bgt_else.11101:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, vecbzero.2606
+	call	%27, vecbzero.2628
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -22592,7 +22364,7 @@ bgt_else.11101:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, p_nvectors.2703
+	call	%27, p_nvectors.2725
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -22603,7 +22375,7 @@ bgt_else.11101:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_intersection_points.2688
+	call	%27, p_intersection_points.2710
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -22613,23 +22385,21 @@ bgt_else.11101:
 	add	%30, %29, 16
 	ld	%24, %30
 	add	%30, %24, %25
+	ld	%24, %30
+	add	%30, %29, 0
 	ld	%25, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
+	sh	%23, %25, 2
 	add	%30, %29, 28
-	ld	%23, %30
-	add	%30, %23, %24
+	ld	%22, %30
+	add	%30, %22, %23
 	ld	%1, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
-	add	%30, %0, %24
+	sh	%25, %25, 2
+	add	%30, %0, %25
 	ld	%2, %30
 	add	%30, %29, 12
-	ld	%24, %30
-	mov	%0, %25
-	mov	%31, %24
+	ld	%25, %30
+	mov	%0, %24
+	mov	%31, %25
 	add	%30, %29, 36
 	st	%27, %30
 	ld	%30, %31
@@ -22643,7 +22413,7 @@ bgt_else.11101:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, p_received_ray_20percent.2696
+	call	%27, p_received_ray_20percent.2718
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -22657,7 +22427,7 @@ bgt_else.11101:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -22670,7 +22440,7 @@ bgt_else.11101:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11103:
+brne_else.11145:
 	add	%30, %29, 0
 	ld	%25, %30
 	add	%1, %25, 1
@@ -22680,7 +22450,7 @@ brne_else.11103:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-pretrace_pixels.2988:
+pretrace_pixels.3010:
 	add	%30, %29, 0
 	fst	%2, %30
 	add	%30, %29, 4
@@ -22744,23 +22514,21 @@ pretrace_pixels.2988:
 	add	%30, %29, 24
 	ld	%31, %30
 	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %29, 12
 	ld	%25, %30
-	cmp	%26, %25, 0
+	add	%30, %29, 12
+	ld	%24, %30
+	cmp	%26, %24, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11104, %26
+	brle	bgt_else.11146, %26
 	call	%30, %27
-bgt_else.11104:
+bgt_else.11146:
 	add	%30, %23, 0
 	fld	%30, %30
 	add	%30, %29, 56
 	fst	%30, %30
-	add	%30, %24, 0
-	ld	%24, %30
-	add	%30, %29, 12
+	add	%30, %25, 0
 	ld	%25, %30
-	sub	%0, %25, %24
+	sub	%0, %24, %25
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
@@ -22780,40 +22548,30 @@ bgt_else.11104:
 	fld	%30, %30
 	fadd	%30, %29, %30
 	add	%30, %29, 48
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%0, %30
+	add	%30, %0, 0
 	fst	%30, %30
-	add	%30, %29, 40
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	fmul	%29, %28, %30
 	add	%30, %29, 4
 	fld	%30, %30
 	fadd	%30, %29, %30
-	add	%30, %29, 48
-	ld	%25, %30
-	add	%30, %25, 4
+	add	%30, %0, 4
 	fst	%30, %30
-	add	%30, %29, 40
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
 	fmul	%29, %28, %30
 	add	%30, %29, 0
 	fld	%30, %30
 	fadd	%30, %29, %30
-	add	%30, %29, 48
-	ld	%25, %30
-	add	%30, %25, 8
+	add	%30, %0, 8
 	fst	%30, %30
 	mov	%1, 0
-	add	%30, %29, 48
-	ld	%0, %30
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, vecunit_sgn.2616
+	call	%27, vecunit_sgn.2638
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -22822,7 +22580,7 @@ bgt_else.11104:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, vecbzero.2606
+	call	%27, vecbzero.2628
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -22833,12 +22591,12 @@ bgt_else.11104:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
 	mov	%0, 0
-	fmov	%0, #l.6134
+	fmov	%0, #l.6178
 	add	%30, %29, 12
 	ld	%25, %30
 	sh	%24, %25, 2
@@ -22846,7 +22604,7 @@ bgt_else.11104:
 	ld	%25, %30
 	add	%30, %25, %24
 	ld	%2, %30
-	fmov	%1, #l.6125
+	fmov	%1, #l.6169
 	add	%30, %29, 32
 	ld	%25, %30
 	add	%30, %29, 48
@@ -22870,7 +22628,7 @@ bgt_else.11104:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, p_rgb.2686
+	call	%27, p_rgb.2708
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -22879,7 +22637,7 @@ bgt_else.11104:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -22895,7 +22653,7 @@ bgt_else.11104:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, p_set_group_id.2700
+	call	%27, p_set_group_id.2722
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -22929,7 +22687,7 @@ bgt_else.11104:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, add_mod5.2595
+	call	%27, add_mod5.2617
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -22949,7 +22707,7 @@ bgt_else.11104:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-pretrace_line.2995:
+pretrace_line.3017:
 	add	%30, %29, 0
 	st	%2, %30
 	add	%30, %29, 4
@@ -22992,8 +22750,8 @@ pretrace_line.2995:
 	fld	%30, %30
 	fmul	%28, %30, %0
 	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 0
+	ld	%24, %30
+	add	%30, %24, 0
 	fld	%30, %30
 	fmul	%29, %28, %30
 	add	%30, %29, 8
@@ -23001,23 +22759,15 @@ pretrace_line.2995:
 	add	%30, %25, 0
 	fld	%30, %30
 	fadd	%0, %29, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 4
+	add	%30, %24, 4
 	fld	%30, %30
 	fmul	%29, %28, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %25, 4
 	fld	%30, %30
 	fadd	%1, %29, %30
-	add	%30, %29, 12
-	ld	%25, %30
-	add	%30, %25, 8
+	add	%30, %24, 8
 	fld	%30, %30
 	fmul	%29, %28, %30
-	add	%30, %29, 8
-	ld	%25, %30
 	add	%30, %25, 8
 	fld	%30, %30
 	fadd	%2, %29, %30
@@ -23035,7 +22785,7 @@ pretrace_line.2995:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-scan_pixel.2999:
+scan_pixel.3021:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -23087,10 +22837,8 @@ scan_pixel.2999:
 	add	%30, %29, 0
 	ld	%24, %30
 	cmp	%26, %25, %24
-	brle	bgt_else.11106, %26
-	add	%30, %29, 0
-	ld	%25, %30
-	sh	%25, %25, 2
+	brle	bgt_else.11148, %26
+	sh	%25, %24, 2
 	add	%30, %29, 8
 	ld	%24, %30
 	add	%30, %24, %25
@@ -23098,7 +22846,7 @@ scan_pixel.2999:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, p_rgb.2686
+	call	%27, p_rgb.2708
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -23109,7 +22857,7 @@ scan_pixel.2999:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, veccpy.2608
+	call	%27, veccpy.2630
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -23131,7 +22879,7 @@ scan_pixel.2999:
 	add	%30, %29, 44
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11107, %26
+	breq	brne_else.11149, %26
 	mov	%5, 0
 	add	%30, %29, 28
 	ld	%25, %30
@@ -23180,7 +22928,7 @@ scan_pixel.2999:
 	ld	%4, %30
 	ld	%30, %31
 	call	%30, %30
-brne_else.11107:
+brne_else.11149:
 	add	%30, %29, 0
 	ld	%25, %30
 	sh	%25, %25, 2
@@ -23226,9 +22974,9 @@ brne_else.11107:
 	ld	%4, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11106:
+bgt_else.11148:
 	call	%30, %27
-scan_line.3005:
+scan_line.3027:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -23260,17 +23008,13 @@ scan_line.3005:
 	add	%30, %29, 0
 	ld	%22, %30
 	cmp	%26, %23, %22
-	brle	bgt_else.11109, %26
+	brle	bgt_else.11151, %26
 	add	%30, %24, 4
 	ld	%24, %30
 	sub	%24, %24, 1
-	add	%30, %29, 0
-	ld	%23, %30
-	cmp	%26, %24, %23
-	brle	bgt_else.11110, %26
-	add	%30, %29, 0
-	ld	%24, %30
-	add	%1, %24, 1
+	cmp	%26, %24, %22
+	brle	bgt_else.11152, %26
+	add	%1, %22, 1
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 4
@@ -23315,7 +23059,7 @@ scan_line.3005:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, add_mod5.2595
+	call	%27, add_mod5.2617
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -23333,7 +23077,7 @@ scan_line.3005:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11110:
+bgt_else.11152:
 	mov	%0, 0
 	add	%30, %29, 24
 	ld	%25, %30
@@ -23365,7 +23109,7 @@ bgt_else.11110:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, add_mod5.2595
+	call	%27, add_mod5.2617
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -23383,11 +23127,11 @@ bgt_else.11110:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11109:
+bgt_else.11151:
 	call	%30, %27
-create_float5x3array.3011:
+create_float5x3array.3033:
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23408,7 +23152,7 @@ create_float5x3array.3011:
 	add	%30, %29, 0
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23421,7 +23165,7 @@ create_float5x3array.3011:
 	add	%30, %25, 4
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23434,7 +23178,7 @@ create_float5x3array.3011:
 	add	%30, %25, 8
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23447,7 +23191,7 @@ create_float5x3array.3011:
 	add	%30, %25, 12
 	st	%0, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23459,13 +23203,11 @@ create_float5x3array.3011:
 	ld	%25, %30
 	add	%30, %25, 16
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-create_pixel.3013:
+create_pixel.3035:
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -23478,7 +23220,7 @@ create_pixel.3013:
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
-	call	%27, create_float5x3array.3011
+	call	%27, create_float5x3array.3033
 	sub	%29, %29, 8
 	add	%30, %29, 4
 	ld	%27, %30
@@ -23509,7 +23251,7 @@ create_pixel.3013:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, create_float5x3array.3011
+	call	%27, create_float5x3array.3033
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -23518,7 +23260,7 @@ create_pixel.3013:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, create_float5x3array.3011
+	call	%27, create_float5x3array.3033
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
@@ -23538,7 +23280,7 @@ create_pixel.3013:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, create_float5x3array.3011
+	call	%27, create_float5x3array.3033
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -23576,7 +23318,7 @@ create_pixel.3013:
 	st	%24, %30
 	mov	%0, %25
 	call	%30, %27
-init_line_elements.3015:
+init_line_elements.3037:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -23585,33 +23327,30 @@ init_line_elements.3015:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11112, %26
+	brle	bgt_else.11154, %26
 	add	%30, %29, 4
 	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
-bgt_else.11112:
+bgt_else.11154:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, create_pixel.3013
+	call	%27, create_pixel.3035
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%25, %30
-	sh	%25, %25, 2
+	sh	%24, %25, 2
 	add	%30, %29, 4
-	ld	%24, %30
-	add	%30, %24, %25
+	ld	%23, %30
+	add	%30, %23, %24
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	sub	%1, %25, 1
-	add	%30, %29, 4
-	ld	%0, %30
-	call	%30, init_line_elements.3015
-create_pixelline.3018:
+	mov	%0, %23
+	call	%30, init_line_elements.3037
+create_pixelline.3040:
 	add	%30, %31, 4
 	ld	%25, %30
 	add	%30, %29, 0
@@ -23625,7 +23364,7 @@ create_pixelline.3018:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, create_pixel.3013
+	call	%27, create_pixel.3035
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -23645,8 +23384,8 @@ create_pixelline.3018:
 	add	%30, %25, 0
 	ld	%25, %30
 	sub	%1, %25, 2
-	call	%30, init_line_elements.3015
-tan.3020:
+	call	%30, init_line_elements.3037
+tan.3042:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 0
@@ -23674,11 +23413,11 @@ tan.3020:
 	finv	%31, %0
 	fmul	%0, %30, %31
 	call	%30, %27
-adjust_position.3022:
+adjust_position.3044:
 	add	%30, %29, 0
 	fst	%1, %30
 	fmul	%30, %0, %0
-	fmov	%29, #l.6665
+	fmov	%29, #l.6709
 	fadd	%0, %30, %29
 	add	%30, %29, 4
 	st	%27, %30
@@ -23689,7 +23428,7 @@ adjust_position.3022:
 	ld	%27, %30
 	add	%30, %29, 4
 	fst	%0, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 4
 	fld	%29, %30
 	finv	%31, %29
@@ -23707,7 +23446,7 @@ adjust_position.3022:
 	add	%30, %29, 12
 	st	%27, %30
 	add	%29, %29, 16
-	call	%27, tan.3020
+	call	%27, tan.3042
 	sub	%29, %29, 16
 	add	%30, %29, 12
 	ld	%27, %30
@@ -23715,7 +23454,7 @@ adjust_position.3022:
 	fld	%30, %30
 	fmul	%0, %0, %30
 	call	%30, %27
-calc_dirvec.3025:
+calc_dirvec.3047:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -23742,7 +23481,7 @@ calc_dirvec.3025:
 	ld	%25, %30
 	cmp	%26, %25, 5
 	sub	%26, 0, %26
-	brle	bgt_else.11113, %26
+	brle	bgt_else.11155, %26
 	add	%30, %29, 4
 	fld	%0, %30
 	add	%30, %29, 12
@@ -23750,7 +23489,7 @@ calc_dirvec.3025:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, adjust_position.3022
+	call	%27, adjust_position.3044
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -23768,7 +23507,7 @@ calc_dirvec.3025:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, adjust_position.3022
+	call	%27, adjust_position.3044
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -23790,13 +23529,13 @@ calc_dirvec.3025:
 	fmov	%0, %30
 	ld	%30, %31
 	call	%30, %30
-bgt_else.11113:
+bgt_else.11155:
 	add	%30, %29, 0
 	fld	%0, %30
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -23807,14 +23546,14 @@ bgt_else.11113:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, fsqr.2553
+	call	%27, fsqr.2575
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
 	add	%30, %29, 44
 	fld	%30, %30
 	fadd	%29, %30, %0
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	fadd	%0, %29, %30
 	add	%30, %29, 52
 	st	%27, %30
@@ -23835,7 +23574,7 @@ bgt_else.11113:
 	fmul	%30, %30, %31
 	add	%30, %29, 52
 	fst	%30, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	finv	%31, %0
 	fmul	%30, %30, %31
 	add	%30, %29, 56
@@ -23859,7 +23598,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23872,7 +23611,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23887,7 +23626,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23898,7 +23637,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23913,7 +23652,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23928,7 +23667,7 @@ bgt_else.11113:
 	add	%30, %29, 68
 	st	%27, %30
 	add	%29, %29, 72
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 72
 	add	%30, %29, 68
 	ld	%27, %30
@@ -23939,7 +23678,7 @@ bgt_else.11113:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -23950,7 +23689,7 @@ bgt_else.11113:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -23965,7 +23704,7 @@ bgt_else.11113:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -23980,7 +23719,7 @@ bgt_else.11113:
 	add	%30, %29, 76
 	st	%27, %30
 	add	%29, %29, 80
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 80
 	add	%30, %29, 76
 	ld	%27, %30
@@ -23991,7 +23730,7 @@ bgt_else.11113:
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
@@ -24002,7 +23741,7 @@ bgt_else.11113:
 	add	%30, %29, 84
 	st	%27, %30
 	add	%29, %29, 88
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 88
 	add	%30, %29, 84
 	ld	%27, %30
@@ -24013,7 +23752,7 @@ bgt_else.11113:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -24028,7 +23767,7 @@ bgt_else.11113:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -24043,7 +23782,7 @@ bgt_else.11113:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -24054,7 +23793,7 @@ bgt_else.11113:
 	add	%30, %29, 92
 	st	%27, %30
 	add	%29, %29, 96
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 96
 	add	%30, %29, 92
 	ld	%27, %30
@@ -24065,7 +23804,7 @@ bgt_else.11113:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
@@ -24080,7 +23819,7 @@ bgt_else.11113:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
@@ -24095,7 +23834,7 @@ bgt_else.11113:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
@@ -24106,7 +23845,7 @@ bgt_else.11113:
 	add	%30, %29, 100
 	st	%27, %30
 	add	%29, %29, 104
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 104
 	add	%30, %29, 100
 	ld	%27, %30
@@ -24116,8 +23855,8 @@ bgt_else.11113:
 	fld	%1, %30
 	add	%30, %29, 52
 	fld	%2, %30
-	call	%30, vecset.2598
-calc_dirvecs.3033:
+	call	%30, vecset.2620
+calc_dirvecs.3055:
 	add	%30, %29, 0
 	fst	%0, %30
 	add	%30, %29, 4
@@ -24135,14 +23874,12 @@ calc_dirvecs.3033:
 	add	%30, %29, 20
 	st	%25, %30
 	add	%30, %29, 4
-	ld	%25, %30
-	cmp	%26, %25, 0
-	sub	%26, 0, %26
-	brle	bgt_else.11114, %26
-	call	%30, %27
-bgt_else.11114:
-	add	%30, %29, 4
 	ld	%0, %30
+	cmp	%26, %0, 0
+	sub	%26, 0, %26
+	brle	bgt_else.11156, %26
+	call	%30, %27
+bgt_else.11156:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
@@ -24150,13 +23887,13 @@ bgt_else.11114:
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
-	fmov	%30, #l.6794
+	fmov	%30, #l.6836
 	fmul	%29, %0, %30
-	fmov	%30, #l.6796
+	fmov	%30, #l.6838
 	fsub	%2, %29, %30
 	mov	%0, 0
-	fmov	%0, #l.6125
-	fmov	%1, #l.6125
+	fmov	%0, #l.6169
+	fmov	%1, #l.6169
 	add	%30, %29, 20
 	ld	%25, %30
 	add	%30, %29, 8
@@ -24183,13 +23920,13 @@ bgt_else.11114:
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
-	fmov	%30, #l.6794
+	fmov	%30, #l.6836
 	fmul	%29, %0, %30
-	fmov	%30, #l.6665
+	fmov	%30, #l.6709
 	fadd	%2, %29, %30
 	mov	%0, 0
-	fmov	%0, #l.6125
-	fmov	%1, #l.6125
+	fmov	%0, #l.6169
+	fmov	%1, #l.6169
 	add	%30, %29, 12
 	ld	%25, %30
 	add	%2, %25, 2
@@ -24219,7 +23956,7 @@ bgt_else.11114:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, add_mod5.2595
+	call	%27, add_mod5.2617
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -24235,7 +23972,7 @@ bgt_else.11114:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-calc_dirvec_rows.3038:
+calc_dirvec_rows.3060:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -24251,14 +23988,12 @@ calc_dirvec_rows.3038:
 	add	%30, %29, 16
 	st	%25, %30
 	add	%30, %29, 0
-	ld	%25, %30
-	cmp	%26, %25, 0
-	sub	%26, 0, %26
-	brle	bgt_else.11116, %26
-	call	%30, %27
-bgt_else.11116:
-	add	%30, %29, 0
 	ld	%0, %30
+	cmp	%26, %0, 0
+	sub	%26, 0, %26
+	brle	bgt_else.11158, %26
+	call	%30, %27
+bgt_else.11158:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
@@ -24266,9 +24001,9 @@ bgt_else.11116:
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
-	fmov	%30, #l.6794
+	fmov	%30, #l.6836
 	fmul	%30, %0, %30
-	fmov	%29, #l.6796
+	fmov	%29, #l.6838
 	fsub	%0, %30, %29
 	mov	%0, 4
 	add	%30, %29, 16
@@ -24297,7 +24032,7 @@ bgt_else.11116:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, add_mod5.2595
+	call	%27, add_mod5.2617
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -24312,13 +24047,13 @@ bgt_else.11116:
 	mov	%0, %25
 	ld	%30, %31
 	call	%30, %30
-create_dirvec.3042:
+create_dirvec.3064:
 	add	%30, %31, 4
 	ld	%25, %30
 	add	%30, %29, 0
 	st	%25, %30
 	mov	%0, 3
-	fmov	%0, #l.6125
+	fmov	%0, #l.6169
 	add	%30, %29, 4
 	st	%27, %30
 	add	%29, %29, 8
@@ -24351,7 +24086,7 @@ create_dirvec.3042:
 	st	%24, %30
 	mov	%0, %25
 	call	%30, %27
-create_dirvec_elements.3044:
+create_dirvec_elements.3066:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -24366,9 +24101,9 @@ create_dirvec_elements.3044:
 	ld	%24, %30
 	cmp	%26, %24, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11118, %26
+	brle	bgt_else.11160, %26
 	call	%30, %27
-bgt_else.11118:
+bgt_else.11160:
 	mov	%31, %25
 	add	%30, %29, 12
 	st	%27, %30
@@ -24380,21 +24115,18 @@ bgt_else.11118:
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%25, %30
-	sh	%25, %25, 2
+	sh	%24, %25, 2
 	add	%30, %29, 4
-	ld	%24, %30
-	add	%30, %24, %25
+	ld	%23, %30
+	add	%30, %23, %24
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	sub	%1, %25, 1
 	add	%30, %29, 8
 	ld	%31, %30
-	add	%30, %29, 4
-	ld	%0, %30
+	mov	%0, %23
 	ld	%30, %31
 	call	%30, %30
-create_dirvecs.3047:
+create_dirvecs.3069:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -24419,9 +24151,9 @@ create_dirvecs.3047:
 	ld	%24, %30
 	cmp	%26, %24, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11120, %26
+	brle	bgt_else.11162, %26
 	call	%30, %27
-bgt_else.11120:
+bgt_else.11162:
 	mov	%24, 120
 	add	%30, %29, 16
 	st	%24, %30
@@ -24447,17 +24179,13 @@ bgt_else.11120:
 	ld	%27, %30
 	add	%30, %29, 0
 	ld	%25, %30
-	sh	%25, %25, 2
+	sh	%24, %25, 2
 	add	%30, %29, 8
-	ld	%24, %30
-	add	%30, %24, %25
+	ld	%23, %30
+	add	%30, %23, %24
 	st	%0, %30
-	add	%30, %29, 0
-	ld	%25, %30
 	sh	%25, %25, 2
-	add	%30, %29, 8
-	ld	%24, %30
-	add	%30, %24, %25
+	add	%30, %23, %25
 	ld	%0, %30
 	mov	%1, 118
 	add	%30, %29, 12
@@ -24478,7 +24206,7 @@ bgt_else.11120:
 	ld	%31, %30
 	ld	%30, %31
 	call	%30, %30
-init_dirvec_constants.3049:
+init_dirvec_constants.3071:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %29, 4
@@ -24488,22 +24216,20 @@ init_dirvec_constants.3049:
 	add	%30, %29, 8
 	ld	%31, %30
 	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 0
 	ld	%25, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	cmp	%26, %24, 0
+	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11122, %26
+	brle	bgt_else.11164, %26
 	call	%30, %27
-bgt_else.11122:
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
+bgt_else.11164:
+	sh	%25, %25, 2
 	add	%30, %29, 4
 	ld	%23, %30
-	add	%30, %23, %24
+	add	%30, %23, %25
 	ld	%0, %30
-	mov	%31, %25
+	mov	%31, %24
 	add	%30, %29, 12
 	st	%27, %30
 	ld	%30, %31
@@ -24521,7 +24247,7 @@ bgt_else.11122:
 	ld	%0, %30
 	ld	%30, %31
 	call	%30, %30
-init_vecset_constants.3052:
+init_vecset_constants.3074:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %29, 4
@@ -24529,25 +24255,23 @@ init_vecset_constants.3052:
 	add	%30, %29, 4
 	ld	%31, %30
 	add	%30, %31, 8
-	ld	%25, %30
+	ld	%24, %30
 	add	%30, %29, 4
 	ld	%31, %30
 	add	%30, %31, 4
-	ld	%24, %30
-	add	%30, %29, 0
 	ld	%23, %30
-	cmp	%26, %23, 0
+	add	%30, %29, 0
+	ld	%25, %30
+	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11124, %26
+	brle	bgt_else.11166, %26
 	call	%30, %27
-bgt_else.11124:
-	add	%30, %29, 0
-	ld	%23, %30
-	sh	%23, %23, 2
-	add	%30, %24, %23
+bgt_else.11166:
+	sh	%25, %25, 2
+	add	%30, %23, %25
 	ld	%0, %30
 	mov	%1, 119
-	mov	%31, %25
+	mov	%31, %24
 	add	%30, %29, 12
 	st	%27, %30
 	ld	%30, %31
@@ -24563,7 +24287,7 @@ bgt_else.11124:
 	ld	%31, %30
 	ld	%30, %31
 	call	%30, %30
-init_dirvecs.3054:
+init_dirvecs.3076:
 	add	%30, %31, 12
 	ld	%25, %30
 	add	%30, %29, 0
@@ -24604,7 +24328,7 @@ init_dirvecs.3054:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-add_reflection.3056:
+add_reflection.3078:
 	add	%30, %29, 0
 	fst	%3, %30
 	add	%30, %29, 4
@@ -24643,7 +24367,7 @@ add_reflection.3056:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, d_vec.2705
+	call	%27, d_vec.2727
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -24656,7 +24380,7 @@ add_reflection.3056:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, vecset.2598
+	call	%27, vecset.2620
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -24696,7 +24420,7 @@ add_reflection.3056:
 	add	%30, %25, %24
 	st	%23, %30
 	call	%30, %27
-setup_rect_reflection.3063:
+setup_rect_reflection.3085:
 	add	%30, %31, 12
 	ld	%25, %30
 	add	%30, %29, 0
@@ -24718,14 +24442,14 @@ setup_rect_reflection.3063:
 	ld	%25, %30
 	add	%30, %29, 16
 	st	%25, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 20
 	fst	%30, %30
 	mov	%0, %1
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -24741,7 +24465,7 @@ setup_rect_reflection.3063:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -24754,7 +24478,7 @@ setup_rect_reflection.3063:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -24767,7 +24491,7 @@ setup_rect_reflection.3063:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, fneg.2549
+	call	%27, fneg.2571
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -24861,7 +24585,7 @@ setup_rect_reflection.3063:
 	add	%30, %25, 0
 	st	%24, %30
 	call	%30, %27
-setup_surface_reflection.3066:
+setup_surface_reflection.3088:
 	add	%30, %29, 0
 	st	%1, %30
 	add	%30, %31, 12
@@ -24886,7 +24610,7 @@ setup_surface_reflection.3066:
 	ld	%25, %30
 	add	%30, %29, 20
 	st	%25, %30
-	fmov	%30, #l.6134
+	fmov	%30, #l.6178
 	add	%30, %29, 24
 	fst	%30, %30
 	add	%30, %29, 0
@@ -24894,7 +24618,7 @@ setup_surface_reflection.3066:
 	add	%30, %29, 28
 	st	%27, %30
 	add	%29, %29, 32
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 32
 	add	%30, %29, 28
 	ld	%27, %30
@@ -24908,7 +24632,7 @@ setup_surface_reflection.3066:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, o_param_abc.2660
+	call	%27, o_param_abc.2682
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
@@ -24919,13 +24643,13 @@ setup_surface_reflection.3066:
 	add	%30, %29, 36
 	st	%27, %30
 	add	%29, %29, 40
-	call	%27, veciprod.2619
+	call	%27, veciprod.2641
 	sub	%29, %29, 40
 	add	%30, %29, 36
 	ld	%27, %30
 	add	%30, %29, 32
 	fst	%0, %30
-	fmov	%30, #l.6131
+	fmov	%30, #l.6175
 	add	%30, %29, 36
 	fst	%30, %30
 	add	%30, %29, 0
@@ -24933,7 +24657,7 @@ setup_surface_reflection.3066:
 	add	%30, %29, 44
 	st	%27, %30
 	add	%29, %29, 48
-	call	%27, o_param_a.2654
+	call	%27, o_param_a.2676
 	sub	%29, %29, 48
 	add	%30, %29, 44
 	ld	%27, %30
@@ -24950,7 +24674,7 @@ setup_surface_reflection.3066:
 	fsub	%30, %29, %30
 	add	%30, %29, 40
 	fst	%30, %30
-	fmov	%30, #l.6131
+	fmov	%30, #l.6175
 	add	%30, %29, 44
 	fst	%30, %30
 	add	%30, %29, 0
@@ -24958,7 +24682,7 @@ setup_surface_reflection.3066:
 	add	%30, %29, 52
 	st	%27, %30
 	add	%29, %29, 56
-	call	%27, o_param_b.2656
+	call	%27, o_param_b.2678
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
@@ -24975,7 +24699,7 @@ setup_surface_reflection.3066:
 	fsub	%30, %29, %30
 	add	%30, %29, 48
 	fst	%30, %30
-	fmov	%30, #l.6131
+	fmov	%30, #l.6175
 	add	%30, %29, 52
 	fst	%30, %30
 	add	%30, %29, 0
@@ -24983,7 +24707,7 @@ setup_surface_reflection.3066:
 	add	%30, %29, 60
 	st	%27, %30
 	add	%29, %29, 64
-	call	%27, o_param_c.2658
+	call	%27, o_param_c.2680
 	sub	%29, %29, 64
 	add	%30, %29, 60
 	ld	%27, %30
@@ -25027,7 +24751,7 @@ setup_surface_reflection.3066:
 	add	%30, %25, 0
 	st	%24, %30
 	call	%30, %27
-setup_reflections.3069:
+setup_reflections.3091:
 	add	%30, %29, 0
 	st	%0, %30
 	add	%30, %31, 12
@@ -25039,18 +24763,16 @@ setup_reflections.3069:
 	add	%30, %29, 8
 	st	%25, %30
 	add	%30, %31, 4
+	ld	%24, %30
+	add	%30, %29, 0
 	ld	%25, %30
-	add	%30, %29, 0
-	ld	%24, %30
-	cmp	%26, %24, 0
+	cmp	%26, %25, 0
 	sub	%26, 0, %26
-	brle	bgt_else.11129, %26
+	brle	bgt_else.11171, %26
 	call	%30, %27
-bgt_else.11129:
-	add	%30, %29, 0
-	ld	%24, %30
-	sh	%24, %24, 2
-	add	%30, %25, %24
+bgt_else.11171:
+	sh	%25, %25, 2
+	add	%30, %24, %25
 	ld	%25, %30
 	add	%30, %29, 12
 	st	%25, %30
@@ -25059,48 +24781,48 @@ bgt_else.11129:
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_reflectiontype.2648
+	call	%27, o_reflectiontype.2670
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 2
-	breq	brne_else.11131, %26
+	breq	brne_else.11173, %26
 	call	%30, %27
-brne_else.11131:
+brne_else.11173:
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_diffuse.2668
+	call	%27, o_diffuse.2690
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
-	fmov	%1, #l.6134
+	fmov	%1, #l.6178
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, fless.2539
+	call	%27, fless.2561
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 0
-	breq	brne_else.11133, %26
+	breq	brne_else.11175, %26
 	add	%30, %29, 12
 	ld	%0, %30
 	add	%30, %29, 20
 	st	%27, %30
 	add	%29, %29, 24
-	call	%27, o_form.2646
+	call	%27, o_form.2668
 	sub	%29, %29, 24
 	add	%30, %29, 20
 	ld	%27, %30
 	cmp	%26, %0, 1
-	breq	brne_else.11134, %26
+	breq	brne_else.11176, %26
 	cmp	%26, %0, 2
-	breq	brne_else.11135, %26
+	breq	brne_else.11177, %26
 	call	%30, %27
-brne_else.11135:
+brne_else.11177:
 	add	%30, %29, 4
 	ld	%25, %30
 	add	%30, %29, 0
@@ -25110,7 +24832,7 @@ brne_else.11135:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.11134:
+brne_else.11176:
 	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %29, 0
@@ -25120,52 +24842,48 @@ brne_else.11134:
 	mov	%31, %25
 	ld	%30, %31
 	call	%30, %30
-brne_else.11133:
+brne_else.11175:
 	call	%30, %27
-rt.3071:
-	add	%30, %31, 56
-	ld	%25, %30
-	add	%30, %29, 0
-	st	%25, %30
+rt.3093:
 	add	%30, %31, 52
 	ld	%25, %30
-	add	%30, %29, 4
+	add	%30, %29, 0
 	st	%25, %30
 	add	%30, %31, 48
 	ld	%25, %30
-	add	%30, %29, 8
+	add	%30, %29, 4
 	st	%25, %30
 	add	%30, %31, 44
 	ld	%25, %30
-	add	%30, %29, 12
+	add	%30, %29, 8
 	st	%25, %30
 	add	%30, %31, 40
 	ld	%25, %30
-	add	%30, %29, 16
+	add	%30, %29, 12
 	st	%25, %30
 	add	%30, %31, 36
 	ld	%25, %30
-	add	%30, %29, 20
+	add	%30, %29, 16
 	st	%25, %30
 	add	%30, %31, 32
 	ld	%25, %30
-	add	%30, %29, 24
+	add	%30, %29, 20
 	st	%25, %30
 	add	%30, %31, 28
 	ld	%25, %30
-	add	%30, %29, 28
+	add	%30, %29, 24
 	st	%25, %30
 	add	%30, %31, 24
 	ld	%25, %30
-	add	%30, %29, 32
+	add	%30, %29, 28
 	st	%25, %30
 	add	%30, %31, 20
 	ld	%25, %30
-	add	%30, %29, 36
+	add	%30, %29, 32
 	st	%25, %30
 	add	%30, %31, 16
 	ld	%25, %30
-	add	%30, %29, 40
+	add	%30, %29, 36
 	st	%25, %30
 	add	%30, %31, 12
 	ld	%23, %30
@@ -25173,7 +24891,7 @@ rt.3071:
 	ld	%24, %30
 	add	%30, %31, 4
 	ld	%25, %30
-	add	%30, %29, 44
+	add	%30, %29, 40
 	st	%25, %30
 	add	%30, %23, 0
 	st	%0, %30
@@ -25185,8 +24903,8 @@ rt.3071:
 	sh	%25, %1, -1
 	add	%30, %24, 4
 	st	%25, %30
-	fmov	%30, #l.6845
-	add	%30, %29, 48
+	fmov	%30, #l.6887
+	add	%30, %29, 44
 	fst	%30, %30
 	add	%30, %29, 52
 	st	%27, %30
@@ -25195,15 +24913,28 @@ rt.3071:
 	sub	%29, %29, 56
 	add	%30, %29, 52
 	ld	%27, %30
-	add	%30, %29, 48
+	add	%30, %29, 44
 	fld	%30, %30
 	finv	%31, %0
 	fmul	%30, %30, %31
-	add	%30, %29, 12
+	add	%30, %29, 8
 	ld	%25, %30
 	add	%30, %25, 0
 	fst	%30, %30
-	add	%30, %29, 44
+	add	%30, %29, 40
+	ld	%25, %30
+	mov	%31, %25
+	add	%30, %29, 52
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 56
+	call	%27, %30
+	sub	%29, %29, 56
+	add	%30, %29, 52
+	ld	%27, %30
+	add	%30, %29, 48
+	st	%0, %30
+	add	%30, %29, 40
 	ld	%25, %30
 	mov	%31, %25
 	add	%30, %29, 52
@@ -25216,7 +24947,7 @@ rt.3071:
 	ld	%27, %30
 	add	%30, %29, 52
 	st	%0, %30
-	add	%30, %29, 44
+	add	%30, %29, 40
 	ld	%25, %30
 	mov	%31, %25
 	add	%30, %29, 60
@@ -25229,7 +24960,7 @@ rt.3071:
 	ld	%27, %30
 	add	%30, %29, 56
 	st	%0, %30
-	add	%30, %29, 44
+	add	%30, %29, 16
 	ld	%25, %30
 	mov	%31, %25
 	add	%30, %29, 60
@@ -25241,111 +24972,94 @@ rt.3071:
 	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 60
-	st	%0, %30
-	add	%30, %29, 20
-	ld	%25, %30
-	mov	%31, %25
-	add	%30, %29, 68
 	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 72
-	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 0
-	ld	%25, %30
-	mov	%31, %25
-	add	%30, %29, 68
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 72
-	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 40
-	ld	%25, %30
-	mov	%31, %25
-	add	%30, %29, 68
-	st	%27, %30
-	ld	%30, %31
-	add	%29, %29, 72
-	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 32
-	ld	%0, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, d_vec.2705
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	add	%29, %29, 64
+	call	%27, write_ppm_header.3001
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 36
-	ld	%1, %30
-	add	%30, %29, 68
-	st	%27, %30
-	add	%29, %29, 72
-	call	%27, veccpy.2608
-	sub	%29, %29, 72
-	add	%30, %29, 68
-	ld	%27, %30
-	add	%30, %29, 8
 	ld	%25, %30
-	add	%30, %29, 32
-	ld	%0, %30
 	mov	%31, %25
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 72
+	add	%29, %29, 64
 	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	add	%30, %29, 28
+	ld	%0, %30
+	add	%30, %29, 60
+	st	%27, %30
+	add	%29, %29, 64
+	call	%27, d_vec.2727
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	add	%30, %29, 32
+	ld	%1, %30
+	add	%30, %29, 60
+	st	%27, %30
+	add	%29, %29, 64
+	call	%27, veccpy.2630
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	add	%30, %29, 4
+	ld	%25, %30
+	add	%30, %29, 28
+	ld	%0, %30
+	mov	%31, %25
+	add	%30, %29, 60
+	st	%27, %30
+	ld	%30, %31
+	add	%29, %29, 64
+	call	%27, %30
+	sub	%29, %29, 64
+	add	%30, %29, 60
+	ld	%27, %30
+	add	%30, %29, 24
 	ld	%25, %30
 	add	%30, %25, 0
 	ld	%25, %30
 	sub	%0, %25, 1
-	add	%30, %29, 4
+	add	%30, %29, 0
 	ld	%25, %30
 	mov	%31, %25
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 72
+	add	%29, %29, 64
 	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	mov	%1, 0
 	mov	%2, 0
-	add	%30, %29, 24
+	add	%30, %29, 20
 	ld	%25, %30
-	add	%30, %29, 56
+	add	%30, %29, 52
 	ld	%0, %30
 	mov	%31, %25
-	add	%30, %29, 68
+	add	%30, %29, 60
 	st	%27, %30
 	ld	%30, %31
-	add	%29, %29, 72
+	add	%29, %29, 64
 	call	%27, %30
-	sub	%29, %29, 72
-	add	%30, %29, 68
+	sub	%29, %29, 64
+	add	%30, %29, 60
 	ld	%27, %30
 	mov	%0, 0
 	mov	%4, 2
-	add	%30, %29, 16
+	add	%30, %29, 12
 	ld	%25, %30
-	add	%30, %29, 52
+	add	%30, %29, 48
 	ld	%1, %30
-	add	%30, %29, 56
+	add	%30, %29, 52
 	ld	%2, %30
-	add	%30, %29, 60
+	add	%30, %29, 56
 	ld	%3, %30
 	mov	%31, %25
 	ld	%30, %31

@@ -5,9 +5,16 @@ source=("ack" "adder" "cls-bug" "cls-rec" "even-odd" "fib" "float"
         "join-stack3" "matmul-flat" "matmul" "mul" "non-tail-if"
         "non-tail-if2" "non-tail-if3" "print" "shuffle"
         "sum-tail" "sum" "spill" "spill2" "spill3" "test" "test2")
+# source=("ack" "adder" "cls-bug" "cls-rec" "even-odd" "fib" "float"
+#         "float2" "float3" "funcomp" "gcd" "inprod-loop" "inprod-rec"
+#         "inprod" "join-reg" "join-reg2" "join-stack" "join-stack2"
+#         "join-stack3" "matmul-flat"  "mul" "non-tail-if"
+#         "non-tail-if2" "non-tail-if3" "print" "shuffle"
+#         "sum-tail" "sum"  "test" "test2")
 
 for ((i=0; i<${#source[@]}; i++))
 do
+echo "compiling "${source[$i]}    
 ./cal test/${source[$i]}
 done
 for ((i=0; i<${#source[@]}; i++))
@@ -15,6 +22,6 @@ do
 echo ${source[$i]}
 ocaml test/${source[$i]}.ml
 echo
-../sim/sim ../sim/${source[$i]}.s -d
+../sim/sim2 ../sim/${source[$i]}.s -d
 echo
 done

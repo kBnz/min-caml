@@ -1,0 +1,223 @@
+****RegAlloc****
+**float list**
+#l.503,12.#l.499,11.#l.495,10.#l.491,9.#l.487,8.#l.483,7.#l.479,6.#l.475,5.#l.471,4.#l.467,3.#l.463,2.#l.459,1.#l.454,0.**code***name* loop3.252 *args*{i.253,k.254,j.255,a.256,b.257,c.258} *fargs*{} *body*
+IfGE(virtual) %1 0Let %25SLL %0 2
+Let %23Ld %5 %25
+Let %25SLL %0 2
+Let %24Ld %5 %25
+Let %25SLL %2 2
+Let %f28LdDf %24 %25
+Let %25SLL %0 2
+Let %24Ld %3 %25
+Let %25SLL %1 2
+Let %f29LdDf %24 %25
+Let %25SLL %1 2
+Let %24Ld %4 %25
+Let %25SLL %2 2
+Let %f30LdDf %24 %25
+Let %f30FMulD %f29 %f30
+Let %f30FAddD %f28 %f30
+Let %25SLL %2 2
+Let Tu101.434StDF %f30 %23%25
+Let %1Sub %1 1
+CallDir loop3.252 {%0,%1,%2,%3,%4,%5} {}
+Nop
+
+*ret* Unit *name* loop2.259 *args*{i.260,m.261,j.262,a.263,b.264,c.265} *fargs*{} *body*
+Let Tu540Save %2 j.262
+Let Tu539Save %5 c.265
+Let Tu538Save %4 b.264
+Let Tu537Save %3 a.263
+Let Tu536Save %1 m.261
+Let Tu535Save %0 i.260
+Let %25Restore j.262
+IfGE(virtual) %25 0Let %25Restore m.261
+Let %1Sub %25 1
+Let %0Restore i.260
+Let %2Restore j.262
+Let %3Restore a.263
+Let %4Restore b.264
+Let %5Restore c.265
+Let Tu102.428CallDir loop3.252 {%0,%1,%2,%3,%4,%5} {}
+Let %25Restore j.262
+Let %2Sub %25 1
+Let %0Restore i.260
+Let %1Restore m.261
+Let %3Restore a.263
+Let %4Restore b.264
+Let %5Restore c.265
+CallDir loop2.259 {%0,%1,%2,%3,%4,%5} {}
+Nop
+
+*ret* Unit *name* loop1.266 *args*{i.267,m.268,n.269,a.270,b.271,c.272} *fargs*{} *body*
+Let Tu559Save %0 i.267
+Let Tu558Save %5 c.272
+Let Tu557Save %4 b.271
+Let Tu556Save %3 a.270
+Let Tu555Save %2 n.269
+Let Tu554Save %1 m.268
+Let %25Restore i.267
+IfGE(virtual) %25 0Let %25Restore n.269
+Let %2Sub %25 1
+Let %0Restore i.267
+Let %1Restore m.268
+Let %3Restore a.270
+Let %4Restore b.271
+Let %5Restore c.272
+Let Tu103.422CallDir loop2.259 {%0,%1,%2,%3,%4,%5} {}
+Let %25Restore i.267
+Let %0Sub %25 1
+Let %1Restore m.268
+Let %2Restore n.269
+Let %3Restore a.270
+Let %4Restore b.271
+Let %5Restore c.272
+CallDir loop1.266 {%0,%1,%2,%3,%4,%5} {}
+Nop
+
+*ret* Unit *name* mul.273 *args*{l.274,m.275,n.276,a.277,b.278,c.279} *fargs*{} *body*
+Let %0Sub %0 1
+CallDir loop1.266 {%0,%1,%2,%3,%4,%5} {}
+*ret* Unit *name* init.281 *args*{i.282,n.283,mat.284} *fargs*{} *body*
+Let Tu569Save %0 i.282
+Let Tu568Save %2 mat.284
+Let Tu567Save %1 n.283
+Let %25Restore i.282
+IfGE(virtual) %25 0Let %f0SetF #l.454
+Let %0Restore n.283
+Let %0CallDir min_caml_create_float_array {%0} {%f0}
+Let %25Restore i.282
+Let %25SLL %25 2
+Let %24Restore mat.284
+Let Tu104.412St %0 %24%25
+Let %25Restore i.282
+Let %0Sub %25 1
+Let %1Restore n.283
+Let %2Restore mat.284
+CallDir init.281 {%0,%1,%2} {}
+Nop
+
+*ret* Unit *name* make.285 *args*{m.286,n.287,dummy.288} *fargs*{} *body*
+Let Tu577Save %0 m.286
+Let Tu576Save %1 n.287
+Let %0Restore m.286
+Let %0CallDir min_caml_create_array {%0,%2} {}
+Let Tu575Save %0 mat.407
+Let %25Restore m.286
+Let %0Sub %25 1
+Let %1Restore n.287
+Let %2Restore mat.407
+Let Tu105.408CallDir init.281 {%0,%1,%2} {}
+Let %25Restore mat.407
+Mov %25
+*ret* Float 
+Let %0Set 0
+Let %f0SetF #l.454
+Let %0CallDir min_caml_create_float_array {%0} {%f0}
+Let Tu607Save %0 dummy.280
+Let %0Set 2
+Let %1Set 3
+Let %2Restore dummy.280
+Let %0CallDir make.285 {%0,%1,%2} {}
+Let Tu605Save %0 a.289
+Let %0Set 3
+Let %1Set 2
+Let %2Restore dummy.280
+Let %0CallDir make.285 {%0,%1,%2} {}
+Let Tu606Save %0 b.290
+Let %0Set 2
+Let %1Set 2
+Let %2Restore dummy.280
+Let %0CallDir make.285 {%0,%1,%2} {}
+Let Tu604Save %0 c.291
+Let %25Restore a.289
+Let %25Ld %25 0
+Let %f30SetF #l.459
+Let Tu125.294StDF %f30 %250
+Let %25Restore a.289
+Let %25Ld %25 0
+Let %f30SetF #l.463
+Let Tu124.295StDF %f30 %254
+Let %25Restore a.289
+Let %25Ld %25 0
+Let %f30SetF #l.467
+Let Tu123.296StDF %f30 %258
+Let %25Restore a.289
+Let %25Ld %25 4
+Let %f30SetF #l.471
+Let Tu122.297StDF %f30 %250
+Let %25Restore a.289
+Let %25Ld %25 4
+Let %f30SetF #l.475
+Let Tu121.298StDF %f30 %254
+Let %25Restore a.289
+Let %25Ld %25 4
+Let %f30SetF #l.479
+Let Tu120.299StDF %f30 %258
+Let %25Restore b.290
+Let %25Ld %25 0
+Let %f30SetF #l.483
+Let Tu119.300StDF %f30 %250
+Let %25Restore b.290
+Let %25Ld %25 0
+Let %f30SetF #l.487
+Let Tu118.301StDF %f30 %254
+Let %25Restore b.290
+Let %25Ld %25 4
+Let %f30SetF #l.491
+Let Tu117.302StDF %f30 %250
+Let %25Restore b.290
+Let %25Ld %25 4
+Let %f30SetF #l.495
+Let Tu116.303StDF %f30 %254
+Let %25Restore b.290
+Let %25Ld %25 8
+Let %f30SetF #l.499
+Let Tu115.304StDF %f30 %250
+Let %25Restore b.290
+Let %25Ld %25 8
+Let %f30SetF #l.503
+Let Tu114.305StDF %f30 %254
+Let %0Set 2
+Let %1Set 3
+Let %2Set 2
+Let %3Restore a.289
+Let %4Restore b.290
+Let %5Restore c.291
+Let Tu113.306CallDir mul.273 {%0,%1,%2,%3,%4,%5} {}
+Let %25Restore a.289
+Let %25Ld %25 0
+Let %f0LdDf %25 0
+Let Tu112.307CallDir min_caml_print_float {} {%f0}
+Let %25Restore a.289
+Let %25Ld %25 0
+Let %f0LdDf %25 4
+Let Tu111.308CallDir min_caml_print_float {} {%f0}
+Let %25Restore a.289
+Let %25Ld %25 4
+Let %f0LdDf %25 0
+Let Tu110.309CallDir min_caml_print_float {} {%f0}
+Let %25Restore a.289
+Let %25Ld %25 4
+Let %f0LdDf %25 4
+Let Tu109.310CallDir min_caml_print_float {} {%f0}
+Let %25Restore c.291
+Let %25Ld %25 0
+Let %f0LdDf %25 0
+Let %0CallDir min_caml_truncate {} {%f0}
+Let Tu108.311CallDir min_caml_print_int {%0} {}
+Let %25Restore c.291
+Let %25Ld %25 0
+Let %f0LdDf %25 4
+Let %0CallDir min_caml_truncate {} {%f0}
+Let Tu107.312CallDir min_caml_print_int {%0} {}
+Let %25Restore c.291
+Let %25Ld %25 4
+Let %f0LdDf %25 0
+Let %0CallDir min_caml_truncate {} {%f0}
+Let Tu106.313CallDir min_caml_print_int {%0} {}
+Let %25Restore c.291
+Let %25Ld %25 4
+Let %f0LdDf %25 4
+Let %0CallDir min_caml_truncate {} {%f0}
+CallDir min_caml_print_int {%0} {}

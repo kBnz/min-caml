@@ -24,17 +24,18 @@ let rec make m n dummy =
 let a = make 2 3 dummy in
 let b = make 3 2 dummy in
 let c = make 2 2 dummy in
+let rec f a = () in
 a.(0).(0) <- 1.; a.(0).(1) <- 2.; a.(0).(2) <- 3.;
 a.(1).(0) <- 4.; a.(1).(1) <- 5.; a.(1).(2) <- 6.;
 b.(0).(0) <- 7.; b.(0).(1) <- 8.;
 b.(1).(0) <- 9.; b.(1).(1) <- 10.;
 b.(2).(0) <- 11.; b.(2).(1) <- 12.;
+(* f (); *)
 mul 2 3 2 a b c;
-(*
-print_float (c.(0).(0));
-print_float (c.(0).(1));
-print_float (c.(1).(0));
-print_float (c.(1).(1))*)
+print_float (a.(0).(0));
+print_float (a.(0).(1));
+print_float (a.(1).(0));
+print_float (a.(1).(1));
 print_int (truncate (c.(0).(0)));
 print_int (truncate (c.(0).(1)));
 print_int (truncate (c.(1).(0)));

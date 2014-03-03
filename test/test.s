@@ -31,8 +31,6 @@ f.111:
 	ld	%25, %30
 	cmp	%26, %25, 0
 	breq	brne_else.126, %26
-	add	%30, %29, 0
-	ld	%25, %30
 	cmp	%26, %25, 1
 	breq	brne_else.127, %26
 	mov	%0, 3

@@ -28,8 +28,6 @@ fib.110:
 	ld	%25, %30
 	cmp	%26, %25, 1
 	brle	bgt_else.128, %26
-	add	%30, %29, 0
-	ld	%25, %30
 	sub	%0, %25, 1
 	add	%30, %29, 4
 	st	%27, %30
@@ -55,8 +53,6 @@ fib.110:
 	add	%0, %25, %0
 	call	%30, %27
 bgt_else.128:
-	add	%30, %29, 0
-	ld	%25, %30
 	mov	%0, %25
 	call	%30, %27
 .section	".rodata"
