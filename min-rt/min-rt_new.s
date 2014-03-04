@@ -36,6 +36,7 @@
 .section	".text"
 .global	min_caml_start
 min_caml_start:
+	inout	%30, 170, -3
 	mov	%28, 32764
 	mov	%0, 1
 	mov	%1, 0

@@ -287,6 +287,7 @@ let f oc (Prog(data, fundefs, e)) =
   Printf.fprintf oc "min_caml_start:\n";
   (* Printf.fprintf oc "\tsave\t%%sp, -112, %%sp\n"; (* from gcc; why 112? *) *)
   (*tekitou*)
+  Printf.fprintf oc "\tinout\t%s, 170, -3\n" reg_tmp;  
   Printf.fprintf oc "\tmov\t%s, 32764\n" reg_hp;  
   stackset := S.empty;
   stackmap := [];
