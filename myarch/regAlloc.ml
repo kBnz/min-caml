@@ -445,7 +445,7 @@ struct
     in loop l
   (*fundef -> flowgraph*)
   exception Map_Error
-  let simplify ((nl,el):IGraph.graph) size =
+  let simplify ((nl,el):IGraph.graph) size use=
     (*単純化 グラフとレジスタ数を受け取りGraphとStackと
       (* 失敗する可能性のあるStack *)を返す*)
     let rec degree_list (nl2,el2)=
@@ -457,7 +457,15 @@ struct
         else ((IGraph.rm_node g2 n),st2,(n::st3)))
         ((nl2,el2), [], []) (degree_list (nl2,el2))
     in
-      push_nodes (nl,el)
+    let var_use_num n=
+      let n2 = (!n) in
+        (n,(List.fold_left (fun i (_,l)->if List.mem n2 l then i+1 else i) 0 use))
+    in
+    let (g,st1,st2) = push_nodes (nl,el) in
+    let compare (n1,i1) (n2,i2) = if i1=i2 then 0
+      else if i1>i2 then -1 else 1
+    in
+      (g,st1,(List.map (fun (n,i)->n)(List.sort compare (List.map var_use_num st2))))
   exception Spill of (flowgraph)
   let rec select control ((nl,el):IGraph.graph) size st args ret cmap0 sflag intflag=(*色を選ぶ*)
     let g = (nl,el) in
@@ -762,7 +770,7 @@ struct
                     igraphf=igf;cmap=cmap} =
     (*変数からレジスタへのマッピング*)
     let main ig args2 size pre flg=
-      let (_,st,st2) = simplify ig size in
+      let (_,st,st2) = simplify ig size use in
       let cmap0 = select control ig size st
         args2 (name^".min_caml_ret_reg") [] false flg in
         List.map (fun (x,y) -> (x,(pre^y)))
