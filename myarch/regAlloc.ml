@@ -636,75 +636,123 @@ struct
       in
         loop ba
     in
-    let rec main g t ba ba2= (*graphと合流後のノードのリスト*)
+    let p_ba = ref [] in
+    let rec main g t ba ba2 pre sflg= (*graphと合流後のノードのリスト*)
       (*ある変数をrestoreして使う場合useするたびにrestoreしていることが前提*)
-      (if List.exists (fun n->n==t) (!nl) or t==end_n then (g,[])
+      (if (List.exists (fun n->n==t) (!nl) or t==end_n) then (g,[])
       else
-        (nl:=t::(!nl);
-        let sl = Graph.succ g t in
-        let pl = Graph.pred g t in
-          if List.length pl <> 1 && t!=start_n then (g,[t])
-          else
-            (match (!t) with
-              | Set((i2,it),(Restore(i))) ->
-                let s = List.nth sl 0 in
-                  if List.exists (fun n->i=n) (!callspill) then
-                    (let i3 = map_ba i i2 ba in
-                     Graph.print_node2 t;print_string ("("^i2^","^i3^")");
-                    let ba3 = if i2=i3 then ((i,i2)::ba) else ba in 
-                    let ba4 = (i2,i3)::ba2 in
-                    let g2 = (if i2<>i3
-                      then rm_node2 g t (*restoreを消す*)else g)
-                    in
-                      main g2 s ba3 ba4)
-                  else
-                    main g s ba ba2 (*call関係以外のspillは無視*)
-              | _ ->
-                  let s = List.nth sl 0 in
-                  let rt = rename_node (ba2) (!t) in
-                  let rt2 = if (!t)<> rt then ref rt else t in
-                  let g2 = if (!t)<> rt then
-                      (changeNode2 g t rt2) else g in
-                  let ba3 =
-                    (match (!rt2) with
-                      | Set((i,it),_) ->
-                            [(i,i)]
-                      | _ -> [])
-                  in
-                    (match (!rt2) with
-                      | Set(_,CallCls(_))| Set(_,CallDir(_))
-                      | Exp(CallCls(_)) | Exp(CallDir(_)) ->
-                        if List.length sl = 2 then
-                          (let s0 = List.nth sl 0 in
-                           let s1 = List.nth sl 1 in
-                           let (g0,l0) = main g2 s0 (ba3@[]) [] in
-                           let (g1,l1) = main g0 s1 (ba3@[]) [] in
-                             (g1,(l1@l0)))
-                        else
-                          main g2 s (ba3@[]) []
-                      | _ ->
-                        if List.length sl = 2 then
-                          (let s0 = List.nth sl 0 in
-                           let s1 = List.nth sl 1 in
-                           let (g0,l0) = main g2 s0 (ba3@ba) ba2 in
-                           let (g1,l1) = main g0 s1 (ba3@ba) ba2 in
-                             (g1,(l1@l0)))
-                        else
-                          (main g2 s (ba3@ba) ba2))
-            )))
+          (
+           let sl = Graph.succ g t in
+           let pl = Graph.pred g t in
+             if List.length pl <> 1 && t!=start_n && not(sflg)then
+               (p_ba:=(pre,ba)::(!p_ba);(g,[t]))
+             else
+               (nl:=t::(!nl);(match (!t) with
+                 | Set((i2,it),(Restore(i))) ->
+                   let s = List.nth sl 0 in
+                     if List.exists (fun n->i=n) (!callspill) then
+                       (let i3 = map_ba i i2 ba in
+                          Graph.print_node2 t;
+                          print_string ("("^i2^","^i3^")\n");
+                          let ba3 = if i2=i3 then ((i,i2)::ba) else ba in 
+                          let ba4 = (i2,i3)::ba2 in
+                          let g2 = (if i2<>i3
+                            then rm_node2 g t (*restoreを消す*)else g)
+                          in
+                            main g2 s ba3 ba4 t (if i2<>i3 then sflg else false))
+                     else
+                       main g s ba ba2 t false(*call関係以外のspillは無視*)
+                 | _ ->
+                   let s = List.nth sl 0 in
+                   let rt = rename_node (ba2) (!t) in
+                   let rt2 = if (!t)<> rt then ref rt else t in
+                   let g2 = if (!t)<> rt then
+                       (changeNode2 g t rt2) else g in
+                   let ba3 =
+                     (match (!rt2) with
+                       | Set((i,it),_) ->
+                         [(i,i)]
+                       | _ -> [])
+                   in
+                     (match (!rt2) with
+                       | Set(_,CallCls(_))| Set(_,CallDir(_))
+                       | Exp(CallCls(_)) | Exp(CallDir(_)) ->
+                         if List.length sl = 2 then
+                           (let s0 = List.nth sl 0 in
+                            let s1 = List.nth sl 1 in
+                            let (g0,l0) = main g2 s0 (ba3@[]) [] rt2 false in
+                            let (g1,l1) = main g0 s1 (ba3@[]) [] rt2 false in
+                              (g1,(l1@l0)))
+                         else
+                           main g2 s (ba3@[]) [] rt2 false
+                       | _ ->
+                         if List.length sl = 2 then
+                           (let s0 = List.nth sl 0 in
+                            let s1 = List.nth sl 1 in
+                            let (g0,l0) = main g2 s0 (ba3@ba) ba2 rt2 false in
+                            let (g1,l1) = main g0 s1 (ba3@ba) ba2 rt2 false in
+                              (g1,(l1@l0)))
+                         else
+                           (main g2 s (ba3@ba) ba2 rt2 false)))
+               )))
+    in
+    let print_pba ()=
+      print_string "\nprint_pba\n";
+      List.map (fun (n,il) ->
+        print_string "\n$$"; Graph.print_node2 n;
+        List.map (fun (i1,i2) -> print_string ("("^i1^","^i2^")")) il)
+        (!p_ba)
     in
     let rec loop g l=
+      let check_pl_exists g n =
+        let (nl,el) = g in
+          List.map (fun n-> if not(List.memq n nl)
+            then raise(The_Others("pl doesn't exists"))
+            else ()) (Graph.pred g n); ()
+      in
+      let is_ready g n = (*plが全て処理されているか*)
+         check_pl_exists g n;List.fold_left
+           (fun t n-> if (List.exists
+           (fun (n2,_)->n2==n) (!p_ba)) then true&&t
+             else (Graph.print_node2 n;false)) true (Graph.pred g n)
+      in
+      let get_ba g n =
+        let pba_map p =
+          let rec loop = function
+            | (x,x2)::y -> if x==p then x2 else loop y
+          in
+            loop (!p_ba)
+        in      
+        let and_set l =
+          let and_set_2 l1 l2 =
+            List.fold_left (fun l3 ba->
+              if List.mem ba l1 then ba::l3 else l3) [] l2
+          in
+            match l with
+              | x::y ->
+                List.fold_left
+                  (fun ans l2-> and_set_2 ans l2) x y
+              | _ -> []
+        in
+        let pl = Graph.pred g n in
+          and_set (List.map pba_map pl)
+      in
       let (g2,l2)= List.fold_left (fun (g,l) n->
         if n==start_n then
           let (g2,l2) =
-            main g n (List.map (fun i->(i,i)) (iarg@farg)) []
+            main g n (List.map (fun i->(i,i)) (iarg@farg)) [] n true
           in
             (g2,(l2@l))
         else
-          let (g2,l2) = main g n [] []in
-            (g2,(l2@l))) (g,[]) l
+          (if is_ready g n then
+              (print_string "\nloop1";Graph.print_node2 n;print_pba();
+              let (g2,l2) = main g n (get_ba g n) [] n true in
+                (g2,(l2@l)))
+           else
+        (print_string "\nloop2";Graph.print_node2 n;print_pba();
+              (g,l)))) (g,[]) l
       in
-        if l2=[] then g2 else loop g2 l2
+        if l2=[] then (print_pba ();g2) else loop g2 l2
     in
       loop control [start_n]
         
